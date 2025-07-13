@@ -33,3 +33,4 @@ jobs:
           password:    ${{ secrets.FTP_PASSWORD }}
           local-dir:   build/
           server-dir:  ${{ secrets.FTP_PATH }}
+          umask:       '022'
