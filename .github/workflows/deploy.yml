@@ -21,15 +21,17 @@ jobs:
         run: npm ci
 
       - name: Build project
+        # uistite sa, že toto
+        # spustí váš Vite build do 'dist/'
         run: npm run build
 
       - name: Deploy via FTPS (Explicit TLS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          protocol:   ftps
-          port:       21
-          server:     ${{ secrets.FTP_HOST }}
-          username:   ${{ secrets.FTP_USERNAME }}
-          password:   ${{ secrets.FTP_PASSWORD }}
-          local-dir:  build/
-          server-dir: ${{ secrets.FTP_PATH }}
+          protocol:    ftps
+          port:        21
+          server:      ${{ secrets.FTP_HOST }}
+          username:    ${{ secrets.FTP_USERNAME }}
+          password:    ${{ secrets.FTP_PASSWORD }}
+          local-dir:   dist/
+          server-dir:  ${{ secrets.FTP_PATH }}
