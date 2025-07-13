@@ -1,6 +1,5 @@
 {
   "name": "patrikvision.sk",
-  "homepage": "https://www.patrikvision.sk/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
