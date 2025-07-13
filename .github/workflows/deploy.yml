@@ -11,12 +11,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy via SFTP to HostCreators
+      - name: Deploy via FTPS (Explicit TLS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          protocol:    sftp
+          protocol:    ftps
           server:      ${{ secrets.FTP_HOST }}
-          port:        22
+          port:        21
           username:    ${{ secrets.FTP_USERNAME }}
           password:    ${{ secrets.FTP_PASSWORD }}
           local-dir:   .
