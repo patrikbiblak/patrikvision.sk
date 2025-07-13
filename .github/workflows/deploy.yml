@@ -1,4 +1,4 @@
-name: Deploy to HostCreators via FTP
+name: Deploy to HostCreators via SFTP
 
 on:
   push:
@@ -8,16 +8,16 @@ jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Deploy via FTP
+      - name: Deploy via SFTP to HostCreators
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol:  ftps
-          port:      21
-          local-dir: .
-          server-dir: ${{ secrets.FTP_PATH }}  
+          protocol:    sftp
+          server:      ${{ secrets.FTP_HOST }}
+          port:        22
+          username:    ${{ secrets.FTP_USERNAME }}
+          password:    ${{ secrets.FTP_PASSWORD }}
+          local-dir:   .
+          server-dir:  ${{ secrets.FTP_PATH }}
