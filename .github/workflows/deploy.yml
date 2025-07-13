@@ -1,4 +1,4 @@
-name: Deploy to HostCreators via SFTP
+name: Build & Deploy to HostCreators via FTPS
 
 on:
   push:
@@ -7,17 +7,29 @@ on:
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
       - name: Deploy via FTPS (Explicit TLS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          protocol:    ftps
-          server:      ${{ secrets.FTP_HOST }}
-          port:        21
-          username:    ${{ secrets.FTP_USERNAME }}
-          password:    ${{ secrets.FTP_PASSWORD }}
-          local-dir:   .
-          server-dir:  ${{ secrets.FTP_PATH }}
+          protocol:   ftps
+          port:       21
+          server:     ${{ secrets.FTP_HOST }}
+          username:   ${{ secrets.FTP_USERNAME }}
+          password:   ${{ secrets.FTP_PASSWORD }}
+          local-dir:  build/
+          server-dir: ${{ secrets.FTP_PATH }}
