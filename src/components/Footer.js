@@ -28,7 +28,7 @@ const Footer = () => {
         <ul>
             <li>
             <a
-                href="https://www.instagram.com/bpaatrik"
+                href="https://www.instagram.com/patrikvision.sk"
                 target="_blank"
                 rel="noopener noreferrer"
             >
@@ -45,7 +45,7 @@ const Footer = () => {
             </a>
             </li>
             <li>
-            <a href="mailto:patrik.biblak@gmail.com">
+            <a href="mailto:contact@patrikvision.sk">
                 <MdEmail /> Email
             </a>
             </li>
