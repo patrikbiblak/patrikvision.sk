@@ -91,13 +91,6 @@
   animation: scroll 40s linear infinite;
 }
 
-.logo-track > * {
-  flex: 0 0 auto;
-  width: var(--icon-w);
-  height: var(--icon-w);
-  margin-right: var(--gap);
-}
-
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -130,4 +123,37 @@
   .logo-track {
     --gap: 80px;
   }
+}
+
+.icon-wrapper {
+  flex: 0 0 auto;
+  width: var(--icon-w);
+  height: var(--icon-w);
+  margin-right: var(--gap);
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.icon-wrapper.html-icon:hover {
+  color: #e34f26;
+}
+
+.icon-wrapper.css-icon:hover {
+  color: #1572b6;
+}
+
+.icon-wrapper.js-icon:hover {
+  color: #f7df1e;
+}
+
+.icon-wrapper.react-icon:hover {
+  color: #61dafb;
+}
+
+.icon-wrapper.git-icon:hover {
+  color: #f05032;
+}
+
+.icon-wrapper.github-icon:hover {
+  color: #6e5494;
 }

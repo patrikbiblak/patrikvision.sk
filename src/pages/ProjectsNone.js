@@ -9,6 +9,15 @@ import {
 import { Link } from 'react-router';
 import "../styles/projectsnone.css";
 
+const icons = [
+  { Icon: SiHtml5, className: "html-icon" },
+  { Icon: SiCss3, className: "css-icon" },
+  { Icon: SiJavascript, className: "js-icon" },
+  { Icon: SiReact, className: "react-icon" },
+  { Icon: SiGit, className: "git-icon" },
+  { Icon: SiGithub, className: "github-icon" },
+];
+
 const ProjectsNone = () => {
     return (
         <div className="projects-none container">
@@ -28,11 +37,10 @@ const ProjectsNone = () => {
 
             <div className="logo-carousel">
                 <div className="logo-track">
-                    {[SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiGithub].map((Icon, i) => (
-                    <Icon key={i} size={48} />
-                    ))}
-                    {[SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiGithub].map((Icon, i) => (
-                    <Icon key={i+6} size={48} />
+                    {[...icons, ...icons].map(({ Icon, className }, i) => (
+                    <div className={`icon-wrapper ${className}`} key={i}>
+                        <Icon size={48} />
+                    </div>
                     ))}
                 </div>
             </div>

@@ -43,14 +43,12 @@ const ProjectsSection = () => {
       <div className="container projects-content">
         <div className="projects-heading" ref={leftRef}>
           <h2>Vybrané projekty</h2>
-          <p>Niektoré z mojich nedávnych prác</p>
+          <p>Na tejto sekcii momentálne pracujem.</p>
         </div>
 
         <div className="projects-grid" ref={gridRef}>
           {projects.map(project => (
-            <div key={project.title} className="project-card">
-              <p>coming soon..</p>
-            </div>
+            <div key={project.title} className="project-card"></div>
           ))}
         </div>
 
