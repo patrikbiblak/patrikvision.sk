@@ -34,6 +34,10 @@
     margin-bottom: 0;
 }
 
+.box-message a {
+  color: var(--text-primary);
+}
+
 .box-message a:hover {
     color: var(--global-color);
 }

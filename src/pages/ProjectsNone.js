@@ -21,7 +21,7 @@ const ProjectsNone = () => {
                     <h4>Každý expert niekde začínal..</h4>
                     <p>Pracujem na portfóliu a budujem základy silného mena.</p>
                     <p>Chcete sa stať súčasťou mojej cesty? &nbsp;
-                        <Link to='/contact'>Ozvite sa.</Link>
+                        <Link to='/contact'>Ozvite sa</Link>.
                     </p>
                 </div>
             </div>
