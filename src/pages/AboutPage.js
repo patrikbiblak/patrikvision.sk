@@ -1,11 +1,3 @@
-import {
-  SiHtml5,
-  SiCss3,
-  SiJavascript,
-  SiReact,
-  SiGit,
-  SiGithub,
-} from 'react-icons/si';
 import { NavLink } from "react-router-dom";
 import "../styles/aboutpage.css";
 
@@ -18,17 +10,6 @@ const AboutPage = () => {
                 <p>Som mladý a nadšený front-end developer ktorý kladie dôraz na transparentnú komunikáciu, dodržiavanie termínov a vysokú kvalitu.</p>
                 <p>Vytváram rýchle a responzívne webové stránky presne podľa vašich predstáv, ktoré plynulo fungujú na rôznych zariadeniach. Môžete sa na mňa spoľahnúť, že vaše nápady premením na pútavú online prezentáciu, ktorá osloví vašich návštevníkov.</p>
                 <p>Potrebujete niekoho, kto zvládne developerské šprinty? Ste na správnom mieste!</p>
-            </div>
-
-            <div className="logo-carousel">
-                <div className="logo-track">
-                    {[SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiGithub].map((Icon, i) => (
-                    <Icon key={i} size={48} />
-                    ))}
-                    {[SiHtml5, SiCss3, SiJavascript, SiReact, SiGit, SiGithub].map((Icon, i) => (
-                    <Icon key={i+6} size={48} />
-                    ))}
-                </div>
             </div>
 
             <div className="aboutme-text-row">
