@@ -23,7 +23,7 @@ const ContactPage = () => {
   };
 
   const contactDetails = [
-    { icon: Mail, label: 'Email', value: 'patrik.biblak@gmail.com' },
+    { icon: Mail, label: 'Email', value: 'contact@patrikvision.sk' },
     { icon: Phone, label: 'Telefon', value: '+421 918 755 276' },
     { icon: MapPin, label: 'Poloha', value: 'Slovensko' },
   ];
