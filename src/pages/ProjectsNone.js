@@ -15,11 +15,11 @@ const ProjectsNone = () => {
             <h1 className="projectsnone-heading">Moje projekty</h1>
 
             <div className="projectsnone-center">
-                <p>Na tejto sekcii momentálne pracujem. Medzitým si môžete pozrieť môj profil alebo ma kontaktovať.</p>
+                <p>Na tejto podstránke momentálne pracujem. Medzitým si môžete pozrieť môj profil alebo ma kontaktovať.</p>
 
                 <div className="box-message">
                     <h4>Každý expert niekde začínal..</h4>
-                    <p>Pracujem na portfóliu a budujem základy silného mena.</p>
+                    <p>Pracujem na portfóliu a budujem základy silného brandu.</p>
                     <p>Chcete sa stať súčasťou mojej cesty? &nbsp;
                         <Link to='/contact'>Ozvite sa</Link>.
                     </p>
