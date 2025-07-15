@@ -22,8 +22,10 @@
   color: #fff; 
   border: 1px solid var(--border-default);
   border-radius: var(--border-radius);
-  padding: 1.5rem; max-width: 800px; 
-  width: 90%; position: relative; 
+  padding: 1.5rem; 
+  max-width: 800px; 
+  width: 90%; 
+  position: relative; 
   animation: slideUp 0.3s ease-out forwards; 
 }
 
@@ -32,14 +34,18 @@
 }
 
 .cookie-modal__close { 
-  position: absolute; 
-  top: 0.8rem; 
-  right: 0.8rem; 
-  background: transparent; 
-  border: none; 
-  font-size: 1.5rem; 
-  cursor: pointer; 
-  color: #fff; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  display: inline-block;
+  pointer-events: auto;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
 }
 
 .cookie-modal__categories { 
@@ -203,6 +209,10 @@
 }
 
 @media (max-width: 768px) { 
+  .cookie-modal__close {
+    width: fit-content;
+  }
+
   .cookie-modal { 
     width: 95%; 
     padding: 1rem; 
