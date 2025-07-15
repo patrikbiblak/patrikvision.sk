@@ -2,9 +2,11 @@
 import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import CookieModal from './CookieModal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCookieBite } from '@fortawesome/free-solid-svg-icons'
 import './cookieconsent.css';
 
-const INITIAL_OPEN_DELAY = 3000; // čas v ms, po ktorom sa modal otvorí pri prvej návšteve
+const INITIAL_OPEN_DELAY = 3000;
 
 const CookieSettings = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -41,16 +43,14 @@ const CookieSettings = () => {
 
   return (
     <>
-      {/* Fixný button v ľavom dolnom rohu */}
       <button
         className="cookie-settings-button"
         onClick={() => setModalOpen(true)}
         aria-label="Nastavenia cookies"
       >
-        🍪
+        <FontAwesomeIcon icon={faCookieBite} />
       </button>
 
-      {/* Modal sa zobrazí buď automaticky po oneskorení, alebo po kliknutí */}
       {modalOpen && (
         <CookieModal onClose={() => setModalOpen(false)} />
       )}

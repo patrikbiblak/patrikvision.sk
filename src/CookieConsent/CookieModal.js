@@ -16,7 +16,7 @@ const CookieModal = ({ onClose }) => {
   return (
     <div className="cookie-modal-overlay">
       <div className="cookie-modal">
-        <h2>Nastavenia cookies</h2>
+        <h2>🍪 Cookie. Cookie.</h2>
         <p>
           Tento web používa cookies na zlepšenie funkčnosti a analytiku. 
           Môžete si vybrať, či s ich používaním súhlasíte.
