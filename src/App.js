@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useVersionChecker from "./hooks/useVersionChecker";
 import AboutPage from "./pages/AboutPage";
@@ -7,30 +6,17 @@ import ProjectsNone from "./pages/ProjectsNone";
 import ContactPage from "./pages/ContactPage";
 import NavigationBar from "./components/Navigation";
 import Footer from "./components/Footer";
-import ContactModal from "./hooks/ContactModal";
 import PrivacyPolicy from "./components/PrivacyPolicy";
+import CookieSettings from "./CookieConsent/CookieSettings";
 
 const App = () => {
   useVersionChecker();
-
-  if ('scrollRestoration' in window.history) {
-    window.history.scrollRestoration = 'manual';
-  }
-
-  const [modalOpen, setModalOpen] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setModalOpen(true);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <Router>
       <div className="content">
         <NavigationBar />
+        <CookieSettings />
         <main>
           <Routes>
             <Route path="/" element={<HomePage />}/>
@@ -40,7 +26,6 @@ const App = () => {
             <Route path="/gdpr" element={<PrivacyPolicy />}/>
           </Routes>
         </main>
-        <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         <Footer />
       </div>
     </Router>

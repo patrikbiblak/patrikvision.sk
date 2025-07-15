@@ -1,0 +1,93 @@
+.cookie-settings-button {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #ccc;
+  color: #fff;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 505px;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background 0.2s ease-in-out;
+}
+
+.cookie-settings-button:hover {
+  background-color: #bbb;
+}
+
+.cookie-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.cookie-modal {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 480px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  position: relative;
+  text-align: center;
+}
+
+.cookie-modal__actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  border: none;
+}
+
+.btn--primary {
+  background-color: #0070f3;
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background-color: #0059c1;
+}
+
+.btn--secondary {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.btn--secondary:hover {
+  background-color: #e0e0e0;
+}
+
+.cookie-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #888;
+}
