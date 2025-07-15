@@ -218,3 +218,15 @@
     padding: 1rem; 
   } 
 }
+
+@media (max-width: 500px) {
+  .cookie-modal__actions {
+    flex-wrap: wrap;
+    margin: 2rem auto;
+    gap: 1.2rem;
+  }
+
+  .cookie-modal__actions > .btn {
+    margin: 0;
+  }
+}
