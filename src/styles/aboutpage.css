@@ -42,7 +42,7 @@
 }
 
 .about-page .hashtags {
-    color: var(--global-color);
+    color: var(--brand-color);
 }
 
 .aboutme-text-row .aboutme-text-item h3 a {
