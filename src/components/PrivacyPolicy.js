@@ -1,7 +1,6 @@
-import '../styles/privacypolicy.css'
+import '../styles/privacypolicy.css';
 
 const PrivacyPolicy = () => {
-  // Funkcia na otvorenie modal okna pre cookie nastavenia cez tlačidlo na stránke
   const openCookieSettingsModal = () => {
     const btn = document.querySelector('.cookie-settings-button');
     if (btn) btn.click();
@@ -10,107 +9,76 @@ const PrivacyPolicy = () => {
   return (
     <div className="privacy-policy container">
       <h1>Zásady ochrany osobných údajov a súborov cookie</h1>
-      <p className="effective-date">
-        <strong>Dátum účinnosti:</strong> 13. júla 2025
-      </p>
+      <p><strong>Dátum účinnosti:</strong> 13. júla 2025</p>
 
       <article>
-        <h2>Úvod</h2>
+        <h2>Prevádzkovateľ a spracovatelia</h2>
         <p>
-          Webová stránka <strong>PatrikVision</strong> rešpektuje vaše právo na ochranu súkromia.
-          Tieto zásady vysvetľujú, aké údaje zhromažďujeme, ako ich používame a aké máte práva.
+          Prevádzkovateľ: PatrikVision (Man Revolution s.r.o.), IČO: 12345678, 
+          email: info@patrikvision.sk.  
+          Spracovatelia: Vercel (hosting), Netlify (CDN), Google (Analytika), Meta (Pixel), 
+          SendGrid (email marketing).
         </p>
       </article>
 
       <article>
         <h2>Aké údaje zhromažďujeme</h2>
         <ul>
-          <li><strong>Kontaktné údaje</strong> – meno, e-mail, správa</li>
-          <li><strong>Technické údaje</strong> – IP adresa, prehliadač, zariadenie (Google Analytics)</li>
-          <li><strong>Údaje o interakcii</strong> – anonymné štatistiky a marketingové dáta (Meta Pixel)</li>
+          <li><strong>Kontaktné údaje</strong> – meno, e‑mail, správy z formulára.</li>
+          <li><strong>Technické údaje</strong> – IP, typ prehliadača, zariadenie (Google Analytics).</li>
+          <li><strong>Interakčné údaje</strong> – anonymné štatistiky, marketingové dáta (Meta Pixel).</li>
         </ul>
       </article>
 
       <article>
-        <h2>Účel spracovania údajov</h2>
+        <h2>Právny základ a účel spracovania</h2>
         <ul>
-          <li>odpovedanie na správy cez formulár</li>
-          <li>zlepšovanie funkčnosti a obsahu stránky</li>
-          <li>marketingové a analytické účely (Meta Pixel, Google Analytics)</li>
+          <li><strong>Súhlas</strong> – marketingové a analytické nástroje.</li>
+          <li><strong>Oprávnený záujem</strong> – zlepšovanie webu a prevádzková štatistika.</li>
+          <li><strong>Zmluvný vzťah</strong> – poskytovanie objednaných služieb.</li>
         </ul>
       </article>
 
       <article>
-        <h2>Právny základ spracovania</h2>
+        <h2>Doba uchovávania</h2>
         <ul>
-          <li>váš <strong>súhlas</strong></li>
-          <li><strong>oprávnený záujem</strong> (analýza návštevnosti)</li>
-          <li><strong>zmluvný vzťah</strong> (pri objednávke služieb)</li>
+          <li>Google Analytics: 14 mesiacov</li>
+          <li>Meta Pixel: 180 dní</li>
+          <li>Kontaktné formuláre: do vymazania používateľom alebo 3 roky</li>
         </ul>
       </article>
 
       <article>
-        <h2>S kým údaje zdieľame</h2>
-        <ul>
-          <li>
-            <strong>Meta (Facebook)</strong> – marketingové účely (
-            <a href="https://www.facebook.com/policy.php" target="_blank" rel="noopener noreferrer">
-              Zásady Facebooku
-            </a>
-            )
-          </li>
-          <li>
-            <strong>Google</strong> - analytické účely (
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-              Zásady Google
-            </a>
-            )
-          </li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Súbory cookie</h2>
+        <h2>Prenosy do tretích krajín</h2>
         <p>
-          Táto stránka používa súbory cookie na zlepšenie používateľského zážitku,
-          analytiku a marketing.
+          Údaje neprevádzajú do krajín mimo EÚ alebo EHP. Ak by k prenosu došlo, zabezpečíme 
+          štandardné zmluvné doložky EÚ.
         </p>
-        <ul>
-          <li><strong>Nevyhnutné cookies</strong> – základné fungovanie stránky</li>
-          <li><strong>Štatistické cookies</strong> – štatistiky návštevnosti (Google Analytics)</li>
-          <li><strong>Marketingové cookies</strong> – personalizovaná reklama (Meta Pixel)</li>
-        </ul>
-        <p>
-          Pri prvej návšteve vás požiadame o súhlas. Granulárne nastavenia cookies
-          zmeníte kliknutím na ikonu koláčika v ľavom dolnom rohu stránky.
-          Môžete tu samostatne zapínať alebo vypínať „Štatistické“ a „Marketingové“ cookies.
-        </p>
-        <button className="link-button" onClick={openCookieSettingsModal}>
-          Upraviť nastavenia cookie
-        </button>
       </article>
 
       <article>
-        <h2>Vaše práva podľa GDPR</h2>
+        <h2>Automatizované rozhodovanie a profilovanie</h2>
+        <p>
+          Nevykonávame žiadne automatizované rozhodovanie ani profilovanie, ktoré by malo 
+          právne účinky na dotknuté osoby.
+        </p>
+      </article>
+
+      <article>
+        <h2>ráva dotknutých osôb</h2>
         <ul>
-          <li>právo na prístup k údajom</li>
-          <li>právo na opravu</li>
-          <li>právo na výmaz („byť zabudnutý“)</li>
-          <li>právo na obmedzenie spracovania</li>
-          <li>právo namietať</li>
-          <li>
-            právo podať sťažnosť - <a href="https://dataprotection.gov.sk" target="_blank" rel="noopener noreferrer">
-              Úrad na ochranu osobných údajov
-            </a>
-          </li>
+          <li>Právo na prístup, opravu, vymazanie („byť zabudnutý“), obmedzenie spracovania.</li>
+          <li>Právo namietať proti spracovaniu.</li>
+          <li>Právo na prenositeľnosť údajov.</li>
+          <li>Právo odvolať súhlas kedykoľvek (<button onClick={openCookieSettingsModal}>Zmeniť nastavenia cookies</button>).</li>
+          <li>Právo podať sťažnosť Úradu na ochranu osobných údajov (<a href="https://dataprotection.gov.sk" target="_blank" rel="noopener noreferrer">link</a>).</li>
         </ul>
       </article>
 
       <article>
         <h2>Kontakt</h2>
         <p>
-          Ak máte otázky ohľadom ochrany údajov, kontaktujte nás cez kontaktný
-          formulár na stránke <strong>PatrikVision</strong>.
+          V prípade otázok píšte na info@patrikvision.sk alebo použite <a href="/contact">kontaktný formulár</a>.
         </p>
       </article>
     </div>
