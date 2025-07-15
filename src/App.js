@@ -8,6 +8,7 @@ import ContactPage from "./pages/ContactPage";
 import NavigationBar from "./components/Navigation";
 import Footer from "./components/Footer";
 import ContactModal from "./hooks/ContactModal";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 const App = () => {
   useVersionChecker();
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/about" element={<AboutPage />}/>
             <Route path="/projects" element={<ProjectsNone />}/>
             <Route path="/contact" element={<ContactPage />}/>
+            <Route path="/gdpr" element={<PrivacyPolicy />}/>
           </Routes>
         </main>
         <ContactModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />

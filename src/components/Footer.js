@@ -72,7 +72,9 @@ const Footer = () => {
         </div>
 
         <div className="global-footer">
-            <p>Zásady používania osobných údajov a súborov cookie</p>
+            <p>
+                <a href='/gdpr'>Zásady používania osobných údajov a súborov cookie</a>
+            </p>
             <p>© {new Date().getFullYear()} PatrikVision. Všetky práva vyhradené.</p>
         </div>
     </footer>
