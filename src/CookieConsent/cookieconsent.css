@@ -1,141 +1,209 @@
-@keyframes blowUp {
-  from { opacity: 0; transform: scale(0.8); }
-  to   { opacity: 1; transform: scale(1); }
+@keyframes slideUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
+@keyframes blowOut { from { opacity: 1; transform: scale(1);} to { opacity: 0; transform: scale(0.8);} }
+@keyframes fadeInOverlay { from { background-color: rgba(0,0,0,0);} to { background-color: rgba(0,0,0,0.6);} }
+@keyframes fadeOutOverlay { from { background-color: rgba(0,0,0,0.6);} to { background-color: rgba(0,0,0,0);} }
+
+.cookie-modal-overlay { 
+  animation: fadeInOverlay 0.3s ease forwards; 
+  position: fixed; 
+  inset: 0; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  z-index: 9999; 
 }
 
-@keyframes blowOut {
-  from { opacity: 1; transform: scale(1); }
-  to   { opacity: 0; transform: scale(0.8); }
+.cookie-modal-overlay.closing { 
+  animation: fadeOutOverlay 0.2s ease-in forwards; 
 }
 
-@keyframes fadeOutOverlay {
-  from { background-color: rgba(0,0,0,0.6); }
-  to   { background-color: rgba(0,0,0,0); }
-}
-
-.cookie-modal.closing {
-  animation: blowOut 0.2s ease-in forwards;
-}
-
-.cookie-modal-overlay.closing {
-  animation: fadeOutOverlay 0.2s ease-in forwards;
-}
-
-
-.cookie-settings-button {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  color: #000000;
-  font-size: 1.6rem;
-  border: none;
-  border-radius: 505px;
-  width: 48px;
-  height: 48px;
-  cursor: pointer;
-  z-index: 9999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: background 0.2s ease-in-out;
-}
-
-.cookie-settings-button:hover {
-  background-color: #bbb;
-}
-
-.cookie-modal-overlay {
-  background-color: rgba(0,0,0,0.6);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  animation: fadeInOverlay 0.3s ease forwards;
-}
-
-.cookie-modal {
+.cookie-modal { 
   background-color: var(--bg-primary);
+  color: #fff; 
   border: 1px solid var(--border-default);
-  color: white;
-  padding: 1.4rem;
-  border-radius: 0.5rem;
-  max-width: 850px;
-  width: 100%;
-  position: relative;
-  animation: blowUp 0.3s ease-out forwards;
+  border-radius: var(--border-radius);
+  padding: 1.5rem; max-width: 800px; 
+  width: 90%; position: relative; 
+  animation: slideUp 0.3s ease-out forwards; 
 }
 
-.cookie-modal__actions {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
+.cookie-modal.closing { 
+  animation: blowOut 0.2s ease-in forwards; 
 }
 
-.btn {
-  padding: 0.6rem 1.4rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background-color 0.2s ease-in-out;
-  border: none;
+.cookie-modal__close { 
+  position: absolute; 
+  top: 0.8rem; 
+  right: 0.8rem; 
+  background: transparent; 
+  border: none; 
+  font-size: 1.5rem; 
+  cursor: pointer; 
+  color: #fff; 
 }
 
-.btn--primary {
-  background-color: var(--global-color);
-  color: #000000;
+.cookie-modal__categories { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 1rem; 
+  margin-top: 1rem; 
 }
 
-.btn--primary:hover {
-  background-color: #a1e1ff;
+.category { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
 }
 
-.btn--secondary {
-  background-color: #ffffff;
-  color: #000000;
+.category__info { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 0.25rem; 
 }
 
-.btn--secondary:hover {
-  background-color: #dcdcdc;
+.category__info strong { 
+  font-size: 1rem; 
 }
 
-.cookie-modal__close {
-  position: absolute;
-  top: 0;
+.category__info small { 
+  font-size: 0.85rem; 
+  color: #ccc; 
+}
+
+.switch { 
+  position: relative; 
+  display: inline-block; 
+  width: 44px; 
+  height: 24px; 
+}
+
+.switch input { 
+  position: absolute; 
+  opacity: 0; 
+  width: 0; 
+  height: 0; 
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+}
+
+.slider { 
+  position: absolute; 
+  cursor: pointer; 
+  top: 0; left: 0; 
   right: 0;
-  background: transparent;
-  display: inline-block;
-  pointer-events: auto;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
-  padding: 0;
-  z-index: 10;
+  bottom: 0; 
+  background-color: #ccc; 
+  transition: 0.4s; 
+  border-radius: 34px; 
 }
 
-@media (max-width: 768px) {
-  .cookie-modal-close {
-    width: inherit;
-  }
-
-  .cookie-modal {
-    width: auto;
-    padding: 1rem;
-    margin: 0;
-  }
+.slider:before { 
+  position: absolute; 
+  content: ""; 
+  height: 18px; 
+  width: 18px; 
+  left: 3px; 
+  bottom: 3px; 
+  background-color: #fff; 
+  transition: 0.4s; 
+  border-radius: 50%; 
 }
 
-@media (max-width: 480px) {
-  .cookie-modal {
-    max-width: 85vw;
-  }
+.switch input:checked + .slider { 
+  background-color: var(--brand-color); 
+}
+
+.switch input:focus + .slider { 
+  box-shadow: 0 0 1px var(--brand-color); 
+}
+
+.switch input:checked + .slider:before { 
+  transform: translateX(20px); 
+}
+
+.switch input[disabled] + .slider { 
+  opacity: 0.5; 
+  cursor: not-allowed; 
+}
+
+.cookie-modal__actions { 
+  display: flex; 
+  justify-content: flex-end; 
+  gap: 1rem; 
+  margin-top: 1.5rem; 
+}
+
+.btn { 
+  padding: 0.6rem 1.4rem; 
+  border: none; 
+  border-radius: var(--border-radius); 
+  font-weight: 600; 
+  font-size: 0.95rem; 
+  cursor: pointer; 
+  transition: background-color 0.2s ease; 
+}
+
+.btn--primary { 
+  background-color: var(--brand-color); 
+  color: #000; 
+}
+
+.btn--primary:hover, .btn--primary:focus { 
+  background-color: #00d0ff; 
+}
+
+.btn--secondary { 
+  background-color: #333; 
+  color: #fff; 
+}
+
+.btn--secondary:hover, .btn--secondary:focus { 
+  background-color: #444; 
+}
+
+.cookie-modal__footer { 
+  margin-top: 1rem; 
+  text-align: center; 
+}
+
+.cookie-modal__link { 
+  color: var(--brand-color); 
+  text-decoration: underline; 
+  font-size: 0.9rem; 
+}
+
+.cookie-modal__link:hover, .cookie-modal__link:focus { 
+  text-decoration: none; 
+}
+
+.cookie-settings-button { 
+  position: fixed; 
+  bottom: 1rem; 
+  left: 1rem; 
+  background-color: #fff; 
+  color: #000; 
+  font-size: 1.6rem; 
+  border: none; 
+  border-radius: 50%; 
+  width: 48px; 
+  height: 48px; 
+  cursor: pointer; 
+  z-index: 9999; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  box-shadow: var(--shadow-default); 
+  transition: background-color 0.2s;
+}
+
+.cookie-settings-button:hover, .cookie-settings-button:focus { 
+  background-color: #eee; 
+}
+
+@media (max-width: 768px) { 
+  .cookie-modal { 
+    width: 95%; 
+    padding: 1rem; 
+  } 
 }

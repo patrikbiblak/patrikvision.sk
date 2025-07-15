@@ -1,10 +1,9 @@
-// src/components/CookieConsent/CookieSettings.jsx
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import CookieModal from './CookieModal';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCookieBite } from '@fortawesome/free-solid-svg-icons'
-import './cookieconsent.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
+import './cookieconsent.css'; // Uistite sa, že importujete aj tu aj v CookieModal.js
 
 const INITIAL_OPEN_DELAY = 3000;
 
@@ -12,24 +11,19 @@ const CookieSettings = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
-    const consent = Cookies.get('cookie_consent');
+    const prefs = Cookies.get('cookie_prefs');
 
-    if (consent === 'true') {
-      // Ak už používateľ súhlasil, načítaj analytiku ihneď
-      loadAnalyticsScripts();
-    } else if (!consent) {
-      // Ak ešte nemá nastavené cookies, otvor modal po oneskorení
-      const timer = setTimeout(() => {
-        setModalOpen(true);
-      }, INITIAL_OPEN_DELAY);
-
+    if (prefs) {
+      const { statistics } = JSON.parse(prefs);
+      if (statistics) loadAnalyticsScripts();
+    } else {
+      const timer = setTimeout(() => setModalOpen(true), INITIAL_OPEN_DELAY);
       return () => clearTimeout(timer);
     }
   }, []);
 
   const loadAnalyticsScripts = () => {
     const GA_ID = 'G-ABC123DEF4';
-
     const script = document.createElement('script');
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
     script.async = true;
@@ -47,12 +41,13 @@ const CookieSettings = () => {
         className="cookie-settings-button"
         onClick={() => setModalOpen(true)}
         aria-label="Nastavenia cookies"
+        aria-haspopup="dialog"
       >
         <FontAwesomeIcon icon={faCookieBite} />
       </button>
 
       {modalOpen && (
-        <CookieModal onClose={() => setModalOpen(false)} />
+        <CookieModal onClose={() => setModalOpen(false)} loadAnalytics={loadAnalyticsScripts} />
       )}
     </>
   );

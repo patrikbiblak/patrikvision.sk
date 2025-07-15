@@ -11,11 +11,12 @@
 
   /* Borders */
   --border-default: #404040;
+  --border-radius: 1rem;
 
   /* Box shadow */
   --box-shadow: rgba(255, 255, 255, 0.12) 0px 4px 16px;
 
-  --global-color: #89CFF0;
+  --brand-color: #89CFF0;
   --foreground: 0, 0%, 100%;
   --muted-foreground: 0, 0%, 80%;
 }
