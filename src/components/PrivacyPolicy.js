@@ -65,7 +65,7 @@ const PrivacyPolicy = () => {
       </article>
 
       <article>
-        <h2>ráva dotknutých osôb</h2>
+        <h2>Práva dotknutých osôb</h2>
         <ul>
           <li>Právo na prístup, opravu, vymazanie („byť zabudnutý“), obmedzenie spracovania.</li>
           <li>Právo namietať proti spracovaniu.</li>
