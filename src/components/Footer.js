@@ -71,8 +71,10 @@ const Footer = () => {
             </div>
         </div>
 
-        <p>© {new Date().getFullYear()} PatrikVision. Všetky práva vyhradené.</p>
-        <p>Zásady používania osobných údajov a súborov cookie</p>
+        <div className="global-footer">
+            <p>Zásady používania osobných údajov a súborov cookie</p>
+            <p>© {new Date().getFullYear()} PatrikVision. Všetky práva vyhradené.</p>
+        </div>
     </footer>
 
   );
