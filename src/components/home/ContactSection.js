@@ -18,10 +18,27 @@ const ContactSection = () => {
     message: '',
   });
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-  };
+const [status, setStatus] = useState('idle');
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setStatus('sending');
+
+  try {
+    const res = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+    if (!res.ok) throw new Error(`Server error: ${res.status}`);
+    setStatus('success');
+    setFormData({ name: '', email: '', message: '' });
+  } catch (err) {
+    console.error(err);
+    setStatus('error');
+  }
+};
 
   const handleChange = (e) => {
     setFormData({
@@ -77,7 +94,12 @@ const ContactSection = () => {
                 required
               />
 
-              <button type="submit">Odoslať</button>
+              <button type="submit" disabled={status === 'sending'}>
+                {status === 'sending' ? 'Odosielam…' : 'Odoslať'}
+              </button>
+
+              {status === 'success' && <p className="success">Správa odoslaná! Ďakujem.</p>}
+              {status === 'error'   && <p className="error">Chyba pri odoslaní. Skús neskôr.</p>}
             </form>
           </div>
 
