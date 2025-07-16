@@ -18,7 +18,9 @@
 }
 
 .cookie-modal { 
-  background-color: var(--bg-primary);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background-color: var(--blur-bg);
   color: #fff; 
   border: 1px solid var(--border-default);
   border-radius: var(--border-radius);
