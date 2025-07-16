@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import CookieModal from './CookieModal';
+import CookieBanner from './CookieBanner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
 import './cookieconsent.css';
 
-const INITIAL_OPEN_DELAY = 3000;
-
 const CookieSettings = () => {
   const [modalOpen, setModalOpen] = useState(false);
+  const [bannerOpen, setBannerOpen] = useState(false);
 
+  // Zobraz banner po 200ms, ak ešte nie sú uložené preferencie
   useEffect(() => {
     const prefs = Cookies.get('cookie_prefs');
-    if (prefs) {
-      const { statistics, marketing } = JSON.parse(prefs);
-      if (statistics) loadAnalyticsScripts();
-      if (marketing)  loadMarketingScripts();
-    } else {
-      const timer = setTimeout(() => setModalOpen(true), INITIAL_OPEN_DELAY);
+    if (!prefs) {
+      const timer = setTimeout(() => setBannerOpen(true), 200);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -25,10 +22,9 @@ const CookieSettings = () => {
   const loadAnalyticsScripts = () => {
     const GA_ID = 'G-ABC123DEF4';
     const s1 = document.createElement('script');
-    s1.src   = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+    s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
     s1.async = true;
     document.head.appendChild(s1);
-
     window.dataLayer = window.dataLayer || [];
     function gtag(){ window.dataLayer.push(arguments); }
     gtag('js', new Date());
@@ -36,13 +32,6 @@ const CookieSettings = () => {
   };
 
   const loadMarketingScripts = () => {
-    /*  
-      Tu vložte kód pre Meta Pixel (alebo iné marketingové skripty), 
-      napr.:
-        !function(f,b,e,v,n,t,s){
-          // štandardný Pixel kód 
-        }(...);
-    */
     const s = document.createElement('script');
     s.innerHTML = `
       !function(f,b,e,v,n,t,s){
@@ -62,8 +51,22 @@ const CookieSettings = () => {
     document.head.appendChild(s);
   };
 
+  const handleAcceptAll = () => {
+    const allPrefs = { necessary: true, statistics: true, marketing: true };
+    Cookies.set('cookie_prefs', JSON.stringify(allPrefs), { expires: 365 });
+    loadAnalyticsScripts();
+    loadMarketingScripts();
+    setBannerOpen(false);
+  };
+
+  const handleMoreInfo = () => {
+    setBannerOpen(false);
+    setModalOpen(true);
+  };
+
   return (
     <>
+      {/* Tlačidlo pre ručné otváranie modalu */}
       <button
         className="cookie-settings-button"
         onClick={() => setModalOpen(true)}
@@ -73,6 +76,15 @@ const CookieSettings = () => {
         <FontAwesomeIcon icon={faCookieBite} />
       </button>
 
+      {/* Malý banner v spodnej časti */}
+      {bannerOpen && (
+        <CookieBanner
+          onAcceptAll={handleAcceptAll}
+          onMoreInfo={handleMoreInfo}
+        />
+      )}
+
+      {/* Veľký detailný modal */}
       {modalOpen && (
         <CookieModal
           onClose={() => setModalOpen(false)}

@@ -14,12 +14,11 @@ const CookieModal = ({ onClose, loadAnalytics, loadMarketing }) => {
   const [prefs, setPrefs] = useState({ necessary: true, statistics: false, marketing: false });
   const [isClosing, setIsClosing] = useState(false);
 
-  // Načítanie existujúcich preferencií
   useEffect(() => {
     const saved = Cookies.get('cookie_prefs');
     if (saved) {
       try { setPrefs(JSON.parse(saved)); }
-      catch { /* ignoruj */ }
+      catch { /* ignor */ }
     }
   }, []);
 
