@@ -12,6 +12,7 @@
 
 .hero-section p {
   margin-bottom: 4rem;
+  font-size: 1.2rem;
 }
 
 .hero-section a {
@@ -30,42 +31,8 @@
   transform: translateY(0);
 }
 
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 4rem;
-}
-
-.hero-btn {
-  border: 1px solid var(--border-default);
-  padding: 0.5rem 1.5rem;
-  border-radius: 0.3rem;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-  display: inline-block;
-}
-
-.hero-btn:hover {
-  background-color: #1a1a1a;
-}
-
 @media (max-width: 768px) {
   .hero-section {
     padding: 3rem 1.5rem;
-  }
-
-   .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 0 auto;
-  }
-
-  .hero-btn {
-    width: 70%;
-    max-width: 18rem;
   }
 }

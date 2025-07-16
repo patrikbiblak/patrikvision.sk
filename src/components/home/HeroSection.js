@@ -1,7 +1,6 @@
-import { Link } from "react-router-dom";
 import { useRef } from 'react';
-import "../../styles/herosection.css";
 import ScrollAnimation from "../../hooks/ScrollAnimation";
+import "../../styles/herosection.css";
 
 const HeroSection = () => {
     const ref = useRef(null);
@@ -11,14 +10,13 @@ const HeroSection = () => {
         <section className="hero-section">
             <div className="container hero-content" ref={ref}> 
                 
-                    <h1>Patrik<span>Vision</span></h1>
+                    <h1>Design. <span>Build. </span>Evolve.</h1>
 
                     <p>Pretváram nápady na moderné a kreatívne webové stránky, ktoré vyniknú v digitálnom svete. Vytvorme spolu online zážitok, ktorý zaujme podľa vašich predstáv.</p>
+            </div>
 
-                    <div className="hero-buttons">
-                        <Link to="/projects" className="hero-btn">Projekty</Link>
-                        <Link to="/contact" className="hero-btn">Kontakt</Link>
-                    </div>
+            <div className="arrow-container">
+                <div className='arrow'></div>
             </div>
         </section>
     )
