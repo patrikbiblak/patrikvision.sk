@@ -1,8 +1,10 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import "../styles/contactpage.css";
 
 const ContactPage = () => {
+    const formRef = useRef();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -12,25 +14,26 @@ const ContactPage = () => {
 
 const [status, setStatus] = useState('idle');
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
-  setStatus('sending');
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setStatus('sending')
 
-  try {
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData),
-    });
-
-    if (!res.ok) throw new Error(`Server error: ${res.status}`);
-    setStatus('success');
-    setFormData({ name: '', email: '', message: '' });
-  } catch (err) {
-    console.error(err);
-    setStatus('error');
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        formRef.current,
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      )
+      .then(() => {
+        setStatus('success')
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((err) => {
+        console.error(err)
+        setStatus('error')
+      })
   }
-};
 
   const handleChange = (e) => {
     setFormData({
@@ -54,7 +57,7 @@ const handleSubmit = async (e) => {
         <div className="contactpage-content">
           <div className="contactpage-box">
             <h3>Pošli správu</h3>
-            <form onSubmit={handleSubmit}>
+            <form ref={formRef} onSubmit={handleSubmit}>
               <label htmlFor="name">Meno</label>
               <input
                 id="name"
