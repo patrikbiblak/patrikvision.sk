@@ -82,7 +82,8 @@
   position: relative; 
   display: inline-block; 
   width: 44px; 
-  height: 24px; 
+  height: 24px;
+  flex: 0 0 auto;
 }
 
 .switch input { 
