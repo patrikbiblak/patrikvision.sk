@@ -258,19 +258,19 @@
   gap: 1rem;
 }
 
+.cookie-banner__actions button {
+  margin-bottom: 0.4rem;
+}
+
 @media (max-width: 480px) {
-  .cookie-banner__actions {
-    font-size: 0.8rem;
-  }
-  
   .cookie-banner__actions button {
-    margin: 1rem auto;
+    margin: 0.8rem auto;
     width: fit-content;
   }
 }
 
 @media (max-width: 352px) {
   .cookie-banner__actions button {
-    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
   }
 }
