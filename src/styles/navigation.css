@@ -4,9 +4,7 @@
   left: 0;
   right: 0;
   z-index: 50;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  background-color: var(--blur-bg);
+  background-color: rgba(0, 0, 0, 0.8);
   box-shadow: var(--box-shadow);
   border-bottom: 1px solid var(--border-default);
 }
@@ -127,9 +125,7 @@
     align-items: center;
     gap: 1.5rem;
     border-bottom: 1px solid var(--border-default);
-    background-color: var(--bg-primary);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.8);
     opacity: 0;
     pointer-events: none;
     width: 75vw;
