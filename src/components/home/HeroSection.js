@@ -15,9 +15,7 @@ const HeroSection = () => {
                     <p>Pretváram nápady na moderné a kreatívne webové stránky, ktoré vyniknú v digitálnom svete. Vytvorme spolu online zážitok, ktorý zaujme podľa vašich predstáv.</p>
             </div>
 
-            <div className="arrow-container">
-                <div className='arrow'></div>
-            </div>
+            <div className='arrow-icon'>&darr;</div>
         </section>
     )
 }
