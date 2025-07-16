@@ -67,7 +67,11 @@ const CookieSettings = () => {
     <>
       <button
         className="cookie-settings-button"
-        onClick={() => setModalOpen(true)}
+        onClick={() => {
+          setModalOpen(true);
+          setBannerOpen(false);
+        }
+        }
         aria-label="Nastavenia cookies"
         aria-haspopup="dialog"
       >
