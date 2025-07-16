@@ -13,7 +13,7 @@ const CookieSettings = () => {
   useEffect(() => {
     const prefs = Cookies.get('cookie_prefs');
     if (!prefs) {
-      const timer = setTimeout(() => setBannerOpen(true), 1000);
+      const timer = setTimeout(() => setBannerOpen(true), 3000);
       return () => clearTimeout(timer);
     }
   }, []);
