@@ -10,11 +10,10 @@ const CookieSettings = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [bannerOpen, setBannerOpen] = useState(false);
 
-  // Zobraz banner po 200ms, ak ešte nie sú uložené preferencie
   useEffect(() => {
     const prefs = Cookies.get('cookie_prefs');
     if (!prefs) {
-      const timer = setTimeout(() => setBannerOpen(true), 200);
+      const timer = setTimeout(() => setBannerOpen(true), 1000);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -66,7 +65,6 @@ const CookieSettings = () => {
 
   return (
     <>
-      {/* Tlačidlo pre ručné otváranie modalu */}
       <button
         className="cookie-settings-button"
         onClick={() => setModalOpen(true)}
@@ -76,7 +74,6 @@ const CookieSettings = () => {
         <FontAwesomeIcon icon={faCookieBite} />
       </button>
 
-      {/* Malý banner v spodnej časti */}
       {bannerOpen && (
         <CookieBanner
           onAcceptAll={handleAcceptAll}
@@ -84,7 +81,6 @@ const CookieSettings = () => {
         />
       )}
 
-      {/* Veľký detailný modal */}
       {modalOpen && (
         <CookieModal
           onClose={() => setModalOpen(false)}

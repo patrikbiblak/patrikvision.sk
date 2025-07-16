@@ -52,7 +52,7 @@ const CookieModal = ({ onClose, loadAnalytics, loadMarketing }) => {
           ✕
         </button>
 
-        <h2 id='cookie-modal-title'>🍪 Cookie. Cookie.</h2>
+        <h2 id='cookie-modal-title'>Cookie. Cookie.</h2>
         <p id='cookie-modal-desc'>Pomáhame webu fungovať rýchlejšie a poskytovať relevantný obsah. Vyberte, ktoré cookies povolíte.</p>
 
         <form className="cookie-modal__categories">
