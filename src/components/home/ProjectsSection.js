@@ -27,11 +27,11 @@ const ProjectsSection = () => {
         setTimeout(() => {
           entry.target.classList.add('visible');
           obs.unobserve(entry.target);
-        }, idx * 150);
+        }, idx * 300);
       });
     }, {
       root: null,
-      threshold: 0.1,
+      threshold: 0.6,
     });
 
     cards.forEach(card => observer.observe(card));
