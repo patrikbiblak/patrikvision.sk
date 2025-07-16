@@ -58,18 +58,18 @@ const [status, setStatus] = useState('idle');
           <div className="contactpage-box">
             <h3>Pošli správu</h3>
             <form ref={formRef} onSubmit={handleSubmit}>
-              <label htmlFor="name">Meno</label>
+              <label htmlFor="page-name">Meno</label>
               <input
-                id="name"
+                id="page-name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
               />
 
-              <label htmlFor="email">Email</label>
+              <label htmlFor="page-email">Email</label>
               <input
-                id="email"
+                id="page-email"
                 name="email"
                 type="email"
                 value={formData.email}
@@ -77,9 +77,9 @@ const [status, setStatus] = useState('idle');
                 required
               />
 
-              <label htmlFor="message">Správa</label>
+              <label htmlFor="page-message">Správa</label>
               <textarea
-                id="message"
+                id="page-message"
                 name="message"
                 rows={5}
                 value={formData.message}
