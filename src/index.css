@@ -239,3 +239,9 @@ input:focus {
     height: 2rem;
   }
 }
+
+@media (max-width: 284px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+}

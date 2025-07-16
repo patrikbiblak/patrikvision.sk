@@ -1,18 +1,7 @@
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .hero-content {
   max-width: 900px;
   margin: 0 auto;
-}
-
-.hero-section h1 {
-  letter-spacing: 4px;
+  text-align: center;  
 }
 
 .hero-section span {
