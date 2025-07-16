@@ -52,11 +52,21 @@
 }
 
 .arrow-icon {
+  opacity: 0;
   position: absolute;
   bottom: 4rem;
   font-size: 3.6rem;
   color: #fff;
   animation: bounce 2s infinite;
+
+  transform: translateY(40px);
+  transition: opacity 2s ease, transform 2s ease;
+  transition-delay: 1.5s;
+}
+
+.arrow-icon.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (max-width: 768px) {

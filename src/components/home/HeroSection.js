@@ -4,6 +4,9 @@ import "../../styles/herosection.css";
 
 const HeroSection = () => {
     const ref = useRef(null);
+    const arrowRef = useRef(null);
+
+    ScrollAnimation(arrowRef, { immediate: true });
     ScrollAnimation(ref, { immediate: true });
 
     return (
@@ -15,7 +18,7 @@ const HeroSection = () => {
                     <p>Pretváram nápady na moderné a kreatívne webové stránky, ktoré vyniknú v digitálnom svete. Vytvorme spolu online zážitok, ktorý zaujme podľa vašich predstáv.</p>
             </div>
 
-            <div className='arrow-icon'>&darr;</div>
+            <div className='arrow-icon' ref={arrowRef}>&darr;</div>
         </section>
     )
 }
