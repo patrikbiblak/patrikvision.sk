@@ -49,7 +49,8 @@
 }
 
 .navigation-link:hover,
-.navigation-link:active {
+.navigation-link:active,
+.navigation-link:focus {
   color: var(--brand-color);
 }
 
@@ -150,13 +151,6 @@
   .navigation-link {
     font-size: 1.2rem;
     font-weight: 600;
-    color: var(--muted-foreground);
     width: fit-content;
-  }
-
-  .navigation-links .navigation-link:hover,
-  .navigation-links .navigation-link:active {
-    color: var(--text-secondary);
-    background-image: none;
   }
 }
