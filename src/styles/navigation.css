@@ -54,6 +54,10 @@
   color: var(--brand-color);
 }
 
+.navigation-link[aria-current="page"] {
+  color: var(--brand-color);
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
