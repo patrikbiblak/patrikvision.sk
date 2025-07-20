@@ -28,7 +28,7 @@ const Footer = () => {
                 <ul>
                     <li>
                     <a
-                        href="https://www.instagram.com/patrikvision.sk"
+                        href="https://www.instagram.com/bpaatrik/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
