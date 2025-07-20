@@ -69,11 +69,11 @@ const Navigation = () => {
             ))}
           </ul>
 
-          <div className="language-buttons">
+          {/* <div className="language-buttons">
             <button className="lang-en" aria-label="Switch to English">EN</button>
               <span>|</span>
             <button className="lang-sk" aria-label="Switch to Slovak">SK</button>
-          </div>
+          </div> */}
         </nav>
       </div>
     </header>
