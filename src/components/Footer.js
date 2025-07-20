@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaInstagram, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { useRef } from 'react';
 import ScrollAnimation from '../hooks/ScrollAnimation';
@@ -35,7 +35,7 @@ const Footer = () => {
                         <FaInstagram /> Instagram
                     </a>
                     </li>
-                    <li>
+                    {/* <li>
                     <a
                         href="https://www.linkedin.com/in/patrikbiblak"
                         target="_blank"
@@ -43,7 +43,7 @@ const Footer = () => {
                     >
                         <FaLinkedin /> LinkedIn
                     </a>
-                    </li>
+                    </li> */}
                     <li>
                     <a href="mailto:contact@patrikvision.sk">
                         <MdEmail /> Email
