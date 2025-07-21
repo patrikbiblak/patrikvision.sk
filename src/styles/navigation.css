@@ -51,7 +51,7 @@
 .navigation-link:hover,
 .navigation-link:active,
 .navigation-link:focus {
-  color: var(--brand-color);
+  color: var(--text-secondary);
 }
 
 .navigation-link[aria-current="page"] {
