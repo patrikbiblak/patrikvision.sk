@@ -12,7 +12,7 @@
 
 .project-card {
   aspect-ratio: 8 / 4;
-  width: 100%;
+  width: 85vw;
   opacity: 0;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
   background-color: var(--bg-card);
@@ -65,5 +65,9 @@
 @media (max-width: 1400px) {
   .projects-grid {
     flex-wrap: wrap;
+  }
+
+  .projects-content.container {
+    padding: 0;
   }
 }
