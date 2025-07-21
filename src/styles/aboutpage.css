@@ -7,8 +7,16 @@
     padding: 7rem 2rem;
 }
 
+.aboutme-heading {
+  text-align: center;
+}
+
 .aboutme-heading h1 {
   margin-bottom: 4rem;
+}
+
+.aboutme-heading span {
+  color: var(--brand-color);
 }
 
 .aboutme-text-row {
