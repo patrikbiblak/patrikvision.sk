@@ -44,6 +44,7 @@
 
 @media (max-width: 768px) {
   .skills-grid {
+    width: 100%;
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
