@@ -23,19 +23,11 @@ const Navigation = () => {
   return (
     <header className="navigation" ref={ref}>
       <div className="navigation-container">
-        <NavLink
-          to="/"
-          onClick={() => {
-            closeMenu();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        >
           <img
             src="logos/pv-logo.png"
             alt="patrikvision.sk"
             className="navigation-logo"
           />
-        </NavLink>
 
         <button
           className={`hamburger ${isOpen ? "open" : ""}`}
