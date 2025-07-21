@@ -23,8 +23,7 @@
 }
 
 .contact-box {
-  flex: 1;
-  width: clamp(100px, 70vw, 500px);
+  width: clamp(100px, 85vw, 500px);
   background-color: var(--bg-card);
   border: 1px solid var(--border-default);
   box-shadow: var(--box-shadow);

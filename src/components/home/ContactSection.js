@@ -58,7 +58,7 @@ const [status, setStatus] = useState('idle');
 
   return (
     <section className="contact-section">
-      <div className="container">
+      <div>
         <div className="contact-heading" ref={ref}>
           <h2>Ozvite sa mi!</h2>
           <p>Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!</p>
