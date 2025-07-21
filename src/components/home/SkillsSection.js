@@ -12,8 +12,7 @@ const SkillsSection = () => {
     { name: 'CSS', level: 75 },
     { name: 'JavaScript', level: 55 },
     { name: 'React', level: 50 },
-    { name: 'GIT', level: 70 },
-    { name: 'SQL', level: 0 },
+    { name: 'GIT', level: 70 }
   ];
 
   return (
