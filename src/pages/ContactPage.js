@@ -51,8 +51,9 @@ const [status, setStatus] = useState('idle');
   return (
       <div className="contact-page container">
         <div className="contactpage-heading">
-          <h1>Poďme na to!</h1>
-        </div>
+          <h1>Váš <span>web</span> - váš <span>úspech</span></h1>
+          <p>Máte predstavu o svojej stránke? Pošlite mi stručný opis vašich cieľov a spoločne vytvoríme riešenie, ktoré prináša výsledky.</p>
+        </div> 
 
         <div className="contactpage-content">
           <div className="contactpage-box">

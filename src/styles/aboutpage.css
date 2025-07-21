@@ -11,10 +11,6 @@
   margin-bottom: 4rem;
 }
 
-.aboutme-heading p {
-  text-align: center;
-}
-
 .aboutme-text-row {
   display: flex;
   justify-content: space-between;
