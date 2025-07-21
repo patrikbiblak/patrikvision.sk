@@ -21,7 +21,7 @@ const icons = [
 const ProjectsNone = () => {
     return (
         <div className="projects-none container">
-            <h1 className="projectsnone-heading">Moje projekty</h1>
+            <h1 className="projectsnone-heading">Moje <span>projekty</span></h1>
 
             <div className="projectsnone-center">
                 <p>Na tejto podstránke momentálne pracujem. Medzitým si môžete pozrieť môj profil alebo ma kontaktovať.</p>
