@@ -24,7 +24,7 @@ const Navigation = () => {
     <header className="navigation" ref={ref}>
       <div className="navigation-container">
           <img
-            src="logos/pv-logo.png"
+            src="/logos/pv-logo.png"
             alt="patrikvision.sk"
             className="navigation-logo"
           />
