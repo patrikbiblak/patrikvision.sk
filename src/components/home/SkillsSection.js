@@ -1,10 +1,12 @@
 import "../../styles/skillssection.css";
 import ScrollAnimation from "../../hooks/ScrollAnimation";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
+import { useTranslation } from "../../contexts/TranslationContext";
 import { useRef } from "react";
 
 const SkillsSection = () => {
   const leftRef = useRef(null);
+  const { t } = useTranslation();
   ScrollAnimation(leftRef, { customClass: 'left' });
 
   const skills = [
@@ -18,7 +20,7 @@ const SkillsSection = () => {
   return (
     <section className="skills-section">
       <div className="container skills-content">
-        <h2 ref={leftRef}>Zručnosti</h2>
+        <h2 ref={leftRef}>{t('skills.title')}</h2>
 
         <div className="skills-grid">
           {skills.map((skill, index) => (

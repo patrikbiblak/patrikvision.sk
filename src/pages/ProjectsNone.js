@@ -7,6 +7,7 @@ import {
   SiGithub,
 } from 'react-icons/si';
 import { Link } from 'react-router';
+import { useTranslation } from '../contexts/TranslationContext';
 import "../styles/projectsnone.css";
 
 const icons = [
@@ -19,18 +20,20 @@ const icons = [
 ];
 
 const ProjectsNone = () => {
+    const { t } = useTranslation();
+    
     return (
         <div className="projects-none container">
-            <h1 className="projectsnone-heading">Moje <span>projekty</span></h1>
+            <h1 className="projectsnone-heading" dangerouslySetInnerHTML={{ __html: t('projects.title') }}></h1>
 
             <div className="projectsnone-center">
-                <p>Na tejto podstránke momentálne pracujem. Medzitým si môžete pozrieť môj profil alebo ma kontaktovať.</p>
+                <p>{t('projects.workingOn')}</p>
 
                 <div className="box-message">
-                    <h4>Každý expert niekde začínal..</h4>
-                    <p>Pracujem na portfóliu a budujem základy silného brandu.</p>
-                    <p>Chcete sa stať súčasťou mojej cesty? &nbsp;
-                        <Link to='/contact'>Ozvite sa</Link>.
+                    <h4>{t('projects.expertQuote')}</h4>
+                    <p>{t('projects.portfolioWork')}</p>
+                    <p>{t('projects.joinJourney')} &nbsp;
+                        <Link to='/contact'>{t('projects.contactMe')}</Link>.
                     </p>
                 </div>
             </div>

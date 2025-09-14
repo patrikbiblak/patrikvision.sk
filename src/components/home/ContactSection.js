@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import ScrollAnimation from "../../hooks/ScrollAnimation";
+import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/contactsection.css";
 
 const ContactSection = () => {
@@ -9,6 +10,7 @@ const ContactSection = () => {
   const rightRef = useRef(null);
   const ref = useRef(null);
   const formRef = useRef();
+  const { t } = useTranslation();
 
   ScrollAnimation(ref);
   ScrollAnimation(leftRef, { customClass: 'left' });
@@ -51,24 +53,24 @@ const [status, setStatus] = useState('idle');
   };
 
   const contactDetails = [
-    { icon: Mail, label: 'Email', value: 'contact@patrikvision.sk' },
-    { icon: Phone, label: 'Telefon', value: '+421 918 755 276' },
-    { icon: MapPin, label: 'Poloha', value: 'Slovensko' },
+    { icon: Mail, label: t('contact.details.email'), value: 'contact@patrikvision.sk' },
+    { icon: Phone, label: t('contact.details.phone'), value: '+421 918 755 276' },
+    { icon: MapPin, label: t('contact.details.location'), value: 'Slovensko' },
   ];
 
   return (
     <section className="contact-section">
       <div>
         <div className="contact-heading" ref={ref}>
-          <h2>Ozvite sa mi!</h2>
-          <p>Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!</p>
+          <h2>{t('contact.contactMe')}</h2>
+          <p>{t('contact.contactDesc')}</p>
         </div>
 
         <div className="contact-content">
           <div className="contact-box" ref={leftRef}>
-            <h3>Pošli správu</h3>
+            <h3>{t('contact.sendMessage')}</h3>
             <form ref={formRef} onSubmit={handleSubmit}>
-              <label htmlFor="section-name">Meno</label>
+              <label htmlFor="section-name">{t('contact.name')}</label>
               <input
                 id="section-name"
                 name="name"
@@ -77,7 +79,7 @@ const [status, setStatus] = useState('idle');
                 required
               />
 
-              <label htmlFor="section-email">Email</label>
+              <label htmlFor="section-email">{t('contact.email')}</label>
               <input
                 id="section-email"
                 name="email"
@@ -87,7 +89,7 @@ const [status, setStatus] = useState('idle');
                 required
               />
 
-              <label htmlFor="section-message">Správa</label>
+              <label htmlFor="section-message">{t('contact.message')}</label>
               <textarea
                 id="section-message"
                 name="message"
@@ -98,16 +100,16 @@ const [status, setStatus] = useState('idle');
               />
 
               <button type="submit" disabled={status === 'sending'}>
-                {status === 'sending' ? 'Odosielam…' : 'Odoslať'}
+                {status === 'sending' ? t('contact.sending') : t('contact.send')}
               </button>
 
-              {status === 'success' && <p className="success">Správa odoslaná! Ďakujem.</p>}
-              {status === 'error'   && <p className="error">Chyba pri odoslaní. Skús neskôr.</p>}
+              {status === 'success' && <p className="success">{t('contact.success')}</p>}
+              {status === 'error'   && <p className="error">{t('contact.error')}</p>}
             </form>
           </div>
 
           <div className="contact-box" ref={rightRef}>
-            <h3>Kontaktné údaje</h3>
+            <h3>{t('contact.contactDetails')}</h3>
             {contactDetails.map((detail) => {
               const Icon = detail.icon;
               return (

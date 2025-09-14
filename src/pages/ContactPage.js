@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useTranslation } from '../contexts/TranslationContext';
 import "../styles/contactpage.css";
 
 const ContactPage = () => {
     const formRef = useRef();
+    const { t } = useTranslation();
 
   const [formData, setFormData] = useState({
     name: '',
@@ -43,23 +45,23 @@ const [status, setStatus] = useState('idle');
   };
 
   const contactDetails = [
-    { icon: Mail, label: 'Email', value: 'contact@patrikvision.sk' },
-    { icon: Phone, label: 'Telefon', value: '+421 918 755 276' },
-    { icon: MapPin, label: 'Poloha', value: 'Slovensko' },
+    { icon: Mail, label: t('contact.details.email'), value: 'contact@patrikvision.sk' },
+    { icon: Phone, label: t('contact.details.phone'), value: '+421 918 755 276' },
+    { icon: MapPin, label: t('contact.details.location'), value: 'Slovensko' },
   ];
 
   return (
       <div className="contact-page">
         <div className="contactpage-heading">
-          <h1>Váš <span>web</span> - váš <span>úspech</span></h1>
-          <p>Máte predstavu o svojej stránke? Pošlite mi stručný opis vašich cieľov a spoločne vytvoríme riešenie, ktoré prináša výsledky.</p>
+          <h1 dangerouslySetInnerHTML={{ __html: t('contact.title') }}></h1>
+          <p>{t('contact.description')}</p>
         </div> 
 
         <div className="contactpage-content">
           <div className="contactpage-box">
-            <h3>Pošli správu</h3>
+            <h3>{t('contact.sendMessage')}</h3>
             <form ref={formRef} onSubmit={handleSubmit}>
-              <label htmlFor="page-name">Meno</label>
+              <label htmlFor="page-name">{t('contact.name')}</label>
               <input
                 id="page-name"
                 name="name"
@@ -68,7 +70,7 @@ const [status, setStatus] = useState('idle');
                 required
               />
 
-              <label htmlFor="page-email">Email</label>
+              <label htmlFor="page-email">{t('contact.email')}</label>
               <input
                 id="page-email"
                 name="email"
@@ -78,7 +80,7 @@ const [status, setStatus] = useState('idle');
                 required
               />
 
-              <label htmlFor="page-message">Správa</label>
+              <label htmlFor="page-message">{t('contact.message')}</label>
               <textarea
                 id="page-message"
                 name="message"
@@ -89,16 +91,16 @@ const [status, setStatus] = useState('idle');
               />
 
               <button type="submit" disabled={status === 'sending'}>
-                {status === 'sending' ? 'Odosielam…' : 'Odoslať'}
+                {status === 'sending' ? t('contact.sending') : t('contact.send')}
               </button>
 
-              {status === 'success' && <p className="success">Správa odoslaná! Ďakujem.</p>}
-              {status === 'error'   && <p className="error">Chyba pri odoslaní. Skús neskôr.</p>}
+              {status === 'success' && <p className="success">{t('contact.success')}</p>}
+              {status === 'error'   && <p className="error">{t('contact.error')}</p>}
             </form>
           </div>
 
           <div className="contactpage-box">
-            <h3>Kontaktné údaje</h3>
+            <h3>{t('contact.contactDetails')}</h3>
             {contactDetails.map((detail) => {
               const Icon = detail.icon;
               return (

@@ -116,6 +116,11 @@
   color: var(--text-secondary);
 }
 
+.language-buttons button.active {
+  color: var(--brand-color);
+  font-weight: 600;
+}
+
 @media (max-width: 1000px) {
   .hamburger {
     display: flex;

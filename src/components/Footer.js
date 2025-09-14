@@ -2,10 +2,12 @@ import { FaInstagram, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { useRef } from 'react';
 import ScrollAnimation from '../hooks/ScrollAnimation';
+import { useTranslation } from '../contexts/TranslationContext';
 import "../styles/footer.css";
 
 const Footer = () => {
     const ref = useRef(null);
+    const { t } = useTranslation();
     ScrollAnimation(ref);
 
   return (
@@ -18,13 +20,12 @@ const Footer = () => {
                         className="navigation-logo"
                 />
             <p>
-                Front-end developer, zapálený pre tvorbu úžasných webových
-                zážitkov.
+                {t('footer.description')}
             </p>
             </div>
 
             <div>
-                <h4>Sociálne siete</h4>
+                <h4>{t('footer.socialMedia')}</h4>
                 <ul>
                     <li>
                     <a
@@ -62,20 +63,20 @@ const Footer = () => {
             </div>
 
             <div>
-                <h4>Informácie</h4>
+                <h4>{t('footer.information')}</h4>
                 <ul>
-                    <li><a href="/about">O mne</a></li>
-                    <li><a href="/projects">Projekty</a></li>
-                    <li><a href="/contact">Kontakt</a></li>
+                    <li><a href="/about">{t('footer.about')}</a></li>
+                    <li><a href="/projects">{t('footer.projects')}</a></li>
+                    <li><a href="/contact">{t('footer.contact')}</a></li>
                 </ul>
             </div>
         </div>
 
         <div className="global-footer">
             <p>
-                <a href='/gdpr'>Zásady používania osobných údajov a súborov cookie</a>
+                <a href='/gdpr'>{t('footer.privacyPolicy')}</a>
             </p>
-            <p>© {new Date().getFullYear()} PatrikVision. Všetky práva vyhradené.</p>
+            <p>© {new Date().getFullYear()} PatrikVision. {t('footer.rights')}</p>
         </div>
     </footer>
 

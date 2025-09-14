@@ -1,6 +1,9 @@
+import { useTranslation } from '../contexts/TranslationContext';
 import '../styles/privacypolicy.css';
 
 const PrivacyPolicy = () => {
+  const { t } = useTranslation();
+  
   const openCookieSettingsModal = () => {
     const btn = document.querySelector('.cookie-settings-button');
     if (btn) btn.click();
@@ -8,77 +11,72 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="privacy-policy container">
-      <h1>Zásady ochrany osobných údajov a súborov cookie</h1>
-      <p><strong>Dátum účinnosti:</strong> 13. júla 2025</p>
+      <h1>{t('privacy.title')}</h1>
+      <p><strong>{t('privacy.effectiveDate')}</strong> {t('privacy.date')}</p>
 
       <article>
-        <h2>Prevádzkovateľ a spracovatelia</h2>
+        <h2>{t('privacy.operator')}</h2>
         <p>
-          Prevádzkovateľ: PatrikVision (Man Revolution s.r.o.), IČO: 12345678, 
-          email: info@patrikvision.sk.  
-          Spracovatelia: Vercel (hosting), Netlify (CDN), Google (Analytika), Meta (Pixel), 
-          SendGrid (email marketing).
+          {t('privacy.operatorText')}
         </p>
       </article>
 
       <article>
-        <h2>Aké údaje zhromažďujeme</h2>
+        <h2>{t('privacy.dataCollected')}</h2>
         <ul>
-          <li><strong>Kontaktné údaje</strong> – meno, e‑mail, správy z formulára.</li>
-          <li><strong>Technické údaje</strong> – IP, typ prehliadača, zariadenie (Google Analytics).</li>
-          <li><strong>Interakčné údaje</strong> – anonymné štatistiky, marketingové dáta (Meta Pixel).</li>
+          <li><strong>{t('privacy.contactData')}</strong></li>
+          <li><strong>{t('privacy.technicalData')}</strong></li>
+          <li><strong>{t('privacy.interactionData')}</strong></li>
         </ul>
       </article>
 
       <article>
-        <h2>Právny základ a účel spracovania</h2>
+        <h2>{t('privacy.legalBasis')}</h2>
         <ul>
-          <li><strong>Súhlas</strong> – marketingové a analytické nástroje.</li>
-          <li><strong>Oprávnený záujem</strong> – zlepšovanie webu a prevádzková štatistika.</li>
-          <li><strong>Zmluvný vzťah</strong> – poskytovanie objednaných služieb.</li>
+          <li><strong>{t('privacy.consent')}</strong></li>
+          <li><strong>{t('privacy.legitimateInterest')}</strong></li>
+          <li><strong>{t('privacy.contractual')}</strong></li>
         </ul>
       </article>
 
       <article>
-        <h2>Doba uchovávania</h2>
+        <h2>{t('privacy.retentionPeriod')}</h2>
         <ul>
-          <li>Google Analytics: 14 mesiacov</li>
-          <li>Meta Pixel: 180 dní</li>
-          <li>Kontaktné formuláre: do vymazania používateľom alebo 3 roky</li>
+          <li>{t('privacy.googleAnalytics')}</li>
+          <li>{t('privacy.metaPixel')}</li>
+          <li>{t('privacy.contactForms')}</li>
         </ul>
       </article>
 
       <article>
-        <h2>Prenosy do tretích krajín</h2>
+        <h2>{t('privacy.thirdCountryTransfers')}</h2>
         <p>
-          Údaje neprevádzajú do krajín mimo EÚ alebo EHP. Ak by k prenosu došlo, zabezpečíme 
-          štandardné zmluvné doložky EÚ.
+          {t('privacy.thirdCountryText')}
         </p>
       </article>
 
       <article>
-        <h2>Automatizované rozhodovanie a profilovanie</h2>
+        <h2>{t('privacy.automatedDecision')}</h2>
         <p>
-          Nevykonávame žiadne automatizované rozhodovanie ani profilovanie, ktoré by malo 
-          právne účinky na dotknuté osoby.
+          {t('privacy.automatedDecisionText')}
         </p>
       </article>
 
       <article>
-        <h2>Práva dotknutých osôb</h2>
+        <h2>{t('privacy.dataSubjectRights')}</h2>
         <ul>
-          <li>Právo na prístup, opravu, vymazanie („byť zabudnutý“), obmedzenie spracovania.</li>
-          <li>Právo namietať proti spracovaniu.</li>
-          <li>Právo na prenositeľnosť údajov.</li>
-          <li>Právo odvolať súhlas kedykoľvek (<button onClick={openCookieSettingsModal}>Zmeniť nastavenia cookies</button>).</li>
-          <li>Právo podať sťažnosť Úradu na ochranu osobných údajov (<a href="https://dataprotection.gov.sk" target="_blank" rel="noopener noreferrer">link</a>).</li>
+          <li>{t('privacy.accessRights')}</li>
+          <li>{t('privacy.objectionRight')}</li>
+          <li>{t('privacy.portabilityRight')}</li>
+          <li>{t('privacy.withdrawConsent')} (<button onClick={openCookieSettingsModal}>{t('privacy.changeCookieSettings')}</button>).</li>
+          <li>{t('privacy.complaintRight')} (<a href="https://dataprotection.gov.sk" target="_blank" rel="noopener noreferrer">link</a>).</li>
         </ul>
       </article>
 
       <article>
-        <h2>Kontakt</h2>
+        <h2>{t('privacy.contact')}</h2>
         <p>
-          V prípade otázok píšte na info@patrikvision.sk alebo použite <a href="/contact">kontaktný formulár</a>.
+          {t('privacy.contactText')} <a href="/contact">{t('privacy.contactForm')}</a>.
         </p>
       </article>
     </div>

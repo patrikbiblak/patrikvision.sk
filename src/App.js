@@ -8,27 +8,30 @@ import NavigationBar from "./components/Navigation";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import CookieSettings from "./CookieConsent/CookieSettings";
+import { TranslationProvider } from "./contexts/TranslationContext";
 
 const App = () => {
   useVersionChecker();
 
   return (
-    <Router>
-      <div className="content">
-        <NavigationBar />
-        <CookieSettings />
-        <main>
-          <Routes>
-            <Route path="/" element={<HomePage />}/>
-            <Route path="/about" element={<AboutPage />}/>
-            <Route path="/projects" element={<ProjectsNone />}/>
-            <Route path="/contact" element={<ContactPage />}/>
-            <Route path="/gdpr" element={<PrivacyPolicy />}/>
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <TranslationProvider>
+      <Router>
+        <div className="content">
+          <NavigationBar />
+          <CookieSettings />
+          <main>
+            <Routes>
+              <Route path="/" element={<HomePage />}/>
+              <Route path="/about" element={<AboutPage />}/>
+              <Route path="/projects" element={<ProjectsNone />}/>
+              <Route path="/contact" element={<ContactPage />}/>
+              <Route path="/gdpr" element={<PrivacyPolicy />}/>
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    </TranslationProvider>
   )
 }
 

@@ -1,10 +1,12 @@
 import { useRef } from 'react';
 import ScrollAnimation from "../../hooks/ScrollAnimation";
+import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/herosection.css";
 
 const HeroSection = () => {
     const ref = useRef(null);
     const arrowRef = useRef(null);
+    const { t } = useTranslation();
 
     ScrollAnimation(arrowRef, { immediate: true });
     ScrollAnimation(ref, { immediate: true });
@@ -13,9 +15,9 @@ const HeroSection = () => {
         <section className="hero-section">
             <div className="container hero-content" ref={ref}> 
                 
-                    <h1>Design. <span>Build.</span> Develop.</h1>
+                    <h1 dangerouslySetInnerHTML={{ __html: t('hero.title') }}></h1>
 
-                    <p>Pretváram nápady na moderné a kreatívne webové stránky, ktoré vyniknú v digitálnom svete. Vytvorme spolu online zážitok, ktorý zaujme podľa vašich predstáv.</p>
+                    <p>{t('hero.description')}</p>
             </div>
 
             <div className='arrow-icon' ref={arrowRef}>&darr;</div>

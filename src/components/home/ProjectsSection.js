@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import ScrollAnimation from "../../hooks/ScrollAnimation";
+import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/projectssection.css";
 
 const projects = [
@@ -12,6 +13,7 @@ const projects = [
 const ProjectsSection = () => {
   const gridRef = useRef(null);
   const leftRef = useRef(null);
+  const { t } = useTranslation();
 
   ScrollAnimation(leftRef, { customClass: 'left' });
 
@@ -42,8 +44,8 @@ const ProjectsSection = () => {
     <section className="projects-section">
       <div className="container projects-content">
         <div className="projects-heading" ref={leftRef}>
-          <h2>Vybrané projekty</h2>
-          <p>Na tejto sekcii momentálne pracujem.</p>
+          <h2>{t('projects.selectedProjects')}</h2>
+          <p>{t('projects.workingOnSection')}</p>
         </div>
 
         <div className="projects-grid" ref={gridRef}>
@@ -54,7 +56,7 @@ const ProjectsSection = () => {
 
         <div className="projects-footer">
           <button className="view-all">
-              <Link to="/projects">Zobraziť všetky projekty</Link>
+              <Link to="/projects">{t('projects.viewAllProjects')}</Link>
             </button>
         </div>
       </div>

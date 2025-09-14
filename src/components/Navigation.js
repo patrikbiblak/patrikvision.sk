@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import ScrollAnimation from "../hooks/ScrollAnimation";
+import { useTranslation } from "../contexts/TranslationContext";
 import "../styles/navigation.css";
 
 const Navigation = () => {
@@ -9,16 +10,22 @@ const Navigation = () => {
 
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const { language, changeLanguage, t } = useTranslation();
 
   const navItems = [
-    { path: "/", label: "Domov" },
-    { path: "/about", label: "O mne" },
-    { path: "/projects", label: "Projekty" },
-    { path: "/contact", label: "Kontakt" },
+    { path: "/", label: t('nav.home') },
+    { path: "/about", label: t('nav.about') },
+    { path: "/projects", label: t('nav.projects') },
+    { path: "/contact", label: t('nav.contact') },
   ];
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
+
+  const handleLanguageChange = (newLanguage) => {
+    changeLanguage(newLanguage);
+    closeMenu(); // Close mobile menu when language changes
+  };
 
   return (
     <header className="navigation" ref={ref}>
@@ -63,11 +70,23 @@ const Navigation = () => {
             ))}
           </ul>
 
-          {/* <div className="language-buttons">
-            <button className="lang-en" aria-label="Switch to English">EN</button>
-              <span>|</span>
-            <button className="lang-sk" aria-label="Switch to Slovak">SK</button>
-          </div> */}
+          <div className="language-buttons">
+            <button 
+              className={`lang-en ${language === 'en' ? 'active' : ''}`} 
+              aria-label="Switch to English"
+              onClick={() => handleLanguageChange('en')}
+            >
+              EN
+            </button>
+            <span>|</span>
+            <button 
+              className={`lang-sk ${language === 'sk' ? 'active' : ''}`} 
+              aria-label="Switch to Slovak"
+              onClick={() => handleLanguageChange('sk')}
+            >
+              SK
+            </button>
+          </div>
         </nav>
       </div>
     </header>
