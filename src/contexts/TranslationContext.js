@@ -14,7 +14,7 @@ export const TranslationProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     // Check localStorage for saved language preference
     const savedLanguage = localStorage.getItem('language');
-    return savedLanguage || 'sk'; // Default to Slovak
+    return savedLanguage || 'en'; // Default to Slovak
   });
 
   // Save language preference to localStorage when it changes
