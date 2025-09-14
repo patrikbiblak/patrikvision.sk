@@ -76,7 +76,7 @@ const Navigation = () => {
               aria-label="Switch to English"
               onClick={() => handleLanguageChange('en')}
             >
-              🇺🇸 EN
+              EN
             </button>
             <span>|</span>
             <button 
@@ -84,7 +84,7 @@ const Navigation = () => {
               aria-label="Switch to Slovak"
               onClick={() => handleLanguageChange('sk')}
             >
-              🇸🇰 SK
+              SK
             </button>
           </div>
         </nav>
