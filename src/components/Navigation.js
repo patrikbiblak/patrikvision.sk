@@ -23,6 +23,8 @@ const Navigation = () => {
   const closeMenu = () => setIsOpen(false);
 
   const handleLanguageChange = (newLanguage) => {
+    console.log('Navigation: Attempting to change language to', newLanguage);
+    console.log('Navigation: Current language is', language);
     changeLanguage(newLanguage);
     closeMenu(); // Close mobile menu when language changes
   };
@@ -70,7 +72,7 @@ const Navigation = () => {
             ))}
           </ul>
 
-          <div className="language-buttons">
+          <div className="language-buttons" key={language}>
             <button 
               className={`lang-en ${language === 'en' ? 'active' : ''}`} 
               aria-label="Switch to English"

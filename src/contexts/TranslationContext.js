@@ -13,13 +13,22 @@ export const useTranslation = () => {
 export const TranslationProvider = ({ children }) => {
   const [language, setLanguage] = useState(() => {
     // Check localStorage for saved language preference
-    const savedLanguage = localStorage.getItem('language');
-    return savedLanguage || 'en'; // Default to Slovak
+    try {
+      const savedLanguage = localStorage.getItem('language');
+      return savedLanguage || 'en'; // Default to English
+    } catch (error) {
+      console.warn('localStorage not available, using default language');
+      return 'en'; // Default to English if localStorage fails
+    }
   });
 
   // Save language preference to localStorage when it changes
   useEffect(() => {
-    localStorage.setItem('language', language);
+    try {
+      localStorage.setItem('language', language);
+    } catch (error) {
+      console.warn('Could not save language preference to localStorage:', error);
+    }
   }, [language]);
 
   const translations = {
@@ -347,6 +356,7 @@ export const TranslationProvider = ({ children }) => {
   };
 
   const changeLanguage = (newLanguage) => {
+    console.log('Changing language from', language, 'to', newLanguage);
     setLanguage(newLanguage);
   };
 
