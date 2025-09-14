@@ -143,6 +143,39 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Kontakt',
         contactText: 'V prípade otázok píšte na info@patrikvision.sk alebo použite',
         contactForm: 'kontaktný formulár'
+      },
+      cookies: {
+        banner: {
+          message: 'Táto webová stránka používa cookies na analýzu návštevnosti, optimalizáciu funkcií a personalizáciu vašich preferencií.',
+          moreInfo: 'Viac info',
+          acceptAll: 'Prijať všetko'
+        },
+        modal: {
+          title: 'Cookie. Cookie.',
+          description: 'Pomáhame webu fungovať rýchlejšie a poskytovať relevantný obsah. Vyberte, ktoré cookies povolíte.',
+          closeLabel: 'Zavrieť nastavenia cookies',
+          categories: {
+            necessary: {
+              label: 'Nevyhnutné',
+              description: 'Základné cookies nevyhnutné pre fungovanie webu.'
+            },
+            statistics: {
+              label: 'Štatistické',
+              description: 'Meranie návštevnosti a zlepšovanie UX.'
+            },
+            marketing: {
+              label: 'Marketingové',
+              description: 'Cielenie reklám a sledovanie kampaní.'
+            }
+          },
+          actions: {
+            rejectAll: 'Odmietnuť všetko',
+            saveSettings: 'Uložiť nastavenia'
+          },
+          footer: {
+            privacyPolicy: 'Zásady ochrany osobných údajov'
+          }
+        }
       }
     },
     en: {
@@ -265,6 +298,39 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Contact',
         contactText: 'For questions, write to info@patrikvision.sk or use the',
         contactForm: 'contact form'
+      },
+      cookies: {
+        banner: {
+          message: 'This website uses cookies to analyze traffic, optimize functionality and personalize your preferences.',
+          moreInfo: 'More info',
+          acceptAll: 'Accept all'
+        },
+        modal: {
+          title: 'Cookie. Cookie.',
+          description: 'We help the website work faster and provide relevant content. Choose which cookies to allow.',
+          closeLabel: 'Close cookie settings',
+          categories: {
+            necessary: {
+              label: 'Necessary',
+              description: 'Basic cookies necessary for website functionality.'
+            },
+            statistics: {
+              label: 'Statistics',
+              description: 'Traffic measurement and UX improvement.'
+            },
+            marketing: {
+              label: 'Marketing',
+              description: 'Ad targeting and campaign tracking.'
+            }
+          },
+          actions: {
+            rejectAll: 'Reject all',
+            saveSettings: 'Save settings'
+          },
+          footer: {
+            privacyPolicy: 'Privacy policy'
+          }
+        }
       }
     }
   };

@@ -1,17 +1,22 @@
+import { useTranslation } from '../contexts/TranslationContext';
 import './cookieconsent.css';
 
-const CookieBanner = ({ onAcceptAll, onMoreInfo }) => (
-  <div className="cookie-banner">
-    <span>Táto webová stránka používa cookies na analýzu návštevnosti, optimalizáciu funkcií a personalizáciu vašich preferencií.</span>
-    <div className="cookie-banner__actions">
-      <button className="btn btn--secondary" onClick={onMoreInfo}>
-        Viac info
-      </button>
-      <button className="btn btn--primary" onClick={onAcceptAll}>
-        Prijať všetko
-      </button>
+const CookieBanner = ({ onAcceptAll, onMoreInfo }) => {
+  const { t } = useTranslation();
+  
+  return (
+    <div className="cookie-banner">
+      <span>{t('cookies.banner.message')}</span>
+      <div className="cookie-banner__actions">
+        <button className="btn btn--secondary" onClick={onMoreInfo}>
+          {t('cookies.banner.moreInfo')}
+        </button>
+        <button className="btn btn--primary" onClick={onAcceptAll}>
+          {t('cookies.banner.acceptAll')}
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default CookieBanner;
