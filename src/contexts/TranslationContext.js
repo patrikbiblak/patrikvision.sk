@@ -96,7 +96,8 @@ export const TranslationProvider = ({ children }) => {
         details: {
           email: 'Email',
           phone: 'Telefón',
-          location: 'Poloha'
+          location: 'Poloha',
+          locationValue: 'Slovensko',
         },
         contactMe: 'Ozvite sa mi!',
         contactDesc: 'Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!'
@@ -251,7 +252,8 @@ export const TranslationProvider = ({ children }) => {
         details: {
           email: 'Email',
           phone: 'Phone',
-          location: 'Location'
+          location: 'Location',
+          locationValue: 'Slovakia',
         },
         contactMe: 'Contact me!',
         contactDesc: 'I\'d love to hear about your project. Let\'s create something amazing together!'
