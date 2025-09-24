@@ -45,9 +45,9 @@ export const TranslationProvider = ({ children }) => {
         description: 'Pretváram nápady na moderné a kreatívne webové stránky, ktoré vyniknú v digitálnom svete. Vytvorme spolu online zážitok, ktorý zaujme podľa vašich predstáv.'
       },
       about: {
-        title: 'O mne',
+        title: 'O Mne',
         subtitle: 'Frontend Developer',
-        description: 'Som frontend developer s vášňou pre vytváranie krásnych a funkčných webových aplikácií. Špecializujem sa na React, JavaScript a moderné webové technológie.',
+        description: 'Som Front-End Developer s vášňou pre vytváranie krásnych a funkčných webových aplikácií. Špecializujem sa na React, JavaScript a moderné webové technológie.',
         skills: 'Zručnosti',
         experience: 'Skúsenosti',
         years: 'rokov skúseností',
@@ -59,7 +59,7 @@ export const TranslationProvider = ({ children }) => {
         intro3: 'Potrebujete niekoho, kto zvládne developerské šprinty? Ste na správnom mieste!',
         personal1: 'Káva, kód a disciplína tvoria môj dokonalý trojboj. Do každého projektu vkladám stovku percent, aby výsledok bežal hladko a bez bugov. Po práci ma šport udrží v kondícii a pomáha mi udržať si čistú myseľ.',
         hashtags: '#front-end &nbsp; #self-improvement &nbsp; #athlete',
-        aboutMe: 'O mne',
+        aboutMe: 'O Mne',
         desc1: 'Vytváram moderné webové aplikácie s dôrazom na funkčnosť a spoľahlivosť podľa presných požiadaviek klienta.',
         desc2: 'Počas vývoja udržiavam otvorenú komunikáciu, aby sme spoločne dolaďovali funkcie aj dizajn a zakomponovali všetky vaše predstavy.',
         desc3: 'Ponúkam tvorbu portfólií, blogov a firemných prezentácií, ktoré nielen esteticky zapôsobia, ale sú aj jednoduché na správu a flexibilné pre ďalší rozvoj.'
@@ -76,7 +76,7 @@ export const TranslationProvider = ({ children }) => {
         portfolioWork: 'Pracujem na portfóliu a budujem základy silného brandu.',
         joinJourney: 'Chcete sa stať súčasťou mojej cesty?',
         contactMe: 'Ozvite sa',
-        selectedProjects: 'Vybrané projekty',
+        selectedProjects: 'Vybrané Projekty',
         workingOnSection: 'Na tejto sekcii momentálne pracujem.',
         viewAllProjects: 'Zobraziť všetky projekty'
       },
@@ -115,7 +115,7 @@ export const TranslationProvider = ({ children }) => {
         privacyPolicy: 'Zásady používania osobných údajov a súborov cookie'
       },
       skills: {
-        title: 'Zručnosti',
+        title: 'Moje Zručnosti',
         subtitle: 'Technológie s ktorými pracujem',
         frontend: 'Frontend',
         backend: 'Backend',
@@ -201,7 +201,7 @@ export const TranslationProvider = ({ children }) => {
         description: 'I transform ideas into modern and creative websites that stand out in the digital world. Let\'s create an online experience that captivates according to your vision.'
       },
       about: {
-        title: 'About me',
+        title: 'About Me',
         subtitle: 'Frontend Developer',
         description: 'I\'m a frontend developer with a passion for creating beautiful and functional web applications. I specialize in React, JavaScript and modern web technologies.',
         skills: 'Skills',
@@ -215,7 +215,7 @@ export const TranslationProvider = ({ children }) => {
         intro3: 'Need someone who can handle development sprints? You\'re in the right place!',
         personal1: 'Coffee, code and discipline form my perfect trio. I put 100% into every project so the result runs smoothly and bug-free. After work, sports keep me in shape and help me maintain a clear mind.',
         hashtags: '#front-end &nbsp; #self-improvement &nbsp; #athlete',
-        aboutMe: 'About me',
+        aboutMe: 'About Me',
         desc1: 'I create modern web applications with emphasis on functionality and reliability according to precise client requirements.',
         desc2: 'During development, I maintain open communication so we can fine-tune both functionality and design together and incorporate all your ideas.',
         desc3: 'I offer portfolio, blog and corporate presentation creation that not only make an aesthetic impact but are also easy to manage and flexible for further development.'
@@ -232,7 +232,7 @@ export const TranslationProvider = ({ children }) => {
         portfolioWork: 'I\'m working on my portfolio and building the foundations of a strong brand.',
         joinJourney: 'Want to be part of my journey?',
         contactMe: 'Contact me',
-        selectedProjects: 'Selected projects',
+        selectedProjects: 'Selected Projects',
         workingOnSection: 'I\'m currently working on this section.',
         viewAllProjects: 'View all projects'
       },
@@ -271,7 +271,7 @@ export const TranslationProvider = ({ children }) => {
         privacyPolicy: 'Privacy policy and cookie usage'
       },
       skills: {
-        title: 'Skills',
+        title: 'My Skills',
         subtitle: 'Technologies I work with',
         frontend: 'Frontend',
         backend: 'Backend',
