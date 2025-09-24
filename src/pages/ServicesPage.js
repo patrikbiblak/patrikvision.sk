@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Helmet } from "react-helmet-async";
 import ServicesSection from "../components/home/ServicesSection";
-import "../styles/homepage.css";
 
 const ServicesPage = () => {
   const { t } = useTranslation();

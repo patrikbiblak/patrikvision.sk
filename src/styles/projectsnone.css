@@ -95,21 +95,10 @@
 
 .logo-track {
   display: flex;
-  width: max-content;
-  will-change: transform;
-  --icon-w: 48px;
-  --gap: 120px;
-  --scroll: calc(6 * (var(--icon-w) + var(--gap)));
-  animation: scroll 40s linear infinite;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-1 * var(--scroll)));
-  }
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  height: 100%;
 }
 
 .logo-carousel::before,

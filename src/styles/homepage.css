@@ -1,50 +1,7 @@
-/* Horizontal scroll container - only for larger screens */
+/* Homepage container styles */
 .homepage-container {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
   background: transparent;
-}
-
-.horizontal-scroll-container {
-  display: flex;
-  height: 100vh;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* Prevent body scroll when horizontal scroll is active */
-body {
-  overflow: hidden;
-  overflow-y: hidden;
-}
-
-.horizontal-scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
-.horizontal-scroll-container {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.section {
-  min-width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background: transparent;
-  border-radius: 0;
-  margin: 0 2rem;
-  padding: 2rem;
-  box-sizing: border-box;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Allow WhyMeSection to have flexible height */
@@ -64,33 +21,12 @@ body {
 }
 
 
-/* Responsive design - disable horizontal scroll for tablets and mobile */
+/* Responsive design for tablets and mobile */
 @media (max-width: 1024px) {
-  body {
-    overflow: auto;
-    overflow-y: hidden;
-  }
-  
   .homepage-container {
     height: auto;
     overflow: visible;
   }
-  
-  .horizontal-scroll-container {
-    display: block;
-    height: auto;
-    overflow: visible;
-    scroll-behavior: auto;
-    scroll-snap-type: none;
-  }
-  
-  .section {
-    min-width: auto;
-    height: auto;
-    scroll-snap-align: none;
-    display: block;
-  }
-  
   
   .hero-section-wrapper .hero-section {
     background: transparent;
@@ -111,7 +47,7 @@ body {
   }
 }
 
-/* Additional section backgrounds for horizontal scroll */
+/* Section backgrounds */
 .about-section-wrapper {
   background: transparent;
 }
