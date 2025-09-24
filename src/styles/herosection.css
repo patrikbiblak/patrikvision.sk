@@ -169,6 +169,10 @@
   color: var(--brand-color);
 }
 
+.hero-section h1 .brand-color {
+  color: var(--brand-color);
+}
+
 .hero-section h1 .underline-word {
   position: relative;
   color: #000000;

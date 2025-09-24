@@ -41,14 +41,14 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Kontakt'
       },
       hero: {
-        title: '<span class="underline-word">Navrhni.</span> <span>Postav.</span> <span class="underline-word">Vyvíjaj.</span>',
-        subtitle: 'Frontend Developer',
-        description: 'Pretváram nápady na moderné a kreatívne webové stránky, ktoré vyniknú v digitálnom svete. Vytvorme spolu online zážitok, ktorý zaujme podľa vašich predstáv.'
+        title: '<span class="brand-color">Web</span> <span class="underline-word">Development</span> & <span class="brand-color">AI</span> <span class="underline-word">Solutions</span>',
+        subtitle: 'Web Development & AI Solutions',
+        description: 'Expert na web development a AI riešenia. Špecializujem sa na SEO optimalizáciu, Google Analytics a AI automatizáciu. Vytváram inteligentné webové stránky, ktoré prinášajú výsledky a transformujú vaše podnikanie.'
       },
       about: {
         title: 'O Mne',
-        subtitle: 'Frontend Developer',
-        description: 'Som Front-End Developer s vášňou pre vytváranie krásnych a funkčných webových aplikácií. Špecializujem sa na React, JavaScript a moderné webové technológie.',
+        subtitle: 'Web Development & AI Solutions',
+        description: 'Som Web Development & AI Solutions špecialista s vášňou pre vytváranie inteligentných a funkčných webových aplikácií. Špecializujem sa na React, JavaScript, AI automatizáciu, SEO optimalizáciu, Google Analytics a moderné webové technológie.',
         skills: 'Zručnosti',
         experience: 'Skúsenosti',
         years: 'rokov skúseností',
@@ -219,14 +219,14 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Contact'
       },
       hero: {
-        title: '<span class="underline-word">Design.</span> <span>Build.</span> <span class="underline-word">Develop.</span>',
-        subtitle: 'Frontend Developer',
-        description: 'I transform ideas into modern and creative websites that stand out in the digital world. Let\'s create an online experience that captivates according to your vision.'
+        title: '<span class="brand-color">Web</span> <span class="underline-word">Development</span> & <span class="brand-color">AI</span> <span class="underline-word">Solutions</span>',
+        subtitle: 'Web Development & AI Solutions',
+        description: 'Expert in web development and AI solutions. Specialized in SEO optimization, Google Analytics and AI automation. I create intelligent websites that deliver results and transform your business.'
       },
       about: {
         title: 'About Me',
-        subtitle: 'Frontend Developer',
-        description: 'I\'m a frontend developer with a passion for creating beautiful and functional web applications. I specialize in React, JavaScript and modern web technologies.',
+        subtitle: 'Web Development & AI Solutions',
+        description: 'I\'m a Web Development & AI Solutions specialist with a passion for creating intelligent and functional web applications. I specialize in React, JavaScript, AI automation, SEO optimization, Google Analytics and modern web technologies.',
         skills: 'Skills',
         experience: 'Experience',
         years: 'years of experience',

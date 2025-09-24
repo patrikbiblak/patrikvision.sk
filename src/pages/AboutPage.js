@@ -24,7 +24,7 @@ const AboutPage = () => {
             </div>
 
             <div className="aboutme-text-row">
-                <img className="aboutme-text-item" src='images/bpaatrik.png' alt="me" />
+                <img className="aboutme-text-item" src='images/bpaatrik.png' alt="PatrikVision - Web Development & AI Solutions" />
                 <div className="aboutme-text-item text-gap">
                     <h3>
                         <NavLink to="https://www.instagram.com/bpaatrik/">@bpaatrik</NavLink>
