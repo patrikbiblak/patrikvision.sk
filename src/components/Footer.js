@@ -1,4 +1,4 @@
-import { FaInstagram, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 import { useRef } from 'react';
 import useScrollAnimation from '../hooks/ScrollAnimation';
