@@ -51,7 +51,7 @@
 }
 
 .box-message a:hover {
-    color: var(--global-color);
+    color: var(--brand-color);
 }
 
 .box-message::before {

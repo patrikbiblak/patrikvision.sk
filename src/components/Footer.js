@@ -2,7 +2,7 @@ import { FaInstagram, FaGithub } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { useRef } from 'react';
 import useScrollAnimation from '../hooks/ScrollAnimation';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useTranslation } from 'react-i18next';
 import "../styles/footer.css";
 
 const Footer = () => {
@@ -34,15 +34,6 @@ const Footer = () => {
                         <FaInstagram /> Instagram
                     </a>
                     </li>
-                    {/* <li>
-                    <a
-                        href="https://www.linkedin.com/in/patrikbiblak"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <FaLinkedin /> LinkedIn
-                    </a>
-                    </li> */}
                     <li>
                     <a href="mailto:contact@patrikvision.sk">
                         <MdEmail /> Email

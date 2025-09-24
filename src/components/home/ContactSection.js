@@ -2,7 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import useScrollAnimation from "../../hooks/ScrollAnimation";
-import { useTranslation } from "../../contexts/TranslationContext";
+import { useTranslation } from "react-i18next";
 import "../../styles/contactsection.css";
 
 const ContactSection = () => {

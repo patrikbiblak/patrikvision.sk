@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useScrollAnimation from "../../hooks/ScrollAnimation";
-import { useTranslation } from "../../contexts/TranslationContext";
+import { useTranslation } from "react-i18next";
 import "../../styles/herosection.css";
 
 const HeroSection = () => {
@@ -25,7 +25,7 @@ const developer = {
   motto: "Code with vision"
 };
 
-console.log("Let's build something great!");`;
+`;
 
     useEffect(() => {
         const codeLines = sampleCode.split('\n');

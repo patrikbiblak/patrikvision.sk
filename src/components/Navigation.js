@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { useTranslation } from "../contexts/TranslationContext";
+import { useTranslation } from "react-i18next";
 import "../styles/navigation.css";
 
 const Navigation = () => {
@@ -8,7 +8,7 @@ const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { language, changeLanguage, t } = useTranslation();
+  const { t } = useTranslation();
 
   const navItems = [
     { path: "/", label: t('nav.home') },
@@ -21,12 +21,6 @@ const Navigation = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
-  const handleLanguageChange = (newLanguage) => {
-    console.log('Navigation: Attempting to change language to', newLanguage);
-    console.log('Navigation: Current language is', language);
-    changeLanguage(newLanguage);
-    closeMenu(); // Close mobile menu when language changes
-  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -77,25 +71,7 @@ const Navigation = () => {
                 </NavLink>
               </li>
             ))}
-          </ul>
-
-          <div className="language-buttons" key={language}>
-            <button 
-              className={`lang-en ${language === 'en' ? 'active' : ''}`} 
-              aria-label="Switch to English"
-              onClick={() => handleLanguageChange('en')}
-            >
-              EN
-            </button>
-            <span>|</span>
-            <button 
-              className={`lang-sk ${language === 'sk' ? 'active' : ''}`} 
-              aria-label="Switch to Slovak"
-              onClick={() => handleLanguageChange('sk')}
-            >
-              SK
-            </button>
-          </div>
+            </ul>
         </nav>
       </div>
     </header>

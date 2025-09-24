@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useTranslation } from 'react-i18next';
 import "../styles/contactpage.css";
 
 const ContactPage = () => {

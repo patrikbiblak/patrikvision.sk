@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useTranslation } from 'react-i18next';
 import './cookieconsent.css';
 
 const CATEGORIES = [

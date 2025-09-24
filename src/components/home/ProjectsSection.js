@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import useScrollAnimation from "../../hooks/ScrollAnimation";
-import { useTranslation } from "../../contexts/TranslationContext";
+import { useTranslation } from "react-i18next";
 import "../../styles/projectssection.css";
 
 const projects = [

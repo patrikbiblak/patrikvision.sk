@@ -43,6 +43,7 @@
   align-items: center;
   flex: 1;
   position: relative;
+  justify-content: center;
 }
 
 .navigation-logo {
@@ -62,7 +63,6 @@
   gap: 6rem;
   list-style: none;
   justify-content: center;
-  flex: 1;
 }
 
 .navigation-link {
@@ -127,39 +127,6 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-.language-buttons {
-  display: flex;
-  align-items: center;
-  right: 0;
-  gap: 0.8rem;
-  opacity: 0;
-  animation: linkFadeIn 0.8s ease-out 1s forwards;
-}
-
-.language-buttons span {
-  font-size: 0.8rem;
-  cursor: default;
-}
-
-.language-buttons button {
-  padding: 0;
-  margin: 0;
-  background: none;
-  font-size: 0.7rem;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.language-buttons button:hover {
-  color: var(--text-secondary);
-}
-
-.language-buttons button.active {
-  color: var(--brand-color);
-  font-weight: 600;
-}
 
 @media (max-width: 1000px) {
   .hamburger {

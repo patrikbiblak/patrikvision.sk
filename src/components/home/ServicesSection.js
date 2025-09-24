@@ -1,6 +1,6 @@
 import "../../styles/servicessection.css";
 import useScrollAnimation from "../../hooks/ScrollAnimation";
-import { useTranslation } from "../../contexts/TranslationContext";
+import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 
 const ServicesSection = () => {

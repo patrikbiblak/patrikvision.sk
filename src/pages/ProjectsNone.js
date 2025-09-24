@@ -7,7 +7,7 @@ import {
   SiGithub,
 } from 'react-icons/si';
 import { Link } from 'react-router';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useTranslation } from 'react-i18next';
 import "../styles/projectsnone.css";
 
 const icons = [

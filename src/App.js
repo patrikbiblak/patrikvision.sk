@@ -1,3 +1,4 @@
+import React, { Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import useVersionChecker from "./hooks/useVersionChecker";
 import AboutPage from "./pages/AboutPage";
@@ -9,13 +10,13 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import CookieSettings from "./CookieConsent/CookieSettings";
-import { TranslationProvider } from "./contexts/TranslationContext";
+import "./i18n";
 
 const App = () => {
   useVersionChecker();
 
   return (
-    <TranslationProvider>
+    <Suspense fallback={<div>Loading...</div>}>
       <Router>
         <div className="content">
           <Navigation />
@@ -33,7 +34,7 @@ const App = () => {
           <Footer />
         </div>
       </Router>
-    </TranslationProvider>
+    </Suspense>
   )
 }
 

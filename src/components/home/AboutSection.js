@@ -1,7 +1,7 @@
 import "../../styles/aboutsection.css";
 import { useRef } from 'react';
 import useScrollAnimation from "../../hooks/ScrollAnimation";
-import { useTranslation } from "../../contexts/TranslationContext";
+import { useTranslation } from "react-i18next";
 
 const AboutSection = () => {
   const leftRef = useRef(null);

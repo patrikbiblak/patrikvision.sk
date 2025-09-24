@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { useTranslation } from "../contexts/TranslationContext";
+import { useTranslation } from "react-i18next";
 import "../styles/aboutpage.css";
 
 const AboutPage = () => {
