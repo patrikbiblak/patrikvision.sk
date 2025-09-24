@@ -19,6 +19,7 @@
 /* Prevent body scroll when horizontal scroll is active */
 body {
   overflow: hidden;
+  overflow-y: hidden;
 }
 
 .horizontal-scroll-container::-webkit-scrollbar {
@@ -67,6 +68,7 @@ body {
 @media (max-width: 1024px) {
   body {
     overflow: auto;
+    overflow-y: hidden;
   }
   
   .homepage-container {

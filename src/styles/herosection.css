@@ -113,7 +113,7 @@
   word-wrap: break-word;
   transition: background 0.3s ease;
   max-height: 255px;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .typing-cursor {
