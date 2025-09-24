@@ -9,7 +9,7 @@ const skTranslations = {
   "hero": {
     "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solutions</span>",
     "subtitle": "Web Development & AI Solutions",
-    "description": "Expert na web development a AI riešenia. Špecializujem sa na SEO optimalizáciu, Google Analytics a AI automatizáciu. Vytváram inteligentné webové stránky, ktoré prinášajú výsledky a transformujú vaše podnikanie.",
+    "description": "Špecializujem sa na web development a AI riešenia. Zameriavam sa na SEO optimalizáciu, Google Analytics a AI automatizáciu. Vytváram inteligentné webové stránky, ktoré prinášajú výsledky a transformujú vaše podnikanie.",
     "services": "Služby",
     "getStarted": "Začať"
   },
@@ -41,13 +41,47 @@ const skTranslations = {
     "noProjects": "Momentálne nemám žiadne verejné projekty na zobrazenie.",
     "comingSoon": "Čoskoro pridám nové projekty!",
     "workingOn": "Na tejto podstránke momentálne pracujem. Medzitým si môžete pozrieť môj profil alebo ma kontaktovať.",
-    "expertQuote": "Každý expert niekde začínal..",
+    "expertQuote": "Každý profesionál niekde začínal..",
     "portfolioWork": "Pracujem na portfóliu a budujem základy silného brandu.",
     "joinJourney": "Chcete sa stať súčasťou mojej cesty?",
     "contactMe": "Ozvite sa",
     "selectedProjects": "Vybrané Projekty",
     "workingOnSection": "Na tejto sekcii momentálne pracujem.",
     "viewAllProjects": "Zobraziť všetky projekty"
+  },
+  "whyChooseMe": {
+    "title": "Prečo si vybrať mňa?",
+    "subtitle": "Tu je to, čo ma odlišuje a robí ma správnou voľbou pre váš projekt",
+    "reason1": {
+      "title": "Pokročilé technické zručnosti",
+      "description": "Odborník v moderných webových technológiách vrátane React, JavaScript a AI automatizácie s dôrazom na čistý, udržateľný kód."
+    },
+    "reason2": {
+      "title": "SEO a Analytics špecializácia",
+      "description": "Špecializované znalosti v SEO optimalizácii a Google Analytics, aby vaša stránka nielen vyzerala skvele, ale aj výnimočne fungovala vo výsledkoch vyhľadávania."
+    },
+    "reason3": {
+      "title": "Transparentná komunikácia",
+      "description": "Udržiavam otvorenú, jasnú komunikáciu počas celého projektu, informujem vás a zapájam vás do každého kroku vývojového procesu."
+    },
+    "reason4": {
+      "title": "Spoľahlivosť a dodržiavanie termínov",
+      "description": "Zaväzujem sa k dodržiavaniu termínov a dodávaniu vysoko kvalitných výsledkov. Môžete sa na mňa spoľahnúť, že dokončím váš projekt načas a v rámci rozpočtu."
+    },
+    "offers": {
+      "offer1": {
+        "title": "Bezplatná Konzultácia",
+        "description": "30-minútová stratégia na diskusiu o vašich cieľoch a požiadavkách projektu bez poplatku"
+      },
+      "offer2": {
+        "title": "Základný SEO Balík",
+        "description": "Bezplatné základné SEO nastavenie vrátane meta tagov, sitemap a Google Analytics integrácie"
+      },
+      "offer3": {
+        "title": "Bonus za Odporúčanie",
+        "description": "Získajte 20% zľavu na váš prvý projekt, A 20% zľavu na váš ďalší projekt za každé odporúčanie, ktoré nám privediete"
+      }
+    }
   },
   "contact": {
     "title": "Váš <span>web</span> - Váš <span>úspech</span>",
@@ -184,9 +218,9 @@ const skTranslations = {
       "keywords": "web development, AI riešenia, umelej inteligencie, SEO, Google Analytics, frontend development, React, JavaScript, web design, AI automatizácia, Slovensko"
     },
     "about": {
-      "title": "O Mne - Web Development & AI Solutions Expert",
+      "title": "O Mne - Web Development & AI Solutions Špecialista",
       "description": "Zistite viac o mojich skúsenostiach v web developmente a AI riešeniach. Špecializujem sa na React, JavaScript, SEO optimalizáciu, Google Analytics a moderné webové technológie.",
-      "keywords": "o mne, web developer, AI riešenia, React developer, JavaScript, SEO expert, Slovensko"
+      "keywords": "o mne, web developer, AI riešenia, React developer, JavaScript, SEO špecialista, Slovensko"
     },
     "contact": {
       "title": "Kontakt - Začnite Svoj Web Development Projekt",

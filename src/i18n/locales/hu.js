@@ -41,13 +41,47 @@ const huTranslations = {
     "noProjects": "Jelenleg nincs nyilvános projektem megjelenítésre.",
     "comingSoon": "Hamarosan új projektek!",
     "workingOn": "Jelenleg ezen az aloldalon dolgozom. Addig is megnézheti a profilomat vagy kapcsolatba léphet velem.",
-    "expertQuote": "Minden szakértő valahol kezdte..",
+    "expertQuote": "Minden szakember valahol kezdte..",
     "portfolioWork": "A portfóliómon dolgozom és egy erős márka alapjait építem.",
     "joinJourney": "Szeretne része lenni az utamnak?",
     "contactMe": "Kapcsolat",
     "selectedProjects": "Kiválasztott Projektek",
     "workingOnSection": "Jelenleg ezen a szakaszon dolgozom.",
     "viewAllProjects": "Összes projekt megtekintése"
+  },
+  "whyChooseMe": {
+    "title": "Miért válasszon engem?",
+    "subtitle": "Itt van az, ami megkülönböztet engem és a megfelelő választássá tesz a projektjéhez",
+    "reason1": {
+      "title": "Szakmai technikai készségek",
+      "description": "Szakértő a modern webes technológiákban, beleértve a React, JavaScript és AI automatizálást, tiszta, karbantartható kódra összpontosítva."
+    },
+    "reason2": {
+      "title": "SEO és Analytics szakértelem",
+      "description": "Speciális tudás SEO optimalizálásban és Google Analytics-ben, hogy a weboldala nemcsak jól nézzen ki, hanem kiválóan teljesítsen a keresési eredményekben."
+    },
+    "reason3": {
+      "title": "Átlátható kommunikáció",
+      "description": "Nyitott, világos kommunikációt tartok fenn a projekt során, tájékoztatom és bevonom Önt a fejlesztési folyamat minden lépésébe."
+    },
+    "reason4": {
+      "title": "Megbízható és határidő-központú",
+      "description": "Elkötelezett vagyok a határidők betartásában és a magas minőségű eredmények szállításában. Számíthat rám, hogy időben és a költségvetésen belül fejezem be a projektjét."
+    },
+    "offers": {
+      "offer1": {
+        "title": "Ingyenes Konzultáció",
+        "description": "30 perces stratégiai beszélgetés a projekt céljairól és követelményeiről díjmentesen"
+      },
+      "offer2": {
+        "title": "Alapvető SEO Csomag",
+        "description": "Ingyenes alapvető SEO beállítás meta címkék, sitemap és Google Analytics integrációval"
+      },
+      "offer3": {
+        "title": "Ajánlási Bónusz",
+        "description": "Kapjon 20% kedvezményt az első projektjére, ÉS 20% kedvezményt a következő projektjére minden ajánlásért, amit hoz nekünk"
+      }
+    }
   },
   "contact": {
     "title": "Az Ön <span>weboldala</span> - Az Ön <span>sikere</span>",

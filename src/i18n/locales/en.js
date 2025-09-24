@@ -9,7 +9,7 @@ const en = {
   "hero": {
     "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solutions</span>",
     "subtitle": "Web Development & AI Solutions",
-    "description": "Expert in web development and AI solutions. Specialized in SEO optimization, Google Analytics and AI automation. I create intelligent websites that deliver results and transform your business.",
+    "description": "Specialized in web development and AI solutions. Focused on SEO optimization, Google Analytics and AI automation. I create intelligent websites that deliver results and transform your business.",
     "services": "Services",
     "getStarted": "Get Started"
   },
@@ -41,13 +41,47 @@ const en = {
     "noProjects": "I currently don't have any public projects to display.",
     "comingSoon": "New projects coming soon!",
     "workingOn": "I'm currently working on this subpage. In the meantime, you can check out my profile or contact me.",
-    "expertQuote": "Every expert started somewhere..",
+    "expertQuote": "Every professional started somewhere..",
     "portfolioWork": "I'm working on my portfolio and building the foundations of a strong brand.",
     "joinJourney": "Want to be part of my journey?",
     "contactMe": "Contact me",
     "selectedProjects": "Selected Projects",
     "workingOnSection": "I'm currently working on this section.",
     "viewAllProjects": "View all projects"
+  },
+  "whyChooseMe": {
+    "title": "Why Choose Me?",
+    "subtitle": "Here's what sets me apart and makes me the right choice for your project",
+    "reason1": {
+      "title": "Advanced Technical Skills",
+      "description": "Proficient in modern web technologies including React, JavaScript, and AI automation with a focus on clean, maintainable code."
+    },
+    "reason2": {
+      "title": "SEO & Analytics Specialization",
+      "description": "Specialized knowledge in SEO optimization and Google Analytics to ensure your website not only looks great but performs exceptionally in search results."
+    },
+    "reason3": {
+      "title": "Transparent Communication",
+      "description": "I maintain open, clear communication throughout the project, keeping you informed and involved in every step of the development process."
+    },
+    "reason4": {
+      "title": "Reliable & Deadline-Focused",
+      "description": "Committed to meeting deadlines and delivering high-quality results. You can count on me to complete your project on time and within budget."
+    },
+    "offers": {
+      "offer1": {
+        "title": "Free Consultation",
+        "description": "30-minute strategy session to discuss your project goals and requirements at no cost"
+      },
+      "offer2": {
+        "title": "Basic SEO Package",
+        "description": "Free basic SEO setup including meta tags, sitemap, and Google Analytics integration"
+      },
+      "offer3": {
+        "title": "Referral Bonus",
+        "description": "Get 20% off your first project, AND 20% off your next project for each referral you bring us"
+      }
+    }
   },
   "contact": {
     "title": "Your <span>web</span> - Your <span>success</span>",
@@ -184,9 +218,9 @@ const en = {
       "keywords": "web development, AI solutions, artificial intelligence, SEO, Google Analytics, frontend development, React, JavaScript, website design, AI automation, Slovakia"
     },
     "about": {
-      "title": "About Me - Web Development & AI Solutions Expert",
+      "title": "About Me - Web Development & AI Solutions Specialist",
       "description": "Learn about my experience in web development and AI solutions. Specialized in React, JavaScript, SEO optimization, Google Analytics and modern web technologies.",
-      "keywords": "about me, web developer, AI solutions, React developer, JavaScript, SEO expert, Slovakia"
+      "keywords": "about me, web developer, AI solutions, React developer, JavaScript, SEO specialist, Slovakia"
     },
     "contact": {
       "title": "Contact - Get Your Web Development Project Started",

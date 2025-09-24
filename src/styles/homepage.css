@@ -46,6 +46,12 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Allow WhyMeSection to have flexible height */
+.why-choose-me-section {
+  height: auto !important;
+  min-height: auto !important;
+}
+
 /* Hero section inherits card styling */
 .hero-section-wrapper .hero-section {
   background: transparent;
