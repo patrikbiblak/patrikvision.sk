@@ -36,7 +36,8 @@ export const TranslationProvider = ({ children }) => {
       nav: {
         home: 'Domov',
         about: 'O mne',
-        projects: 'Projekty',
+        portfolio: 'Portfólio',
+        services: 'Služby',
         contact: 'Kontakt'
       },
       hero: {
@@ -147,7 +148,7 @@ export const TranslationProvider = ({ children }) => {
         effectiveDate: 'Dátum účinnosti:',
         date: '13. júla 2025',
         operator: 'Prevádzkovateľ a spracovatelia',
-        operatorText: 'Prevádzkovateľ: PatrikVision (Man Revolution s.r.o.), IČO: 12345678, email: info@patrikvision.sk. Spracovatelia: Vercel (hosting), Netlify (CDN), Google (Analytika), Meta (Pixel), SendGrid (email marketing).',
+        operatorText: 'Prevádzkovateľ: PatrikVision (Man Revolution s.r.o.), IČO: 12345678, email: contact@patrikvision.sk. Spracovatelia: Vercel (hosting), Netlify (CDN), Google (Analytika), Meta (Pixel), SendGrid (email marketing).',
         dataCollected: 'Aké údaje zhromažďujeme',
         contactData: 'Kontaktné údaje – meno, e‑mail, správy z formulára.',
         technicalData: 'Technické údaje – IP, typ prehliadača, zariadenie (Google Analytics).',
@@ -172,7 +173,7 @@ export const TranslationProvider = ({ children }) => {
         changeCookieSettings: 'Zmeniť nastavenia cookies',
         complaintRight: 'Právo podať sťažnosť Úradu na ochranu osobných údajov',
         contact: 'Kontakt',
-        contactText: 'V prípade otázok píšte na info@patrikvision.sk alebo použite',
+        contactText: 'V prípade otázok píšte na contact@patrikvision.sk alebo použite',
         contactForm: 'kontaktný formulár'
       },
       cookies: {
@@ -213,7 +214,8 @@ export const TranslationProvider = ({ children }) => {
       nav: {
         home: 'Home',
         about: 'About',
-        projects: 'Projects',
+        portfolio: 'Portfolio',
+        services: 'Services',
         contact: 'Contact'
       },
       hero: {
@@ -324,7 +326,7 @@ export const TranslationProvider = ({ children }) => {
         effectiveDate: 'Effective date:',
         date: 'July 13, 2025',
         operator: 'Controller and processors',
-        operatorText: 'Controller: PatrikVision (Man Revolution s.r.o.), ID: 12345678, email: info@patrikvision.sk. Processors: Vercel (hosting), Netlify (CDN), Google (Analytics), Meta (Pixel), SendGrid (email marketing).',
+        operatorText: 'Controller: PatrikVision (Man Revolution s.r.o.), ID: 12345678, email: contact@patrikvision.sk. Processors: Vercel (hosting), Netlify (CDN), Google (Analytics), Meta (Pixel), SendGrid (email marketing).',
         dataCollected: 'What data we collect',
         contactData: 'Contact data – name, email, messages from forms.',
         technicalData: 'Technical data – IP, browser type, device (Google Analytics).',
@@ -349,7 +351,7 @@ export const TranslationProvider = ({ children }) => {
         changeCookieSettings: 'Change cookie settings',
         complaintRight: 'Right to file a complaint with the Data Protection Authority',
         contact: 'Contact',
-        contactText: 'For questions, write to info@patrikvision.sk or use the',
+        contactText: 'For questions, write to contact@patrikvision.sk or use the',
         contactForm: 'contact form'
       },
       cookies: {

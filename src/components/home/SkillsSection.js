@@ -1,13 +1,12 @@
 import "../../styles/skillssection.css";
-import ScrollAnimation from "../../hooks/ScrollAnimation";
-import useScrollAnimation from "../../hooks/useScrollAnimation";
+import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "../../contexts/TranslationContext";
 import { useRef } from "react";
 
 const SkillsSection = () => {
   const leftRef = useRef(null);
   const { t } = useTranslation();
-  ScrollAnimation(leftRef, { customClass: 'left' });
+  useScrollAnimation(leftRef, { customClass: 'left' });
 
   const skills = [
     { name: 'HTML', level: 80 },

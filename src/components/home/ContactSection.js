@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import ScrollAnimation from "../../hooks/ScrollAnimation";
+import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/contactsection.css";
 
@@ -12,9 +12,9 @@ const ContactSection = () => {
   const formRef = useRef();
   const { t } = useTranslation();
 
-  ScrollAnimation(ref);
-  ScrollAnimation(leftRef, { customClass: 'left' });
-  ScrollAnimation(rightRef, { customClass: 'right' });
+  useScrollAnimation(ref);
+  useScrollAnimation(leftRef, { customClass: 'left' });
+  useScrollAnimation(rightRef, { customClass: 'right' });
   
   const [formData, setFormData] = useState({
     name: '',

@@ -1,6 +1,9 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-const ScrollAnimation = (ref, { threshold = 0.3, immediate = false, customClass = '' } = {}) => {
+const useScrollAnimation = (ref, options = {}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const { threshold = 0.3, immediate = false, customClass = '' } = options;
+
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -13,6 +16,7 @@ const ScrollAnimation = (ref, { threshold = 0.3, immediate = false, customClass 
     if (immediate) {
       setTimeout(() => {
         el.classList.add(showClass);
+        setIsVisible(true);
       }, 100);
       return;
     }
@@ -21,6 +25,7 @@ const ScrollAnimation = (ref, { threshold = 0.3, immediate = false, customClass 
       ([entry]) => {
         if (entry.isIntersecting) {
           el.classList.add(showClass);
+          setIsVisible(true);
           observer.unobserve(el);
         }
       },
@@ -30,6 +35,8 @@ const ScrollAnimation = (ref, { threshold = 0.3, immediate = false, customClass 
     observer.observe(el);
     return () => observer.unobserve(el);
   }, [ref, threshold, immediate, customClass]);
-}
 
-export default ScrollAnimation;
+  return isVisible;
+};
+
+export default useScrollAnimation;

@@ -1,6 +1,6 @@
 import "../../styles/aboutsection.css";
 import { useRef } from 'react';
-import ScrollAnimation from "../../hooks/ScrollAnimation";
+import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "../../contexts/TranslationContext";
 
 const AboutSection = () => {
@@ -8,8 +8,8 @@ const AboutSection = () => {
   const rightRef = useRef(null);
   const { t } = useTranslation();
 
-  ScrollAnimation(leftRef, { customClass: 'left' });
-  ScrollAnimation(rightRef, { customClass: 'right' });
+  useScrollAnimation(leftRef, { customClass: 'left' });
+  useScrollAnimation(rightRef, { customClass: 'right' });
 
   return (
     <section className="about-section" style={{ 

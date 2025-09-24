@@ -134,7 +134,7 @@
 }
 
 .switch input:focus + .slider { 
-  box-shadow: 0 0 0 2px rgba(18, 77, 84, 0.3); 
+  box-shadow: 0 0 0 2px rgba(17, 100, 102, 0.3); 
 }
 
 .switch input:checked + .slider:before { 
@@ -181,7 +181,7 @@
 }
 
 .btn--secondary:hover, .btn--secondary:focus { 
-  background-color: rgba(18, 77, 84, 0.05); 
+  background-color: rgba(17, 100, 102, 0.05); 
   border-color: #999999;
   color: #333333;
 }

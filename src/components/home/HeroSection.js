@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
-import ScrollAnimation from "../../hooks/ScrollAnimation";
+import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/herosection.css";
 
@@ -11,9 +11,9 @@ const HeroSection = () => {
     const [displayedCode, setDisplayedCode] = useState('');
     const [isTyping, setIsTyping] = useState(false);
 
-    ScrollAnimation(arrowRef, { immediate: true });
-    ScrollAnimation(ref, { immediate: true });
-    ScrollAnimation(codeRef, { immediate: true });
+    useScrollAnimation(arrowRef, { immediate: true });
+    useScrollAnimation(ref, { immediate: true });
+    useScrollAnimation(codeRef, { immediate: true });
 
     const sampleCode = `// PatrikVision
 const developer = {

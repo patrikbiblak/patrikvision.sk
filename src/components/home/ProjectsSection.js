@@ -1,6 +1,6 @@
 import { useRef, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import ScrollAnimation from "../../hooks/ScrollAnimation";
+import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/projectssection.css";
 
@@ -15,7 +15,7 @@ const ProjectsSection = () => {
   const leftRef = useRef(null);
   const { t } = useTranslation();
 
-  ScrollAnimation(leftRef, { customClass: 'left' });
+  useScrollAnimation(leftRef, { customClass: 'left' });
 
   useEffect(() => {
     if (!gridRef.current) return;

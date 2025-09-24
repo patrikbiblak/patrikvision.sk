@@ -45,7 +45,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: rgba(18, 77, 84, 0.1);
+  background-color: rgba(17, 100, 102, 0.1);
   border: 2px solid var(--brand-color);
   transition: all 0.3s ease;
 }
