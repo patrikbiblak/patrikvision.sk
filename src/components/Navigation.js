@@ -1,12 +1,9 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import ScrollAnimation from "../hooks/ScrollAnimation";
 import { useTranslation } from "../contexts/TranslationContext";
 import "../styles/navigation.css";
 
 const Navigation = () => {
-  const ref = useRef(null);
-  ScrollAnimation(ref, { customClass: 'top', immediate: true });
 
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +38,7 @@ const Navigation = () => {
   }, []);
 
   return (
-    <header className={`navigation ${isScrolled ? 'scrolled' : ''}`} ref={ref}>
+    <header className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navigation-container">
           <div className="navigation-logo">
             PatrikVision
