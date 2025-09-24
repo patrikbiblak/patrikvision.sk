@@ -176,6 +176,38 @@ const skTranslations = {
         "privacyPolicy": "Zásady ochrany osobných údajov"
       }
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Web Development & AI Solutions | SEO, Analytics, Digitálny Marketing",
+      "description": "Profesionálny web development a AI riešenia. Špecializujem sa na SEO optimalizáciu, Google Analytics, AI automatizáciu a moderné webové technológie. Transformujte svoje podnikanie s inteligentnými digitálnymi riešeniami.",
+      "keywords": "web development, AI riešenia, umelej inteligencie, SEO, Google Analytics, frontend development, React, JavaScript, web design, AI automatizácia, Slovensko"
+    },
+    "about": {
+      "title": "O Mne - Web Development & AI Solutions Expert",
+      "description": "Zistite viac o mojich skúsenostiach v web developmente a AI riešeniach. Špecializujem sa na React, JavaScript, SEO optimalizáciu, Google Analytics a moderné webové technológie.",
+      "keywords": "o mne, web developer, AI riešenia, React developer, JavaScript, SEO expert, Slovensko"
+    },
+    "contact": {
+      "title": "Kontakt - Začnite Svoj Web Development Projekt",
+      "description": "Kontaktujte ma pre váš web development a AI riešenia projekt. Vytvorme spolu niečo úžasné s profesionálnymi web development službami.",
+      "keywords": "kontakt, web development, AI riešenia, konzultácia projektu, web design, Slovensko"
+    },
+    "services": {
+      "title": "Služby - Web Development, SEO, AI Riešenia a Viac",
+      "description": "Profesionálne web development služby vrátane SEO optimalizácie, Google Analytics, AI automatizácie a digitálneho marketingu.",
+      "keywords": "služby, web development, SEO služby, Google Analytics, AI automatizácia, digitálny marketing, web design"
+    },
+    "portfolio": {
+      "title": "Portfólio - Web Development Projekty a AI Riešenia",
+      "description": "Preskúmajte moje web development projekty a AI riešenia. Profesionálne portfólio predstavujúce moderné webové technológie a inovatívne riešenia.",
+      "keywords": "portfólio, projekty, web development, AI riešenia, React projekty, JavaScript, prípadové štúdie"
+    },
+    "privacy": {
+      "title": "Zásady Ochrany Osobných Údajov - Ochrana Dát a Používanie Cookies",
+      "description": "Zásady ochrany osobných údajov a používania cookies pre PatrikVision. Zistite, ako chránime vaše údaje a používame cookies na našej webovej stránke.",
+      "keywords": "zásady ochrany osobných údajov, ochrana dát, cookies, GDPR, osobné údaje, Slovensko"
+    }
   }
 };
 

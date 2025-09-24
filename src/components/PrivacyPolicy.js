@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import '../styles/privacypolicy.css';
 
 const PrivacyPolicy = () => {
@@ -11,6 +12,25 @@ const PrivacyPolicy = () => {
 
   return (
     <div className="privacy-policy container">
+      <Helmet>
+        <title>{t('seo.privacy.title')} | PatrikVision</title>
+        <meta name="description" content={t('seo.privacy.description')} />
+        <meta name="keywords" content={t('seo.privacy.keywords')} />
+        <meta name="author" content="PatrikVision" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://patrikvision.sk/gdpr" />
+        <meta property="og:title" content={t('seo.privacy.title')} />
+        <meta property="og:description" content={t('seo.privacy.description')} />
+        <meta property="og:site_name" content="PatrikVision" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://patrikvision.sk/gdpr" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={t('seo.privacy.title')} />
+        <meta name="twitter:description" content={t('seo.privacy.description')} />
+        <link rel="alternate" hreflang="en" href="https://patrikvision.sk/gdpr" />
+        <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/gdpr" />
+        <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/gdpr" />
+      </Helmet>
       <h1>{t('privacy.title')}</h1>
       <p><strong>{t('privacy.effectiveDate')}</strong> {t('privacy.date')}</p>
 

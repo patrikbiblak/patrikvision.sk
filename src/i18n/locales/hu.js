@@ -176,6 +176,38 @@ const huTranslations = {
         "privacyPolicy": "Adatvédelmi irányelvek"
       }
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Web Fejlesztés & AI Megoldások | SEO, Analytics, Digitális Marketing",
+      "description": "Professzionális web fejlesztés és AI megoldások. SEO optimalizációban, Google Analytics-ben és AI automatizációban specializálódom. Intelligens digitális megoldásokkal alakítsa át üzletét.",
+      "keywords": "web fejlesztés, AI megoldások, mesterséges intelligencia, SEO, Google Analytics, frontend fejlesztés, React, JavaScript, web design, AI automatizáció, Szlovákia"
+    },
+    "about": {
+      "title": "Rólam - Web Fejlesztés & AI Megoldások Szakértő",
+      "description": "Ismerje meg tapasztalataimat a web fejlesztésben és AI megoldásokban. React, JavaScript, SEO optimalizáció, Google Analytics és modern web technológiák területén specializálódom.",
+      "keywords": "rólam, web fejlesztő, AI megoldások, React fejlesztő, JavaScript, SEO szakértő, Szlovákia"
+    },
+    "contact": {
+      "title": "Kapcsolat - Indítsa El Web Fejlesztési Projektjét",
+      "description": "Lépjen kapcsolatba velem web fejlesztési és AI megoldási projektekhez. Készítsünk valami csodálatosat együtt professzionális web fejlesztési szolgáltatásokkal.",
+      "keywords": "kapcsolat, web fejlesztés, AI megoldások, projekt konzultáció, web design, Szlovákia"
+    },
+    "services": {
+      "title": "Szolgáltatások - Web Fejlesztés, SEO, AI Megoldások és Több",
+      "description": "Professzionális web fejlesztési szolgáltatások SEO optimalizációval, Google Analytics-szel, AI automatizációval és digitális marketinggel.",
+      "keywords": "szolgáltatások, web fejlesztés, SEO szolgáltatások, Google Analytics, AI automatizáció, digitális marketing, web design"
+    },
+    "portfolio": {
+      "title": "Portfólió - Web Fejlesztési Projektek és AI Megoldások",
+      "description": "Fedezze fel web fejlesztési projekteimet és AI megoldásaimat. Professzionális portfólió modern web technológiákat és innovatív megoldásokat bemutatva.",
+      "keywords": "portfólió, projektek, web fejlesztés, AI megoldások, React projektek, JavaScript, esettanulmányok"
+    },
+    "privacy": {
+      "title": "Adatvédelmi Irányelvek - Adatvédelem és Cookie Használat",
+      "description": "Adatvédelmi irányelvek és cookie használat a PatrikVision számára. Ismerje meg, hogyan védjük az adatait és használjuk a cookie-kat weboldalunkon.",
+      "keywords": "adatvédelmi irányelvek, adatvédelem, cookie-k, GDPR, személyes adatok, Szlovákia"
+    }
   }
 };
 

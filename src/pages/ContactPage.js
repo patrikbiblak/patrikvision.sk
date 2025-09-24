@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import "../styles/contactpage.css";
 
 const ContactPage = () => {
@@ -52,6 +53,25 @@ const [status, setStatus] = useState('idle');
 
   return (
       <div className="contact-page">
+        <Helmet>
+          <title>{t('seo.contact.title')} | PatrikVision</title>
+          <meta name="description" content={t('seo.contact.description')} />
+          <meta name="keywords" content={t('seo.contact.keywords')} />
+          <meta name="author" content="PatrikVision" />
+          <meta name="robots" content="index, follow" />
+          <link rel="canonical" href="https://patrikvision.sk/contact" />
+          <meta property="og:title" content={t('seo.contact.title')} />
+          <meta property="og:description" content={t('seo.contact.description')} />
+          <meta property="og:site_name" content="PatrikVision" />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://patrikvision.sk/contact" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={t('seo.contact.title')} />
+          <meta name="twitter:description" content={t('seo.contact.description')} />
+          <link rel="alternate" hreflang="en" href="https://patrikvision.sk/contact" />
+          <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/contact" />
+          <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
+        </Helmet>
         <div className="contactpage-heading">
           <h1 dangerouslySetInnerHTML={{ __html: t('contact.title') }}></h1>
           <p>{t('contact.description')}</p>

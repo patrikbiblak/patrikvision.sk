@@ -8,6 +8,7 @@ import {
 } from 'react-icons/si';
 import { Link } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import { Helmet } from 'react-helmet-async';
 import "../styles/projectsnone.css";
 
 const icons = [
@@ -24,6 +25,25 @@ const ProjectsNone = () => {
     
     return (
         <div className="projects-none container">
+            <Helmet>
+                <title>{t('seo.portfolio.title')} | PatrikVision</title>
+                <meta name="description" content={t('seo.portfolio.description')} />
+                <meta name="keywords" content={t('seo.portfolio.keywords')} />
+                <meta name="author" content="PatrikVision" />
+                <meta name="robots" content="index, follow" />
+                <link rel="canonical" href="https://patrikvision.sk/portfolio" />
+                <meta property="og:title" content={t('seo.portfolio.title')} />
+                <meta property="og:description" content={t('seo.portfolio.description')} />
+                <meta property="og:site_name" content="PatrikVision" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://patrikvision.sk/portfolio" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content={t('seo.portfolio.title')} />
+                <meta name="twitter:description" content={t('seo.portfolio.description')} />
+                <link rel="alternate" hreflang="en" href="https://patrikvision.sk/portfolio" />
+                <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/portfolio" />
+                <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/portfolio" />
+            </Helmet>
             <h1 className="projectsnone-heading" dangerouslySetInnerHTML={{ __html: t('projects.title') }}></h1>
 
             <div className="projectsnone-center">

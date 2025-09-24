@@ -176,6 +176,38 @@ const en = {
         "privacyPolicy": "Privacy policy"
       }
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Web Development & AI Solutions | SEO, Analytics, Digital Marketing",
+      "description": "Professional web development and AI solutions. Specialized in SEO, Google Analytics, AI automation, and modern web technologies. Transform your business with intelligent digital solutions.",
+      "keywords": "web development, AI solutions, artificial intelligence, SEO, Google Analytics, frontend development, React, JavaScript, website design, AI automation, Slovakia"
+    },
+    "about": {
+      "title": "About Me - Web Development & AI Solutions Expert",
+      "description": "Learn about my experience in web development and AI solutions. Specialized in React, JavaScript, SEO optimization, Google Analytics and modern web technologies.",
+      "keywords": "about me, web developer, AI solutions, React developer, JavaScript, SEO expert, Slovakia"
+    },
+    "contact": {
+      "title": "Contact - Get Your Web Development Project Started",
+      "description": "Contact me for your web development and AI solutions project. Let's create something amazing together with professional web development services.",
+      "keywords": "contact, web development, AI solutions, project consultation, web design, Slovakia"
+    },
+    "services": {
+      "title": "Services - Web Development, SEO, AI Solutions & More",
+      "description": "Professional web development services including SEO optimization, Google Analytics, AI automation, and digital marketing solutions.",
+      "keywords": "services, web development, SEO services, Google Analytics, AI automation, digital marketing, web design"
+    },
+    "portfolio": {
+      "title": "Portfolio - Web Development Projects & AI Solutions",
+      "description": "Explore my web development projects and AI solutions. Professional portfolio showcasing modern web technologies and innovative solutions.",
+      "keywords": "portfolio, projects, web development, AI solutions, React projects, JavaScript, case studies"
+    },
+    "privacy": {
+      "title": "Privacy Policy - Data Protection & Cookie Usage",
+      "description": "Privacy policy and cookie usage information for PatrikVision. Learn how we protect your data and use cookies on our website.",
+      "keywords": "privacy policy, data protection, cookies, GDPR, personal data, Slovakia"
+    }
   }
 };
 
