@@ -9,7 +9,7 @@ const skTranslations = {
   "hero": {
     "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solutions</span>",
     "subtitle": "Web Development & AI Solutions",
-    "description": "Špecializujem sa na web development a AI riešenia. Zameriavam sa na SEO optimalizáciu, Google Analytics a AI automatizáciu. Vytváram inteligentné webové stránky, ktoré prinášajú výsledky a transformujú vaše podnikanie.",
+    "description": "Transformujte svoje podnikanie s najmodernejšími webovými riešeniami, ktoré poháňajú rast. Od inteligentnej AI automatizácie po výkonne optimalizované webové stránky - prinášam merateľné výsledky, ktoré zvyšujú vašu online prítomnosť.",
     "services": "Služby",
     "getStarted": "Začať"
   },

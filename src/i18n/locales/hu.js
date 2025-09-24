@@ -9,7 +9,7 @@ const huTranslations = {
   "hero": {
     "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Fejlesztés</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Megoldások</span>",
     "subtitle": "Web Fejlesztés & AI Megoldások",
-    "description": "Szakértő web fejlesztésben és AI megoldásokban. SEO optimalizációban, Google Analytics-ben és AI automatizációban specializálódom. Intelligens weboldalakat készítek, amelyek eredményeket hoznak és átalakítják az üzletet.",
+    "description": "Átalakítsa üzletét a legmodernebb webes megoldásokkal, amelyek növekedést idéznek elő. Az intelligens AI automatizációtól a teljesítmény-optimalizált weboldalakig - mérhető eredményeket nyújtok, amelyek növelik online jelenlétét.",
     "services": "Szolgáltatások",
     "getStarted": "Kezdés"
   },
