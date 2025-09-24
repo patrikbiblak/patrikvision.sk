@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Cookies from 'js-cookie';
 import CookieModal from './CookieModal';
 import CookieBanner from './CookieBanner';
+import ScrollAnimation from '../hooks/ScrollAnimation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
 import './cookieconsent.css';
@@ -9,6 +10,7 @@ import './cookieconsent.css';
 const CookieSettings = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [bannerOpen, setBannerOpen] = useState(false);
+  const cookieButtonRef = useRef(null);
 
   useEffect(() => {
     const prefs = Cookies.get('cookie_prefs');
@@ -16,6 +18,17 @@ const CookieSettings = () => {
       const timer = setTimeout(() => setBannerOpen(true), 3000);
       return () => clearTimeout(timer);
     }
+  }, []);
+
+  // Add scale-in animation to cookie button with 1 second delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (cookieButtonRef.current) {
+        cookieButtonRef.current.classList.add('show');
+      }
+    }, 1000);
+    
+    return () => clearTimeout(timer);
   }, []);
 
   const loadAnalyticsScripts = () => {
@@ -66,6 +79,7 @@ const CookieSettings = () => {
   return (
     <>
       <button
+        ref={cookieButtonRef}
         className="cookie-settings-button"
         onClick={() => {
           setModalOpen(true);
