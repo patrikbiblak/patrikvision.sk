@@ -53,7 +53,7 @@ export const TranslationProvider = ({ children }) => {
         years: 'rokov skúseností',
         projects: 'dokončených projektov',
         clients: 'spokojných klientov',
-        whoAmI: 'Kto <span>som</span>',
+        whoAmI: 'Kto <span>Som</span>',
         intro1: 'Som mladý a nadšený front-end developer ktorý kladie dôraz na transparentnú komunikáciu, dodržiavanie termínov a vysokú kvalitu.',
         intro2: 'Vytváram rýchle a responzívne webové stránky presne podľa vašich predstáv, ktoré plynulo fungujú na rôznych zariadeniach. Môžete sa na mňa spoľahnúť, že vaše nápady premením na pútavú online prezentáciu, ktorá osloví vašich návštevníkov.',
         intro3: 'Potrebujete niekoho, kto zvládne developerské šprinty? Ste na správnom mieste!',
@@ -65,7 +65,7 @@ export const TranslationProvider = ({ children }) => {
         desc3: 'Ponúkam tvorbu portfólií, blogov a firemných prezentácií, ktoré nielen esteticky zapôsobia, ale sú aj jednoduché na správu a flexibilné pre ďalší rozvoj.'
       },
       projects: {
-        title: 'Moje <span>projekty</span>',
+        title: 'Moje <span>Projekty</span>',
         subtitle: 'Najnovšie práce',
         description: 'Tu sú niektoré z mojich najnovších projektov.',
         viewProject: 'Pozrieť projekt',
@@ -81,7 +81,7 @@ export const TranslationProvider = ({ children }) => {
         viewAllProjects: 'Zobraziť všetky projekty'
       },
       contact: {
-        title: 'Váš <span>web</span> - váš <span>úspech</span>',
+        title: 'Váš <span>web</span> - Váš <span>úspech</span>',
         subtitle: 'Kontakt',
         description: 'Máte predstavu o svojej stránke? Pošlite mi stručný opis vašich cieľov a spoločne vytvoríme riešenie, ktoré prináša výsledky.',
         sendMessage: 'Pošli správu',
@@ -221,7 +221,7 @@ export const TranslationProvider = ({ children }) => {
         desc3: 'I offer portfolio, blog and corporate presentation creation that not only make an aesthetic impact but are also easy to manage and flexible for further development.'
       },
       projects: {
-        title: 'My <span>projects</span>',
+        title: 'My <span>Projects</span>',
         subtitle: 'Latest work',
         description: 'Here are some of my latest projects.',
         viewProject: 'View project',
@@ -237,7 +237,7 @@ export const TranslationProvider = ({ children }) => {
         viewAllProjects: 'View all projects'
       },
       contact: {
-        title: 'Your <span>web</span> - your <span>success</span>',
+        title: 'Your <span>web</span> - Your <span>success</span>',
         subtitle: 'Contact',
         description: 'Have an idea for your website? Send me a brief description of your goals and together we\'ll create a solution that delivers results.',
         sendMessage: 'Send message',
