@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Cookies from 'js-cookie';
 import CookieModal from './CookieModal';
 import CookieBanner from './CookieBanner';
-import useScrollAnimation from '../hooks/ScrollAnimation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCookieBite } from '@fortawesome/free-solid-svg-icons';
 import './cookieconsent.css';

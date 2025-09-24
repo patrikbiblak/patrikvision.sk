@@ -27,7 +27,7 @@ const AboutSection = () => {
           <p>{t('about.desc3')}</p>
         </div>
         <div className="about-item" ref={rightRef}>
-          <img src="images/profile1.png" alt="PatrikVision - Web Development & AI Solutions Profile Photo" />
+          <img src="images/profile1.png" alt="PatrikVision - Web Development & AI Solutions Profile" />
         </div>
       </div>
     </section>
