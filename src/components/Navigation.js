@@ -22,12 +22,6 @@ const Navigation = () => {
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
 
-  const handleLanguageChange = (event) => {
-    const selectedLanguage = event.target.value;
-    i18n.changeLanguage(selectedLanguage);
-  };
-
-
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;

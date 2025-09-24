@@ -28,7 +28,6 @@ html, body {
   color: #333333;
   line-height: 1.6;
   overflow-x: hidden;
-  overflow-y: hidden;
 }
 
 section:not(.hero-section) {
