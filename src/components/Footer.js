@@ -15,7 +15,7 @@ const Footer = () => {
         <div ref={ref} className="footer-columns">
             <div className="footer-1">
                 <div className="navigation-logo">
-                    PatrikVision
+                    Patrik<span style={{color: 'var(--brand-color)'}}>Vision</span>
                 </div>
             <p>
                 {t('footer.description')}
@@ -74,7 +74,7 @@ const Footer = () => {
             <p>
                 <a href='/gdpr'>{t('footer.privacyPolicy')}</a>
             </p>
-            <p>© {new Date().getFullYear()} PatrikVision. {t('footer.rights')}</p>
+            <p>© {new Date().getFullYear()} Patrik<span style={{color: 'var(--brand-color)'}}>Vision</span>. {t('footer.rights')}</p>
         </div>
     </footer>
 

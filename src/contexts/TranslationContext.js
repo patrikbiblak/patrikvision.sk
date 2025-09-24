@@ -40,7 +40,7 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Kontakt'
       },
       hero: {
-        title: 'Navrhni. Postav. Vyvíjaj.',
+        title: '<span class="underline-word">Navrhni.</span> <span>Postav.</span> <span class="underline-word">Vyvíjaj.</span>',
         subtitle: 'Frontend Developer',
         description: 'Pretváram nápady na moderné a kreatívne webové stránky, ktoré vyniknú v digitálnom svete. Vytvorme spolu online zážitok, ktorý zaujme podľa vašich predstáv.'
       },
@@ -217,7 +217,7 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Contact'
       },
       hero: {
-        title: 'Design. Build. Develop.',
+        title: '<span class="underline-word">Design.</span> <span>Build.</span> <span class="underline-word">Develop.</span>',
         subtitle: 'Frontend Developer',
         description: 'I transform ideas into modern and creative websites that stand out in the digital world. Let\'s create an online experience that captivates according to your vision.'
       },

@@ -41,7 +41,7 @@ const Navigation = () => {
     <header className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navigation-container">
           <div className="navigation-logo">
-            PatrikVision
+            Patrik<span style={{color: 'var(--brand-color)'}}>Vision</span>
           </div>
 
         <button
