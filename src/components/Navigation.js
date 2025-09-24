@@ -8,7 +8,8 @@ const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const { t } = useTranslation();
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const navItems = [
     { path: "/", label: t('nav.home') },
@@ -20,6 +21,11 @@ const Navigation = () => {
 
   const toggleMenu = () => setIsOpen((prev) => !prev);
   const closeMenu = () => setIsOpen(false);
+
+  const handleLanguageChange = (event) => {
+    const selectedLanguage = event.target.value;
+    i18n.changeLanguage(selectedLanguage);
+  };
 
 
   useEffect(() => {
@@ -35,20 +41,9 @@ const Navigation = () => {
   return (
     <header className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navigation-container">
-          <div className="navigation-logo">
-            Patrik<span style={{color: 'var(--brand-color)'}}>Vision</span>
-          </div>
-
-        <button
-          className={`hamburger ${isOpen ? "open" : ""}`}
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-          aria-expanded={isOpen}
-        >
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </button>
+        <div className="navigation-logo">
+          Patrik<span style={{color: 'var(--brand-color)'}}>Vision</span>
+        </div>
 
         <nav className={`nav-menu-wrapper ${isOpen ? "open" : ""}`}>
           <ul className="navigation-links">
@@ -71,8 +66,106 @@ const Navigation = () => {
                 </NavLink>
               </li>
             ))}
+            <li className="mobile-language-switcher">
+              <div className="custom-select mobile">
+                <div 
+                  className="select-trigger"
+                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+                >
+                  <span>{i18n.language.toUpperCase()}</span>
+                  <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
+                </div>
+                {isLanguageOpen && (
+                  <div className="select-options">
+                    <div 
+                      className={`option ${i18n.language === 'en' ? 'selected' : ''}`}
+                      onClick={() => {
+                        i18n.changeLanguage('en');
+                        setIsLanguageOpen(false);
+                      }}
+                    >
+                      EN
+                    </div>
+                    <div 
+                      className={`option ${i18n.language === 'sk' ? 'selected' : ''}`}
+                      onClick={() => {
+                        i18n.changeLanguage('sk');
+                        setIsLanguageOpen(false);
+                      }}
+                    >
+                      SK
+                    </div>
+                    <div 
+                      className={`option ${i18n.language === 'hu' ? 'selected' : ''}`}
+                      onClick={() => {
+                        i18n.changeLanguage('hu');
+                        setIsLanguageOpen(false);
+                      }}
+                    >
+                      HU
+                    </div>
+                  </div>
+                )}
+              </div>
+            </li>
           </ul>
         </nav>
+        
+        <div className="navbar-right">
+          <div className="language-switcher">
+            <div className="custom-select">
+              <div 
+                className="select-trigger"
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              >
+                <span>{i18n.language.toUpperCase()}</span>
+                <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
+              </div>
+              {isLanguageOpen && (
+                <div className="select-options">
+                  <div 
+                    className={`option ${i18n.language === 'en' ? 'selected' : ''}`}
+                    onClick={() => {
+                      i18n.changeLanguage('en');
+                      setIsLanguageOpen(false);
+                    }}
+                  >
+                    EN
+                  </div>
+                  <div 
+                    className={`option ${i18n.language === 'sk' ? 'selected' : ''}`}
+                    onClick={() => {
+                      i18n.changeLanguage('sk');
+                      setIsLanguageOpen(false);
+                    }}
+                  >
+                    SK
+                  </div>
+                  <div 
+                    className={`option ${i18n.language === 'hu' ? 'selected' : ''}`}
+                    onClick={() => {
+                      i18n.changeLanguage('hu');
+                      setIsLanguageOpen(false);
+                    }}
+                  >
+                    HU
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+          
+          <button
+            className={`hamburger ${isOpen ? "open" : ""}`}
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={isOpen}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </button>
+        </div>
       </div>
     </header>
   );
