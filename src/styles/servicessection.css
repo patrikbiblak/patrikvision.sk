@@ -53,9 +53,9 @@
   justify-content: center;
   width: 80px;
   height: 80px;
-  border-radius: 50%;
+  border-radius: 8px;
   background-color: rgba(17, 100, 102, 0.1);
-  border: 2px solid var(--brand-color);
+  border: 1.8px solid var(--brand-color);
   transition: all 0.3s ease;
 }
 
@@ -67,7 +67,7 @@
 .service:hover .service-icon {
   background-color: var(--brand-color);
   color: #ffffff;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .service-content h3 {
