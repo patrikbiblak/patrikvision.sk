@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import ScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/herosection.css";
@@ -8,6 +8,8 @@ const HeroSection = () => {
     const arrowRef = useRef(null);
     const codeRef = useRef(null);
     const { t } = useTranslation();
+    const [displayedCode, setDisplayedCode] = useState('');
+    const [isTyping, setIsTyping] = useState(false);
 
     ScrollAnimation(arrowRef, { immediate: true });
     ScrollAnimation(ref, { immediate: true });
@@ -16,12 +18,43 @@ const HeroSection = () => {
     const sampleCode = `// PatrikVision
 const developer = {
   name: "Patrik",
-  skills: ["React", "JavaScript", "Node.js", "Python"],
+  interests: ["UI/UX Design", "SEO", "Analytics", "Performance"],
   passion: "Creating amazing web experiences",
   motto: "Code with vision"
 };
 
 console.log("Let's build something great!");`;
+
+    useEffect(() => {
+        const codeLines = sampleCode.split('\n');
+        let currentIndex = 0;
+        let currentLine = 0;
+        let currentText = '';
+
+        const typeNextCharacter = () => {
+            if (currentLine < codeLines.length) {
+                const currentLineText = codeLines[currentLine];
+                
+                if (currentIndex < currentLineText.length) {
+                    currentText += currentLineText[currentIndex];
+                    setDisplayedCode(currentText);
+                    currentIndex++;
+                    setTimeout(typeNextCharacter, 50);
+                } else {
+                    currentText += '\n';
+                    setDisplayedCode(currentText);
+                    currentLine++;
+                    currentIndex = 0;
+                    setTimeout(typeNextCharacter, 50);
+                }
+            } else {
+                setIsTyping(false);
+            }
+        };
+
+        setIsTyping(true);
+        setTimeout(typeNextCharacter, 500);
+    }, [sampleCode]);
 
     return (
         <section className="hero-section">
@@ -35,8 +68,11 @@ console.log("Let's build something great!");`;
                         </div>
                         <span className="code-title">portfolio.js</span>
                     </div>
-                    <pre className="code-content">
-                        <code>{sampleCode}</code>
+                    <pre className={`code-content ${isTyping ? 'typing-active' : ''}`}>
+                        <code>
+                            {displayedCode}
+                            {isTyping && <span className="typing-cursor">|</span>}
+                        </code>
                     </pre>
                 </div>
 
