@@ -109,13 +109,21 @@ const skTranslations = {
     "rights": "Všetky práva vyhradené.",
     "privacy": "Ochrana súkromia",
     "madeWith": "Vytvorené s ❤️ v Slovensku",
-    "description": "Front-end developer, zapálený pre tvorbu úžasných webových zážitkov.",
+    "description": "Profesionálny webový vývojár a špecialista na AI riešenia, zapálený pre tvorbu úžasných digitálnych zážitkov.",
     "socialMedia": "Sociálne siete",
     "information": "Informácie",
     "about": "O mne",
     "projects": "Projekty",
     "contact": "Kontakt",
-    "privacyPolicy": "Zásady používania osobných údajov a súborov cookie"
+    "privacyPolicy": "Zásady používania osobných údajov a súborov cookie",
+    "quickLinks": "Rýchle odkazy",
+    "services": "Služby",
+    "portfolio": "Portfólio",
+    "webDevelopment": "Webový vývoj",
+    "uiUxDesign": "UI/UX dizajn",
+    "seoOptimization": "SEO optimalizácia",
+    "consulting": "Konzultácie",
+    "contactInfo": "Kontaktné informácie"
   },
   "services": {
     "title": "Moje Služby",

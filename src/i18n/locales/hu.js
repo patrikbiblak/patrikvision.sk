@@ -109,13 +109,21 @@ const huTranslations = {
     "rights": "Minden jog fenntartva.",
     "privacy": "Adatvédelem",
     "madeWith": "Készítve ❤️-vel Szlovákiában",
-    "description": "Front-end fejlesztő, szenvedéllyel alkotok csodálatos webes élményeket.",
+    "description": "Professzionális webfejlesztő és AI megoldások specialistája, szenvedéllyel alkotok csodálatos digitális élményeket.",
     "socialMedia": "Közösségi média",
     "information": "Információ",
     "about": "Rólam",
     "projects": "Projektek",
     "contact": "Kapcsolat",
-    "privacyPolicy": "Adatvédelmi irányelvek és cookie használat"
+    "privacyPolicy": "Adatvédelmi irányelvek és cookie használat",
+    "quickLinks": "Gyors linkek",
+    "services": "Szolgáltatások",
+    "portfolio": "Portfólió",
+    "webDevelopment": "Webfejlesztés",
+    "uiUxDesign": "UI/UX tervezés",
+    "seoOptimization": "SEO optimalizálás",
+    "consulting": "Tanácsadás",
+    "contactInfo": "Kapcsolati információk"
   },
   "services": {
     "title": "Szolgáltatásaim",

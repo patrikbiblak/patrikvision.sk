@@ -109,13 +109,21 @@ const en = {
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
     "madeWith": "Made with ❤️ in Slovakia",
-    "description": "Front-end developer, passionate about creating amazing web experiences.",
+    "description": "Professional web developer and AI solutions specialist, passionate about creating amazing digital experiences.",
     "socialMedia": "Social media",
     "information": "Information",
     "about": "About",
     "projects": "Projects",
     "contact": "Contact",
-    "privacyPolicy": "Privacy policy and cookie usage"
+    "privacyPolicy": "Privacy policy and cookie usage",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "portfolio": "Portfolio",
+    "webDevelopment": "Web Development",
+    "uiUxDesign": "UI/UX Design",
+    "seoOptimization": "SEO Optimization",
+    "consulting": "Consulting",
+    "contactInfo": "Contact Information"
   },
   "services": {
     "title": "My Services",
