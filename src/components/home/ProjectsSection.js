@@ -41,7 +41,13 @@ const ProjectsSection = () => {
   }, []);
 
   return (
-    <section className="projects-section">
+    <section className="projects-section" style={{ 
+        margin: '40px 60px', 
+        padding: '40px',
+        backgroundColor: '#dddddd',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
+        transition: 'all 0.3s ease'
+    }}>
       <div className="container projects-content">
         <div className="projects-heading" ref={leftRef}>
           <h2>{t('projects.selectedProjects')}</h2>

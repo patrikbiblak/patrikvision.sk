@@ -1,25 +1,19 @@
 :root {
-  /* Background colors */
-  --bg-primary: #000000;
-  --bg-secondary: #0a0a0a;
-  --bg-card: #070707;
-  --blur-bg: hsla(var(--bg-primary), 0.6);
-
   /* Text colors */
-  --text-primary: #ffffff;
-  --text-secondary: #a1a1aa;
-  --text-accent: #fafafa;
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --text-accent: #222222;
 
   /* Borders */
-  --border-default: #404040;
+  --border-default: #999999;
   --border-radius: 1rem;
 
   /* Box shadow */
-  --box-shadow: rgba(255, 255, 255, 0.12) 0px 4px 16px;
+  --box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 16px;
 
-  --brand-color: #89CFF0;
-  --foreground: 0, 0%, 100%;
-  --muted-foreground: 0, 0%, 80%;
+  --brand-color: #666666;
+  --foreground: 0, 0%, 20%;
+  --muted-foreground: 0, 0%, 40%;
 }
 
 * {
@@ -30,13 +24,13 @@
 
 html, body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg-primary);
-  color: #ffffff;
+  background-color: #eeeeee;
+  color: #333333;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
-section {
+section:not(.hero-section) {
   text-align: center;
   min-height: 100vh;
   padding: 4rem 2rem;
@@ -47,7 +41,10 @@ section {
 }
 
 section:nth-of-type(2n) {
-  background-color: var(--bg-secondary);
+  background-color: #b8b8b8;
+  background-image: 
+    radial-gradient(circle at 0.3px 0.3px, rgba(140, 140, 140, 0.2) 0.3px, transparent 0.3px);
+  background-size: 1.5px 1.5px;
 }
 
 .container {
@@ -96,9 +93,9 @@ p {
 }
 
 button {
-  background-color: var(--bg-card);
+  background-color: transparent;
   border: 1px solid var(--border-default);
-  color: white;
+  color: #333333;
   padding: 0.75rem 1.5rem;
   margin: 1rem;
   border-radius: 0.3rem;
@@ -108,7 +105,7 @@ button {
 }
 
 button:hover {
-  background-color: #1a1a1a;
+  background-color: rgba(153, 153, 153, 0.1);
 }
 
 img {
@@ -121,8 +118,8 @@ input, textarea, select {
   font-family: inherit;
   font-size: 1rem;
   border: 1px solid var(--border-default);
-  color: #ffffff;
-  background: #080808;
+  color: #333333;
+  background: transparent;
   border-radius: 0.3rem;
   padding: 0.5rem;
   margin-bottom: 1rem;
@@ -206,7 +203,7 @@ input:focus {
     padding: 0.5rem 1rem;
   }
 
-  section {
+  section:not(.hero-section) {
     padding: 1rem;
   }
 

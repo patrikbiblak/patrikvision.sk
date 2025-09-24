@@ -20,7 +20,7 @@
   flex-shrink: 0;
   align-self: flex-start;
   width: clamp(180px, 50vw, 260px);
-  background-color: var(--bg-card);
+  background-color: transparent;
   border-radius: 12px;
   overflow: hidden;
   border: 1px solid var(--border-default);

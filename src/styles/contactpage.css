@@ -33,7 +33,7 @@
 
 .contactpage-box {
   width: clamp(100px, 85vw, 500px);
-  background-color: var(--bg-card);
+  background-color: transparent;
   border: 1px solid var(--border-default);
   box-shadow: var(--box-shadow);
   border-radius: 12px;
@@ -55,16 +55,16 @@
 
 .contactpage-box:first-child button {
   display: block;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
-  background: #ffffff;
+  background: transparent;
   margin: 0 auto;
   width: 100%;
   margin-top: 1.2rem;
 }
 
 .contactpage-box button:hover {
-  background-color: #d7d7d7;
+  background-color: transparent;
 }
 
 .contactpage-info-item {
@@ -98,7 +98,7 @@
 }
 
 .contactpage-info-item div p:first-child {
-  color: white;
+  color: #333333;
   font-weight: 300;
   text-align: left;
 }

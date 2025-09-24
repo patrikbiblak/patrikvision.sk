@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import ScrollAnimation from "../hooks/ScrollAnimation";
 import { useTranslation } from "../contexts/TranslationContext";
@@ -10,6 +10,7 @@ const Navigation = () => {
 
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { language, changeLanguage, t } = useTranslation();
 
   const navItems = [
@@ -29,14 +30,22 @@ const Navigation = () => {
     closeMenu(); // Close mobile menu when language changes
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="navigation" ref={ref}>
+    <header className={`navigation ${isScrolled ? 'scrolled' : ''}`} ref={ref}>
       <div className="navigation-container">
-          <img
-            src="/logos/pv-logo.png"
-            alt="patrikvision.sk"
-            className="navigation-logo"
-          />
+          <div className="navigation-logo">
+            PatrikVision
+          </div>
 
         <button
           className={`hamburger ${isOpen ? "open" : ""}`}

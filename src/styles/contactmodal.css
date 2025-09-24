@@ -51,7 +51,7 @@
 }
 
 .modal-overlay {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(187,187,187,0.6);
   position: fixed;
   top: 0;
   left: 0;
@@ -65,9 +65,9 @@
 }
 
 .modal-container {
-  background-color: var(--bg-primary);
+  background-color: transparent;
   border: 1px solid var(--border-default);
-  color: white;
+  color: #333333;
   padding: 1.4rem;
   border-radius: 0.5rem;
   max-width: 850px;
@@ -84,7 +84,7 @@
   display: inline-block;
   pointer-events: auto;
   border: none;
-  color: white;
+  color: #333333;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0;
@@ -119,9 +119,9 @@
 
 .submit-btn {
   display: block;
-  color: #000000;
+  color: #333333;
   font-weight: bold;
-  background: #ffffff;
+  background: transparent;
   margin: 0 auto;
   width: 100%;
   margin-top: 1.2rem;
@@ -129,12 +129,12 @@
 }
 
 .submit-btn:hover {
-  background-color: #d7d7d7;
+  background-color: transparent;
 }
 
 .why-work {
   margin-top: 1.4rem;
-  background-color: var(--bg-secondary);
+  background-color: transparent;
   padding: 1rem;
   border: none;
   border-radius: 0.4rem;
@@ -154,8 +154,8 @@
 }
 
 .contact-info-item .icon {
-  background-color: #1b1b1b;
-  color: white;
+  background-color: transparent;
+  color: #333333;
   padding: 0.6rem;
   border-radius: 50%;
   width: 2.5rem;

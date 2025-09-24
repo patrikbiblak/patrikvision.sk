@@ -12,7 +12,13 @@ const AboutSection = () => {
   ScrollAnimation(rightRef, { customClass: 'right' });
 
   return (
-    <section className="about-section">
+    <section className="about-section" style={{ 
+        margin: '40px 60px', 
+        padding: '40px',
+        backgroundColor: '#dddddd',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
+        transition: 'all 0.3s ease'
+    }}>
       <div className="container about-content">
         <div className="about-item" ref={leftRef}>
           <h2>{t('about.aboutMe')}</h2>

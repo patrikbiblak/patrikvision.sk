@@ -30,7 +30,7 @@
 .box-message {
   position: relative;
   overflow: hidden;
-  background-color: var(--bg-card);
+  background-color: transparent;
   border: 1px solid var(--border-default);
   border-radius: 14px;
   padding: 2rem;
@@ -124,11 +124,11 @@
 }
 .logo-carousel::before {
   left: 0;
-  background: linear-gradient(to right, #000, transparent);
+  background: linear-gradient(to right, transparent, transparent);
 }
 .logo-carousel::after {
   right: 0;
-  background: linear-gradient(to left, #000, transparent);
+  background: linear-gradient(to left, transparent, transparent);
 }
 
 @media (max-width: 480px) {
@@ -142,7 +142,7 @@
   width: var(--icon-w);
   height: var(--icon-w);
   margin-right: var(--gap);
-  color: white;
+  color: #333333;
   transition: color 0.3s ease;
 }
 

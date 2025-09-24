@@ -18,7 +18,13 @@ const SkillsSection = () => {
   ];
 
   return (
-    <section className="skills-section">
+    <section className="skills-section" style={{ 
+        margin: '40px 60px', 
+        padding: '40px',
+        backgroundColor: '#dddddd',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
+        transition: 'all 0.3s ease'
+    }}>
       <div className="container skills-content">
         <h2 ref={leftRef}>{t('skills.title')}</h2>
 

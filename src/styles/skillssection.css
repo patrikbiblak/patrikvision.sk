@@ -38,7 +38,7 @@
   content: '';
   display: block;
   height: 10px;
-  background: linear-gradient(to right, #ffffff var(--level), #474747 var(--level));
+  background: linear-gradient(to right, transparent var(--level), transparent var(--level));
   border-radius: 30px;
 }
 

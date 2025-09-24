@@ -14,11 +14,9 @@ const Footer = () => {
     <footer>
         <div ref={ref} className="footer-columns">
             <div className="footer-1">
-                <img
-                        src="logos/pv-logo.png"
-                        alt="patrikvision.sk"
-                        className="navigation-logo"
-                />
+                <div className="navigation-logo">
+                    PatrikVision
+                </div>
             <p>
                 {t('footer.description')}
             </p>

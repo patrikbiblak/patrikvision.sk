@@ -15,7 +15,7 @@
   width: 85vw;
   opacity: 0;
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-  background-color: var(--bg-card);
+  background-color: transparent;
   border: 1px solid var(--border-default);
   border-radius: 20px;
   cursor: default;
@@ -55,7 +55,7 @@
 }
 
 .projects-footer a {
-  color: #fff;
+  color: #333333;
 }
 
 .view-all {
