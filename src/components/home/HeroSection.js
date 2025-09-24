@@ -22,7 +22,9 @@ const developer = {
   name: "Patrik",
   interests: ["UI/UX Design", "SEO", "Analytics", "Performance"],
   passion: "Creating amazing web experiences",
-  motto: "Code with vision"
+  motto: "Code with vision",
+
+  console.log("Let's build something great!");
 };
 
 `;
