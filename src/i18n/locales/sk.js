@@ -1,4 +1,4 @@
-export default {
+const skTranslations = {
   "nav": {
     "home": "Domov",
     "about": "O mne",
@@ -178,3 +178,5 @@ export default {
     }
   }
 };
+
+export default skTranslations;

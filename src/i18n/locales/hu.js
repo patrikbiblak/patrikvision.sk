@@ -1,4 +1,4 @@
-export default {
+const huTranslations = {
   "nav": {
     "home": "Főoldal",
     "about": "Rólam",
@@ -178,3 +178,5 @@ export default {
     }
   }
 };
+
+export default huTranslations;
