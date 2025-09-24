@@ -114,12 +114,33 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Kontakt',
         privacyPolicy: 'Zásady používania osobných údajov a súborov cookie'
       },
-      skills: {
-        title: 'Moje Zručnosti',
-        subtitle: 'Technológie s ktorými pracujem',
-        frontend: 'Frontend',
-        backend: 'Backend',
-        tools: 'Nástroje'
+      services: {
+        title: 'Moje Služby',
+        subtitle: 'Čo vám môžem ponúknuť',
+        seo: {
+          name: 'SEO',
+          description: 'Optimalizácia pre vyhľadávače na zlepšenie viditeľnosti vašej stránky'
+        },
+        analytics: {
+          name: 'Google Analytics',
+          description: 'Nastavenie analytiky a analýza dát pre lepšie pochopenie návštevníkov'
+        },
+        ai: {
+          name: 'AI a Automatizácia',
+          description: 'Riešenia umelou inteligenciou a automatizácia procesov'
+        },
+        support: {
+          name: 'Podpora',
+          description: 'Technická podpora a údržba vašich projektov'
+        },
+        webpages: {
+          name: 'Webové Stránky',
+          description: 'Vývoj a dizajn vlastných webových riešení'
+        },
+        marketing: {
+          name: 'Digitálny Marketing',
+          description: 'Marketingové stratégie, sociálne médiá a email marketing'
+        }
       },
       privacy: {
         title: 'Zásady ochrany osobných údajov a súborov cookie',
@@ -270,12 +291,33 @@ export const TranslationProvider = ({ children }) => {
         contact: 'Contact',
         privacyPolicy: 'Privacy policy and cookie usage'
       },
-      skills: {
-        title: 'My Skills',
-        subtitle: 'Technologies I work with',
-        frontend: 'Frontend',
-        backend: 'Backend',
-        tools: 'Tools'
+      services: {
+        title: 'My Services',
+        subtitle: 'What I can offer you',
+        seo: {
+          name: 'SEO',
+          description: 'Search Engine Optimization to improve your website visibility'
+        },
+        analytics: {
+          name: 'Google Analytics',
+          description: 'Analytics setup and data analysis for better insights'
+        },
+        ai: {
+          name: 'AI and Automation',
+          description: 'Artificial Intelligence solutions and process automation'
+        },
+        support: {
+          name: 'Support',
+          description: 'Technical support and maintenance for your projects'
+        },
+        webpages: {
+          name: 'Web Pages',
+          description: 'Custom website development and design solutions'
+        },
+        marketing: {
+          name: 'Digital Marketing',
+          description: 'Marketing strategies, social media and email marketing'
+        }
       },
       privacy: {
         title: 'Privacy Policy and Cookie Usage',

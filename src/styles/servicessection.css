@@ -1,0 +1,124 @@
+.services-content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  text-align: center;
+  width: clamp(300px, 80vw, 1200px);
+  margin: 0 auto;
+}
+
+.service {
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+  border: 1px solid #cccccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.animate-service {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  color: var(--brand-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: rgba(18, 77, 84, 0.1);
+  border: 2px solid var(--brand-color);
+  transition: all 0.3s ease;
+}
+
+.service-icon .material-icons {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.service:hover .service-icon {
+  background-color: var(--brand-color);
+  color: #ffffff;
+  transform: scale(1.1);
+}
+
+.service-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.service-content p {
+  color: #666666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .service {
+    padding: 1.5rem;
+    transform: translateY(20px);
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+  }
+
+  .service-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service {
+    padding: 1rem;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+  }
+
+  .service-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .service-content p {
+    font-size: 0.85rem;
+  }
+}
