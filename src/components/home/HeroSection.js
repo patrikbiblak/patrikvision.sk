@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "../../contexts/TranslationContext";
 import "../../styles/herosection.css";
@@ -7,6 +8,7 @@ const HeroSection = () => {
     const ref = useRef(null);
     const arrowRef = useRef(null);
     const codeRef = useRef(null);
+    const navigate = useNavigate();
     const { t } = useTranslation();
     const [displayedCode, setDisplayedCode] = useState('');
     const [isTyping, setIsTyping] = useState(false);
@@ -56,6 +58,14 @@ console.log("Let's build something great!");`;
         setTimeout(typeNextCharacter, 500);
     }, [sampleCode]);
 
+    const handleServicesClick = () => {
+        navigate('/services');
+    };
+
+    const handleGetStartedClick = () => {
+        navigate('/contact');
+    };
+
     return (
         <section className="hero-section">
             <div className="hero-container">
@@ -79,6 +89,10 @@ console.log("Let's build something great!");`;
                 <div className="hero-content" ref={ref}> 
                     <h1 dangerouslySetInnerHTML={{ __html: t('hero.title') }}></h1>
                     <p>{t('hero.description')}</p>
+                    <div className="hero-buttons">
+                        <button className="btn-services" onClick={handleServicesClick}>{t('hero.services')}</button>
+                        <button className="btn-get-started" onClick={handleGetStartedClick}>{t('hero.getStarted')}</button>
+                    </div>
                 </div>
             </div>
 

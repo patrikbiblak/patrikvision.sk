@@ -43,7 +43,9 @@ export const TranslationProvider = ({ children }) => {
       hero: {
         title: '<span class="brand-color">Web</span> <span class="underline-word">Development</span> & <span class="brand-color">AI</span> <span class="underline-word">Solutions</span>',
         subtitle: 'Web Development & AI Solutions',
-        description: 'Expert na web development a AI riešenia. Špecializujem sa na SEO optimalizáciu, Google Analytics a AI automatizáciu. Vytváram inteligentné webové stránky, ktoré prinášajú výsledky a transformujú vaše podnikanie.'
+        description: 'Expert na web development a AI riešenia. Špecializujem sa na SEO optimalizáciu, Google Analytics a AI automatizáciu. Vytváram inteligentné webové stránky, ktoré prinášajú výsledky a transformujú vaše podnikanie.',
+        services: 'Služby',
+        getStarted: 'Začať'
       },
       about: {
         title: 'O Mne',
@@ -221,7 +223,9 @@ export const TranslationProvider = ({ children }) => {
       hero: {
         title: '<span class="brand-color">Web</span> <span class="underline-word">Development</span> & <span class="brand-color">AI</span> <span class="underline-word">Solutions</span>',
         subtitle: 'Web Development & AI Solutions',
-        description: 'Expert in web development and AI solutions. Specialized in SEO optimization, Google Analytics and AI automation. I create intelligent websites that deliver results and transform your business.'
+        description: 'Expert in web development and AI solutions. Specialized in SEO optimization, Google Analytics and AI automation. I create intelligent websites that deliver results and transform your business.',
+        services: 'Services',
+        getStarted: 'Get Started'
       },
       about: {
         title: 'About Me',
