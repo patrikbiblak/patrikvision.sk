@@ -71,7 +71,7 @@ const Navigation = () => {
                 </NavLink>
               </li>
             ))}
-            </ul>
+          </ul>
         </nav>
       </div>
     </header>

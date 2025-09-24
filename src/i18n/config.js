@@ -5,6 +5,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // Import translation files
 import en from './locales/en.js';
 import sk from './locales/sk.js';
+import hu from './locales/hu.js';
 
 const resources = {
   en: {
@@ -12,6 +13,9 @@ const resources = {
   },
   sk: {
     translation: sk
+  },
+  hu: {
+    translation: hu
   }
 };
 

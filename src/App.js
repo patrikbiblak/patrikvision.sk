@@ -10,7 +10,7 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import CookieSettings from "./CookieConsent/CookieSettings";
-import "./i18n";
+import "./i18n/config";
 
 const App = () => {
   useVersionChecker();
