@@ -1,8 +1,7 @@
-@keyframes slideUp { from { opacity: 0; transform: translateY(20px);} to { opacity: 1; transform: translateY(0);} }
-@keyframes blowOut { from { opacity: 1; transform: scale(1);} to { opacity: 0; transform: scale(0.8);} }
-@keyframes fadeInOverlay { from { background-color: rgba(0,0,0,0);} to { background-color: rgba(0,0,0,0.6);} }
-@keyframes fadeOutOverlay { from { background-color: rgba(0,0,0,0.6);} to { background-color: rgba(0,0,0,0);} }
-@keyframes scaleIn { from { opacity: 0; transform: scale(0.3);} to { opacity: 1; transform: scale(1);} }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.8);} to { opacity: 1; transform: scale(1);} }
+@keyframes scaleOut { from { opacity: 1; transform: scale(1);} to { opacity: 0; transform: scale(0.8);} }
+@keyframes fadeInOverlay { from { background-color: rgba(0,0,0,0);} to { background-color: rgba(0,0,0,0.4);} }
+@keyframes fadeOutOverlay { from { background-color: rgba(0,0,0,0.4);} to { background-color: rgba(0,0,0,0);} }
 
 .cookie-modal-overlay { 
   animation: fadeInOverlay 0.3s ease forwards; 
@@ -19,36 +18,42 @@
 }
 
 .cookie-modal { 
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  background-color: var(--blur-bg);
-  color: #fff; 
-  border: 1px solid var(--border-default);
-  border-radius: var(--border-radius);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #333333; 
+  border: 1px solid #cccccc;
+  border-radius: 0;
   padding: 1.5rem; 
   max-width: 800px; 
   width: 90%; 
   position: relative; 
-  animation: slideUp 0.3s ease-out forwards; 
+  animation: scaleIn 0.3s ease-out forwards; 
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
 .cookie-modal.closing { 
-  animation: blowOut 0.2s ease-in forwards; 
+  animation: scaleOut 0.2s ease-in forwards; 
 }
 
 .cookie-modal__close { 
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1rem;
+  right: 1rem;
   background: transparent;
   display: inline-block;
   pointer-events: auto;
   border: none;
-  color: white;
+  color: #666666;
   font-size: 1.5rem;
   cursor: pointer;
   padding: 0;
   z-index: 10;
+  transition: color 0.2s ease;
+}
+
+.cookie-modal__close:hover {
+  background-color: transparent;
 }
 
 .cookie-modal__categories { 
@@ -76,7 +81,8 @@
 
 .category__info small { 
   font-size: 0.85rem; 
-  color: #ccc; 
+  color: #666666; 
+  line-height: 1.4;
 }
 
 .switch { 
@@ -103,9 +109,10 @@
   top: 0; left: 0; 
   right: 0;
   bottom: 0; 
-  background-color: #ccc; 
+  background-color: #e0e0e0; 
   transition: 0.4s; 
   border-radius: 34px; 
+  border: 1px solid #cccccc;
 }
 
 .slider:before { 
@@ -115,17 +122,19 @@
   width: 18px; 
   left: 3px; 
   bottom: 3px; 
-  background-color: #fff; 
+  background-color: #ffffff; 
   transition: 0.4s; 
   border-radius: 50%; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .switch input:checked + .slider { 
-  background-color: var(--brand-color); 
+  background-color: #666666; 
+  border-color: #555555;
 }
 
 .switch input:focus + .slider { 
-  box-shadow: 0 0 1px var(--brand-color); 
+  box-shadow: 0 0 0 2px rgba(102, 102, 102, 0.3); 
 }
 
 .switch input:checked + .slider:before { 
@@ -155,21 +164,26 @@
 }
 
 .btn--primary { 
-  background-color: var(--brand-color); 
-  color: #000; 
+  background-color: #666666; 
+  color: #ffffff; 
+  border: 1px solid #666666;
 }
 
 .btn--primary:hover, .btn--primary:focus { 
-  background-color: #00d0ff; 
+  background-color: #555555; 
+  border-color: #555555;
 }
 
 .btn--secondary { 
-  background-color: #333; 
-  color: #fff; 
+  background-color: transparent; 
+  color: #666666; 
+  border: 1px solid #cccccc;
 }
 
 .btn--secondary:hover, .btn--secondary:focus { 
-  background-color: #444; 
+  background-color: rgba(102, 102, 102, 0.05); 
+  border-color: #999999;
+  color: #333333;
 }
 
 .cookie-modal__footer { 
@@ -178,13 +192,15 @@
 }
 
 .cookie-modal__link { 
-  color: var(--brand-color); 
+  color: #666666; 
   text-decoration: underline; 
   font-size: 0.9rem; 
+  transition: color 0.2s ease;
 }
 
 .cookie-modal__link:hover, .cookie-modal__link:focus { 
   text-decoration: none; 
+  color: #333333;
 }
 
 .cookie-settings-button { 
@@ -192,10 +208,10 @@
   margin: 1rem;
   bottom: 0; 
   left: 0; 
-  background-color: #1a1a1a; 
-  color: #f8f9fa; 
+  background-color: rgba(255, 255, 255, 0.95); 
+  color: #666666; 
   font-size: 1.6rem; 
-  border: none; 
+  border: 1px solid #cccccc; 
   border-radius: 50%; 
   width: 48px; 
   height: 48px; 
@@ -205,6 +221,8 @@
   align-items: center; 
   justify-content: center; 
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   transition: all 0.3s ease;
   opacity: 0;
   transform: scale(0.3);
@@ -217,7 +235,9 @@
 }
 
 .cookie-settings-button:hover, .cookie-settings-button:focus { 
-  background-color: #2d2d2d; 
+  background-color: rgba(255, 255, 255, 1); 
+  color: #333333;
+  border-color: #999999;
   transform: translateY(-2px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.15);
 }
@@ -230,7 +250,22 @@
   .cookie-modal { 
     width: 95%; 
     padding: 1rem; 
+    margin: 1rem;
   } 
+  
+  .cookie-banner {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    padding: 0.75rem 1rem;
+  }
+  
+  .cookie-settings-button {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+  }
 }
 
 @media (max-width: 500px) {
@@ -242,6 +277,18 @@
 
   .cookie-modal__actions > .btn {
     margin: 0;
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .cookie-banner__actions {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .cookie-banner__actions button {
+    margin: 0.2rem 0;
+    width: 100%;
   }
 }
 
@@ -250,15 +297,17 @@
   flex-direction: column;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  background-color: var(--blur-bg);
-  border: 1px solid var(--border-default);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333333;
+  border: 1px solid #cccccc;
   border-radius: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 
   position: fixed;
   bottom: 20px;
   right: 20px;
   margin: 0;
-  padding: 0.75em 1.25em;
+  padding: 1rem 1.25rem;
 
   max-width: 90%;
   width: 500px;
@@ -274,16 +323,6 @@
   gap: 1rem;
 }
 
-.cookie-banner__actions button {
-  margin-bottom: 0.4rem;
-}
-
-@media (max-width: 480px) {
-  .cookie-banner__actions button {
-    margin: 0.8rem auto;
-    width: fit-content;
-  }
-}
 
 @media (max-width: 352px) {
   .cookie-banner__actions button {
