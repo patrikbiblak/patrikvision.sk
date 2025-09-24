@@ -5,6 +5,9 @@
   margin-top: 4rem;
   position: relative;
   overflow: hidden;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .footer::before {
@@ -83,12 +86,12 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 1.2rem;
   border: 1px solid rgba(17, 100, 102, 0.1);
+  cursor: pointer;
 }
 
 .social-link:hover {
   background: var(--brand-color);
   color: white;
-  transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(17, 100, 102, 0.3);
   border-color: var(--brand-color);
 }
@@ -162,8 +165,7 @@
 /* Footer Bottom */
 .footer-bottom {
   border-top: 1px solid rgba(17, 100, 102, 0.1);
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
 .footer-bottom-content {

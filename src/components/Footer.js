@@ -48,6 +48,9 @@ const Footer = () => {
                         >
                             <MdEmail />
                         </a>
+                        <div className="social-link">
+                            <FaLinkedin />
+                        </div>
                     </div>
                 </div>
 
@@ -97,12 +100,10 @@ const Footer = () => {
             <div className="footer-bottom">
                 <div className="footer-bottom-content">
                     <p className="copyright">
-                        © {new Date().getFullYear()} Patrik<span className="brand-accent">Vision</span>. {t('footer.rights')}
+                        © {new Date().getFullYear()} PatrikVision. {t('footer.rights')}
                     </p>
                     <div className="footer-bottom-links">
                         <a href="/gdpr" className="footer-bottom-link">{t('footer.privacyPolicy')}</a>
-                        <span className="footer-divider">•</span>
-                        <a href="/contact" className="footer-bottom-link">{t('footer.contact')}</a>
                     </div>
                 </div>
             </div>
