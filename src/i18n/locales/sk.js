@@ -102,7 +102,7 @@ const skTranslations = {
       "location": "Poloha",
       "locationValue": "Slovensko"
     },
-    "contactMe": "Ozvite sa mi!",
+    "contactMe": "Get In Touch",
     "contactDesc": "Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!"
   },
   "footer": {

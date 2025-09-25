@@ -40,12 +40,6 @@ section:not(.hero-section):not(.why-choose-me-section) {
   align-items: center;
 }
 
-section:nth-of-type(2n) {
-  background-color: #b8b8b8;
-  background-image: 
-    radial-gradient(circle at 0.3px 0.3px, rgba(140, 140, 140, 0.2) 0.3px, transparent 0.3px);
-  background-size: 1.5px 1.5px;
-}
 
 .container {
   max-width: 75%;

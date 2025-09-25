@@ -102,7 +102,7 @@ const en = {
       "location": "Location",
       "locationValue": "Slovakia"
     },
-    "contactMe": "Contact me!",
+    "contactMe": "Get In Touch",
     "contactDesc": "I'd love to hear about your project. Let's create something amazing together!"
   },
   "footer": {
