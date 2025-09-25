@@ -91,18 +91,17 @@
 .code-content {
   background: #1e1e1e;
   color: #d4d4d4;
-  padding: 24px;
-  overflow: hidden;
+  padding: 1.5em 1.25em;
   font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
   font-size: clamp(11px, 1.5vw, 14px);
   line-height: 1.6;
   height: calc(100% - 45px);
+  max-height: 255px;
   position: relative;
   white-space: pre-wrap;
-  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
   transition: background 0.3s ease;
-  max-height: 255px;
-  overflow-y: hidden;
   letter-spacing: 0.02em;
 }
 
@@ -113,9 +112,11 @@
 .code-content code {
   background: none;
   color: inherit;
-  padding: 0;
   font-size: inherit;
   transition: all 0.1s ease;
+  word-break: break-all;
+  white-space: pre-wrap;
+  display: block;
 }
 
 .typing-cursor {
@@ -334,7 +335,7 @@
   
   .code-content {
     font-size: clamp(10px, 1.8vw, 12px);
-    padding: 18px;
+    padding: 1.25em 1em;
   }
   
   .hero-buttons {
@@ -391,7 +392,7 @@
   
   .code-content {
     font-size: clamp(9px, 2vw, 11px);
-    padding: 16px;
+    padding: 1em 0.875em;
   }
   
   .hero-buttons {
@@ -434,7 +435,7 @@
   
   .code-content {
     font-size: clamp(8px, 2.2vw, 10px);
-    padding: 14px;
+    padding: 0.875em 0.75em;
   }
   
   .hero-section h1 {
@@ -490,7 +491,7 @@
   
   .code-content {
     font-size: clamp(7px, 2.5vw, 9px);
-    padding: 12px;
+    padding: 0.75em 0.625em;
   }
   
   .hero-section h1 {
