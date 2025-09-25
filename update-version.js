@@ -20,6 +20,5 @@ fs.readFile(indexPath, 'utf8', (err, data) => {
 
   fs.writeFile(indexPath, updated, 'utf8', (err) => {
     if (err) return console.error('Chyba pri zápise novej verzie:', err);
-    console.log(`✅ Verzia ${version} bola automaticky zapísaná do index.html`);
   });
 });

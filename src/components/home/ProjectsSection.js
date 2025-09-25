@@ -4,11 +4,7 @@ import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "react-i18next";
 import "../../styles/projectssection.css";
 
-const projects = [
-  { title: "", description: "", },
-  { title: "", description: "", },
-  { title: "", description: "", },
-];
+const projects = [];
 
 const ProjectsSection = () => {
   const gridRef = useRef(null);

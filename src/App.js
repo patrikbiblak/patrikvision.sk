@@ -1,8 +1,12 @@
 import React, { Suspense } from "react";
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import useVersionChecker from "./hooks/useVersionChecker";
 import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import ContactPage from "./pages/ContactPage";
+import PortfolioPage from "./pages/PortfolioPage";
+import ServicesPage from "./pages/ServicesPage";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
@@ -22,10 +26,10 @@ const App = () => {
             <main>
               <Routes>
                 <Route path="/" element={<HomePage />}/>
-                <Route path="/about" element={<Navigate to="/" replace />}/>
-                <Route path="/portfolio" element={<Navigate to="/" replace />}/>
-                <Route path="/services" element={<Navigate to="/" replace />}/>
-                <Route path="/contact" element={<Navigate to="/" replace />}/>
+                <Route path="/about" element={<AboutPage />}/>
+                <Route path="/portfolio" element={<PortfolioPage />}/>
+                <Route path="/services" element={<ServicesPage />}/>
+                <Route path="/contact" element={<ContactPage />}/>
                 <Route path="/gdpr" element={<PrivacyPolicy />}/>
               </Routes>
             </main>

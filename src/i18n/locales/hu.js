@@ -6,6 +6,14 @@ const huTranslations = {
     "services": "Szolgáltatások",
     "contact": "Kapcsolat"
   },
+  "maintenance": {
+    "title": "Karbantartás",
+    "message": "Ez a szakasz jelenleg karbantartás alatt áll. Kérjük, próbálja újra később.",
+    "suggestion1": "Várakozás közben:",
+    "suggestion2": "Fedezze fel a weboldal más szakaszait",
+    "suggestion3": "Lépjen kapcsolatba velünk további információkért",
+    "suggestion4": "Ellenőrizze később a frissítéseket"
+  },
   "hero": {
     "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Fejlesztés</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Megoldások</span>",
     "subtitle": "Web Fejlesztés & AI Megoldások",

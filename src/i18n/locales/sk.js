@@ -6,6 +6,14 @@ const skTranslations = {
     "services": "Služby",
     "contact": "Kontakt"
   },
+  "maintenance": {
+    "title": "Údržba",
+    "message": "Táto sekcia je momentálne v údržbe. Prosím, skúste to neskôr.",
+    "suggestion1": "Zatiaľ čo čakáte, môžete:",
+    "suggestion2": "Preskúmať ďalšie sekcie webu",
+    "suggestion3": "Kontaktovať nás pre viac informácií",
+    "suggestion4": "Skontrolovať aktualizácie neskôr"
+  },
   "hero": {
     "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solutions</span>",
     "subtitle": "Web Development & AI Solutions",

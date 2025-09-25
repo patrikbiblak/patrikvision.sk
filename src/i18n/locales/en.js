@@ -6,6 +6,14 @@ const en = {
     "services": "Services",
     "contact": "Contact"
   },
+  "maintenance": {
+    "title": "Under Maintenance",
+    "message": "This section is currently under maintenance. Please check back later.",
+    "suggestion1": "While you wait, you can:",
+    "suggestion2": "Explore other sections of the website",
+    "suggestion3": "Contact us for more information",
+    "suggestion4": "Check back later for updates"
+  },
   "hero": {
     "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solutions</span>",
     "subtitle": "Web Development & AI Solutions",

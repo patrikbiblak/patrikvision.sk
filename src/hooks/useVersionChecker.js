@@ -15,7 +15,6 @@ const useVersionChecker = () => {
           ?.getAttribute('content');
 
         if (latestVersion && currentVersion && latestVersion !== currentVersion) {
-          console.log('🆕 Nová verzia zistená, stránka sa obnovuje...');
           window.location.reload();
         }
       } catch (err) {
