@@ -229,6 +229,7 @@
 .btn-get-started {
   background: var(--brand-color);
   color: white;
+  border: 2px solid transparent;
   box-shadow: 0 4px 15px rgba(17, 100, 102, 0.2);
 }
 
