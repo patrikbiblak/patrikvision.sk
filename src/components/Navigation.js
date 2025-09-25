@@ -40,6 +40,48 @@ const Navigation = () => {
         </div>
 
         <nav className={`nav-menu-wrapper ${isOpen ? "open" : ""}`}>
+          <div className="mobile-language-switcher">
+            <div className="custom-select mobile">
+              <div 
+                className="select-trigger"
+                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
+              >
+                <span>{i18n.language.split('-')[0].toUpperCase()}</span>
+                <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
+              </div>
+              {isLanguageOpen && (
+                <div className="select-options">
+                  <div 
+                    className={`option ${i18n.language.split('-')[0] === 'en' ? 'selected' : ''}`}
+                    onClick={() => {
+                      i18n.changeLanguage('en');
+                      setIsLanguageOpen(false);
+                    }}
+                  >
+                    EN
+                  </div>
+                  <div 
+                    className={`option ${i18n.language.split('-')[0] === 'sk' ? 'selected' : ''}`}
+                    onClick={() => {
+                      i18n.changeLanguage('sk');
+                      setIsLanguageOpen(false);
+                    }}
+                  >
+                    SK
+                  </div>
+                  <div 
+                    className={`option ${i18n.language.split('-')[0] === 'hu' ? 'selected' : ''}`}
+                    onClick={() => {
+                      i18n.changeLanguage('hu');
+                      setIsLanguageOpen(false);
+                    }}
+                  >
+                    HU
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
           <ul className="navigation-links">
             {navItems.map(({ path, label }) => (
               <li key={path}>
@@ -60,48 +102,6 @@ const Navigation = () => {
                 </NavLink>
               </li>
             ))}
-            <li className="mobile-language-switcher">
-              <div className="custom-select mobile">
-                <div 
-                  className="select-trigger"
-                  onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-                >
-                  <span>{i18n.language.split('-')[0].toUpperCase()}</span>
-                  <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
-                </div>
-                {isLanguageOpen && (
-                  <div className="select-options">
-                    <div 
-                      className={`option ${i18n.language.split('-')[0] === 'en' ? 'selected' : ''}`}
-                      onClick={() => {
-                        i18n.changeLanguage('en');
-                        setIsLanguageOpen(false);
-                      }}
-                    >
-                      EN
-                    </div>
-                    <div 
-                      className={`option ${i18n.language.split('-')[0] === 'sk' ? 'selected' : ''}`}
-                      onClick={() => {
-                        i18n.changeLanguage('sk');
-                        setIsLanguageOpen(false);
-                      }}
-                    >
-                      SK
-                    </div>
-                    <div 
-                      className={`option ${i18n.language.split('-')[0] === 'hu' ? 'selected' : ''}`}
-                      onClick={() => {
-                        i18n.changeLanguage('hu');
-                        setIsLanguageOpen(false);
-                      }}
-                    >
-                      HU
-                    </div>
-                  </div>
-                )}
-              </div>
-            </li>
           </ul>
         </nav>
         
