@@ -6,7 +6,7 @@ import {
   SiGit,
   SiGithub,
 } from 'react-icons/si';
-import { Link } from 'react-router';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import "../styles/projectsnone.css";

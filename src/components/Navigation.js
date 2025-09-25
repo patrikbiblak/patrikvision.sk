@@ -66,13 +66,13 @@ const Navigation = () => {
                   className="select-trigger"
                   onClick={() => setIsLanguageOpen(!isLanguageOpen)}
                 >
-                  <span>{i18n.language.toUpperCase()}</span>
+                  <span>{i18n.language.split('-')[0].toUpperCase()}</span>
                   <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
                 </div>
                 {isLanguageOpen && (
                   <div className="select-options">
                     <div 
-                      className={`option ${i18n.language === 'en' ? 'selected' : ''}`}
+                      className={`option ${i18n.language.split('-')[0] === 'en' ? 'selected' : ''}`}
                       onClick={() => {
                         i18n.changeLanguage('en');
                         setIsLanguageOpen(false);
@@ -81,7 +81,7 @@ const Navigation = () => {
                       EN
                     </div>
                     <div 
-                      className={`option ${i18n.language === 'sk' ? 'selected' : ''}`}
+                      className={`option ${i18n.language.split('-')[0] === 'sk' ? 'selected' : ''}`}
                       onClick={() => {
                         i18n.changeLanguage('sk');
                         setIsLanguageOpen(false);
@@ -90,7 +90,7 @@ const Navigation = () => {
                       SK
                     </div>
                     <div 
-                      className={`option ${i18n.language === 'hu' ? 'selected' : ''}`}
+                      className={`option ${i18n.language.split('-')[0] === 'hu' ? 'selected' : ''}`}
                       onClick={() => {
                         i18n.changeLanguage('hu');
                         setIsLanguageOpen(false);
@@ -112,13 +112,13 @@ const Navigation = () => {
                 className="select-trigger"
                 onClick={() => setIsLanguageOpen(!isLanguageOpen)}
               >
-                <span>{i18n.language.toUpperCase()}</span>
+                <span>{i18n.language.split('-')[0].toUpperCase()}</span>
                 <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
               </div>
               {isLanguageOpen && (
                 <div className="select-options">
                   <div 
-                    className={`option ${i18n.language === 'en' ? 'selected' : ''}`}
+                    className={`option ${i18n.language.split('-')[0] === 'en' ? 'selected' : ''}`}
                     onClick={() => {
                       i18n.changeLanguage('en');
                       setIsLanguageOpen(false);
@@ -127,7 +127,7 @@ const Navigation = () => {
                     EN
                   </div>
                   <div 
-                    className={`option ${i18n.language === 'sk' ? 'selected' : ''}`}
+                    className={`option ${i18n.language.split('-')[0] === 'sk' ? 'selected' : ''}`}
                     onClick={() => {
                       i18n.changeLanguage('sk');
                       setIsLanguageOpen(false);
@@ -136,7 +136,7 @@ const Navigation = () => {
                     SK
                   </div>
                   <div 
-                    className={`option ${i18n.language === 'hu' ? 'selected' : ''}`}
+                    className={`option ${i18n.language.split('-')[0] === 'hu' ? 'selected' : ''}`}
                     onClick={() => {
                       i18n.changeLanguage('hu');
                       setIsLanguageOpen(false);

@@ -16,7 +16,7 @@ const useVersionChecker = () => {
 
         if (latestVersion && currentVersion && latestVersion !== currentVersion) {
           console.log('🆕 Nová verzia zistená, stránka sa obnovuje...');
-          window.location.reload(true);
+          window.location.reload();
         }
       } catch (err) {
         console.error('Chyba pri kontrole verzie:', err);

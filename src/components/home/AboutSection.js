@@ -20,14 +20,19 @@ const AboutSection = () => {
         transition: 'all 0.3s ease'
     }}>
       <div className="container about-content">
-        <div className="about-item" ref={leftRef}>
-          <h2>{t('about.aboutMe')}</h2>
-          <p>{t('about.desc1')}</p>
-          <p>{t('about.desc2')}</p>
-          <p>{t('about.desc3')}</p>
-        </div>
-        <div className="about-item" ref={rightRef}>
-          <img src="images/profile1.png" alt="PatrikVision - Web Development & AI Solutions Profile" />
+        <div className="about-wrapper">
+          <div className="about-text" ref={leftRef}>
+            <h2>{t('about.aboutMe')}</h2>
+            <p>{t('about.desc1')}</p>
+            <p>{t('about.desc2')}</p>
+            <p>{t('about.desc3')}</p>
+          </div>
+          <div className="about-image" ref={rightRef}>
+            <img 
+              src="/images/avatar.png" 
+              alt="Patrik - Web Developer & AI Solutions Specialist"
+            />
+          </div>
         </div>
       </div>
     </section>
