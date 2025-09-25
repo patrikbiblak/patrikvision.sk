@@ -143,11 +143,11 @@
 
 .hero-section h1 {
   color: #000000;
-  margin-bottom: 1.75rem;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
-  line-height: 1.15;
-  font-weight: 800;
-  letter-spacing: -0.02em;
+  margin-bottom: 2.5rem;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
 }
 
 .hero-section h1 span,
@@ -164,29 +164,29 @@
 .hero-section h1 .underline-word::after {
   content: '';
   position: absolute;
-  bottom: -4px;
+  bottom: clamp(-3px, -0.3vw, -4px);
   left: 0;
   width: 100%;
-  height: 4px;
+  height: clamp(3px, 0.3vw, 4px);
   background: var(--brand-color);
   opacity: 0.6;
   transform: scaleX(1);
 }
 
 .hero-section p {
-  margin-bottom: 2.25rem;
-  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  margin-bottom: 3.5rem;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
   color: var(--text-secondary);
-  line-height: 1.7;
+  line-height: 1.6;
   font-weight: 400;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.005em;
 }
 
 /* ===== BUTTONS ===== */
 .hero-buttons {
   display: flex;
-  gap: clamp(0.5rem, 1.5vw, 0.875rem);
-  margin-top: 2.5rem;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  margin-top: 0;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
@@ -208,6 +208,7 @@
   min-width: 130px;
   letter-spacing: 0.01em;
   line-height: 1.2;
+  margin: 0; /* Override global button margin */
 }
 
 .btn-services {
@@ -269,17 +270,17 @@
   }
   
   .hero-section h1 {
-    font-size: clamp(2.8rem, 4.5vw, 3.5rem);
-    margin-bottom: 1.5rem;
-  }
-  
-  .hero-section p {
-    font-size: clamp(1rem, 2.2vw, 1.15rem);
+    font-size: clamp(2rem, 4vw, 3.2rem);
     margin-bottom: 2rem;
   }
   
+  .hero-section p {
+    font-size: clamp(0.95rem, 2vw, 1.05rem);
+    margin-bottom: 3rem;
+  }
+  
   .hero-buttons {
-    margin-top: 2.25rem;
+    margin-top: 0;
   }
 }
 
@@ -310,15 +311,20 @@
   }
   
   .hero-section h1 {
-    font-size: clamp(2.2rem, 6vw, 2.8rem);
+    font-size: clamp(1.8rem, 5vw, 2.4rem);
     line-height: 1.2;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  .hero-section h1 .underline-word::after {
+    bottom: -2px;
+    height: 3px;
   }
   
   .hero-section p {
-    font-size: clamp(0.95rem, 2.5vw, 1.05rem);
-    margin-bottom: 2rem;
-    line-height: 1.65;
+    font-size: clamp(0.9rem, 2.2vw, 1rem);
+    margin-bottom: 2.75rem;
+    line-height: 1.6;
   }
   
   .code-content {
@@ -328,7 +334,7 @@
   
   .hero-buttons {
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 0;
   }
   
   .btn-services,
@@ -336,6 +342,7 @@
     padding: 0.7rem 1.5rem;
     font-size: clamp(0.8rem, 2.2vw, 0.9rem);
     min-width: 120px;
+    margin: 0; /* Override global button margin */
   }
   
   .arrow-icon {
@@ -361,14 +368,19 @@
   }
   
   .hero-section h1 {
-    font-size: clamp(1.9rem, 7vw, 2.4rem);
+    font-size: clamp(1.6rem, 5.5vw, 2rem);
     line-height: 1.25;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-section h1 .underline-word::after {
+    bottom: -1.5px;
+    height: 2.5px;
   }
   
   .hero-section p {
-    font-size: clamp(0.9rem, 2.8vw, 1rem);
-    margin-bottom: 1.75rem;
+    font-size: clamp(0.85rem, 2.4vw, 0.95rem);
+    margin-bottom: 2.5rem;
     line-height: 1.6;
   }
   
@@ -380,7 +392,7 @@
   .hero-buttons {
     flex-direction: column;
     align-items: center;
-    margin-top: 1.75rem;
+    margin-top: 0;
   }
   
   .btn-services,
@@ -389,6 +401,7 @@
     max-width: 220px;
     padding: 0.75rem 1.5rem;
     font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    margin: 0; /* Override global button margin */
   }
   
   .arrow-icon {
@@ -420,14 +433,19 @@
   }
   
   .hero-section h1 {
-    font-size: clamp(1.6rem, 8vw, 2rem);
+    font-size: clamp(1.4rem, 6.5vw, 1.7rem);
     line-height: 1.2;
-    margin-bottom: 0.875rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .hero-section h1 .underline-word::after {
+    bottom: -1px;
+    height: 2px;
   }
   
   .hero-section p {
-    font-size: clamp(0.85rem, 3vw, 0.95rem);
-    margin-bottom: 1.5rem;
+    font-size: clamp(0.8rem, 2.7vw, 0.9rem);
+    margin-bottom: 2rem;
     line-height: 1.55;
   }
   
@@ -436,10 +454,11 @@
     max-width: 200px;
     padding: 0.7rem 1.25rem;
     font-size: clamp(0.75rem, 2.8vw, 0.85rem);
+    margin: 0; /* Override global button margin */
   }
   
   .hero-buttons {
-    margin-top: 1.5rem;
+    margin-top: 0;
   }
   
   .arrow-icon {
@@ -470,15 +489,20 @@
   }
   
   .hero-section h1 {
-    font-size: clamp(1.4rem, 9vw, 1.8rem);
+    font-size: clamp(1.25rem, 7.5vw, 1.5rem);
     line-height: 1.15;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-section h1 .underline-word::after {
+    bottom: -0.5px;
+    height: 1.5px;
   }
   
   .hero-section p {
-    font-size: clamp(0.8rem, 3.2vw, 0.9rem);
+    font-size: clamp(0.75rem, 3vw, 0.85rem);
     line-height: 1.5;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.75rem;
   }
   
   .btn-services,
@@ -486,10 +510,11 @@
     max-width: 180px;
     padding: 0.65rem 1rem;
     font-size: clamp(0.7rem, 3vw, 0.8rem);
+    margin: 0; /* Override global button margin */
   }
   
   .hero-buttons {
-    margin-top: 1.25rem;
+    margin-top: 0;
   }
   
   .arrow-icon {
