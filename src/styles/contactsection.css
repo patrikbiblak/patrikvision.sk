@@ -1,61 +1,81 @@
 .contact-section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4rem 2rem;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+  width: 100%;
 }
 
 .contact-heading {
-  margin-bottom: 4rem;
+  margin-bottom: clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
 }
 
 .contact-heading h2 {
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.5rem, 2vw, 1rem);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
+
+.contact-heading p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
 }
 
 .contact-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: clamp(1.5rem, 4vw, 4rem);
   align-items: flex-start;
   justify-content: center;
   margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
 }
 
 .contact-box {
-  width: clamp(100px, 85vw, 500px);
+  width: clamp(280px, 90vw, 500px);
   background: #1e1e1e;
   border: 1px solid #3d3d3d;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   border-radius: 12px;
-  padding: 2rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   color: #d4d4d4;
+  min-height: fit-content;
 }
 
 .contact-box h3 {
-  margin-bottom: 2rem;
+  margin-bottom: clamp(1rem, 2vw, 2rem);
   text-align: left;
   color: #ffffff;
   font-weight: 600;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
 }
 
 .contact-box form label {
-  font-size: 15px;
+  font-size: clamp(0.9rem, 2vw, 15px);
   font-weight: 500;
   text-align: left;
   display: block;
-  margin-bottom: 0.4rem;
+  margin-bottom: clamp(0.3rem, 1vw, 0.4rem);
   color: #ffffff;
 }
 
 .contact-box input,
 .contact-box textarea {
+  width: 100%;
   background: #2d2d2d;
   border: 1px solid #3d3d3d;
   color: #ffffff;
-  padding: 0.75rem;
+  padding: clamp(0.6rem, 1.5vw, 0.75rem);
   border-radius: 0.5rem;
   transition: all 0.3s ease;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+  box-sizing: border-box;
 }
 
 .contact-box input:focus,
@@ -70,16 +90,23 @@
   color: #888888;
 }
 
+.contact-box textarea {
+  resize: vertical;
+  min-height: clamp(100px, 15vw, 120px);
+}
+
 .contact-box .success {
   color: #4ade80;
   font-weight: 500;
   margin-top: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .contact-box .error {
   color: #f87171;
   font-weight: 500;
   margin-top: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .contact-box:first-child button {
@@ -90,8 +117,12 @@
   border: 2px solid var(--brand-color);
   margin: 0 auto;
   width: 100%;
-  margin-top: 1.2rem;
+  margin-top: clamp(1rem, 2vw, 1.2rem);
   transition: all 0.3s ease;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 .contact-box button:hover {
@@ -100,12 +131,18 @@
   box-shadow: 0 8px 25px rgba(17, 100, 102, 0.4);
 }
 
+.contact-box button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
 .contact-info-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
-  gap: 1.4rem;
-  margin-bottom: 2rem;
+  gap: clamp(1rem, 2vw, 1.4rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
 }
 
 .contact-info-item:last-child {
@@ -113,44 +150,114 @@
 }
 
 .contact-info-item svg {
-  width: 24px;
-  height: 24px;
+  width: clamp(20px, 3vw, 24px);
+  height: clamp(20px, 3vw, 24px);
   flex-shrink: 0;
   color: var(--brand-color);
+  margin-top: 0.2rem;
 }
 
 .contact-info-item div {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  min-width: 0;
+  flex: 1;
 }
 
 .contact-info-item p {
   margin: 0;
   line-height: 1.4;
-  white-space: nowrap;
   color: #d4d4d4;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .contact-info-item div p:first-child {
   color: #ffffff;
   font-weight: 500;
   text-align: left;
+  margin-bottom: 0.25rem;
 }
 
-@media (max-width: 1170px) {
+/* Tablet and smaller desktop */
+@media (max-width: 1024px) {
   .contact-content {
-    gap: 2rem;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+}
+
+/* Mobile landscape and tablet portrait */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: clamp(1.5rem, 4vw, 3rem) clamp(0.75rem, 2vw, 1.5rem);
+  }
+
+  .contact-heading {
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .contact-content {
+    gap: clamp(1rem, 2vw, 2rem);
+    flex-direction: column;
+    align-items: center;
   }
 
   .contact-box {
-    padding: 1.5rem;
+    width: 100%;
+    max-width: 500px;
   }
 }
 
+/* Mobile portrait */
 @media (max-width: 480px) {
-  .contact-box form label {
-    font-size: 0.85rem;
-    margin-bottom: 0.2rem;
+  .contact-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .contact-heading {
+    margin-bottom: 2rem;
+  }
+
+  .contact-box {
+    padding: 1.25rem;
+    width: 100%;
+  }
+
+  .contact-info-item {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info-item svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .contact-section {
+    padding: 0.75rem 0.25rem;
+  }
+
+  .contact-box {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .contact-box h3 {
+    font-size: 1.1rem;
+  }
+
+  .contact-info-item {
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .contact-info-item svg {
+    width: 18px;
+    height: 18px;
   }
 }

@@ -1,15 +1,24 @@
+.about-section {
+  margin: clamp(1rem, 4vw, 2.5rem) clamp(1rem, 6vw, 3.75rem);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  background-color: #dddddd;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
 .about-content {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 1rem;
+  padding: clamp(2rem, 5vw, 4rem) clamp(0.5rem, 2vw, 1rem);
 }
 
 .about-wrapper {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: clamp(1.5rem, 4vw, 3rem);
   max-width: 1000px;
   width: 100%;
 }
@@ -20,8 +29,8 @@
 
 .about-image img {
   display: block;
-  width: 250px;
-  height: 330px;
+  width: clamp(200px, 25vw, 250px);
+  height: clamp(260px, 35vw, 330px);
   object-fit: cover;
   border-radius: 12px;
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
@@ -39,22 +48,23 @@
 }
 
 .about-text h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  line-height: 1.2;
 }
 
 .about-text p {
-  margin-bottom: 1rem;
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
+  line-height: 1.6;
 }
 
-@media (max-width: 1050px) {
-  .about-content {
-    padding: 2rem 1rem;
-  }
-
+/* Tablet and smaller desktop */
+@media (max-width: 1024px) {
   .about-wrapper {
     flex-direction: column;
     text-align: center;
-    gap: 2rem;
+    gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 
   .about-text {
@@ -62,14 +72,74 @@
   }
 
   .about-image img {
-    width: 210px;
-    height: 280px;
+    width: clamp(180px, 30vw, 220px);
+    height: clamp(240px, 40vw, 290px);
   }
 }
 
+/* Mobile landscape and tablet portrait */
 @media (max-width: 768px) {
+  .about-section {
+    margin: clamp(0.75rem, 3vw, 1.5rem);
+    padding: clamp(1rem, 3vw, 1.5rem);
+  }
+
+  .about-content {
+    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 1vw, 0.75rem);
+  }
+
   .about-image img {
-    width: 180px;
-    height: 240px;
+    width: clamp(160px, 35vw, 200px);
+    height: clamp(210px, 45vw, 260px);
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .about-section {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+
+  .about-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .about-wrapper {
+    gap: 1rem;
+  }
+
+  .about-image img {
+    width: 150px;
+    height: 200px;
+  }
+
+  .about-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .about-section {
+    margin: 0.25rem;
+    padding: 0.75rem;
+  }
+
+  .about-image img {
+    width: 130px;
+    height: 170px;
+  }
+
+  .about-text h2 {
+    font-size: 1.25rem;
+  }
+
+  .about-text p {
+    font-size: 0.85rem;
   }
 }

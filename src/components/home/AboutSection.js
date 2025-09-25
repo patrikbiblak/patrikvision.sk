@@ -12,13 +12,7 @@ const AboutSection = () => {
   useScrollAnimation(rightRef, { customClass: 'right' });
 
   return (
-    <section className="about-section" style={{ 
-        margin: '40px 60px', 
-        padding: '40px',
-        backgroundColor: '#dddddd',
-        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.08)',
-        transition: 'all 0.3s ease'
-    }}>
+    <section className="about-section">
       <div className="container about-content">
         <div className="about-wrapper">
           <div className="about-text" ref={leftRef}>
