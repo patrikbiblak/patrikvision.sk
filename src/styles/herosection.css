@@ -29,6 +29,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  justify-items: center;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
