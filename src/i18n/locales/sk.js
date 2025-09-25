@@ -15,7 +15,7 @@ const skTranslations = {
     "suggestion4": "Skontrolovať aktualizácie neskôr"
   },
   "hero": {
-    "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solutions</span>",
+    "title": "<span class=\"brand-color\">Webový</span> <span class=\"underline-word\">vývoj</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">riešenia</span>",
     "subtitle": "Web Development & AI Solutions",
     "description": "Transformujte svoje podnikanie s najmodernejšími webovými riešeniami, ktoré poháňajú rast. Od inteligentnej AI automatizácie po výkonne optimalizované webové stránky - prinášam merateľné výsledky, ktoré zvyšujú vašu online prítomnosť.",
     "services": "Služby",
@@ -110,7 +110,7 @@ const skTranslations = {
       "location": "Poloha",
       "locationValue": "Slovensko"
     },
-    "contactMe": "Get In Touch",
+    "contactMe": "Kontaktujte Ma",
     "contactDesc": "Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!"
   },
   "footer": {

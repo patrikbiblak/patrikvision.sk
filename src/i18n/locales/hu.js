@@ -110,7 +110,7 @@ const huTranslations = {
       "location": "Helyszín",
       "locationValue": "Szlovákia"
     },
-    "contactMe": "Get In Touch",
+    "contactMe": "Lépjünk Kapcsolatba",
     "contactDesc": "Szeretnék hallani a projektjéről. Alkossunk valami csodálatosat együtt!"
   },
   "footer": {
