@@ -46,7 +46,7 @@ const Maintenance = ({ className = '' }) => {
           <p className="maintenance-suggestion">
             {t('maintenance.suggestion1', 'While you wait, you can:')}
           </p>
-          <ul className="maintenance-list" role="list">
+          <ul className="maintenance-list">
             <li>{t('maintenance.suggestion2', 'Explore other sections of the website')}</li>
             <li>{t('maintenance.suggestion3', 'Contact us for more information')}</li>
             <li>{t('maintenance.suggestion4', 'Check back later for updates')}</li>
