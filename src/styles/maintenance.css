@@ -1,17 +1,15 @@
-/* Maintenance Component Styles */
+/* Maintenance Component - Minimal Centering Styles */
 .maintenance-container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   padding: 2rem;
-  margin: 0;
 }
 
 .maintenance-content {
   text-align: center;
   max-width: 500px;
-  width: 100%;
 }
 
 .maintenance-icon {
@@ -76,7 +74,7 @@
   left: 0;
 }
 
-/* Animations */
+/* Animation */
 @keyframes maintenance-pulse {
   0%, 100% {
     transform: scale(1);
@@ -88,12 +86,10 @@
   }
 }
 
-/* Responsive Design */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
   .maintenance-container {
-    min-height: 250px;
-    padding: 1.5rem;
-    margin: 1rem 0;
+    padding: 1rem;
   }
   
   .maintenance-title {
@@ -107,23 +103,5 @@
   .maintenance-icon svg {
     width: 40px;
     height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .maintenance-container {
-    padding: 1rem;
-  }
-  
-  .maintenance-title {
-    font-size: 1.25rem;
-  }
-  
-  .maintenance-message {
-    font-size: 0.85rem;
-  }
-  
-  .maintenance-suggestions {
-    max-width: 300px;
   }
 }

@@ -8,13 +8,12 @@ const Maintenance = ({ className = '' }) => {
   return (
     <div className={`maintenance-container ${className}`}>
       <div className="maintenance-content">
-        <div className="maintenance-icon">
+        <div className="maintenance-icon" role="img" aria-label="Maintenance icon">
           <svg 
-            width="48" 
-            height="48" 
             viewBox="0 0 24 24" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <path 
               d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" 
@@ -35,9 +34,9 @@ const Maintenance = ({ className = '' }) => {
           </svg>
         </div>
         
-        <h2 className="maintenance-title">
+        <h1 className="maintenance-title">
           {t('maintenance.title', 'Under Maintenance')}
-        </h2>
+        </h1>
         
         <p className="maintenance-message">
           {t('maintenance.message', 'This section is currently under maintenance. Please check back later.')}
@@ -47,7 +46,7 @@ const Maintenance = ({ className = '' }) => {
           <p className="maintenance-suggestion">
             {t('maintenance.suggestion1', 'While you wait, you can:')}
           </p>
-          <ul className="maintenance-list">
+          <ul className="maintenance-list" role="list">
             <li>{t('maintenance.suggestion2', 'Explore other sections of the website')}</li>
             <li>{t('maintenance.suggestion3', 'Contact us for more information')}</li>
             <li>{t('maintenance.suggestion4', 'Check back later for updates')}</li>
