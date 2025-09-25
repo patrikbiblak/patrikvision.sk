@@ -41,22 +41,6 @@ const skTranslations = {
     "desc2": "Počas vývoja udržiavam otvorenú komunikáciu, aby sme spoločne dolaďovali funkcie aj dizajn a zakomponovali všetky vaše predstavy.",
     "desc3": "Ponúkam tvorbu portfólií, blogov a firemných prezentácií, ktoré nielen esteticky zapôsobia, ale sú aj jednoduché na správu a flexibilné pre ďalší rozvoj."
   },
-  "projects": {
-    "title": "Moje <span>Projekty</span>",
-    "subtitle": "Najnovšie práce",
-    "description": "Tu sú niektoré z mojich najnovších projektov.",
-    "viewProject": "Pozrieť projekt",
-    "noProjects": "Momentálne nemám žiadne verejné projekty na zobrazenie.",
-    "comingSoon": "Čoskoro pridám nové projekty!",
-    "workingOn": "Na tejto podstránke momentálne pracujem. Medzitým si môžete pozrieť môj profil alebo ma kontaktovať.",
-    "expertQuote": "Každý profesionál niekde začínal..",
-    "portfolioWork": "Pracujem na portfóliu a budujem základy silného brandu.",
-    "joinJourney": "Chcete sa stať súčasťou mojej cesty?",
-    "contactMe": "Ozvite sa",
-    "selectedProjects": "Vybrané Projekty",
-    "workingOnSection": "Na tejto sekcii momentálne pracujem.",
-    "viewAllProjects": "Zobraziť všetky projekty"
-  },
   "whyChooseMe": {
     "title": "Prečo si vybrať mňa?",
     "subtitle": "Tu je to, čo ma odlišuje a robí ma správnou voľbou pre váš projekt",

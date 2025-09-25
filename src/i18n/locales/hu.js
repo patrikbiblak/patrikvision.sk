@@ -41,22 +41,6 @@ const huTranslations = {
     "desc2": "A fejlesztés során nyitott kommunikációt folytatok, hogy együtt finomhangolhassuk a funkciókat és a dizájnt, és beépíthessük az összes ötletét.",
     "desc3": "Portfólió, blog és vállalati prezentáció készítést kínálok, amelyek nemcsak esztétikai hatást keltenek, hanem könnyen kezelhetők és rugalmasak a további fejlesztéshez."
   },
-  "projects": {
-    "title": "Projektjeim",
-    "subtitle": "Legújabb munkák",
-    "description": "Íme néhány a legújabb projekteimből.",
-    "viewProject": "Projekt megtekintése",
-    "noProjects": "Jelenleg nincs nyilvános projektem megjelenítésre.",
-    "comingSoon": "Hamarosan új projektek!",
-    "workingOn": "Jelenleg ezen az aloldalon dolgozom. Addig is megnézheti a profilomat vagy kapcsolatba léphet velem.",
-    "expertQuote": "Minden szakember valahol kezdte..",
-    "portfolioWork": "A portfóliómon dolgozom és egy erős márka alapjait építem.",
-    "joinJourney": "Szeretne része lenni az utamnak?",
-    "contactMe": "Kapcsolat",
-    "selectedProjects": "Kiválasztott Projektek",
-    "workingOnSection": "Jelenleg ezen a szakaszon dolgozom.",
-    "viewAllProjects": "Összes projekt megtekintése"
-  },
   "whyChooseMe": {
     "title": "Miért válasszon engem?",
     "subtitle": "Itt van az, ami megkülönböztet engem és a megfelelő választássá tesz a projektjéhez",

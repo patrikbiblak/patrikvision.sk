@@ -41,7 +41,6 @@
   
   .about-section-wrapper,
   .skills-section-wrapper,
-  .projects-section-wrapper,
   .contact-section-wrapper {
     min-height: auto;
   }
@@ -56,9 +55,6 @@
   background: transparent;
 }
 
-.projects-section-wrapper {
-  background: transparent;
-}
 
 .contact-section-wrapper {
   background: transparent;

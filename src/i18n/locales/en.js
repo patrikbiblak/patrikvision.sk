@@ -41,22 +41,6 @@ const en = {
     "desc2": "During development, I maintain open communication so we can fine-tune both functionality and design together and incorporate all your ideas.",
     "desc3": "I offer portfolio, blog and corporate presentation creation that not only make an aesthetic impact but are also easy to manage and flexible for further development."
   },
-  "projects": {
-    "title": "My <span>Projects</span>",
-    "subtitle": "Latest work",
-    "description": "Here are some of my latest projects.",
-    "viewProject": "View project",
-    "noProjects": "I currently don't have any public projects to display.",
-    "comingSoon": "New projects coming soon!",
-    "workingOn": "I'm currently working on this subpage. In the meantime, you can check out my profile or contact me.",
-    "expertQuote": "Every professional started somewhere..",
-    "portfolioWork": "I'm working on my portfolio and building the foundations of a strong brand.",
-    "joinJourney": "Want to be part of my journey?",
-    "contactMe": "Contact me",
-    "selectedProjects": "Selected Projects",
-    "workingOnSection": "I'm currently working on this section.",
-    "viewAllProjects": "View all projects"
-  },
   "whyChooseMe": {
     "title": "Why Choose Me?",
     "subtitle": "Here's what sets me apart and makes me the right choice for your project",
