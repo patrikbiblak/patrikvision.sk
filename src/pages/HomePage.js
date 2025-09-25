@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import AboutSection from "../components/home/AboutSection";
 import HeroSection from "../components/home/HeroSection";
 import ServicesSection from "../components/home/ServicesSection";
-import ProjectsSection from "../components/home/ProjectsSection";
 import WhyMeSection from "../components/home/WhyMeSection";
 import ContactSection from "../components/home/ContactSection";
 
@@ -40,7 +39,6 @@ const HomePage = () => {
             <HeroSection />
             <AboutSection />
             <ServicesSection />
-            <ProjectsSection />
             <WhyMeSection />
             <ContactSection />
         </div>
