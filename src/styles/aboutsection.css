@@ -1,145 +1,330 @@
+/* Elegant Two-Column About Layout - Mobile First */
 .about-section {
-  margin: clamp(1rem, 4vw, 2.5rem) clamp(1rem, 6vw, 3.75rem);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
-  background-color: #dddddd;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-  border-radius: 8px;
+  padding: clamp(2rem, 8vw, 5rem) 0;
+  background: linear-gradient(145deg, #0a0a0a 0%, #111111 30%, #1a1a1a 100%);
+  margin: 0 clamp(1rem, 4vw, 4rem);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-radius: clamp(8px, 2vw, 16px);
+}
+
+.about-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  z-index: 2;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  padding: 0 clamp(1rem, 5vw, 3rem);
+}
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 6vw, 4rem);
+  align-items: start;
+  position: relative;
+}
+
+/* Desktop Layout - Two Columns */
+@media (min-width: 769px) {
+  .about-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(3rem, 5vw, 4.5rem);
+  }
+}
+
+/* Creative visual elements - Desktop Only */
+@media (min-width: 769px) {
+  .about-layout::before {
+    content: '';
+    position: absolute;
+    left: 48%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.1) 80%, transparent);
+    z-index: 1;
+  }
+}
+
+/* Left Column - Heading with responsive elegance */
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+/* Desktop heading alignment */
+@media (min-width: 769px) {
+  .about-left {
+    align-items: flex-start;
+    text-align: left;
+    padding-top: 1rem;
+  }
+}
+
+.about-heading {
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  font-weight: 200;
+  color: #ffffff;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin: 0 0 clamp(1.5rem, 4vw, 2.5rem) 0;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-heading:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 3px 6px rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Right Column - Content with responsive styling */
+.about-right {
+  max-width: 650px;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Desktop padding */
+@media (min-width: 769px) {
+  .about-right {
+    padding-left: 2rem;
+    max-width: 650px;
+  }
 }
 
 .about-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+.about-content p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.7;
+  color: #9ca3af;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: clamp(2rem, 5vw, 4rem) clamp(0.5rem, 2vw, 1rem);
 }
 
-.about-wrapper {
-  display: flex;
-  align-items: center;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  max-width: 1000px;
-  width: 100%;
+.about-content p:hover {
+  color: #d1d5db;
 }
 
-.about-image {
-  flex: 0 0 auto;
-}
 
-.about-image img {
-  display: block;
-  width: clamp(200px, 25vw, 250px);
-  height: clamp(260px, 35vw, 330px);
-  object-fit: cover;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  padding: 8px;
-  box-shadow: 
-    0 8px 16px rgba(17, 100, 102, 0.2),
-    0 4px 8px rgba(17, 100, 102, 0.15),
-    0 2px 4px rgba(17, 100, 102, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.8);
-}
 
-.about-text {
-  flex: 1;
-  text-align: left;
-}
+/* ===== COMPREHENSIVE RESPONSIVE DESIGN ===== */
 
-.about-text h2 {
-  margin-bottom: clamp(1rem, 2vw, 1.5rem);
-  font-size: clamp(1.75rem, 4vw, 2.25rem);
-  line-height: 1.2;
-}
-
-.about-text p {
-  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
-  font-size: clamp(0.95rem, 2vw, 1.1rem);
-  line-height: 1.6;
-}
-
-/* Tablet and smaller desktop */
-@media (max-width: 1024px) {
-  .about-wrapper {
-    flex-direction: column;
-    text-align: center;
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-  }
-
-  .about-text {
-    text-align: center;
-  }
-
-  .about-image img {
-    width: clamp(180px, 30vw, 220px);
-    height: clamp(240px, 40vw, 290px);
-  }
-}
-
-/* Mobile landscape and tablet portrait */
-@media (max-width: 768px) {
-  .about-section {
-    margin: clamp(0.75rem, 3vw, 1.5rem);
-    padding: clamp(1rem, 3vw, 1.5rem);
-  }
-
-  .about-content {
-    padding: clamp(1.5rem, 4vw, 2.5rem) clamp(0.25rem, 1vw, 0.75rem);
-  }
-
-  .about-image img {
-    width: clamp(160px, 35vw, 200px);
-    height: clamp(210px, 45vw, 260px);
-  }
-}
-
-/* Mobile portrait */
+/* Small Mobile Devices (320px - 480px) */
 @media (max-width: 480px) {
   .about-section {
-    margin: 0.5rem;
-    padding: 1rem;
+    padding: clamp(1.5rem, 5vw, 2.5rem) 0;
+    margin: 0 clamp(0.7rem, 3vw, 1rem);
+    border-radius: 8px;
+  }
+
+  .about-container {
+    padding: 0 clamp(0.8rem, 3vw, 1.2rem);
+  }
+
+  .about-layout {
+    gap: clamp(1.2rem, 4vw, 2rem);
+  }
+
+  .about-heading {
+    font-size: clamp(1.6rem, 9vw, 2.2rem);
+    margin-bottom: clamp(1.2rem, 3vw, 1.8rem);
+    line-height: 1.1;
   }
 
   .about-content {
-    padding: 1rem 0.5rem;
+    gap: clamp(0.8rem, 2.5vw, 1.2rem);
   }
 
-  .about-wrapper {
-    gap: 1rem;
-  }
-
-  .about-image img {
-    width: 150px;
-    height: 200px;
-  }
-
-  .about-text h2 {
-    font-size: 1.5rem;
-  }
-
-  .about-text p {
-    font-size: 0.9rem;
+  .about-content p {
+    font-size: clamp(0.9rem, 3.5vw, 1.05rem);
+    line-height: 1.6;
   }
 }
 
-/* Very small screens */
-@media (max-width: 320px) {
+/* Medium Mobile Devices (481px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
   .about-section {
-    margin: 0.25rem;
-    padding: 0.75rem;
+    padding: clamp(2rem, 6vw, 3rem) 0;
+    margin: 0 clamp(1rem, 4vw, 1.5rem);
+    border-radius: 10px;
   }
 
-  .about-image img {
-    width: 130px;
-    height: 170px;
+  .about-container {
+    padding: 0 clamp(1rem, 4vw, 1.5rem);
   }
 
-  .about-text h2 {
-    font-size: 1.25rem;
+  .about-layout {
+    gap: clamp(1.8rem, 4vw, 2.5rem);
   }
 
-  .about-text p {
-    font-size: 0.85rem;
+  .about-heading {
+    font-size: clamp(2rem, 7vw, 2.8rem);
+    margin-bottom: clamp(1.5rem, 4vw, 2.2rem);
+  }
+
+  .about-content {
+    gap: clamp(1rem, 2.5vw, 1.4rem);
+  }
+
+  .about-content p {
+    font-size: clamp(0.95rem, 2.8vw, 1.1rem);
+  }
+}
+
+/* Large Mobile / Small Tablet (641px - 768px) */
+@media (min-width: 641px) and (max-width: 768px) {
+  .about-section {
+    padding: clamp(2.5rem, 7vw, 3.5rem) 0;
+    margin: 0 clamp(1.5rem, 5vw, 2rem);
+    border-radius: 12px;
+  }
+
+  .about-container {
+    padding: 0 clamp(1.2rem, 4vw, 1.8rem);
+  }
+
+  .about-layout {
+    gap: clamp(2rem, 4vw, 3rem);
+  }
+
+  .about-heading {
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
+    margin-bottom: clamp(1.8rem, 4vw, 2.5rem);
+  }
+
+  .about-content {
+    gap: clamp(1.2rem, 2.5vw, 1.6rem);
+  }
+
+  .about-content p {
+    font-size: clamp(1rem, 2vw, 1.125rem);
+  }
+}
+
+/* Tablet Landscape (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .about-section {
+    padding: clamp(3rem, 8vw, 4.5rem) 0;
+    margin: 0 clamp(2rem, 6vw, 3rem);
+  }
+
+  .about-container {
+    padding: 0 clamp(1.5rem, 4vw, 2.5rem);
+  }
+
+  .about-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(2.5rem, 4vw, 3.5rem);
+  }
+
+  .about-heading {
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+/* Large Tablet / Small Desktop (1025px - 1200px) */
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .about-section {
+    padding: clamp(3.5rem, 8vw, 5rem) 0;
+    margin: 0 clamp(2.5rem, 5vw, 3.5rem);
+  }
+
+  .about-container {
+    padding: 0 clamp(2rem, 4vw, 3rem);
+  }
+
+  .about-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(3rem, 4.5vw, 4rem);
+  }
+
+  .about-heading {
+    font-size: clamp(2.8rem, 6vw, 4rem);
+  }
+}
+
+/* Large Desktop (1201px+) */
+@media (min-width: 1201px) {
+  .about-section {
+    padding: clamp(4rem, 10vw, 6rem) 0;
+    margin: 0 clamp(3rem, 6vw, 4rem);
+  }
+
+  .about-container {
+    padding: 0 clamp(2.5rem, 5vw, 3rem);
+  }
+}
+
+/* Ultra-wide screens (1920px+) */
+@media (min-width: 1920px) {
+  .about-container {
+    max-width: 1400px;
+    padding: 0 clamp(3rem, 5vw, 4rem);
+  }
+
+  .about-layout {
+    gap: clamp(4rem, 5vw, 5rem);
+  }
+
+  .about-heading {
+    font-size: clamp(3.5rem, 5vw, 5rem);
+  }
+
+  .about-content p {
+    font-size: clamp(1.2rem, 2.5vw, 1.3rem);
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .about-section {
+    padding: clamp(1.5rem, 6vw, 2.5rem) 0;
+  }
+  
+  .about-layout {
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+  
+  .about-content {
+    gap: clamp(0.8rem, 2vw, 1.2rem);
   }
 }

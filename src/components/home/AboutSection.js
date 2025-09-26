@@ -13,19 +13,17 @@ const AboutSection = () => {
 
   return (
     <section className="about-section">
-      <div className="container about-content">
-        <div className="about-wrapper">
-          <div className="about-text" ref={leftRef}>
-            <h2>{t('about.aboutMe')}</h2>
-            <p>{t('about.desc1')}</p>
-            <p>{t('about.desc2')}</p>
-            <p>{t('about.desc3')}</p>
+      <div className="about-container">
+        <div className="about-layout">
+          <div className="about-left">
+            <h2 className="about-heading">{t('about.aboutMe')}</h2>
           </div>
-          <div className="about-image" ref={rightRef}>
-            <img 
-              src="/images/avatar.png" 
-              alt="Patrik - Web Developer & AI Solutions Specialist"
-            />
+          <div className="about-right">
+            <div className="about-content">
+              <p ref={leftRef}>{t('about.desc1')}</p>
+              <p ref={rightRef}>{t('about.desc2')}</p>
+              <p>{t('about.desc3')}</p>
+            </div>
           </div>
         </div>
       </div>
