@@ -1,12 +1,10 @@
 import "../../styles/skillssection.css";
-import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 
 const SkillsSection = () => {
   const leftRef = useRef(null);
   const { t } = useTranslation();
-  useScrollAnimation(leftRef, { customClass: 'left' });
 
   const skills = [
     { name: 'HTML', level: 80 },
@@ -39,12 +37,11 @@ const SkillsSection = () => {
 
 const SkillItem = ({ skill, index }) => {
   const ref = useRef(null);
-  const isVisible = useScrollAnimation(ref);
 
   return (
     <div
       ref={ref}
-      className={`skill ${isVisible ? 'animate-skill' : ''}`}
+      className="skill"
       style={{
         '--level': `${skill.level}%`,
         transitionDelay: `${index * 100}ms`,

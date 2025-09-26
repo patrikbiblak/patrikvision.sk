@@ -1,13 +1,10 @@
 import { useRef } from 'react';
-import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "react-i18next";
 import "../../styles/whymesection.css";
 
 const WhyMeSection = () => {
   const ref = useRef(null);
   const { t } = useTranslation();
-
-  useScrollAnimation(ref);
 
   const reasons = [
     t('whyChooseMe.reason1.title'),

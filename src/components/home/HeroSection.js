@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "react-i18next";
 import "../../styles/herosection.css";
 
@@ -12,10 +11,6 @@ const HeroSection = () => {
     const { t } = useTranslation();
     const [displayedCode, setDisplayedCode] = useState('');
     const [isTyping, setIsTyping] = useState(false);
-
-    useScrollAnimation(arrowRef, { immediate: true });
-    useScrollAnimation(ref, { immediate: true });
-    useScrollAnimation(codeRef, { immediate: true });
 
     const sampleCode = `// PatrikVision
 const developer = {

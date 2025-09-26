@@ -1,14 +1,12 @@
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
 import { useRef } from 'react';
-import useScrollAnimation from '../hooks/ScrollAnimation';
 import { useTranslation } from 'react-i18next';
 import "../styles/footer.css";
 
 const Footer = () => {
     const ref = useRef(null);
     const { t } = useTranslation();
-    useScrollAnimation(ref);
 
   return (
     <footer className="footer">

@@ -1,5 +1,4 @@
 import "../../styles/servicessection.css";
-import useScrollAnimation from "../../hooks/ScrollAnimation";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
 
@@ -54,12 +53,11 @@ const ServicesSection = () => {
 
 const ServiceItem = ({ service, index }) => {
   const ref = useRef(null);
-  const isVisible = useScrollAnimation(ref);
 
   return (
     <div
       ref={ref}
-      className={`service ${isVisible ? 'animate-service' : ''}`}
+      className="service"
       style={{
         transitionDelay: `${index * 100}ms`,
       }}

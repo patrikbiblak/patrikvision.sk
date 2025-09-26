@@ -33,14 +33,6 @@
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 3rem;
   padding: 4rem 0 2rem;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.footer-content.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 /* Brand Section */

@@ -42,19 +42,11 @@
   background: #1e1e1e;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  opacity: 0;
-  transform: translateX(-40px);
-  transition: opacity 2s ease, transform 2s ease;
-  transition-delay: 0.3s;
+  opacity: 1;
   aspect-ratio: 16/10;
   max-width: 500px;
   width: 100%;
   min-height: 200px;
-}
-
-.code-space.show {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .code-header {
@@ -130,15 +122,6 @@
   max-width: 600px;
   width: 100%;
   text-align: left;
-  opacity: 0;
-  transform: translateX(40px);
-  transition: opacity 2s ease, transform 2s ease;
-  transition-delay: 0.5s;
-}
-
-.hero-content.show {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .hero-section h1 {
@@ -238,27 +221,20 @@
 
 /* ===== SCROLL ARROW ===== */
 .arrow-icon {
-  opacity: 0;
+  opacity: 1;
   position: absolute;
   bottom: clamp(0.75rem, 2.5vw, 1.5rem);
   color: #666666;
   left: 50%;
-  transform: translateX(-50%) translateY(40px);
-  transition: opacity 2s ease, transform 2s ease;
-  transition-delay: 1.5s;
+  transform: translateX(-50%);
   cursor: pointer;
   z-index: 10;
+  animation: elegantFloat 1.5s ease-in-out infinite;
 }
 
 .arrow-icon svg {
   width: clamp(20px, 3vw, 28px);
   height: clamp(20px, 3vw, 28px);
-}
-
-.arrow-icon.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-  animation: elegantFloat 1.5s ease-in-out infinite;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
