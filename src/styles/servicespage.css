@@ -1,0 +1,83 @@
+/* ===== SERVICES PAGE ===== */
+.services-page {
+  width: 100%;
+}
+
+.services-page-content {
+  padding-top: calc(3.5rem + 2rem); /* Account for navbar height + top padding */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-heading {
+  color: var(--brand-color);
+  margin: 0 2rem 2.5rem 2rem;
+  font-size: clamp(2.4rem, 4.8vw, 3.8rem);
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-align: left;
+  max-width: 1200px;
+  width: calc(100% - 4rem); /* Account for padding in parent container */
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .services-heading {
+    width: calc(100% - 3rem);
+    margin: 0 1.5rem 2rem 1.5rem;
+    font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .services-page-content {
+    padding-top: calc(3.5rem + 1.25rem);
+  }
+  
+  .services-heading {
+    width: calc(100% - 2rem);
+    margin: 0 1rem 1.75rem 1rem;
+    font-size: clamp(2rem, 5.2vw, 2.6rem);
+    line-height: 1.2;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 640px) {
+  .services-page-content {
+    padding-top: calc(3.5rem + 0.75rem);
+  }
+  
+  .services-heading {
+    width: calc(100% - 1.5rem);
+    margin: 0 0.75rem 1.5rem 0.75rem;
+    font-size: clamp(1.8rem, 5.8vw, 2.2rem);
+    line-height: 1.25;
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 480px) {
+  .services-heading {
+    width: calc(100% - 1rem);
+    margin: 0 0.5rem 1.25rem 0.5rem;
+    font-size: clamp(1.6rem, 6.8vw, 1.9rem);
+    line-height: 1.2;
+  }
+}
+
+/* Very small mobile phones */
+@media (max-width: 360px) {
+  .services-heading {
+    width: calc(100% - 0.5rem);
+    margin: 0 0.25rem 1rem 0.25rem;
+    font-size: clamp(1.45rem, 7.8vw, 1.7rem);
+    line-height: 1.15;
+  }
+}

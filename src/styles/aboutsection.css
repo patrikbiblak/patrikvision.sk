@@ -1,8 +1,8 @@
 /* Elegant Two-Column About Layout - Mobile First */
 .about-section {
-  padding: clamp(2rem, 8vw, 5rem) 0;
+  padding: 0;
   background: #000000;
-  margin: 0 clamp(1rem, 4vw, 4rem);
+  margin: 0;
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -89,7 +89,7 @@
 
 .about-heading {
   font-size: clamp(2rem, 8vw, 4.5rem);
-  font-weight: 200;
+  font-weight: 700;
   color: #ffffff;
   line-height: 1.05;
   letter-spacing: -0.03em;
@@ -149,8 +149,8 @@
 /* Small Mobile Devices (320px - 480px) */
 @media (max-width: 480px) {
   .about-section {
-    padding: clamp(1.5rem, 5vw, 2.5rem) 0;
-    margin: 0 clamp(0.7rem, 3vw, 1rem);
+    padding: 0;
+    margin: 0;
   }
 
   .about-container {
@@ -180,8 +180,8 @@
 /* Medium Mobile Devices (481px - 640px) */
 @media (min-width: 481px) and (max-width: 640px) {
   .about-section {
-    padding: clamp(2rem, 6vw, 3rem) 0;
-    margin: 0 clamp(1rem, 4vw, 1.5rem);
+    padding: 0;
+    margin: 0;
   }
 
   .about-container {
@@ -209,8 +209,8 @@
 /* Large Mobile / Small Tablet (641px - 768px) */
 @media (min-width: 641px) and (max-width: 768px) {
   .about-section {
-    padding: clamp(2.5rem, 7vw, 3.5rem) 0;
-    margin: 0 clamp(1.5rem, 5vw, 2rem);
+    padding: 0;
+    margin: 0;
   }
 
   .about-container {
@@ -238,8 +238,8 @@
 /* Tablet Landscape (769px - 1024px) */
 @media (min-width: 769px) and (max-width: 1024px) {
   .about-section {
-    padding: clamp(3rem, 8vw, 4.5rem) 0;
-    margin: 0 clamp(2rem, 6vw, 3rem);
+    padding: 0;
+    margin: 0;
   }
 
   .about-container {
@@ -260,8 +260,8 @@
 /* Large Tablet / Small Desktop (1025px - 1200px) */
 @media (min-width: 1025px) and (max-width: 1200px) {
   .about-section {
-    padding: clamp(3.5rem, 8vw, 5rem) 0;
-    margin: 0 clamp(2.5rem, 5vw, 3.5rem);
+    padding: 0;
+    margin: 0;
   }
 
   .about-container {
@@ -281,8 +281,8 @@
 /* Large Desktop (1201px+) */
 @media (min-width: 1201px) {
   .about-section {
-    padding: clamp(4rem, 10vw, 6rem) 0;
-    margin: 0 clamp(3rem, 6vw, 4rem);
+    padding: 0;
+    margin: 0;
   }
 
   .about-container {
@@ -313,7 +313,7 @@
 /* Landscape orientation adjustments */
 @media (max-height: 500px) and (orientation: landscape) {
   .about-section {
-    padding: clamp(1.5rem, 6vw, 2.5rem) 0;
+    padding: 0;
   }
   
   .about-layout {

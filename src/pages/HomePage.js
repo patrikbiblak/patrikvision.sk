@@ -37,8 +37,8 @@ const HomePage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk" />
             </Helmet>
             <HeroSection />
-            <AboutSection />
             <ServicesSection />
+            <AboutSection />
             <WhyMeSection />
             <ContactSection />
         </div>

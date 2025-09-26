@@ -122,27 +122,133 @@ const en = {
     "subtitle": "What I can offer you",
     "seo": {
       "name": "SEO",
-      "description": "Search Engine Optimization to improve your website visibility"
+      "description": "Boost your search rankings and drive qualified traffic to increase sales. Our proven SEO strategy includes keyword optimization, technical fixes, and content improvements that get you found by customers searching for your services. Measure results with improved rankings and higher conversion rates."
     },
     "analytics": {
       "name": "Google Analytics",
-      "description": "Analytics setup and data analysis for better insights"
+      "description": "Turn website visitors into valuable insights that drive profitable decisions. Our advanced tracking reveals which pages convert best, where your revenue comes from, and how customers behave on your site. Use data to optimize marketing spend and double down on strategies that actually work."
     },
     "ai": {
       "name": "AI and Automation",
-      "description": "Artificial Intelligence solutions and process automation"
+      "description": "Reduce costs and boost efficiency with smart automation that works 24/7. Generate more leads with AI chatbots, streamline operations with automated workflows, and create personalized experiences that convert visitors into customers. Stay ahead of competitors with cutting-edge technology."
     },
     "support": {
       "name": "Support",
-      "description": "Technical support and maintenance for your projects"
+      "description": "Keep your website secure, fast, and profitable. Our maintenance prevents costly crashes and data loss while ensuring lightning-fast loading speeds that keep customers engaged. Focus on growing your business while we handle the technical details that drive success."
     },
     "webpages": {
-      "name": "Web Pages",
-      "description": "Custom website development and design solutions"
+      "name": "Website Development",
+      "description": "Professional website creation with focus on speed, SEO and conversions that attract new customers.",
+      "icon": "language",
+      "tag": "Most Requested",
+      "challenge": {
+        "title": "CHALLENGE",
+        "content": "Generic websites that are not aligned with business goals or do not lead to conversions"
+      },
+      "solution": {
+        "title": "SOLUTION",
+        "content": "Strategic web development focused on business results and user experience"
+      },
+      "outcome": {
+        "title": "OUTCOME",
+        "content": "Professional online presence that generates potential customers and builds trust"
+      },
+      "cta": "Find Out More"
+    },
+    "ai": {
+      "name": "AI Automation",
+      "description": "Intelligent solutions for streamlining business processes and increasing your company's productivity.",
+      "icon": "auto_awesome",
+      "tag": "Innovative",
+      "challenge": {
+        "title": "CHALLENGE",
+        "content": "Complex process tasks and manual work that delay growth and cause higher costs"
+      },
+      "solution": {
+        "title": "SOLUTION",
+        "content": "AI automation and intelligent solutions tailored to your needs"
+      },
+      "outcome": {
+        "title": "OUTCOME",
+        "content": "Efficient processes and reduced costs enabling the growth of your business"
+      },
+      "cta": "Find Out More"
+    },
+    "seo": {
+      "name": "SEO Optimization",
+      "description": "Increase visibility of your pages in search engines to gain new visitors.",
+      "icon": "search",
+      "tag": "Results-Driven",
+      "challenge": {
+        "title": "CHALLENGE",
+        "content": "Websites that don't appear in search engines and get few visitors"
+      },
+      "solution": {
+        "title": "SOLUTION",
+        "content": "Comprehensive SEO strategy focused on organic results and quality content"
+      },
+      "outcome": {
+        "title": "OUTCOME",
+        "content": "Higher search rankings bring stable income from quality visitors"
+      },
+      "cta": "Find Out More"
+    },
+    "analytics": {
+      "name": "Google Analytics",
+      "description": "Turn website visitors into valuable insights for profitable decisions.",
+      "icon": "trending_up",
+      "tag": "Analytical",
+      "challenge": {
+        "title": "CHALLENGE",
+        "content": "No visibility into website visitors and inability to optimize pages for better results"
+      },
+      "solution": {
+        "title": "SOLUTION",
+        "content": "Advanced tracking and data analysis for better audience understanding"
+      },
+      "outcome": {
+        "title": "OUTCOME",
+        "content": "Accurate analytical insights that boost conversions and optimize marketing"
+      },
+      "cta": "Find Out More"
+    },
+    "support": {
+      "name": "Support",
+      "description": "Keep your website secure, fast, and profitable with professional maintenance.",
+      "icon": "support_agent",
+      "tag": "Reliable",
+      "challenge": {
+        "title": "CHALLENGE",
+        "content": "Websites frequently crash, are slow, and threaten your reputation"
+      },
+      "solution": {
+        "title": "SOLUTION",
+        "content": "Proactive maintenance preventing issues and ensuring maximum uptime"
+      },
+      "outcome": {
+        "title": "OUTCOME",
+        "content": "Stable, fast website with minimal downtime and higher user trust"
+      },
+      "cta": "Find Out More"
     },
     "marketing": {
       "name": "Digital Marketing",
-      "description": "Marketing strategies, social media and email marketing"
+      "description": "Attract more customers with effective marketing strategies targeted at your growth.",
+      "icon": "campaign",
+      "tag": "Strategic",
+      "challenge": {
+        "title": "CHALLENGE",
+        "content": "Few customers and ineffective marketing spend that doesn't deliver ROI"
+      },
+      "solution": {
+        "title": "SOLUTION",
+        "content": "Data-driven marketing strategies focused on your target with optimized budgets"
+      },
+      "outcome": {
+        "title": "OUTCOME",
+        "content": "More qualified clients with measurable ROI and growing revenue"
+      },
+      "cta": "Find Out More"
     }
   },
   "privacy": {

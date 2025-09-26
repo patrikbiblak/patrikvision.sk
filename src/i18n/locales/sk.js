@@ -122,27 +122,133 @@ const skTranslations = {
     "subtitle": "Čo vám môžem ponúknuť",
     "seo": {
       "name": "SEO",
-      "description": "Optimalizácia pre vyhľadávače na zlepšenie viditeľnosti vašej stránky"
+      "description": "Zvýšte pozície vo vyhľadávaní a priťáhňete kvalifikovanú návštevnosť na zvýšenie predajov. Naša preukázaná SEO stratégia zahŕňa optimalizáciu kľúčových slov, technické úpravy a zlepšenie obsahu, aby vás našli zákazníci. Merajte výsledky s lepšími pozíciami a vyššími konverznými pomermi."
     },
     "analytics": {
       "name": "Google Analytics",
-      "description": "Nastavenie analytiky a analýza dát pre lepšie pochopenie návštevníkov"
+      "description": "Premenňe návštevníkov webu na cenné poznatky pre výnosné rozhodnutia. Naše pokročilé sledovanie odhalí, ktoré stránky konvertujú najlepšie, odkiaľ pochádza váš výnos a ako sa zákazníci správajú. Používajte údaje na optimalizáciu marketingových výdavkov a zdvojnásobte stratégiám, ktoré skutočne fungujú."
     },
     "ai": {
       "name": "AI a Automatizácia",
-      "description": "Riešenia umelou inteligenciou a automatizácia procesov"
+      "description": "Znižte náklady a zvyšte efektívnosť so smart automatizáciou, ktorá funguje 24/7. Generujte viac lídov s AI chatbotmi, zefektívnite operácie s automatizovanými pracovnými postupmi a vytvárajte personalizované skúsenosti, ktoré konvertujú návštevníkov na zákazníkov. Buďte pred konkurenciou s najmodernejšími technológiami."
     },
     "support": {
       "name": "Podpora",
-      "description": "Technická podpora a údržba vašich projektov"
+      "description": "Uďržujte váš web bezpečný, rýchly a ziskový. Naša údržba predchádza nákladným výpadkom a strate dát, zabezpeĎuje rýchlosť stránok, ktoré zadržujú zákazníkov. Sústredte sa na rast podnikania, zatiaľ čo my riešime technické detaily úspechu."
     },
     "webpages": {
-      "name": "Webové Stránky",
-      "description": "Vývoj a dizajn vlastných webových riešení"
+      "name": "Tvorba Webových Stránok",
+      "description": "Profesionálna tvorba webových stránok s dôrazom na rýchlosť, SEO a konverzie, ktoré prilákajú nových zákazníkov.",
+      "icon": "language",
+      "tag": "Najžiadanejšie",
+      "challenge": {
+        "title": "VÝZVA",
+        "content": "Generické webové stránky, ktoré nie sú v súlade s obchodnými cieľmi alebo nevedú ku konverziám"
+      },
+      "solution": {
+        "title": "RIEŠENIE",
+        "content": "Strategický vývoj webu zameraný na obchodné výsledky a používateľskú skúsenosť"
+      },
+      "outcome": {
+        "title": "VÝSLEDOK",
+        "content": "Profesionálna online prítomnosť, ktorá generuje potenciálnych zákazníkov a buduje dôveryhodnosť"
+      },
+      "cta": "Zistiť Viac"
+    },
+    "ai": {
+      "name": "AI Automatizácia",
+      "description": "Inteligentné riešenia pre zefektívnenie obchodných procesov a zvýšenie produktivity vášho podnikania.",
+      "icon": "auto_awesome",
+      "tag": "Inovatívne",
+      "challenge": {
+        "title": "VÝZVA",
+        "content": "Náročné procesné úlohy a manuálna práca, ktoré zdržujú rast a spôsobujú vyššie náklady"
+      },
+      "solution": {
+        "title": "RIEŠENIE",
+        "content": "AI automatizácia a inteligentné riešenia šité na mieru vašim potrebám"
+      },
+      "outcome": {
+        "title": "VÝSLEDOK",
+        "content": "Efektívne procesy a znížené náklady umožňujúce rast vašeho podnikania"
+      },
+      "cta": "Zistiť Viac"
+    },
+    "seo": {
+      "name": "SEO Optimalizácia", 
+      "description": "Zvýšení viditeľnosti vašich stránok vo vyhľadávačoch na získanie nových návštevníkov.",
+      "icon": "search",
+      "tag": "Výsledkovité",
+      "challenge": {
+        "title": "VÝZVA",
+        "content": "Webové stránky, ktoré nevidíte vo vyhľadávačoch a dostávate málo návštevníkov"
+      },
+      "solution": {
+        "title": "RIEŠENIE",
+        "content": "Komplexná SEO stratégia zameraná na organické výsledky a kvalitný obsah"
+      },
+      "outcome": {
+        "title": "VÝSLEDOK",
+        "content": "Vyššie pozície vo vyhľadávaní prínášajú stabilný príjem kvalitných návštevníkov"
+      },
+      "cta": "Zistiť Viac"
+    },
+    "analytics": {
+      "name": "Google Analytics",
+      "description": "Premenňte návštevníkov webu na cenné poznatky pre výnosné rozhodnutia.",
+      "icon": "trending_up",
+      "tag": "Analytické",
+      "challenge": {
+        "title": "VÝZVA",
+        "content": "Nemáte prehľad o návštevníkoch webu a neviemo tak optimalizovať stránky pre lepšie výsledky"
+      },
+      "solution": {
+        "title": "RIEŠENIE",
+        "content": "Pokročilé sledovanie a analýza dát pre lepšie porozumenie vašej audiencie"
+      },
+      "outcome": {
+        "title": "VÝSLEDOK",
+        "content": "Presné analytické poznatky, ktoré zvyšujú konverzie a optimalizujú marketing"
+      },
+      "cta": "Zistiť Viac"
+    },
+    "support": {
+      "name": "Podpora",
+      "description": "Udržujte váš web bezpečný, rýchly a ziskový s profesionálnou údržbou.",
+      "icon": "support_agent",
+      "tag": "Spoľahlivé",
+      "challenge": {
+        "title": "VÝZVA",
+        "content": "Webové stránky pravidelne padajú, sú pomalé a ohrozujú vašu reputáciu"
+      },
+      "solution": {
+        "title": "RIEŠENIE",
+        "content": "Proaktívna údržba predchádzajúca problémov a zabezpečujúca maximálnu dostupnosť"
+      },
+      "outcome": {
+        "title": "VÝSLEDOK",
+        "content": "Stabilný, rýchly web s minimálnymi výpadkami a vyšším používateľským trustom"
+      },
+      "cta": "Zistiť Viac"
     },
     "marketing": {
       "name": "Digitálny Marketing",
-      "description": "Marketingové stratégie, sociálne médiá a email marketing"
+      "description": "Privábte viac zákazníkov efektívnymi marketingovými stratégiiami cielenými na váš rozvoj.",
+      "icon": "campaign",
+      "tag": "Strategické",
+      "challenge": {
+        "title": "VÝZVA",
+        "content": "Málo zákazníkov a neefektívne marketingové výdavky ktoré neprinášajú ROI"
+      },
+      "solution": {
+        "title": "RIEŠENIE",
+        "content": "Data-driven marketing stratégie zamerané na váš prícuľ a optimalizované rozpočty"
+      },
+      "outcome": {
+        "title": "VÝSLEDOK",
+        "content": "Viac kvalifikovaných klientov s merateľným ROI a rastúcou tržbou"
+      },
+      "cta": "Zistiť Viac"
     }
   },
   "privacy": {

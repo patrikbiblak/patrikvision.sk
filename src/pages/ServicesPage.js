@@ -1,12 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import Maintenance from "../components/Maintenance";
+import ServicesSection from "../components/home/ServicesSection";
+import "../styles/servicespage.css";
 
 const ServicesPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div>
+        <div className="services-page">
             <Helmet>
                 <title>{t('seo.services.title')} | PatrikVision</title>
                 <meta name="description" content={t('seo.services.description')} />
@@ -32,7 +33,10 @@ const ServicesPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/services" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/services" />
             </Helmet>
-            <Maintenance />
+            <div className="services-page-content">
+                <h1 className="services-heading">{t('nav.services')}</h1>
+                <ServicesSection />
+            </div>
         </div>
     )
 }

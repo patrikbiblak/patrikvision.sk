@@ -122,27 +122,125 @@ const huTranslations = {
     "subtitle": "Mit tudok kínálni",
     "seo": {
       "name": "SEO",
-      "description": "Keresőoptimalizálás a weboldal láthatóságának javításához"
+      "description": "Növelje keresési rangsorjait és vonzzon minőségi látogatottságot az értékesítés növeléséhez. Bevált SEO stratégiám kulcsszó optimalizálás, technikai javítások és tartalom fejlesztés révén kihallgat."
     },
     "analytics": {
       "name": "Google Analytics",
-      "description": "Analitikai beállítás és adatelemzés jobb betekintésért"
+      "description": "A weboldal látogatóit értékes betekintésekké alakítsa, amelyek nyereséges döntéseket támogatnak. Fejlett nyomon követésünk felfedi, hogy mely oldalak konvertálnak a legjobban."
+    },
+    "webpages": {
+      "name": "Weboldal Fejlesztés",
+      "description": "Professzionális weboldal készítés hangsúlyozva a sebességre, SEO-ra és konverziókra, amely új ügyfeleket vonz.",
+      "icon": "language",
+      "tag": "Legnépszerűbb",
+      "challenge": {
+        "title": "KIHÍVÁS",
+        "content": "Általános weboldalak, amelyek nem összhangban vannak az üzleti célokkal vagy nem vezetnek konverziókhoz"
+      },
+      "solution": {
+        "title": "MEGOLDÁS",
+        "content": "Stratégiai webfejlesztés, amely az üzleti eredményekre és felhasználói élményre fókuszál"
+      },
+      "outcome": {
+        "title": "EREDMÉNY",
+        "content": "Professzionális online jelenlét, amely potenciális ügyfeleket generál és bizalmat épít"
+      },
+      "cta": "Tudjon Meg Többet"
     },
     "ai": {
-      "name": "AI és Automatizálás",
-      "description": "Mesterséges intelligencia megoldások és folyamat automatizálás"
+      "name": "AI Automatizálás",
+      "description": "Intelligens megoldások üzleti folyamatok egyszerűsítésére és cég termelékenységének növelésére.",
+      "icon": "auto_awesome",
+      "tag": "Inovatív",
+      "challenge": {
+        "title": "KIHÍVÁS",
+        "content": "Összetett folyamatos feladatok és kézi munka, amely késést okoz a növekedésben és magasabb költségeket eredményez"
+      },
+      "solution": {
+        "title": "MEGOLDÁS",
+        "content": "AI automatizálás és intelligens megoldások az igényeinek megfelelően"
+      },
+      "outcome": {
+        "title": "EREDMÉNY",
+        "content": "Hatékony folyamatok és csökkentett költségek, amely a vállalat növekedését lehetővé teszi"
+      },
+      "cta": "Tudjon Meg Többet"
+    },
+    "seo": {
+      "name": "SEO Optimalizálás",
+      "description": "Növelje oldalai láthatóságát a keresőmotorokban új látogatók megszerzéséhez.",
+      "icon": "search",
+      "tag": "Eredményközpontú",
+      "challenge": {
+        "title": "KIHÍVÁS",
+        "content": "Weboldalak, amelyek nem jelennek meg a keresőmotorokban és kevés látogatót kapnak"
+      },
+      "solution": {
+        "title": "MEGOLDÁS",
+        "content": "Átfogó SEO stratégia, amely az organikus eredményekre és minőségi tartalomra összpontosít"
+      },
+      "outcome": {
+        "title": "EREDMÉNY",
+        "content": "Magasabb keresési rangsorok stabil bevételt eredményeznek minőségi látogatóknál"
+      },
+      "cta": "Tudjon Meg Többet"
+    },
+    "analytics": {
+      "name": "Google Analytics",
+      "description": "A weboldal látogatóit értékes betekintésekké alakítsa nyereséges döntésekért.",
+      "icon": "trending_up",
+      "tag": "Elemző",
+      "challenge": {
+        "title": "KIHÍVÁS",
+        "content": "Nincs áttekintés a weboldal látogatóiról és nem lehet optimalizálni az oldalakat jobb eredményekért"
+      },
+      "solution": {
+        "title": "MEGOLDÁS",
+        "content": "Fejlett követési és adatelemzés jobb közönség megértésért"
+      },
+      "outcome": {
+        "title": "EREDMÉNY",
+        "content": "Pontos elemző betekintések, amelyek konverziókat növelnek és optimalizálják a marketinget"
+      },
+      "cta": "Tudjon Meg Többet"
     },
     "support": {
       "name": "Támogatás",
-      "description": "Technikai támogatás és karbantartás a projektekhez"
-    },
-    "webpages": {
-      "name": "Weboldalak",
-      "description": "Egyedi weboldal fejlesztés és dizájn megoldások"
+      "description": "Tartsa weboldalát biztonságban, gyors és jövedelmező professzionális karbantartással.",
+      "icon": "support_agent",
+      "tag": "Megbízható",
+      "challenge": {
+        "title": "KIHÍVÁS",
+        "content": "Weboldalak gyakran összeomlanak, lassúak és veszélyeztetik a reputációt"
+      },
+      "solution": {
+        "title": "MEGOLDÁS",
+        "content": "Proaktív karbantartás, amely problémákat elővé ellő és biztosítja a maximális rendelkezésre állást"
+      },
+      "outcome": {
+        "title": "EREDMÉNY",
+        "content": "Stabil, gyors weboldal minimális leállással és magasabb felhasználói bizalom"
+      },
+      "cta": "Tudjon Meg Többet"
     },
     "marketing": {
       "name": "Digitális Marketing",
-      "description": "Marketing stratégiák, közösségi média és email marketing"
+      "description": "Vonzzon több ügyfelet hatékony marketing stratégiákkal, amelyek a növekedésükre összpontosítanak.",
+      "icon": "campaign",
+      "tag": "Stratégiai",
+      "challenge": {
+        "title": "KIHÍVÁS",
+        "content": "Keves ügyfél és hatékony marketing kiadás, amely nem hoz nyereséget"
+      },
+      "solution": {
+        "title": "MEGOLDÁS",
+        "content": "Adatvezérelt marketing stratégiák, amelyek a célcsoportokra és optimalizált költségvetésekre összpontosítanak"
+      },
+      "outcome": {
+        "title": "EREDMÉNY",
+        "content": "Több minősített ügyfél mérhető ROI-val és növekvő bevételekkel"
+      },
+      "cta": "Tudjon Meg Többet"
     }
   },
   "privacy": {
