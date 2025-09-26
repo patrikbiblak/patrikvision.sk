@@ -120,14 +120,6 @@ const huTranslations = {
   "services": {
     "title": "Szolgáltatásaim",
     "subtitle": "Mit tudok kínálni",
-    "seo": {
-      "name": "SEO",
-      "description": "Növelje keresési rangsorjait és vonzzon minőségi látogatottságot az értékesítés növeléséhez. Bevált SEO stratégiám kulcsszó optimalizálás, technikai javítások és tartalom fejlesztés révén kihallgat."
-    },
-    "analytics": {
-      "name": "Google Analytics",
-      "description": "A weboldal látogatóit értékes betekintésekké alakítsa, amelyek nyereséges döntéseket támogatnak. Fejlett nyomon követésünk felfedi, hogy mely oldalak konvertálnak a legjobban."
-    },
     "webpages": {
       "name": "Weboldal Fejlesztés",
       "description": "Professzionális weboldal készítés hangsúlyozva a sebességre, SEO-ra és konverziókra, amely új ügyfeleket vonz.",

@@ -120,22 +120,6 @@ const en = {
   "services": {
     "title": "My Services",
     "subtitle": "What I can offer you",
-    "seo": {
-      "name": "SEO",
-      "description": "Boost your search rankings and drive qualified traffic to increase sales. Our proven SEO strategy includes keyword optimization, technical fixes, and content improvements that get you found by customers searching for your services. Measure results with improved rankings and higher conversion rates."
-    },
-    "analytics": {
-      "name": "Google Analytics",
-      "description": "Turn website visitors into valuable insights that drive profitable decisions. Our advanced tracking reveals which pages convert best, where your revenue comes from, and how customers behave on your site. Use data to optimize marketing spend and double down on strategies that actually work."
-    },
-    "ai": {
-      "name": "AI and Automation",
-      "description": "Reduce costs and boost efficiency with smart automation that works 24/7. Generate more leads with AI chatbots, streamline operations with automated workflows, and create personalized experiences that convert visitors into customers. Stay ahead of competitors with cutting-edge technology."
-    },
-    "support": {
-      "name": "Support",
-      "description": "Keep your website secure, fast, and profitable. Our maintenance prevents costly crashes and data loss while ensuring lightning-fast loading speeds that keep customers engaged. Focus on growing your business while we handle the technical details that drive success."
-    },
     "webpages": {
       "name": "Website Development",
       "description": "Professional website creation with focus on speed, SEO and conversions that attract new customers.",

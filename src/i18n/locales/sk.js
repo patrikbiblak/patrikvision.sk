@@ -120,22 +120,6 @@ const skTranslations = {
   "services": {
     "title": "Moje Služby",
     "subtitle": "Čo vám môžem ponúknuť",
-    "seo": {
-      "name": "SEO",
-      "description": "Zvýšte pozície vo vyhľadávaní a priťáhňete kvalifikovanú návštevnosť na zvýšenie predajov. Naša preukázaná SEO stratégia zahŕňa optimalizáciu kľúčových slov, technické úpravy a zlepšenie obsahu, aby vás našli zákazníci. Merajte výsledky s lepšími pozíciami a vyššími konverznými pomermi."
-    },
-    "analytics": {
-      "name": "Google Analytics",
-      "description": "Premenňe návštevníkov webu na cenné poznatky pre výnosné rozhodnutia. Naše pokročilé sledovanie odhalí, ktoré stránky konvertujú najlepšie, odkiaľ pochádza váš výnos a ako sa zákazníci správajú. Používajte údaje na optimalizáciu marketingových výdavkov a zdvojnásobte stratégiám, ktoré skutočne fungujú."
-    },
-    "ai": {
-      "name": "AI a Automatizácia",
-      "description": "Znižte náklady a zvyšte efektívnosť so smart automatizáciou, ktorá funguje 24/7. Generujte viac lídov s AI chatbotmi, zefektívnite operácie s automatizovanými pracovnými postupmi a vytvárajte personalizované skúsenosti, ktoré konvertujú návštevníkov na zákazníkov. Buďte pred konkurenciou s najmodernejšími technológiami."
-    },
-    "support": {
-      "name": "Podpora",
-      "description": "Uďržujte váš web bezpečný, rýchly a ziskový. Naša údržba predchádza nákladným výpadkom a strate dát, zabezpeĎuje rýchlosť stránok, ktoré zadržujú zákazníkov. Sústredte sa na rast podnikania, zatiaľ čo my riešime technické detaily úspechu."
-    },
     "webpages": {
       "name": "Tvorba Webových Stránok",
       "description": "Profesionálna tvorba webových stránok s dôrazom na rýchlosť, SEO a konverzie, ktoré prilákajú nových zákazníkov.",

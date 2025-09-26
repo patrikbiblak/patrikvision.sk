@@ -1,10 +1,8 @@
 import "../../styles/servicessection.css";
-import { useTranslation } from "react-i18next";
 import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 
 const ServicesSection = () => {
-  const { t } = useTranslation();
-
   const services = [
     'webpages',
     'ai', 
