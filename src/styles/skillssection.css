@@ -39,7 +39,6 @@
   display: block;
   height: 10px;
   background: linear-gradient(to right, transparent var(--level), transparent var(--level));
-  border-radius: 30px;
 }
 
 @media (max-width: 768px) {

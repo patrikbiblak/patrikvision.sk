@@ -41,7 +41,6 @@
   background: #1e1e1e;
   border: 1px solid #3d3d3d;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
   padding: clamp(1.5rem, 3vw, 2rem);
   color: #d4d4d4;
   min-height: fit-content;
@@ -71,7 +70,6 @@
   border: 1px solid #3d3d3d;
   color: #ffffff;
   padding: clamp(0.6rem, 1.5vw, 0.75rem);
-  border-radius: 0.5rem;
   transition: all 0.3s ease;
   font-size: clamp(0.9rem, 2vw, 1rem);
   margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
@@ -121,7 +119,6 @@
   transition: all 0.3s ease;
   padding: clamp(0.75rem, 2vw, 1rem);
   font-size: clamp(0.9rem, 2vw, 1.1rem);
-  border-radius: 0.5rem;
   cursor: pointer;
 }
 
@@ -244,7 +241,6 @@
 
   .contact-box {
     padding: 1rem;
-    border-radius: 8px;
   }
 
   .contact-box h3 {

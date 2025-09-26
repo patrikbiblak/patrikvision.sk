@@ -13,7 +13,6 @@
   transition: all 0.3s ease;
   min-height: auto;
   height: auto;
-  border-radius: 0;
   overflow-x: hidden;
   box-sizing: border-box;
 }
@@ -96,7 +95,6 @@
 
 .offer-card {
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 0.8rem;
   padding: 1.2rem;
   text-align: left;
   transition: all 0.3s ease;

@@ -40,7 +40,6 @@
 /* ===== CODE DISPLAY ===== */
 .code-space {
   background: #1e1e1e;
-  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -75,7 +74,6 @@
 .code-btn {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
 }
 
 .code-btn.red { background: #ff5f56; }
@@ -197,7 +195,6 @@
 .btn-services,
 .btn-get-started {
   padding: 0.75rem 1.75rem;
-  border-radius: 0.5rem;
   font-size: clamp(0.85rem, 2vw, 0.95rem);
   font-weight: 600;
   cursor: pointer;
@@ -432,7 +429,6 @@
   .code-space {
     max-width: 320px;
     min-height: 120px;
-    border-radius: 8px;
   }
   
   .code-content {
