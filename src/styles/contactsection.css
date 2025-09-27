@@ -2,9 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
   width: 100%;
+  text-align: center;
 }
 
 .contact-heading {
@@ -12,6 +13,8 @@
   text-align: center;
   max-width: 800px;
   width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-heading h2 {
