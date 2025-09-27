@@ -92,7 +92,9 @@ const skTranslations = {
       "email": "Email",
       "phone": "Telefón",
       "location": "Poloha",
-      "locationValue": "Slovensko"
+      "locationValue": "Slovensko",
+      "responseTime": "Čas Odozvy",
+      "responseTimeValue": "Do 24 hodín"
     },
     "contactMe": "Kontaktujte Ma",
     "contactDesc": "Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!"

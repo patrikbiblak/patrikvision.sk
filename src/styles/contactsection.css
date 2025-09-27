@@ -206,6 +206,23 @@
   line-height: 1.2;
 }
 
+.contact-link {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.contact-link:hover {
+  color: var(--brand-color);
+  border-bottom-color: var(--brand-color);
+}
+
 /* Tablet and smaller desktop */
 @media (max-width: 1024px) {
   .contact-content {

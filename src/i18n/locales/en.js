@@ -92,7 +92,9 @@ const en = {
       "email": "Email",
       "phone": "Phone",
       "location": "Location",
-      "locationValue": "Slovakia"
+      "locationValue": "Slovakia",
+      "responseTime": "Response Time",
+      "responseTimeValue": "Within 24 hours"
     },
     "contactMe": "Get In Touch",
     "contactDesc": "I'd love to hear about your project. Let's create something amazing together!"

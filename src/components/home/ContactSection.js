@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from "react-i18next";
 import "../../styles/contactsection.css";
 
@@ -51,6 +51,7 @@ const [status, setStatus] = useState('idle');
     { icon: Mail, label: t('contact.details.email'), value: 'contact@patrikvision.sk' },
     { icon: Phone, label: t('contact.details.phone'), value: '+421 918 755 276' },
     { icon: MapPin, label: t('contact.details.location'), value: t('contact.details.locationValue') },
+    { icon: Clock, label: t('contact.details.responseTime'), value: t('contact.details.responseTimeValue') },
   ];
 
   return (
@@ -112,7 +113,18 @@ const [status, setStatus] = useState('idle');
                   <Icon />
                   <div>
                     <p>{detail.label}</p>
-                    <p>{detail.value}</p>
+                    {detail.isLink ? (
+                      <a 
+                        href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="contact-link"
+                      >
+                        {detail.value}
+                      </a>
+                    ) : (
+                      <p>{detail.value}</p>
+                    )}
                   </div>
                 </div>
               );

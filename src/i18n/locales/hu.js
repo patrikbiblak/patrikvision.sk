@@ -92,7 +92,9 @@ const huTranslations = {
       "email": "Email",
       "phone": "Telefon",
       "location": "Helyszín",
-      "locationValue": "Szlovákia"
+      "locationValue": "Szlovákia",
+      "responseTime": "Válaszidő",
+      "responseTimeValue": "24 órán belül"
     },
     "contactMe": "Lépjünk Kapcsolatba",
     "contactDesc": "Szeretnék hallani a projektjéről. Alkossunk valami csodálatosat együtt!"
