@@ -14,14 +14,16 @@ const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    productInterest: '',
+    country: '',
     message: '',
   });
 
-const [status, setStatus] = useState('idle');
+  const [status, setStatus] = useState('idle');
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setStatus('sending')
+    e.preventDefault();
+    setStatus('sending');
 
     emailjs
       .sendForm(
@@ -31,14 +33,14 @@ const [status, setStatus] = useState('idle');
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        setStatus('success')
-        setFormData({ name: '', email: '', message: '' });
+        setStatus('success');
+        setFormData({ name: '', email: '', productInterest: '', country: '', message: '' });
       })
       .catch((err) => {
-        console.error(err)
-        setStatus('error')
-      })
-  }
+        console.error(err);
+        setStatus('error');
+      });
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -46,6 +48,32 @@ const [status, setStatus] = useState('idle');
       [e.target.name]: e.target.value,
     });
   };
+
+  const productOptions = [
+    { value: '', label: t('contact.selectProduct') },
+    { value: 'webpages', label: t('services.webpages.name') },
+    { value: 'ai', label: t('services.ai.name') },
+    { value: 'seo', label: t('services.seo.name') },
+    { value: 'analytics', label: t('services.analytics.name') },
+    { value: 'support', label: t('services.support.name') },
+    { value: 'marketing', label: t('services.marketing.name') },
+    { value: 'consultation', label: t('contact.consultation') },
+    { value: 'other', label: t('contact.other') },
+  ];
+
+  const countryOptions = [
+    { value: '', label: t('contact.selectCountry') },
+    { value: 'slovakia', label: 'Slovakia' },
+    { value: 'czech-republic', label: 'Czech Republic' },
+    { value: 'hungary', label: 'Hungary' },
+    { value: 'austria', label: 'Austria' },
+    { value: 'poland', label: 'Poland' },
+    { value: 'germany', label: 'Germany' },
+    { value: 'uk', label: 'United Kingdom' },
+    { value: 'usa', label: 'United States' },
+    { value: 'canada', label: 'Canada' },
+    { value: 'other', label: t('contact.other') },
+  ];
 
   const contactDetails = [
     { icon: Mail, label: t('contact.details.email'), value: 'contact@patrikvision.sk' },
@@ -66,6 +94,7 @@ const [status, setStatus] = useState('idle');
           <div className="contact-box" ref={leftRef}>
             <h3>{t('contact.sendMessage')}</h3>
             <form ref={formRef} onSubmit={handleSubmit}>
+              {/* Personal Information */}
               <label htmlFor="section-name">{t('contact.name')}</label>
               <input
                 id="section-name"
@@ -85,6 +114,38 @@ const [status, setStatus] = useState('idle');
                 required
               />
 
+              {/* Project Information */}
+              <label htmlFor="section-product">{t('contact.productInterest')}</label>
+              <select
+                id="section-product"
+                name="productInterest"
+                value={formData.productInterest}
+                onChange={handleChange}
+                required
+              >
+                {productOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+
+              <label htmlFor="section-country">{t('contact.country')}</label>
+              <select
+                id="section-country"
+                name="country"
+                value={formData.country}
+                onChange={handleChange}
+                required
+              >
+                {countryOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
+              </select>
+
+              {/* Message */}
               <label htmlFor="section-message">{t('contact.message')}</label>
               <textarea
                 id="section-message"

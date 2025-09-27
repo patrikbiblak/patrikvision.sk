@@ -71,31 +71,33 @@
 }
 
 .contact-box form label {
-  font-size: clamp(0.9rem, 2vw, 15px);
+  font-size: clamp(0.8rem, 1.8vw, 13px);
   font-weight: 600;
   text-align: left;
   display: block;
-  margin-bottom: clamp(0.3rem, 1vw, 0.4rem);
+  margin-bottom: clamp(0.25rem, 0.8vw, 0.35rem);
   color: var(--brand-color);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .contact-box input,
-.contact-box textarea {
+.contact-box textarea,
+.contact-box select {
   width: 100%;
   background: #ffffff;
   border: 2px solid rgba(17, 100, 102, 0.2);
   color: var(--text-primary);
-  padding: clamp(0.6rem, 1.5vw, 0.75rem);
+  padding: clamp(0.5rem, 1.2vw, 0.65rem);
   transition: all 0.3s ease;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  margin-bottom: clamp(0.5rem, 1vw, 0.75rem);
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  margin-bottom: clamp(0.4rem, 0.8vw, 0.6rem);
   box-sizing: border-box;
 }
 
 .contact-box input:focus,
-.contact-box textarea:focus {
+.contact-box textarea:focus,
+.contact-box select:focus {
   border-color: var(--brand-color);
   outline: none;
   box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.15);
@@ -109,7 +111,17 @@
 
 .contact-box textarea {
   resize: vertical;
-  min-height: clamp(100px, 15vw, 120px);
+  min-height: clamp(80px, 12vw, 100px);
+}
+
+.contact-box select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23116666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
 }
 
 .contact-box .success {
@@ -134,10 +146,10 @@
   border: none;
   margin: 0 auto;
   width: 100%;
-  margin-top: clamp(1rem, 2vw, 1.2rem);
+  margin-top: clamp(0.8rem, 1.5vw, 1rem);
   transition: all 0.3s ease;
-  padding: clamp(0.75rem, 2vw, 1rem);
-  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  padding: clamp(0.6rem, 1.5vw, 0.8rem);
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -160,8 +172,8 @@
   display: flex;
   align-items: flex-start;
   flex-direction: row;
-  gap: clamp(1.2rem, 2.5vw, 1.6rem);
-  margin-bottom: clamp(1.8rem, 3.5vw, 2.2rem);
+  gap: clamp(1rem, 2vw, 1.3rem);
+  margin-bottom: clamp(1.4rem, 2.8vw, 1.8rem);
 }
 
 .contact-info-item:last-child {
@@ -189,7 +201,7 @@
   margin: 0;
   line-height: 1.5;
   color: var(--text-primary);
-  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 500;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -199,17 +211,17 @@
   color: var(--brand-color);
   font-weight: 700;
   text-align: left;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
   text-transform: uppercase;
-  letter-spacing: 0.8px;
-  font-size: clamp(0.75rem, 2vw, 0.8rem);
+  letter-spacing: 0.6px;
+  font-size: clamp(0.7rem, 1.8vw, 0.75rem);
   line-height: 1.2;
 }
 
 .contact-link {
   color: var(--text-primary);
   text-decoration: none;
-  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 500;
   line-height: 1.5;
   word-wrap: break-word;
