@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import AboutSection from "../components/home/AboutSection";
 import HeroSection from "../components/home/HeroSection";
-import ServicesSection from "../components/home/ServicesSection";
+import HomeServicesSection from "../components/home/HomeServicesSection";
 import WhyMeSection from "../components/home/WhyMeSection";
 import ContactSection from "../components/home/ContactSection";
 
@@ -37,7 +37,7 @@ const HomePage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk" />
             </Helmet>
             <HeroSection />
-            <ServicesSection />
+            <HomeServicesSection />
             <AboutSection />
             <WhyMeSection />
             <ContactSection />

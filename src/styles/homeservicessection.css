@@ -1,0 +1,174 @@
+.home-services-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.home-services-content {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.home-service-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 0px;
+  padding: 1.75rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.15);
+  border: 1px solid rgba(17, 100, 102, 0.2);
+  width: 100%;
+  max-width: 380px;
+  min-height: 280px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
+}
+
+.home-service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+
+.home-service-icon-container {
+  width: 50px;
+  height: 50px;
+  background: rgba(17, 100, 102, 0.1);
+  border: 2px solid var(--brand-color);
+  border-radius: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.home-service-icon {
+  font-size: 22px;
+  color: var(--brand-color);
+}
+
+.home-service-tag {
+  background: var(--brand-color);
+  color: #ffffff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.home-service-main {
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.home-service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--brand-color);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+  text-align: left;
+  letter-spacing: -0.02em;
+}
+
+.home-service-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0;
+  text-align: left;
+  font-weight: 400;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .home-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-services-section {
+    padding: 2rem 1rem;
+  }
+  
+  .home-services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    max-width: 350px;
+  }
+
+  .home-service-card {
+    padding: 1.5rem;
+    max-width: 100%;
+    text-align: left;
+    min-height: 260px;
+  }
+
+  .home-service-title {
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .home-service-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-service-card {
+    padding: 1.25rem;
+    min-height: 240px;
+  }
+
+  .home-service-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .home-service-icon-container {
+    width: 45px;
+    height: 45px;
+  }
+
+  .home-service-icon {
+    font-size: 20px;
+  }
+}
