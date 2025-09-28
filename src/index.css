@@ -29,17 +29,6 @@ html, body {
   overflow-x: hidden;
 }
 
-section:not(.hero-section):not(.why-choose-me-section):not(.contact-section) {
-  text-align: center;
-  min-height: 100vh;
-  padding: 4rem 2rem;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
 .container {
   max-width: 75%;
   width: 100%;
@@ -194,7 +183,7 @@ input:focus {
     padding: 0.5rem 1rem;
   }
 
-  section:not(.hero-section):not(.why-choose-me-section) {
+  section:not(.hero-section):not(.why-choose-me-section):not(.home-services-section):not(.services-section) {
     padding: 1rem;
   }
 

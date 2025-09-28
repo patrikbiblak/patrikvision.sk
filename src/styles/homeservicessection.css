@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 4rem 2rem;
+  padding: 4rem 0rem;
   width: 100%;
 }
 
@@ -122,10 +122,6 @@
 }
 
 @media (max-width: 768px) {
-  .home-services-section {
-    padding: 2rem 1rem;
-  }
-  
   .home-services-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
