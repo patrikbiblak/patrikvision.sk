@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import useVersionChecker from "./hooks/useVersionChecker";
@@ -11,14 +11,25 @@ import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import CookieSettings from "./CookieConsent/CookieSettings";
+import LoadingScreen from "./components/LoadingScreen";
 import "./i18n/config";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  
   useVersionChecker();
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
+  };
+
+  if (isLoading) {
+    return <LoadingScreen onComplete={handleLoadingComplete} />;
+  }
 
   return (
     <HelmetProvider>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<LoadingScreen />}>
         <Router>
           <div className="content">
             <Navigation />
