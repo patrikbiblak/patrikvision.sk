@@ -23,8 +23,8 @@ const Particles = () => {
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.2;
-        this.vy = (Math.random() - 0.5) * 0.2;
+        this.vx = (Math.random() - 0.5) * 0.8;
+        this.vy = (Math.random() - 0.5) * 0.8;
         this.radius = Math.random() * 2 + 1;
         this.opacity = Math.random() * 0.6 + 0.2;
         this.brandColor = '#116466';
