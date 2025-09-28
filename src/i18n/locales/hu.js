@@ -37,9 +37,17 @@ const huTranslations = {
     "personal1": "A kávé, a kód és a fegyelem alkotja a tökéletes triómat. Minden projektbe száz százalékot fektetek, hogy az eredmény zökkenőmentesen és hibamentesen működjön. A munka után a sport formában tart és segít tiszta elmét megőrizni.",
     "hashtags": "#front-end &nbsp; #önfejlesztés &nbsp; #sportoló",
     "aboutMe": "Rólam",
-    "desc1": "Modern webalkalmazásokat készítek, hangsúlyozva a funkcionalitást és megbízhatóságot a pontos ügyfélkövetelmények szerint.",
-    "desc2": "A fejlesztés során nyitott kommunikációt folytatok, hogy együtt finomhangolhassuk a funkciókat és a dizájnt, és beépíthessük az összes ötletét.",
-    "desc3": "Portfólió, blog és vállalati prezentáció készítést kínálok, amelyek nemcsak esztétikai hatást keltenek, hanem könnyen kezelhetők és rugalmasak a további fejlesztéshez."
+    "desc1": "Weboldalakat készítek, amelyek eladják a termékeit és növelik a vállalkozását. Céloldalaktól e-kereskedelmi áruházakig - azokra az eredményekre fókuszálok, amelyek fontosak.",
+    "desc2": "A weboldala magasabban fog szerepelni a Google keresésekben és több ügyfelet fog vonzani. Mindent optimalizálok, hogy a potenciális ügyfelek könnyen megtalálják és tőle vásároljanak.",
+    "desc3": "Minden lépésben együtt dolgozom önnel. A koncepciótól a beindításon át és tovább, folyamatos támogatást biztosítok a vállalkozásának jövedelmező működéséhez.",
+    "stats": {
+      "yearsOfExperience": "2+",
+      "yearsLabel": "Év Tapasztalat",
+      "clientSatisfaction": "100%",
+      "satisfactionLabel": "Minőségre Fókuszálás",
+      "projectsCompleted": "3x",
+      "projectsLabel": "Gyorsabb Betöltés"
+    }
   },
   "whyChooseMe": {
     "title": "Miért válasszon engem?",

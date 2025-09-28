@@ -92,17 +92,16 @@
 .service-title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--brand-color);
+  color: #116466;
   margin-bottom: 0.8rem;
   line-height: 1.2;
   text-align: left;
 }
 
 .service-description {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.5;
-  opacity: 0.9;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  line-height: 1.6;
   margin-bottom: 0;
   text-align: left;
 }
@@ -122,20 +121,19 @@
 }
 
 .detail-title {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: var(--brand-color);
-  margin-bottom: 0.4rem;
+  color: #116466;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: left;
 }
 
 .detail-content {
-  color: var(--text-primary);
-  font-size: 0.8rem;
-  line-height: 1.4;
-  opacity: 0.85;
+  color: #2a2a2a;
+  font-size: 0.85rem;
+  line-height: 1.5;
   margin: 0;
   text-align: left;
 }
@@ -175,15 +173,21 @@
   }
 
   .service-title {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .service-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .detail-title {
     font-size: 0.85rem;
   }
 
   .detail-content {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
   }
 
   .service-cta {
@@ -198,7 +202,19 @@
   }
 
   .service-title {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+  }
+
+  .service-description {
+    font-size: 0.85rem;
+  }
+
+  .detail-title {
+    font-size: 0.8rem;
+  }
+
+  .detail-content {
+    font-size: 0.75rem;
   }
 
   .service-icon-container {

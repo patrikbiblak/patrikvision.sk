@@ -37,9 +37,17 @@ const en = {
     "personal1": "Coffee, code and discipline form my perfect trio. I put 100% into every project so the result runs smoothly and bug-free. After work, sports keep me in shape and help me maintain a clear mind.",
     "hashtags": "#front-end &nbsp; #self-improvement &nbsp; #athlete",
     "aboutMe": "About Me",
-    "desc1": "I create modern web applications with emphasis on functionality and reliability according to precise client requirements.",
-    "desc2": "During development, I maintain open communication so we can fine-tune both functionality and design together and incorporate all your ideas.",
-    "desc3": "I offer portfolio, blog and corporate presentation creation that not only make an aesthetic impact but are also easy to manage and flexible for further development."
+    "desc1": "I create websites that sell your products and grow your business. From landing pages to e-commerce stores, I focus on results that matter.",
+    "desc2": "Your website will rank higher in Google and attract more customers. I optimize everything so potential customers can easily find and buy from you.",
+    "desc3": "I work with you every step of the way. From concept to launch and beyond, I provide ongoing support to keep your business profitable.",
+    "stats": {
+      "yearsOfExperience": "2+",
+      "yearsLabel": "Years Experience",
+      "clientSatisfaction": "100%",
+      "satisfactionLabel": "Quality Focus",
+      "projectsCompleted": "3x",
+      "projectsLabel": "Faster Loading"
+    }
   },
   "whyChooseMe": {
     "title": "Why Choose Me?",

@@ -37,9 +37,17 @@ const skTranslations = {
     "personal1": "Káva, kód a disciplína tvoria môj dokonalý trojboj. Do každého projektu vkladám stovku percent, aby výsledok bežal hladko a bez bugov. Po práci ma šport udrží v kondícii a pomáha mi udržať si čistú myseľ.",
     "hashtags": "#front-end &nbsp; #self-improvement &nbsp; #athlete",
     "aboutMe": "O Mne",
-    "desc1": "Vytváram moderné webové aplikácie s dôrazom na funkčnosť a spoľahlivosť podľa presných požiadaviek klienta.",
-    "desc2": "Počas vývoja udržiavam otvorenú komunikáciu, aby sme spoločne dolaďovali funkcie aj dizajn a zakomponovali všetky vaše predstavy.",
-    "desc3": "Ponúkam tvorbu portfólií, blogov a firemných prezentácií, ktoré nielen esteticky zapôsobia, ale sú aj jednoduché na správu a flexibilné pre ďalší rozvoj."
+    "desc1": "Vytváram webové stránky, ktoré predávajú vaše produkty a rastú vašu firmu. Od zacídelovacích stránok po e-shopy, sústredím sa na výsledky, ktoré sú dôležité.",
+    "desc2": "Vaša webová stránka sa umiestni vyššie v Google a priláká viac zákazníkov. Optimalizujem všetko, aby vás potenciálni zákazníci ľahko našli a od vás nakupovali.",
+    "desc3": "Pracujem s vami na každom kroku. Od koncepcie po spustenie a ďalej, poskytujem pokračujúcu podporu na udržanie vašej firmy ziskovej.",
+    "stats": {
+      "yearsOfExperience": "2+",
+      "yearsLabel": "Rokov Skúseností",
+      "clientSatisfaction": "100%",
+      "satisfactionLabel": "Zameranie na Kvalitu",
+      "projectsCompleted": "3x",
+      "projectsLabel": "Rýchlejšie Načítanie"
+    }
   },
   "whyChooseMe": {
     "title": "Prečo si vybrať mňa?",

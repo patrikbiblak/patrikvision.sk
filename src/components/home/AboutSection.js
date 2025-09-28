@@ -22,6 +22,22 @@ const AboutSection = () => {
             </div>
           </div>
         </div>
+        
+        {/* Statistics Cards */}
+        <div className="about-stats">
+          <div className="stats-card">
+            <div className="stats-number">{t('about.stats.yearsOfExperience')}</div>
+            <div className="stats-label">{t('about.stats.yearsLabel')}</div>
+          </div>
+          <div className="stats-card">
+            <div className="stats-number">{t('about.stats.clientSatisfaction')}</div>
+            <div className="stats-label">{t('about.stats.satisfactionLabel')}</div>
+          </div>
+          <div className="stats-card">
+            <div className="stats-number">{t('about.stats.projectsCompleted')}</div>
+            <div className="stats-label">{t('about.stats.projectsLabel')}</div>
+          </div>
+        </div>
       </div>
     </section>
   );
