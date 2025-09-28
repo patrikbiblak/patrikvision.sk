@@ -10,7 +10,6 @@ const ContactPage = () => {
     const { t } = useTranslation();
     const leftRef = useRef(null);
     const rightRef = useRef(null);
-    const ref = useRef(null);
     const formRef = useRef();
     
     const [formData, setFormData] = useState({
