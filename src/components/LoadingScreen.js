@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './LoadingScreen.css';
+import '../styles/loadingscreen.css';
 
 const LoadingScreen = ({ onComplete }) => {
   const [currentStep, setCurrentStep] = useState(0);
