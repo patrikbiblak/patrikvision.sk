@@ -1,0 +1,31 @@
+/* Particles Animation Styles */
+.particles-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+/* Performance optimization */
+.particles-canvas {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Smooth animation */
+@keyframes particles-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.particles-canvas {
+  animation: particles-float 6s ease-in-out infinite;
+}

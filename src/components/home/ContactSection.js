@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from "react-i18next";
+import Particles from '../Particles';
 import "../../styles/contactsection.css";
 
 const ContactSection = () => {
@@ -84,6 +85,7 @@ const ContactSection = () => {
 
   return (
     <section className="contact-section">
+      <Particles />
       <div>
         <div className="contact-heading" ref={ref}>
           <h2>{t('contact.contactMe')}</h2>
