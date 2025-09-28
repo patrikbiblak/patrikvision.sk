@@ -23,6 +23,7 @@
   padding: 2rem 0;
   padding-top: calc(3.5rem + 2rem);
   overflow-x: hidden;
+  background-color: rgba(17, 100, 102, 0.1);
 }
 
 .hero-container {
