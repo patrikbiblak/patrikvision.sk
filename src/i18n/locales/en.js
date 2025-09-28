@@ -49,6 +49,11 @@ const en = {
       "projectsLabel": "Faster Loading"
     }
   },
+  "latestWork": {
+    "title": "Latest Work",
+    "description": "Explore my recent projects showcasing modern web development, AI solutions, and innovative digital experiences that drive business growth.",
+    "viewAll": "View All Projects"
+  },
   "whyChooseMe": {
     "title": "Why Choose Me?",
     "subtitle": "Here's what sets me apart and makes me the right choice for your project",

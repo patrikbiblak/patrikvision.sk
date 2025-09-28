@@ -49,6 +49,11 @@ const skTranslations = {
       "projectsLabel": "Rýchlejšie Načítanie"
     }
   },
+  "latestWork": {
+    "title": "Najnovšie Práce",
+    "description": "Preskúmajte moje nedávne projekty predstavujúce moderný webový vývoj, AI riešenia a inovatívne digitálne zážitky, ktoré poháňajú rast firmy.",
+    "viewAll": "Zobraziť Všetky Projekty"
+  },
   "whyChooseMe": {
     "title": "Prečo si vybrať mňa?",
     "subtitle": "Tu je to, čo ma odlišuje a robí ma správnou voľbou pre váš projekt",

@@ -49,6 +49,11 @@ const huTranslations = {
       "projectsLabel": "Gyorsabb Betöltés"
     }
   },
+  "latestWork": {
+    "title": "Legújabb Munkák",
+    "description": "Fedezze fel legújabb projekteimet, amelyek a modern webfejlesztést, AI megoldásokat és innovatív digitális élményeket mutatják be, amelyek üzleti növekedést idéznek elő.",
+    "viewAll": "Összes Projekt Megtekintése"
+  },
   "whyChooseMe": {
     "title": "Miért válasszon engem?",
     "subtitle": "Itt van az, ami megkülönböztet engem és a megfelelő választássá tesz a projektjéhez",
