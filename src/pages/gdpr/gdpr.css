@@ -1,13 +1,13 @@
+body {
+    background-color: #1164661a;
+}
+
 .privacy-policy {
     display: flex;
     gap: 4rem;
     flex-direction: column;
     align-items: flex-start;
     min-height: 100vh;
-    background-color: #b8b8b8;
-    background-image: 
-        radial-gradient(circle at 0.3px 0.3px, rgba(140, 140, 140, 0.2) 0.3px, transparent 0.3px);
-    background-size: 1.5px 1.5px;
     margin: 6rem auto;
     padding: 2rem;
 }

@@ -36,26 +36,24 @@ const Gdpr = () => {
 
       <article>
         <h2>{t('privacy.operator')}</h2>
-        <p>
-          {t('privacy.operatorText')}
-        </p>
+        <div dangerouslySetInnerHTML={{ __html: t('privacy.operatorText') }} />
       </article>
 
       <article>
         <h2>{t('privacy.dataCollected')}</h2>
         <ul>
-          <li><strong>{t('privacy.contactData')}</strong></li>
-          <li><strong>{t('privacy.technicalData')}</strong></li>
-          <li><strong>{t('privacy.interactionData')}</strong></li>
+          <li>{t('privacy.contactData')}</li>
+          <li>{t('privacy.technicalData')}</li>
+          <li>{t('privacy.interactionData')}</li>
         </ul>
       </article>
 
       <article>
         <h2>{t('privacy.legalBasis')}</h2>
         <ul>
-          <li><strong>{t('privacy.consent')}</strong></li>
-          <li><strong>{t('privacy.legitimateInterest')}</strong></li>
-          <li><strong>{t('privacy.contractual')}</strong></li>
+          <li>{t('privacy.consent')}</li>
+          <li>{t('privacy.legitimateInterest')}</li>
+          <li>{t('privacy.contractual')}</li>
         </ul>
       </article>
 
@@ -63,7 +61,6 @@ const Gdpr = () => {
         <h2>{t('privacy.retentionPeriod')}</h2>
         <ul>
           <li>{t('privacy.googleAnalytics')}</li>
-          <li>{t('privacy.metaPixel')}</li>
           <li>{t('privacy.contactForms')}</li>
         </ul>
       </article>
