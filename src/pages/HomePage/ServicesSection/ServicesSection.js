@@ -1,8 +1,8 @@
-import "./HomeServicesSection.css";
+import "./ServicesSection.css";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
 
-const HomeServicesSection = () => {
+const ServicesSection = () => {
   const services = [
     'webpages',
     'ai', 
@@ -58,6 +58,6 @@ const HomeServiceItem = ({ serviceKey, index }) => {
   );
 };
 
-export default HomeServicesSection;
+export default ServicesSection;
 
 
