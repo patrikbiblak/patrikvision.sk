@@ -9,7 +9,7 @@ import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
 import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import Navigation from "./components/layout/Navigation/Navigation";
 import Footer from "./components/layout/Footer/Footer";
-import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
+import Gdpr from "./pages/gdpr/gdpr";
 import CookieSettings from "./components/features/cookies/CookieSettings";
 import LoadingScreen from "./components/common/LoadingScreen/LoadingScreen";
 import "./i18n/config";
@@ -41,7 +41,7 @@ const App = () => {
                 <Route path="/portfolio" element={<PortfolioPage />}/>
                 <Route path="/services" element={<ServicesPage />}/>
                 <Route path="/contact" element={<ContactPage />}/>
-                <Route path="/gdpr" element={<PrivacyPolicy />}/>
+                <Route path="/gdpr" element={<Gdpr />}/>
               </Routes>
             </main>
             <Footer />
