@@ -1,12 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Maintenance from "../../components/common/Maintenance/Maintenance";
+import "./PortfolioPage.css";
 
 const PortfolioPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div>
+        <div className="portfolio-page">
             <Helmet>
                 <title>{t('seo.portfolio.title')} | PatrikVision</title>
                 <meta name="description" content={t('seo.portfolio.description')} />

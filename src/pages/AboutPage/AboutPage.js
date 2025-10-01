@@ -1,12 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import Maintenance from "../../components/common/Maintenance/Maintenance";
+import "./AboutPage.css";
 
 const AboutPage = () => {
     const { t } = useTranslation();
 
     return (
-        <div>
+        <div className="about-page">
             <Helmet>
                 <title>{t('seo.about.title')} | PatrikVision</title>
                 <meta name="description" content={t('seo.about.description')} />
