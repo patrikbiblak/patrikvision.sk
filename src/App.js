@@ -2,16 +2,16 @@ import React, { Suspense, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import useVersionChecker from "./hooks/useVersionChecker";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ContactPage from "./pages/ContactPage";
-import PortfolioPage from "./pages/PortfolioPage";
-import ServicesPage from "./pages/ServicesPage";
-import Navigation from "./components/Navigation";
-import Footer from "./components/Footer";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import CookieSettings from "./CookieConsent/CookieSettings";
-import LoadingScreen from "./components/LoadingScreen";
+import HomePage from "./pages/HomePage/HomePage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import ContactPage from "./pages/ContactPage/ContactPage";
+import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
+import ServicesPage from "./pages/ServicesPage/ServicesPage";
+import Navigation from "./components/layout/Navigation/Navigation";
+import Footer from "./components/layout/Footer/Footer";
+import PrivacyPolicy from "./pages/PrivacyPolicyPage/PrivacyPolicyPage";
+import CookieSettings from "./components/features/cookies/CookieSettings";
+import LoadingScreen from "./components/common/LoadingScreen/LoadingScreen";
 import "./i18n/config";
 
 const App = () => {
