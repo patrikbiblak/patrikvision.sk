@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 const LatestWorkSection = () => {
   const { t } = useTranslation();
 
-  // Sample project data - you can replace this with real data
   const projects = [
     {
       id: 1,
@@ -28,7 +27,6 @@ const LatestWorkSection = () => {
     <section className="latest-work-section">
       <div className="latest-work-container">
         <div className="latest-work-layout">
-          {/* Project Cards - Left Side */}
           <div className="latest-work-left">
             <div className="project-cards">
               {projects.map((project) => (
@@ -57,7 +55,6 @@ const LatestWorkSection = () => {
             </div>
           </div>
 
-          {/* Heading - Right Side */}
           <div className="latest-work-right">
             <h2 className="latest-work-heading">{t('latestWork.title')}</h2>
             <a href="/portfolio" className="latest-work-cta">
@@ -71,3 +68,5 @@ const LatestWorkSection = () => {
 };
 
 export default LatestWorkSection;
+
+

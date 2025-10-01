@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import AboutSection from "../../components/features/home/AboutSection/AboutSection";
-import HeroSection from "../../components/features/home/HeroSection/HeroSection";
-import HomeServicesSection from "../../components/features/home/HomeServicesSection/HomeServicesSection";
-import LatestWorkSection from "../../components/features/home/LatestWorkSection/LatestWorkSection";
-import WhyMeSection from "../../components/features/home/WhyMeSection/WhyMeSection";
-import ContactSection from "../../components/features/home/ContactSection/ContactSection";
+import AboutSection from "./AboutSection/AboutSection";
+import HeroSection from "./HeroSection/HeroSection";
+import HomeServicesSection from "./HomeServicesSection/HomeServicesSection";
+import LatestWorkSection from "./LatestWorkSection/LatestWorkSection";
+import WhyMeSection from "./WhyMeSection/WhyMeSection";
+import ContactSection from "./ContactSection/ContactSection";
 
 const HomePage = () => {
     const { t } = useTranslation();

@@ -1,0 +1,48 @@
+import "./AboutSection.css";
+import { useRef } from 'react';
+import { useTranslation } from "react-i18next";
+
+const AboutSection = () => {
+  const leftRef = useRef(null);
+  const rightRef = useRef(null);
+  const { t } = useTranslation();
+
+  return (
+    <section className="about-section">
+      <div className="about-container">
+        <div className="about-layout">
+          <div className="about-left">
+            <h2 className="about-heading">{t('about.aboutMe')}</h2>
+          </div>
+          <div className="about-right">
+            <div className="about-content">
+              <p ref={leftRef}>{t('about.desc1')}</p>
+              <p ref={rightRef}>{t('about.desc2')}</p>
+              <p>{t('about.desc3')}</p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Statistics Cards */}
+        <div className="about-stats">
+          <div className="stats-card">
+            <div className="stats-number">{t('about.stats.yearsOfExperience')}</div>
+            <div className="stats-label">{t('about.stats.yearsLabel')}</div>
+          </div>
+          <div className="stats-card">
+            <div className="stats-number">{t('about.stats.clientSatisfaction')}</div>
+            <div className="stats-label">{t('about.stats.satisfactionLabel')}</div>
+          </div>
+          <div className="stats-card">
+            <div className="stats-number">{t('about.stats.projectsCompleted')}</div>
+            <div className="stats-label">{t('about.stats.projectsLabel')}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutSection;
+
+

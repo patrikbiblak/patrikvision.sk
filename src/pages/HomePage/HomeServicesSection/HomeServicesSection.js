@@ -31,7 +31,6 @@ const HomeServiceItem = ({ serviceKey, index }) => {
   
   const service = t(`services.${serviceKey}`, { returnObjects: true });
 
-  // Add safety checks to prevent undefined errors
   if (!service || typeof service !== 'object') {
     return null;
   }
@@ -60,3 +59,5 @@ const HomeServiceItem = ({ serviceKey, index }) => {
 };
 
 export default HomeServicesSection;
+
+
