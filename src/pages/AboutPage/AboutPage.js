@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import Maintenance from "../MaintenancePage/MaintenancePage";
+import Maintenance from "../../components/common/Maintenance/Maintenance";
 
 const AboutPage = () => {
     const { t } = useTranslation();

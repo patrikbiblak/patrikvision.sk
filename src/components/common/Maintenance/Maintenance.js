@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import './MaintenancePage.css';
+import './Maintenance.css';
 
 const Maintenance = ({ className = '' }) => {
   const { t } = useTranslation();
