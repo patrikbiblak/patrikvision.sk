@@ -1,7 +1,7 @@
 import React, { Suspense, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import useVersionChecker from "./hooks/useVersionChecker";
+import useVersionChecker from "./components/hooks/useVersionChecker";
 import HomePage from "./pages/HomePage/HomePage";
 import AboutPage from "./pages/AboutPage/AboutPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
