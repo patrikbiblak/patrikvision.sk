@@ -27,9 +27,6 @@
   letter-spacing: -0.02em;
 }
 
-.services-content {
-  width: 100%;
-}
 
 .services-grid {
   display: grid;
@@ -48,7 +45,7 @@
   border: 1px solid rgba(17, 100, 102, 0.2);
   width: 100%;
   max-width: 380px;
-  min-height: 280px;
+  min-height: 400px;
   text-align: left;
   display: flex;
   flex-direction: column;
@@ -176,7 +173,7 @@
     padding: 1.5rem;
     max-width: 100%;
     text-align: left;
-    min-height: 260px;
+    min-height: 350px;
   }
 
   .service-title {
@@ -187,17 +184,12 @@
   .service-description {
     font-size: 0.9rem;
   }
-
-  .services-heading {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width: 480px) {
   .service-card {
     padding: 1.25rem;
-    min-height: 240px;
+    min-height: 320px;
   }
 
   .service-title {
@@ -212,10 +204,5 @@
 
   .service-icon {
     font-size: 20px;
-  }
-
-  .services-heading {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
   }
 }
