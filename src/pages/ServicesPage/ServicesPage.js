@@ -32,12 +32,16 @@ const ServicesPage = () => {
                 <link rel="canonical" href="https://patrikvision.sk/services" />
                 <meta property="og:title" content={t('seo.services.title')} />
                 <meta property="og:description" content={t('seo.services.description')} />
+                <meta property="og:image" content="https://patrikvision.sk/images/PatrikVision.png" />
                 <meta property="og:site_name" content="PatrikVision" />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content="https://patrikvision.sk/services" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <meta name="twitter:title" content={t('seo.services.title')} />
                 <meta name="twitter:description" content={t('seo.services.description')} />
+                <meta name="twitter:image" content="https://patrikvision.sk/images/PatrikVision.png" />
+                <meta name="twitter:site" content="@patrikvision" />
+                <meta name="twitter:creator" content="@patrikvision" />
                 <link rel="alternate" hreflang="en" href="https://patrikvision.sk/services" />
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/services" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/services" />
