@@ -86,8 +86,8 @@ const ContactPage = () => {
         { icon: Linkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/patrikvision' },
     ];
 
-    // Slovakia coordinates (Bratislava area)
-    const mapCenter = { lat: 48.6690, lng: 19.6990 };
+    // Bratislava, Slovakia coordinates
+    const mapCenter = { lat: 48.1485965, lng: 17.1077478 };
 
     return (
         <div className="contact-page">
@@ -100,9 +100,9 @@ const ContactPage = () => {
                 <meta name="language" content="en,sk,hu" />
                 <meta name="revisit-after" content="7 days" />
                 <meta name="geo.region" content="SK" />
-                <meta name="geo.placename" content="Slovakia" />
-                <meta name="geo.position" content="48.6690;19.6990" />
-                <meta name="ICBM" content="48.6690, 19.6990" />
+                <meta name="geo.placename" content="Bratislava, Slovakia" />
+                <meta name="geo.position" content="48.1485965;17.1077478" />
+                <meta name="ICBM" content="48.1485965, 17.1077478" />
                 <link rel="canonical" href="https://patrikvision.sk/contact" />
                 <meta property="og:title" content={t('seo.contact.title')} />
                 <meta property="og:description" content={t('seo.contact.description')} />

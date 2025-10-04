@@ -195,7 +195,7 @@ const ContactSection = () => {
             })}
             <div className="homepage-contact-map">
               <GoogleMap 
-                center={{ lat: 48.6690, lng: 19.6990 }}
+                center={{ lat: 48.1485965, lng: 17.1077478 }}
                 zoom={10}
                 className="contact-map"
               />

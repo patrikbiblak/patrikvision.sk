@@ -92,8 +92,8 @@ const en = {
     "title": "Your <span>web</span> - Your <span>success</span>",
     "subtitle": "Contact",
     "description": "Have an idea for your website? Send me a brief description of your goals and together we'll create a solution that delivers results.",
-    "sendMessage": "Send message",
-    "contactDetails": "Contact details",
+    "sendMessage": "Send Message",
+    "contactDetails": "Contact Details",
     "name": "Name",
     "email": "Email",
     "productInterest": "Product Interest",
@@ -115,7 +115,7 @@ const en = {
       "responseTime": "Response Time",
       "responseTimeValue": "Within 24 hours"
     },
-    "socialLinks": "Social Links",
+    "socialLinks": "Social Profiles",
     "contactMe": "Get In Touch",
     "contactDesc": "I'd love to hear about your project. Let's create something amazing together!",
     "intro": "If you want your website to start working for you, message me — I'll be happy to show you how."
