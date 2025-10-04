@@ -115,6 +115,7 @@ const skTranslations = {
       "responseTime": "Čas Odozvy",
       "responseTimeValue": "Do 24 hodín"
     },
+    "socialLinks": "Sociálne Siete",
     "contactMe": "Kontaktujte Ma",
     "contactDesc": "Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!",
     "intro": "Ak chceš, aby tvoj web začal skutočne pracovať pre teba, napíš mi — rád ti ukážem, ako na to."

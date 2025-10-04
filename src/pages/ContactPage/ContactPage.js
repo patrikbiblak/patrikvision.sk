@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone } from 'lucide-react';
+import { Mail, Phone, Instagram, Linkedin } from 'lucide-react';
 import GoogleMap from '../../components/common/GoogleMap/GoogleMap';
 import "./ContactPage.css";
 
@@ -81,6 +81,11 @@ const ContactPage = () => {
         { icon: Phone, label: t('contact.details.phone'), value: '+421 918 755 276' },
     ];
 
+    const socialLinks = [
+        { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/patrikvision' },
+        { icon: Linkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/patrikvision' },
+    ];
+
     // Slovakia coordinates (Bratislava area)
     const mapCenter = { lat: 48.6690, lng: 19.6990 };
 
@@ -115,19 +120,9 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/contact" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
-            <div>
-                <div className="contact-page-heading">
-                    <h1>{t('nav.contact')}</h1>
-                    <p>{t('contact.intro')}</p>
-                </div>
-
-                <div className="contact-page-map-container">
-                    <GoogleMap 
-                        center={mapCenter}
-                        zoom={10}
-                        className="contact-map"
-                    />
-                </div>
+            <div className="contact-page-content">
+                <h1 className="contact-heading">{t('nav.contact')}</h1>
+                <p className="intro-text">{t('contact.intro')}</p>
 
                 <div className="contact-page-content-grid">
                     <div className="contact-page-info-box" ref={leftRef}>
@@ -155,6 +150,25 @@ const ContactPage = () => {
                                 </div>
                             );
                         })}
+                        
+                        <h3 className="social-links-heading">{t('contact.socialLinks')}</h3>
+                        <div className="contact-page-social-links">
+                            {socialLinks.map((social) => {
+                                const Icon = social.icon;
+                                return (
+                                    <a
+                                        key={social.label}
+                                        href={social.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="contact-page-social-link"
+                                        aria-label={social.label}
+                                    >
+                                        <Icon />
+                                    </a>
+                                );
+                            })}
+                        </div>
                         
                     </div>
 
@@ -231,6 +245,14 @@ const ContactPage = () => {
                             {status === 'error'   && <p className="error">{t('contact.error')}</p>}
                         </form>
                     </div>
+                </div>
+
+                <div className="contact-page-map-container">
+                    <GoogleMap 
+                        center={mapCenter}
+                        zoom={10}
+                        className="contact-map"
+                    />
                 </div>
             </div>
         </div>

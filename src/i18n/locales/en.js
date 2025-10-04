@@ -115,6 +115,7 @@ const en = {
       "responseTime": "Response Time",
       "responseTimeValue": "Within 24 hours"
     },
+    "socialLinks": "Social Links",
     "contactMe": "Get In Touch",
     "contactDesc": "I'd love to hear about your project. Let's create something amazing together!",
     "intro": "If you want your website to start working for you, message me — I'll be happy to show you how."

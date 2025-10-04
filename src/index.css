@@ -183,10 +183,6 @@ input:focus {
     padding: 0.5rem 1rem;
   }
 
-  section:not(.hero-section):not(.why-choose-me-section):not(.home-services-section):not(.services-section) {
-    padding: 1rem;
-  }
-
   .container {
     padding: 0 1rem;
     max-width: 100%;

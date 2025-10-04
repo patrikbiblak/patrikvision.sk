@@ -115,6 +115,7 @@ const huTranslations = {
       "responseTime": "Válaszidő",
       "responseTimeValue": "24 órán belül"
     },
+    "socialLinks": "Közösségi Média",
     "contactMe": "Lépjünk Kapcsolatba",
     "contactDesc": "Szeretnék hallani a projektjéről. Alkossunk valami csodálatosat együtt!",
     "intro": "Ha azt szeretnéd, hogy a weboldalad tényleg dolgozzon érted, írj nekem — szívesen megmutatom, hogyan."
