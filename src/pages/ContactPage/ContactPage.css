@@ -95,6 +95,11 @@
   border-bottom-color: var(--text-accent);
 }
 
+.contact-page .map-container {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
 /* Form uses site card pattern from Services */
 .contact-page .contact-form-box {
   background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);

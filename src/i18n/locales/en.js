@@ -116,7 +116,8 @@ const en = {
       "responseTimeValue": "Within 24 hours"
     },
     "contactMe": "Get In Touch",
-    "contactDesc": "I'd love to hear about your project. Let's create something amazing together!"
+    "contactDesc": "I'd love to hear about your project. Let's create something amazing together!",
+    "intro": "If you want your website to start working for you, write to me — I'll be happy to show you how."
   },
   "footer": {
     "rights": "All rights reserved.",
@@ -141,6 +142,7 @@ const en = {
   "services": {
     "title": "My Services",
     "subtitle": "What I can offer you",
+    "intro": "From web development to AI automation, I provide comprehensive digital solutions tailored to your business needs.",
     "webpages": {
       "name": "Website Development",
       "description": "Professional website creation with focus on speed, SEO and conversions that attract new customers.",

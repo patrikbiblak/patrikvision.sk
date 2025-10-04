@@ -116,7 +116,8 @@ const huTranslations = {
       "responseTimeValue": "24 órán belül"
     },
     "contactMe": "Lépjünk Kapcsolatba",
-    "contactDesc": "Szeretnék hallani a projektjéről. Alkossunk valami csodálatosat együtt!"
+    "contactDesc": "Szeretnék hallani a projektjéről. Alkossunk valami csodálatosat együtt!",
+    "intro": "Ha azt szeretnéd, hogy a weboldalad tényleg dolgozzon érted, írj nekem — szívesen megmutatom, hogyan."
   },
   "footer": {
     "rights": "Minden jog fenntartva.",
@@ -141,6 +142,7 @@ const huTranslations = {
   "services": {
     "title": "Szolgáltatásaim",
     "subtitle": "Mit tudok kínálni",
+    "intro": "Web fejlesztéstől AI automatizálásig, átfogó digitális megoldásokat kínálok az üzlet igényeihez igazítva.",
     "webpages": {
       "name": "Weboldal Fejlesztés",
       "description": "Professzionális weboldal készítés hangsúlyozva a sebességre, SEO-ra és konverziókra, amely új ügyfeleket vonz.",

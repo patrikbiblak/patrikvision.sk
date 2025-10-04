@@ -116,7 +116,8 @@ const skTranslations = {
       "responseTimeValue": "Do 24 hodín"
     },
     "contactMe": "Kontaktujte Ma",
-    "contactDesc": "Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!"
+    "contactDesc": "Rád by som počul o vašom projekte. Poďme spolu vytvoriť niečo úžasné!",
+    "intro": "Ak chceš, aby tvoj web začal skutočne pracovať pre teba, napíš mi — rád ti ukážem, ako na to."
   },
   "footer": {
     "rights": "Všetky práva vyhradené.",
@@ -141,6 +142,7 @@ const skTranslations = {
   "services": {
     "title": "Moje Služby",
     "subtitle": "Čo vám môžem ponúknuť",
+    "intro": "Od webového vývoja po AI automatizáciu, poskytujem komplexné digitálne riešenia prispôsobené potrebám vášho podnikania.",
     "webpages": {
       "name": "Tvorba Webových Stránok",
       "description": "Profesionálna tvorba webových stránok s dôrazom na rýchlosť, SEO a konverzie, ktoré prilákajú nových zákazníkov.",

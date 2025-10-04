@@ -48,6 +48,8 @@ const ServicesPage = () => {
             </Helmet>
             <div className="services-page-content">
                 <h1 className="services-heading">{t('nav.services')}</h1>
+                <p className="intro-text">{t('services.intro')}</p>
+                
                 <div className="services-grid">
                     {services.map((serviceKey, index) => (
                         <ServiceCard key={serviceKey} serviceKey={serviceKey} index={index} />

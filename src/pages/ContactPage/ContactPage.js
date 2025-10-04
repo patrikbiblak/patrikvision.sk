@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import GoogleMap from '../../components/common/GoogleMap/GoogleMap';
 import "./ContactPage.css";
 
 const ContactPage = () => {
@@ -82,6 +83,9 @@ const ContactPage = () => {
         { icon: Clock, label: t('contact.details.responseTime'), value: t('contact.details.responseTimeValue') },
     ];
 
+    // Slovakia coordinates (Bratislava area)
+    const mapCenter = { lat: 48.6690, lng: 19.6990 };
+
     return (
         <div className="contact-page">
             <Helmet>
@@ -115,6 +119,7 @@ const ContactPage = () => {
             </Helmet>
             <div className="contact-page-content">
                 <h1 className="contact-heading">{t('nav.contact')}</h1>
+                <p className="contact-intro">{t('contact.intro')}</p>
 
                 <div className="contact-content">
                     <div className="contact-box contact-info-box" ref={leftRef}>
@@ -142,6 +147,9 @@ const ContactPage = () => {
                                 </div>
                             );
                         })}
+                        <div className="map-container">
+                            <GoogleMap center={mapCenter} zoom={8} />
+                        </div>
                     </div>
                     <div className="contact-box contact-form-box" ref={rightRef}>
                         <h3>{t('contact.sendMessage')}</h3>
