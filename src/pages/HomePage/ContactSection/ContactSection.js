@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from "react-i18next";
 import Particles from '../../../components/common/Particles/Particles';
+import GoogleMap from '../../../components/common/GoogleMap/GoogleMap';
 import "./ContactSection.css";
 
 const ContactSection = () => {
@@ -192,6 +193,13 @@ const ContactSection = () => {
                 </div>
               );
             })}
+            <div className="homepage-contact-map">
+              <GoogleMap 
+                center={{ lat: 48.6690, lng: 19.6990 }}
+                zoom={10}
+                className="contact-map"
+              />
+            </div>
           </div>
         </div>
         </div>
