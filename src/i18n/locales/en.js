@@ -117,7 +117,7 @@ const en = {
     },
     "contactMe": "Get In Touch",
     "contactDesc": "I'd love to hear about your project. Let's create something amazing together!",
-    "intro": "If you want your website to start working for you, write to me — I'll be happy to show you how."
+    "intro": "If you want your website to start working for you, message me — I'll be happy to show you how."
   },
   "footer": {
     "rights": "All rights reserved.",

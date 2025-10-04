@@ -87,8 +87,12 @@
 }
 
 .contact-page .contact-page-info-box h3 {
+  margin-bottom: clamp(1rem, 2vw, 2rem);
+  text-align: left;
   color: var(--brand-color);
-  margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  line-height: 1.2;
 }
 
 .contact-page .contact-page-info-item {
@@ -172,20 +176,22 @@
 .contact-page .contact-page-form-box input,
 .contact-page .contact-page-form-box textarea,
 .contact-page .contact-page-form-box select {
-  background: transparent;
-  border: 1px solid var(--border-default);
-  color: #333333;
-  padding: 0.5rem;
-  margin-bottom: 0.75rem;
   width: 100%;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background: #ffffff;
+  border: 2px solid rgba(17, 100, 102, 0.2);
+  color: var(--text-primary);
+  padding: clamp(0.5rem, 1.2vw, 0.65rem);
+  transition: all 0.3s ease;
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  margin-bottom: clamp(0.4rem, 0.8vw, 0.6rem);
+  box-sizing: border-box;
 }
 
 .contact-page .contact-page-form-box input:focus,
 .contact-page .contact-page-form-box textarea:focus,
 .contact-page .contact-page-form-box select:focus {
-  outline: none;
   border-color: var(--brand-color);
+  outline: none;
   box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.15);
 }
 
@@ -216,12 +222,15 @@
 }
 
 .contact-page .contact-page-form-box button:hover {
-  background-color: rgba(153, 153, 153, 0.1);
+  background-color: #0d4f51;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(17, 100, 102, 0.4);
 }
 
 .contact-page .contact-page-form-box button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
+  transform: none;
 }
 
 .contact-page .contact-page-form-box .success {
