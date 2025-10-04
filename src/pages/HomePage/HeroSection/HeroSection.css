@@ -42,7 +42,7 @@
 .code-space {
   background: #1e1e1e;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   opacity: 1;
   aspect-ratio: 16/10;
   max-width: 500px;
@@ -204,20 +204,20 @@
   background: var(--brand-color);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(17, 100, 102, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .btn-get-started {
   background: var(--brand-color);
   color: white;
   border: 2px solid transparent;
-  box-shadow: 0 4px 15px rgba(17, 100, 102, 0.2);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .btn-get-started:hover {
   background: #0d4f51;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(17, 100, 102, 0.4);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 /* ===== SCROLL ARROW ===== */

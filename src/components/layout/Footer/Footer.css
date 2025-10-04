@@ -82,7 +82,7 @@
 .social-link:hover {
   background: var(--brand-color);
   color: white;
-  box-shadow: 0 8px 25px rgba(17, 100, 102, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border-color: var(--brand-color);
 }
 

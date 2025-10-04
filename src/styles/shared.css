@@ -8,7 +8,7 @@
   padding: 1.75rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border: 1px solid rgba(17, 100, 102, 0.2);
   width: 100%;
 }
@@ -38,7 +38,7 @@
   padding: 1.75rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border: 1px solid rgba(17, 100, 102, 0.2);
   width: 100%;
 }
@@ -59,7 +59,7 @@
   padding: 1.75rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border: 1px solid rgba(17, 100, 102, 0.2);
   width: 100%;
   min-height: 400px;
@@ -85,7 +85,7 @@
   padding: 1.75rem;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border: 1px solid rgba(17, 100, 102, 0.2);
   width: 100%;
 }
@@ -107,7 +107,7 @@
 .u-form-field:focus {
   outline: none;
   border-color: var(--brand-color);
-  box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .u-form-label {
@@ -143,13 +143,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 3px 12px rgba(17, 100, 102, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .u-form-button--primary:hover {
   background-color: #0d4f51;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(17, 100, 102, 0.4);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .u-form-button:disabled {
@@ -175,7 +175,7 @@
 .contact-form-field:focus {
   outline: none;
   border-color: var(--brand-color);
-  box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .contact-form-label {
@@ -211,13 +211,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 3px 12px rgba(17, 100, 102, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .contact-form-button--primary:hover {
   background-color: #0d4f51;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(17, 100, 102, 0.4);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 /* ===== SECTION HEADINGS ===== */

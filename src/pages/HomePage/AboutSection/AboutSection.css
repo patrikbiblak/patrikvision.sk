@@ -295,7 +295,7 @@
   padding: 1.5rem 1.25rem;
   text-align: center;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 16px rgba(17, 100, 102, 0.1);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .stats-number {

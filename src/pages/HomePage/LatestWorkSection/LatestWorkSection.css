@@ -65,11 +65,11 @@
   overflow: hidden;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  box-shadow: 0 4px 16px rgba(17, 100, 102, 0.1);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .project-card:hover {
-  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.2);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border-color: rgba(17, 100, 102, 0.4);
 }
 
@@ -219,7 +219,7 @@
   background: transparent;
   color: #116466;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(17, 100, 102, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */

@@ -5,6 +5,32 @@
   min-height: 100vh;
   padding: 6rem 0rem;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at top left, rgba(17, 100, 102, 0.15) 0%, rgba(17, 100, 102, 0.08) 30%, rgba(17, 100, 102, 0.03) 60%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-page::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at bottom right, rgba(17, 100, 102, 0.15) 0%, rgba(17, 100, 102, 0.08) 30%, rgba(17, 100, 102, 0.03) 60%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .contact-page-content {
@@ -15,6 +41,8 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
+  position: relative;
+  z-index: 1;
 }
 
 .contact-heading {
@@ -60,7 +88,7 @@
   margin: clamp(2rem, 4vw, 3rem) auto 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border: 1px solid rgba(17, 100, 102, 0.2);
   position: relative;
   z-index: 2;
@@ -112,7 +140,7 @@
   padding: clamp(1.75rem, 3.5vw, 2.25rem);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 32px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border: 1px solid rgba(17, 100, 102, 0.2);
   color: var(--text-primary);
   display: flex;
@@ -170,7 +198,7 @@
 .contact-page-form-box select:focus {
   border-color: var(--brand-color);
   outline: none;
-  box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .contact-page-form-box input::placeholder,
@@ -223,13 +251,13 @@
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 3px 12px rgba(17, 100, 102, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .contact-page-form-box button:hover {
   background-color: #0d4f51;
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(17, 100, 102, 0.4);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .contact-page-form-box button:disabled {
@@ -338,14 +366,14 @@
   color: var(--brand-color);
   text-decoration: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(17, 100, 102, 0.1);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .contact-page-social-link:hover {
   background: var(--brand-color);
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(17, 100, 102, 0.3);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border-color: var(--brand-color);
 }
 

@@ -9,7 +9,7 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   transition: all 0.3s ease;
   min-height: auto;
   height: auto;
@@ -105,7 +105,7 @@
 .offer-card:hover {
   background-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .offer-title {
