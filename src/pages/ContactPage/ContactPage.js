@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
-import Particles from '../../components/common/Particles/Particles';
 import GoogleMap from '../../components/common/GoogleMap/GoogleMap';
 import "./ContactPage.css";
 
@@ -118,7 +117,6 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/contact" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
-            <Particles />
             <div>
                 <div className="contact-page-heading">
                     <h1>{t('nav.contact')}</h1>
