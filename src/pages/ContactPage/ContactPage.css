@@ -345,42 +345,52 @@
   line-height: 1.2;
 }
 
-/* Social Media Links */
-.contact-page-social-links {
+/* Social Links Container */
+.social-links-container {
   display: flex;
-  gap: clamp(1rem, 2vw, 1.5rem);
-  margin-top: 0;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.contact-page-social-link {
-  display: flex;
+/* Social Media Items */
+.contact-page-social-item {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: clamp(40px, 6vw, 48px);
-  height: clamp(40px, 6vw, 48px);
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  border: 2px solid rgba(17, 100, 102, 0.2);
-  border-radius: 50%;
-  color: var(--brand-color);
+  gap: clamp(1rem, 2vw, 1.3rem);
+  margin-bottom: clamp(1.4rem, 2.8vw, 1.8rem);
   text-decoration: none;
+  color: var(--text-primary);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  padding: 0.5rem 0;
+  width: fit-content;
 }
 
-.contact-page-social-link:hover {
-  background: var(--brand-color);
-  color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border-color: var(--brand-color);
+.contact-page-social-item:last-child {
+  margin-bottom: 0;
 }
 
-.contact-page-social-link svg {
-  width: clamp(20px, 3vw, 24px);
-  height: clamp(20px, 3vw, 24px);
+.contact-page-social-item:hover {
+  color: var(--brand-color);
+  transform: translateX(5px);
 }
+
+.contact-page-social-item svg {
+  width: clamp(28px, 4vw, 32px);
+  height: clamp(28px, 4vw, 32px);
+  flex-shrink: 0;
+  color: var(--brand-color);
+}
+
+.contact-page-social-item span {
+  color: var(--brand-color);
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: clamp(0.7rem, 1.8vw, 0.75rem);
+  line-height: 1.2;
+}
+
 
 
 /* Tablet and smaller desktop */

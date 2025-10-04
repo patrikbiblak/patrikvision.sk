@@ -152,7 +152,7 @@ const ContactPage = () => {
                         })}
                         
                         <h3 className="social-links-heading">{t('contact.socialLinks')}</h3>
-                        <div className="contact-page-social-links">
+                        <div className="social-links-container">
                             {socialLinks.map((social) => {
                                 const Icon = social.icon;
                                 return (
@@ -161,10 +161,11 @@ const ContactPage = () => {
                                         href={social.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="contact-page-social-link"
+                                        className="contact-page-social-item"
                                         aria-label={social.label}
                                     >
                                         <Icon />
+                                        <span>{social.label}</span>
                                     </a>
                                 );
                             })}
