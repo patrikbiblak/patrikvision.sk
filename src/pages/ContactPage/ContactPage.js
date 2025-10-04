@@ -82,8 +82,8 @@ const ContactPage = () => {
     ];
 
     const socialLinks = [
-        { icon: Instagram, label: 'Instagram', url: 'https://instagram.com/patrikvision' },
-        { icon: Linkedin, label: 'LinkedIn', url: 'https://linkedin.com/in/patrikvision' },
+        { icon: Instagram, label: 'Instagram', url: 'https://www.instagram.com/bpaatrik/' },
+        { icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/patrikbiblak/' },
     ];
 
     // Bratislava, Slovakia coordinates

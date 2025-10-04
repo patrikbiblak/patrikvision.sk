@@ -46,9 +46,15 @@ const Footer = () => {
                         >
                             <MdEmail />
                         </a>
-                        <div className="social-link">
+                        <a
+                            href="https://www.linkedin.com/in/patrikbiblak/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="social-link"
+                            aria-label="LinkedIn"
+                        >
                             <FaLinkedin />
-                        </div>
+                        </a>
                     </div>
                 </div>
 
