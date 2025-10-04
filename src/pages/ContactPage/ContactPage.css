@@ -198,14 +198,21 @@
 }
 
 .contact-page .contact-page-form-box button {
-  background-color: transparent;
-  border: 1px solid var(--border-default);
-  color: #333333;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  transition: all 0.3s;
+  display: block;
+  color: #ffffff;
+  font-weight: 600;
+  background: var(--brand-color);
+  border: none;
+  margin: 0 auto;
   width: 100%;
-  margin: 0.5rem 0 0;
+  margin-top: clamp(0.8rem, 1.5vw, 1rem);
+  transition: all 0.3s ease;
+  padding: clamp(0.6rem, 1.5vw, 0.8rem);
+  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 3px 12px rgba(17, 100, 102, 0.3);
 }
 
 .contact-page .contact-page-form-box button:hover {
@@ -240,6 +247,8 @@
   .contact-page .contact-page-intro {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .contact-page .contact-page-content-grid {
@@ -259,6 +268,8 @@
   .contact-page .contact-page-intro {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .contact-page .contact-page-info-box,

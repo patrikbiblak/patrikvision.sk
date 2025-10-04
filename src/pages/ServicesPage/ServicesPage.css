@@ -190,6 +190,8 @@
   .intro-text {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .services-grid {
@@ -219,6 +221,8 @@
   .intro-text {
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .service-card {
