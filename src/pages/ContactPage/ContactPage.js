@@ -118,16 +118,16 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
             <div className="contact-page-content">
-                <h1 className="contact-heading">{t('nav.contact')}</h1>
-                <p className="contact-intro">{t('contact.intro')}</p>
+                <h1 className="contact-page-heading">{t('nav.contact')}</h1>
+                <p className="contact-page-intro">{t('contact.intro')}</p>
 
-                <div className="contact-content">
-                    <div className="contact-box contact-info-box" ref={leftRef}>
+                <div className="contact-page-content-grid">
+                    <div className="contact-page-info-box" ref={leftRef}>
                         <h3>{t('contact.contactMe')}</h3>
                         {contactDetails.map((detail) => {
                             const Icon = detail.icon;
                             return (
-                                <div key={detail.label} className="contact-info-item">
+                                <div key={detail.label} className="contact-page-info-item">
                                     <Icon />
                                     <div>
                                         <p>{detail.label}</p>
@@ -136,7 +136,7 @@ const ContactPage = () => {
                                                 href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="contact-link"
+                                                className="contact-page-link"
                                             >
                                                 {detail.value}
                                             </a>
@@ -147,11 +147,11 @@ const ContactPage = () => {
                                 </div>
                             );
                         })}
-                        <div className="map-container">
+                        <div className="contact-page-map-container">
                             <GoogleMap center={mapCenter} zoom={8} />
                         </div>
                     </div>
-                    <div className="contact-box contact-form-box" ref={rightRef}>
+                    <div className="contact-page-form-box" ref={rightRef}>
                         <h3>{t('contact.sendMessage')}</h3>
                         <form ref={formRef} onSubmit={handleSubmit}>
                             {/* Personal Information */}

@@ -14,15 +14,25 @@
   align-items: center;
 }
 
-.contact-page .contact-heading {
+.contact-page .contact-page-heading {
   color: var(--brand-color);
   text-align: center;
   letter-spacing: -0.02em;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-size: 2.5rem;
 }
 
-.contact-page .contact-content {
+.contact-page .contact-page-intro {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-page .contact-page-content-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -31,7 +41,7 @@
 }
 
 /* Info box uses site card pattern */
-.contact-page .contact-info-box {
+.contact-page .contact-page-info-box {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -44,7 +54,7 @@
   width: 100%;
 }
 
-.contact-page .contact-info-box::before {
+.contact-page .contact-page-info-box::before {
   content: '';
   position: absolute;
   top: 0;
@@ -54,29 +64,29 @@
   background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
 }
 
-.contact-page .contact-info-box h3 {
+.contact-page .contact-page-info-box h3 {
   color: var(--brand-color);
   margin-bottom: 0.5rem;
 }
 
-.contact-page .contact-info-item {
+.contact-page .contact-page-info-item {
   display: flex;
   gap: 1rem;
   align-items: flex-start;
 }
 
-.contact-page .contact-info-item svg {
+.contact-page .contact-page-info-item svg {
   width: 28px;
   height: 28px;
   color: var(--brand-color);
   flex-shrink: 0;
 }
 
-.contact-page .contact-info-item p {
+.contact-page .contact-page-info-item p {
   margin: 0;
 }
 
-.contact-page .contact-info-item div p:first-child {
+.contact-page .contact-page-info-item div p:first-child {
   color: var(--brand-color);
   font-weight: 700;
   text-transform: uppercase;
@@ -85,23 +95,23 @@
   margin-bottom: 0.25rem;
 }
 
-.contact-page .contact-link {
+.contact-page .contact-page-link {
   color: var(--text-secondary);
   border-bottom: 1px solid transparent;
 }
 
-.contact-page .contact-link:hover {
+.contact-page .contact-page-link:hover {
   color: var(--text-accent);
   border-bottom-color: var(--text-accent);
 }
 
-.contact-page .map-container {
+.contact-page .contact-page-map-container {
   margin-top: 1.5rem;
   width: 100%;
 }
 
 /* Form uses site card pattern from Services */
-.contact-page .contact-form-box {
+.contact-page .contact-page-form-box {
   background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
   padding: 1.75rem;
   position: relative;
@@ -111,7 +121,7 @@
   width: 100%;
 }
 
-.contact-page .contact-form-box::before {
+.contact-page .contact-page-form-box::before {
   content: '';
   position: absolute;
   top: 0;
@@ -121,13 +131,13 @@
   background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
 }
 
-.contact-page .contact-form-box h3 {
+.contact-page .contact-page-form-box h3 {
   color: var(--brand-color);
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.contact-page .contact-form-box form label {
+.contact-page .contact-page-form-box form label {
   font-size: 0.8rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -137,9 +147,9 @@
   display: block;
 }
 
-.contact-page .contact-form-box input,
-.contact-page .contact-form-box textarea,
-.contact-page .contact-form-box select {
+.contact-page .contact-page-form-box input,
+.contact-page .contact-page-form-box textarea,
+.contact-page .contact-page-form-box select {
   background: transparent;
   border: 1px solid var(--border-default);
   color: #333333;
@@ -149,23 +159,23 @@
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.contact-page .contact-form-box input:focus,
-.contact-page .contact-form-box textarea:focus,
-.contact-page .contact-form-box select:focus {
+.contact-page .contact-page-form-box input:focus,
+.contact-page .contact-page-form-box textarea:focus,
+.contact-page .contact-page-form-box select:focus {
   outline: none;
   border-color: var(--brand-color);
   box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.15);
 }
 
-.contact-page .contact-form-box textarea {
+.contact-page .contact-page-form-box textarea {
   min-height: 100px;
 }
 
-.contact-page .contact-form-box select {
+.contact-page .contact-page-form-box select {
   cursor: pointer;
 }
 
-.contact-page .contact-form-box button {
+.contact-page .contact-page-form-box button {
   background-color: transparent;
   border: 1px solid var(--border-default);
   color: #333333;
@@ -176,22 +186,22 @@
   margin: 0.5rem 0 0;
 }
 
-.contact-page .contact-form-box button:hover {
+.contact-page .contact-page-form-box button:hover {
   background-color: rgba(153, 153, 153, 0.1);
 }
 
-.contact-page .contact-form-box button:disabled {
+.contact-page .contact-page-form-box button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
 }
 
-.contact-page .contact-form-box .success {
+.contact-page .contact-page-form-box .success {
   color: #4ade80;
   font-weight: 500;
   margin-top: 0.75rem;
 }
 
-.contact-page .contact-form-box .error {
+.contact-page .contact-page-form-box .error {
   color: #f87171;
   font-weight: 500;
   margin-top: 0.75rem;
@@ -205,19 +215,19 @@
 }
 
 @media (max-width: 768px) {
-  .contact-page .contact-heading {
+  .contact-page .contact-page-heading {
     font-size: 2rem;
     margin-bottom: 1.5rem;
   }
 
-  .contact-page .contact-content {
+  .contact-page .contact-page-content-grid {
     grid-template-columns: 1fr;
     gap: 1.2rem;
     max-width: 520px;
     margin: 0 auto;
   }
 
-  .contact-page .contact-form-box {
+  .contact-page .contact-page-form-box {
     padding: 1.5rem;
   }
 }
@@ -227,11 +237,11 @@
     padding: 2rem 1rem;
   }
 
-  .contact-page .contact-heading {
+  .contact-page .contact-page-heading {
     font-size: 1.8rem;
   }
 
-  .contact-page .contact-form-box {
+  .contact-page .contact-page-form-box {
     padding: 1.25rem;
   }
 }

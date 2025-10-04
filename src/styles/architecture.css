@@ -1,0 +1,168 @@
+/* ===== CSS ARCHITECTURE GUIDE ===== */
+/* 
+This file defines the CSS architecture and naming conventions for the project.
+It helps prevent CSS conflicts and provides a clear structure for developers.
+
+NAMING CONVENTIONS:
+- .u-* = Utility classes (base patterns, reusable)
+- .component-* = Component-specific classes (scoped to specific components)
+- .page-* = Page-specific classes (scoped to specific pages)
+- .section-* = Section-specific classes (scoped to specific sections)
+
+COMPONENT SCOPING:
+- Each component should have its own CSS file
+- Use component-specific class prefixes to prevent conflicts
+- Import shared utilities from shared.css
+- Use CSS custom properties for consistent theming
+
+EXAMPLE USAGE:
+```css
+/* In ContactSection.css */
+.contact-section {
+  /* Section-specific styles */
+}
+
+.contact-section .contact-form {
+  /* Form styles specific to contact section */
+}
+
+.contact-section .contact-form .contact-form-field {
+  /* Field styles using shared utility */
+  composes: u-form-field;
+}
+```
+*/
+
+/* ===== COMPONENT SCOPE UTILITIES ===== */
+/* These classes help create component-specific scopes */
+
+/* Page-level scoping */
+.page-home {
+  /* Homepage-specific overrides */
+}
+
+.page-contact {
+  /* Contact page-specific overrides */
+}
+
+.page-services {
+  /* Services page-specific overrides */
+}
+
+.page-about {
+  /* About page-specific overrides */
+}
+
+/* Section-level scoping */
+.section-contact {
+  /* Contact section-specific overrides */
+}
+
+.section-about {
+  /* About section-specific overrides */
+}
+
+.section-services {
+  /* Services section-specific overrides */
+}
+
+/* ===== LAYOUT UTILITIES ===== */
+/* Common layout patterns that can be reused */
+
+.u-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.u-container--narrow {
+  max-width: 800px;
+}
+
+.u-container--wide {
+  max-width: 1400px;
+}
+
+.u-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.u-grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.u-grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.u-flex {
+  display: flex;
+}
+
+.u-flex--column {
+  flex-direction: column;
+}
+
+.u-flex--center {
+  align-items: center;
+  justify-content: center;
+}
+
+.u-flex--space-between {
+  justify-content: space-between;
+}
+
+/* ===== SPACING UTILITIES ===== */
+.u-mb-1 { margin-bottom: 0.5rem; }
+.u-mb-2 { margin-bottom: 1rem; }
+.u-mb-3 { margin-bottom: 1.5rem; }
+.u-mb-4 { margin-bottom: 2rem; }
+.u-mb-5 { margin-bottom: 2.5rem; }
+
+.u-mt-1 { margin-top: 0.5rem; }
+.u-mt-2 { margin-top: 1rem; }
+.u-mt-3 { margin-top: 1.5rem; }
+.u-mt-4 { margin-top: 2rem; }
+.u-mt-5 { margin-top: 2.5rem; }
+
+.u-p-1 { padding: 0.5rem; }
+.u-p-2 { padding: 1rem; }
+.u-p-3 { padding: 1.5rem; }
+.u-p-4 { padding: 2rem; }
+.u-p-5 { padding: 2.5rem; }
+
+/* ===== TEXT UTILITIES ===== */
+.u-text-center { text-align: center; }
+.u-text-left { text-align: left; }
+.u-text-right { text-align: right; }
+
+.u-text-primary { color: var(--text-primary); }
+.u-text-secondary { color: var(--text-secondary); }
+.u-text-accent { color: var(--text-accent); }
+.u-text-brand { color: var(--brand-color); }
+
+.u-font-bold { font-weight: 700; }
+.u-font-semibold { font-weight: 600; }
+.u-font-medium { font-weight: 500; }
+
+/* ===== RESPONSIVE UTILITIES ===== */
+@media (max-width: 768px) {
+  .u-container {
+    padding: 0 1rem;
+  }
+  
+  .u-grid--2-cols {
+    grid-template-columns: 1fr;
+  }
+  
+  .u-grid--3-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .u-container {
+    padding: 0 0.5rem;
+  }
+}

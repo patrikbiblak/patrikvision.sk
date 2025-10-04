@@ -1,5 +1,5 @@
 /* ===== CONTACT SECTION (HOMEPAGE ONLY) ===== */
-.contact-section {
+.homepage-contact-section {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +11,7 @@
   overflow: hidden;
 }
 
-.contact-heading {
+.homepage-contact-heading {
   margin-bottom: clamp(2rem, 5vw, 4rem);
   text-align: center;
   max-width: 800px;
@@ -22,18 +22,18 @@
   z-index: 2;
 }
 
-.contact-heading h2 {
+.homepage-contact-heading h2 {
   margin-bottom: clamp(0.5rem, 2vw, 1rem);
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   line-height: 1.2;
 }
 
-.contact-heading p {
+.homepage-contact-heading p {
   font-size: clamp(1rem, 2vw, 1.2rem);
   line-height: 1.6;
 }
 
-.contact-content {
+.homepage-contact-content {
   display: flex;
   flex-wrap: wrap;
   gap: clamp(1.5rem, 4vw, 4rem);
@@ -46,7 +46,7 @@
   z-index: 2;
 }
 
-.contact-box {
+.homepage-contact-box {
   width: clamp(280px, 90vw, 500px);
   background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
   padding: clamp(1.5rem, 3vw, 2rem);
@@ -58,7 +58,7 @@
   min-height: fit-content;
 }
 
-.contact-box::before {
+.homepage-contact-box::before {
   content: '';
   position: absolute;
   top: 0;
@@ -68,7 +68,7 @@
   background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
 }
 
-.contact-box h3 {
+.homepage-contact-box h3 {
   margin-bottom: clamp(1rem, 2vw, 2rem);
   text-align: left;
   color: var(--brand-color);
@@ -77,7 +77,7 @@
   line-height: 1.2;
 }
 
-.contact-box form label {
+.homepage-contact-box form label {
   font-size: clamp(0.8rem, 1.8vw, 13px);
   font-weight: 600;
   text-align: left;
@@ -88,9 +88,9 @@
   letter-spacing: 0.5px;
 }
 
-.contact-box input,
-.contact-box textarea,
-.contact-box select {
+.homepage-contact-box input,
+.homepage-contact-box textarea,
+.homepage-contact-box select {
   width: 100%;
   background: #ffffff;
   border: 2px solid rgba(17, 100, 102, 0.2);
@@ -102,26 +102,26 @@
   box-sizing: border-box;
 }
 
-.contact-box input:focus,
-.contact-box textarea:focus,
-.contact-box select:focus {
+.homepage-contact-box input:focus,
+.homepage-contact-box textarea:focus,
+.homepage-contact-box select:focus {
   border-color: var(--brand-color);
   outline: none;
   box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.15);
 }
 
-.contact-box input::placeholder,
-.contact-box textarea::placeholder {
+.homepage-contact-box input::placeholder,
+.homepage-contact-box textarea::placeholder {
   color: var(--text-secondary);
   opacity: 0.7;
 }
 
-.contact-box textarea {
+.homepage-contact-box textarea {
   resize: vertical;
   min-height: clamp(80px, 12vw, 100px);
 }
 
-.contact-box select {
+.homepage-contact-box select {
   cursor: pointer;
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23116666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -131,21 +131,21 @@
   padding-right: 2.5rem;
 }
 
-.contact-box .success {
+.homepage-contact-box .success {
   color: #4ade80;
   font-weight: 500;
   margin-top: 1rem;
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-.contact-box .error {
+.homepage-contact-box .error {
   color: #f87171;
   font-weight: 500;
   margin-top: 1rem;
   font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
-.contact-box:first-child button {
+.homepage-contact-box:first-child button {
   display: block;
   color: #ffffff;
   font-weight: 600;
@@ -163,19 +163,19 @@
   box-shadow: 0 3px 12px rgba(17, 100, 102, 0.3);
 }
 
-.contact-box button:hover {
+.homepage-contact-box button:hover {
   background-color: #0d4f51;
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(17, 100, 102, 0.4);
 }
 
-.contact-box button:disabled {
+.homepage-contact-box button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
 }
 
-.contact-info-item {
+.homepage-contact-info-item {
   display: flex;
   align-items: flex-start;
   flex-direction: row;
@@ -183,11 +183,11 @@
   margin-bottom: clamp(1.4rem, 2.8vw, 1.8rem);
 }
 
-.contact-info-item:last-child {
+.homepage-contact-info-item:last-child {
   margin-bottom: 0;
 }
 
-.contact-info-item svg {
+.homepage-contact-info-item svg {
   width: clamp(28px, 4vw, 32px);
   height: clamp(28px, 4vw, 32px);
   flex-shrink: 0;
@@ -195,7 +195,7 @@
   margin-top: 0.1rem;
 }
 
-.contact-info-item div {
+.homepage-contact-info-item div {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -204,7 +204,7 @@
   flex: 1;
 }
 
-.contact-info-item p {
+.homepage-contact-info-item p {
   margin: 0;
   line-height: 1.5;
   color: var(--text-primary);
@@ -214,7 +214,7 @@
   overflow-wrap: break-word;
 }
 
-.contact-info-item div p:first-child {
+.homepage-contact-info-item div p:first-child {
   color: var(--brand-color);
   font-weight: 700;
   text-align: left;
@@ -225,7 +225,7 @@
   line-height: 1.2;
 }
 
-.contact-link {
+.homepage-contact-link {
   color: var(--text-primary);
   text-decoration: none;
   font-size: clamp(0.9rem, 2vw, 1rem);
@@ -237,35 +237,35 @@
   border-bottom: 1px solid transparent;
 }
 
-.contact-link:hover {
+.homepage-contact-link:hover {
   color: var(--brand-color);
   border-bottom-color: var(--brand-color);
 }
 
 /* Tablet and smaller desktop */
 @media (max-width: 1024px) {
-  .contact-content {
+  .homepage-contact-content {
     gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 }
 
 /* Mobile landscape and tablet portrait */
 @media (max-width: 768px) {
-  .contact-section {
+  .homepage-contact-section {
     padding: clamp(1.5rem, 4vw, 3rem) clamp(0.75rem, 2vw, 1.5rem);
   }
 
-  .contact-heading {
+  .homepage-contact-heading {
     margin-bottom: clamp(1.5rem, 4vw, 3rem);
   }
 
-  .contact-content {
+  .homepage-contact-content {
     gap: clamp(1rem, 2vw, 2rem);
     flex-direction: column;
     align-items: center;
   }
 
-  .contact-box {
+  .homepage-contact-box {
     width: 100%;
     max-width: 500px;
   }
@@ -273,25 +273,25 @@
 
 /* Mobile portrait */
 @media (max-width: 480px) {
-  .contact-section {
+  .homepage-contact-section {
     padding: 1rem 0.5rem;
   }
 
-  .contact-heading {
+  .homepage-contact-heading {
     margin-bottom: 2rem;
   }
 
-  .contact-box {
+  .homepage-contact-box {
     padding: 1.25rem;
     width: 100%;
   }
 
-  .contact-info-item {
+  .homepage-contact-info-item {
     gap: 1rem;
     margin-bottom: 1.5rem;
   }
 
-  .contact-info-item svg {
+  .homepage-contact-info-item svg {
     width: 24px;
     height: 24px;
   }
@@ -299,24 +299,24 @@
 
 /* Very small screens */
 @media (max-width: 320px) {
-  .contact-section {
+  .homepage-contact-section {
     padding: 0.75rem 0.25rem;
   }
 
-  .contact-box {
+  .homepage-contact-box {
     padding: 1rem;
   }
 
-  .contact-box h3 {
+  .homepage-contact-box h3 {
     font-size: 1.1rem;
   }
 
-  .contact-info-item {
+  .homepage-contact-info-item {
     gap: 0.75rem;
     margin-bottom: 1.25rem;
   }
 
-  .contact-info-item svg {
+  .homepage-contact-info-item svg {
     width: 20px;
     height: 20px;
   }

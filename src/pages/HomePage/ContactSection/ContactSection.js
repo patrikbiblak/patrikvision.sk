@@ -84,16 +84,16 @@ const ContactSection = () => {
   ];
 
   return (
-    <section className="contact-section">
+    <section className="homepage-contact-section">
       <Particles />
       <div>
-        <div className="contact-heading" ref={ref}>
+        <div className="homepage-contact-heading" ref={ref}>
           <h2>{t('contact.contactMe')}</h2>
           <p>{t('contact.contactDesc')}</p>
         </div>
 
-        <div className="contact-content">
-          <div className="contact-box" ref={leftRef}>
+        <div className="homepage-contact-content">
+          <div className="homepage-contact-box" ref={leftRef}>
             <h3>{t('contact.sendMessage')}</h3>
             <form ref={formRef} onSubmit={handleSubmit}>
               {/* Personal Information */}
@@ -167,12 +167,12 @@ const ContactSection = () => {
             </form>
           </div>
 
-          <div className="contact-box" ref={rightRef}>
+          <div className="homepage-contact-box" ref={rightRef}>
             <h3>{t('contact.contactDetails')}</h3>
             {contactDetails.map((detail) => {
               const Icon = detail.icon;
               return (
-                <div key={detail.label} className="contact-info-item">
+                <div key={detail.label} className="homepage-contact-info-item">
                   <Icon />
                   <div>
                     <p>{detail.label}</p>
@@ -181,7 +181,7 @@ const ContactSection = () => {
                         href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="contact-link"
+                        className="homepage-contact-link"
                       >
                         {detail.value}
                       </a>
