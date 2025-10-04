@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import Particles from '../../components/common/Particles/Particles';
 import GoogleMap from '../../components/common/GoogleMap/GoogleMap';
 import "./ContactPage.css";
 
@@ -117,41 +118,15 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/contact" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
-            <div className="contact-page-content">
-                <h1 className="contact-page-heading">{t('nav.contact')}</h1>
-                <p className="contact-page-intro">{t('contact.intro')}</p>
+            <Particles />
+            <div>
+                <div className="contact-page-heading">
+                    <h1>{t('nav.contact')}</h1>
+                    <p>{t('contact.intro')}</p>
+                </div>
 
                 <div className="contact-page-content-grid">
-                    <div className="contact-page-info-box" ref={leftRef}>
-                        <h3>{t('contact.contactMe')}</h3>
-                        {contactDetails.map((detail) => {
-                            const Icon = detail.icon;
-                            return (
-                                <div key={detail.label} className="contact-page-info-item">
-                                    <Icon />
-                                    <div>
-                                        <p>{detail.label}</p>
-                                        {detail.isLink ? (
-                                            <a 
-                                                href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="contact-page-link"
-                                            >
-                                                {detail.value}
-                                            </a>
-                                        ) : (
-                                            <p>{detail.value}</p>
-                                        )}
-                                    </div>
-                                </div>
-                            );
-                        })}
-                        <div className="contact-page-map-container">
-                            <GoogleMap center={mapCenter} zoom={8} />
-                        </div>
-                    </div>
-                    <div className="contact-page-form-box" ref={rightRef}>
+                    <div className="contact-page-form-box" ref={leftRef}>
                         <h3>{t('contact.sendMessage')}</h3>
                         <form ref={formRef} onSubmit={handleSubmit}>
                             {/* Personal Information */}
@@ -223,6 +198,40 @@ const ContactPage = () => {
                             {status === 'success' && <p className="success">{t('contact.success')}</p>}
                             {status === 'error'   && <p className="error">{t('contact.error')}</p>}
                         </form>
+                    </div>
+
+                    <div className="contact-page-info-box" ref={rightRef}>
+                        <h3>{t('contact.contactDetails')}</h3>
+                        {contactDetails.map((detail) => {
+                            const Icon = detail.icon;
+                            return (
+                                <div key={detail.label} className="contact-page-info-item">
+                                    <Icon />
+                                    <div>
+                                        <p>{detail.label}</p>
+                                        {detail.isLink ? (
+                                            <a 
+                                                href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="contact-page-link"
+                                            >
+                                                {detail.value}
+                                            </a>
+                                        ) : (
+                                            <p>{detail.value}</p>
+                                        )}
+                                    </div>
+                                </div>
+                            );
+                        })}
+                        <div className="contact-page-map-container">
+                            <GoogleMap 
+                                center={{ lat: 48.6690, lng: 19.6990 }}
+                                zoom={10}
+                                className="contact-map"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
