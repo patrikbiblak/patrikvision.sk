@@ -29,6 +29,7 @@
   position: relative; 
   animation: scaleIn 0.3s ease-out forwards; 
   box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  border-radius: var(--brand-radius);
 }
 
 .cookie-modal.closing { 
@@ -90,6 +91,8 @@
   width: 44px; 
   height: 24px;
   flex: 0 0 auto;
+  border-radius: calc(var(--brand-radius) - 2px);
+  overflow: hidden;
 }
 
 .switch input { 
@@ -111,6 +114,7 @@
   background-color: #e0e0e0; 
   transition: 0.4s; 
   border: 1px solid #cccccc;
+  border-radius: calc(var(--brand-radius) * 2);
 }
 
 .slider:before { 
@@ -123,6 +127,7 @@
   background-color: #ffffff; 
   transition: 0.4s; 
   box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  border-radius: 50%;
 }
 
 .switch input:checked + .slider { 
@@ -308,6 +313,7 @@
   z-index: 1000;
 
   animation: slideUp 0.3s ease-out forwards; 
+  border-radius: var(--brand-radius);
 }
 
 .cookie-banner__actions {
