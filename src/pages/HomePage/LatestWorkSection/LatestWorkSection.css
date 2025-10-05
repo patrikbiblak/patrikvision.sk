@@ -46,7 +46,7 @@
   .project-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(1.25rem, 3vw, 2rem);
-    max-width: 980px;
+    max-width: 1120px; /* slightly larger cards on tablet/desktop */
   }
 }
 
@@ -54,6 +54,7 @@
   .project-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: clamp(1.5rem, 3vw, 2.5rem);
+    max-width: 1200px; /* allow a bit more width on large screens */
   }
 }
 
