@@ -40,7 +40,7 @@ const ServicesPage = () => {
                 <h1 className="about-heading">{t('nav.about')}</h1>
                 <p className="intro-text">{t('about.intro')}</p>
                 <div className="about-grid">
-                    <div className="about-image-wrapper">
+                    <div className="about-image-wrapper area-portrait">
                         <img
                             src="/images/bpaatrik.png"
                             alt="Patrik portrait"
@@ -50,17 +50,17 @@ const ServicesPage = () => {
                         />
                     </div>
 
-                    <div className="about-card">
+                    <div className="about-card area-vision">
                         <h2 className="about-subheading">Vision</h2>
                         <p className="about-paragraph">To make the web simpler, faster, and more human — through clear design, purposeful engineering, and experiences that feel effortless.</p>
                     </div>
 
-                    <div className="about-card">
+                    <div className="about-card area-mission">
                         <h2 className="about-subheading">Mission</h2>
                         <p className="about-paragraph">Deliver high‑quality, performant websites and apps that help clients grow — combining thoughtful UX, robust code, and measurable results on every project.</p>
                     </div>
 
-                    <div className="about-image-wrapper">
+                    <div className="about-image-wrapper area-avatar">
                         <img
                             src="/images/avatar.png"
                             alt="Patrik avatar"
