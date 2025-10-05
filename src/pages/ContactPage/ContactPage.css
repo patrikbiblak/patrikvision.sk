@@ -78,7 +78,7 @@
   width: 60px;
   height: 2px;
   background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
-  border-radius: 1px;
+  border-radius: var(--brand-radius);
 }
 
 /* Map container below the boxes */
@@ -87,7 +87,7 @@
   max-width: calc(1200px - (var(--map-side-gap) * 2));
   height: 300px;
   margin: clamp(2rem, 4vw, 3rem) auto 0 auto;
-  border-radius: 12px;
+  border-radius: var(--brand-radius);
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border: 1px solid rgba(17, 100, 102, 0.2);
@@ -123,6 +123,7 @@
   color: var(--text-primary);
   display: flex;
   flex-direction: column;
+  border-radius: var(--brand-radius);
 }
 
 .contact-page-info-box h3 {
@@ -147,6 +148,7 @@
   display: flex;
   flex-direction: column;
   min-height: 600px;
+  border-radius: var(--brand-radius);
 }
 
 .contact-page-form-box::before {

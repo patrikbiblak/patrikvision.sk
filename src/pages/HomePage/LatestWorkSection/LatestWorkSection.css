@@ -65,7 +65,8 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border-radius: 12px;
+  border-radius: var(--brand-radius);
+  border-radius: var(--brand-radius);
 }
 
 .project-card:hover {
@@ -183,7 +184,7 @@
   letter-spacing: 0.05em;
   min-width: 180px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: var(--brand-radius);
   margin: 0 auto;
   width: fit-content;
 }

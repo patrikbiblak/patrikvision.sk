@@ -374,10 +374,15 @@
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border-radius: 8px;
+  border-radius: var(--brand-radius);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   min-width: 0;
   width: 100%;
+}
+
+/* Ensure any link styled under stats card follows brand radius */
+.stats-card a {
+  border-radius: var(--brand-radius);
 }
 
 .stats-number {
