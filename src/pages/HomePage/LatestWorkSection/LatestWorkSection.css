@@ -1,16 +1,15 @@
 /* Latest Work Section - Mirrored About Section Design */
 .latest-work-section {
-  padding: 2rem 0;
+  padding: clamp(2rem, 6vw, 5rem) 0;
   background-color: transparent;
   color: #ffffff;
   position: relative;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  min-height: auto;
+  display: block;
 }
 
 .latest-work-container {
-  max-width: 1200px;
+  max-width: 1040px;
   margin: 0 auto;
   position: relative;
   padding: 0 2rem;
@@ -19,7 +18,7 @@
 .latest-work-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 3rem;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
   align-items: center;
   justify-items: center;
 }
@@ -27,8 +26,8 @@
 /* Desktop Layout - Two Columns (Switched from About Section) */
 @media (min-width: 768px) {
   .latest-work-layout {
-    grid-template-columns: 1.2fr 1fr;
-    gap: 4rem;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(2rem, 5vw, 3rem);
     align-items: center;
     justify-items: center;
   }
@@ -36,25 +35,28 @@
 
 /* Left Column - Project Cards */
 .latest-work-left {
-  max-width: none;
+  max-width: clamp(520px, 46vw, 680px);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .project-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .project-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: clamp(1.25rem, 3vw, 2rem);
   }
 }
 
 @media (min-width: 1024px) {
   .project-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: clamp(1.5rem, 3vw, 2.5rem);
   }
 }
@@ -66,6 +68,7 @@
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  border-radius: 12px;
 }
 
 .project-card:hover {
@@ -75,7 +78,9 @@
 
 .project-image {
   position: relative;
-  height: clamp(150px, 25vw, 250px);
+  aspect-ratio: 18 / 9;
+  height: auto;
+  width: 100%;
   overflow: hidden;
 }
 
@@ -125,46 +130,22 @@
 }
 
 .project-content {
-  padding: clamp(1rem, 3vw, 1.75rem);
+  padding: 0 clamp(1rem, 3vw, 1.5rem);
 }
 
 .project-title {
-  font-size: clamp(1.125rem, 3vw, 1.5rem);
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
   font-weight: 700;
   color: #116466;
-  margin: 0 0 clamp(0.5rem, 2vw, 1rem) 0;
+  margin: 0;
   font-family: 'Inter', sans-serif;
   line-height: 1.2;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  text-align: center;
+  padding: clamp(0.9rem, 2vw, 1.25rem) 0;
 }
 
-.project-description {
-  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
-  line-height: 1.6;
-  color: #1a1a1a;
-  margin: 0 0 clamp(0.75rem, 2vw, 1.25rem) 0;
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-}
-
-.project-technologies {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tech-tag {
-  background: rgba(17, 100, 102, 0.15);
-  color: #116466;
-  padding: clamp(0.25rem, 1vw, 0.375rem) clamp(0.5rem, 2vw, 0.875rem);
-  font-size: clamp(0.75rem, 2vw, 0.875rem);
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  border: 1px solid rgba(17, 100, 102, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
 
 /* Right Column - Heading */
 .latest-work-right {
@@ -172,47 +153,48 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  justify-content: space-between;
-  height: 100%;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 1.5rem);
 }
 
 @media (min-width: 768px) {
   .latest-work-right {
-    align-items: flex-end;
-    text-align: right;
+    align-items: center;
+    text-align: center;
     padding-left: 2rem;
     padding-top: 0;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 .latest-work-heading {
-  font-size: clamp(1.5rem, 4vw, 2.5rem);
-  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
   color: #116466;
-  line-height: 1.1;
-  letter-spacing: -0.03em;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
   margin: 0;
   font-family: 'Inter', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 .latest-work-cta {
-  display: inline-block;
+  display: block;
   background: #116466;
   color: #ffffff;
   text-decoration: none;
-  padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2.5rem);
+  padding: clamp(0.6rem, 1.8vw, 0.9rem) clamp(1.25rem, 3.5vw, 2rem);
   font-weight: 600;
-  font-size: clamp(0.875rem, 2.5vw, 1.125rem);
+  font-size: clamp(0.85rem, 2.2vw, 1.05rem);
   font-family: 'Inter', sans-serif;
   transition: all 0.3s ease;
   border: 2px solid #116466;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  min-width: 200px;
+  min-width: 180px;
   text-align: center;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: fit-content;
 }
 
 .latest-work-cta:hover {
@@ -227,7 +209,7 @@
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .latest-work-section {
-    padding: 2rem 0;
+    padding: clamp(1.5rem, 5vw, 2.5rem) 0;
     min-height: auto;
     display: block;
   }
@@ -237,7 +219,7 @@
   }
 
   .latest-work-layout {
-    gap: 2.5rem;
+    gap: clamp(1.25rem, 4vw, 2rem);
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
@@ -252,7 +234,7 @@
     order: 1;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.25rem;
   }
 
   .latest-work-left {
@@ -260,28 +242,34 @@
   }
 
   .latest-work-heading {
-    font-size: clamp(1.25rem, 5vw, 2rem);
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
     margin: 0;
     text-align: center;
+    line-height: 1.1;
   }
 
   .project-cards {
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .project-card {
     margin-bottom: 0;
   }
 
+  .project-image {
+    aspect-ratio: 18 / 9;
+    height: auto;
+  }
+
   .project-content {
-    padding: clamp(0.875rem, 2.5vw, 1.25rem);
+    padding: 0 clamp(0.75rem, 3.5vw, 1.25rem);
   }
 }
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
   .latest-work-section {
-    padding: 1.5rem 0;
+    padding: 1.25rem 0;
   }
 
   .latest-work-container {
@@ -289,7 +277,7 @@
   }
 
   .latest-work-layout {
-    gap: 2rem;
+    gap: 1.25rem;
     align-items: center;
     justify-items: center;
     display: flex;
@@ -300,7 +288,7 @@
     order: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .latest-work-left {
@@ -308,27 +296,27 @@
   }
 
   .latest-work-heading {
-    font-size: clamp(1.125rem, 6vw, 1.75rem);
+    font-size: clamp(1.5rem, 8vw, 1.8rem);
     margin: 0;
     text-align: center;
+    line-height: 1.1;
   }
 
   .project-cards {
-    gap: 1.25rem;
+    gap: 0.9rem;
   }
 
   .project-content {
-    padding: clamp(0.75rem, 2vw, 1rem);
+    padding: clamp(0.6rem, 2vw, 0.9rem);
   }
 }
 
 /* Tablet adjustments */
 @media (min-width: 768px) and (max-width: 1023px) {
   .latest-work-section {
-    padding: 1.5rem 0;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
+    padding: clamp(1.25rem, 4vw, 2rem) 0;
+    min-height: auto;
+    display: block;
   }
 
   .latest-work-container {
@@ -336,44 +324,45 @@
   }
 
   .latest-work-layout {
-    gap: 3rem;
-    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(1.5rem, 4vw, 2.25rem);
+    grid-template-columns: 1.15fr 0.85fr;
     align-items: center;
     justify-items: center;
   }
 
   .latest-work-right {
-    align-items: flex-end;
-    text-align: right;
-    padding-left: 1.5rem;
+    align-items: center;
+    text-align: center;
+    padding-left: 1rem;
   }
 
   .latest-work-heading {
-    font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+    font-size: clamp(2rem, 4vw, 2.5rem);
     margin: 0;
+    line-height: 1.2;
   }
 
   .project-cards {
-    gap: 1.25rem;
+    gap: 1rem;
   }
 
   .project-content {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 }
 
 /* Large screens */
 @media (min-width: 1024px) {
   .latest-work-section {
-    padding: 1rem 0;
+    padding: clamp(1rem, 3vw, 2rem) 0;
   }
 
   .latest-work-container {
-    padding: 0 3rem;
+    padding: 0 clamp(2rem, 4vw, 3rem);
   }
 
   .latest-work-layout {
-    gap: 3.5rem;
+    gap: clamp(2rem, 3vw, 3rem);
     align-items: center;
     justify-items: center;
   }

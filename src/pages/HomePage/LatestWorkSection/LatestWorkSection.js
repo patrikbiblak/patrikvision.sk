@@ -41,14 +41,6 @@ const LatestWorkSection = () => {
                   </div>
                   <div className="project-content">
                     <h3 className="project-title">{project.title}</h3>
-                    <p className="project-description">{project.description}</p>
-                    <div className="project-technologies">
-                      {project.technologies.map((tech, index) => (
-                        <span key={index} className="tech-tag">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
                   </div>
                 </div>
               ))}
