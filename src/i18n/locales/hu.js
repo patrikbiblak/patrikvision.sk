@@ -107,6 +107,16 @@ const huTranslations = {
     "sending": "Küldés...",
     "success": "Üzenet elküldve! Köszönöm.",
     "error": "Hiba a küldés során. Kérjük, próbálja újra később.",
+    "modal": {
+      "success": {
+        "title": "Üzenet sikeresen elküldve!",
+        "message": "Köszönöm az üzenetét. Válaszom 24 órán belül érkezik."
+      },
+      "error": {
+        "title": "Hiba az üzenet küldése során",
+        "message": "Sajnálom, hiba történt az üzenete küldése során. Kérjük, próbálja újra később vagy lépjen velem kapcsolatba közvetlenül."
+      }
+    },
     "details": {
       "email": "Email",
       "phone": "Telefon",

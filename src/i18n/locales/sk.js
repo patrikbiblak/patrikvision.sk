@@ -107,6 +107,16 @@ const skTranslations = {
     "sending": "Odosielam…",
     "success": "Správa odoslaná! Ďakujem.",
     "error": "Chyba pri odoslaní. Skús neskôr.",
+    "modal": {
+      "success": {
+        "title": "Správa úspešne odoslaná!",
+        "message": "Ďakujem za vašu správu. Ozvem sa vám do 24 hodín."
+      },
+      "error": {
+        "title": "Chyba pri odosielaní správy",
+        "message": "Ospravedlňujem sa, ale pri odosielaní vašej správy sa vyskytla chyba. Skúste to neskôr alebo ma kontaktujte priamo."
+      }
+    },
     "details": {
       "email": "Email",
       "phone": "Telefón",

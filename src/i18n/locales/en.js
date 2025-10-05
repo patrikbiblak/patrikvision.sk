@@ -107,6 +107,16 @@ const en = {
     "sending": "Sending...",
     "success": "Message sent! Thank you.",
     "error": "Error sending message. Please try again later.",
+    "modal": {
+      "success": {
+        "title": "Message Sent Successfully!",
+        "message": "Thank you for your message. I'll get back to you within 24 hours."
+      },
+      "error": {
+        "title": "Error Sending Message",
+        "message": "Sorry, there was an error sending your message. Please try again later or contact me directly."
+      }
+    },
     "details": {
       "email": "Email",
       "phone": "Phone",

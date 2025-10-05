@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin, Clock } from 'lucide-react';
 import { useTranslation } from "react-i18next";
 import Particles from '../../../components/common/Particles/Particles';
 import GoogleMap from '../../../components/common/GoogleMap/GoogleMap';
+import Modal from '../../../components/common/Modal/Modal';
 import "./ContactSection.css";
 
 const ContactSection = () => {
@@ -22,6 +23,7 @@ const ContactSection = () => {
   });
 
   const [status, setStatus] = useState('idle');
+  const [modal, setModal] = useState({ isOpen: false, type: '', title: '', message: '' });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -35,13 +37,29 @@ const ContactSection = () => {
         process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        setStatus('success');
+        setStatus('idle');
         setFormData({ name: '', email: '', productInterest: '', country: '', message: '' });
+        setModal({
+          isOpen: true,
+          type: 'success',
+          title: t('contact.modal.success.title'),
+          message: t('contact.modal.success.message')
+        });
       })
       .catch((err) => {
         console.error(err);
-        setStatus('error');
+        setStatus('idle');
+        setModal({
+          isOpen: true,
+          type: 'error',
+          title: t('contact.modal.error.title'),
+          message: t('contact.modal.error.message')
+        });
       });
+  };
+
+  const closeModal = () => {
+    setModal({ isOpen: false, type: '', title: '', message: '' });
   };
 
   const handleChange = (e) => {
@@ -162,9 +180,6 @@ const ContactSection = () => {
               <button type="submit" disabled={status === 'sending'}>
                 {status === 'sending' ? t('contact.sending') : t('contact.send')}
               </button>
-
-              {status === 'success' && <p className="success">{t('contact.success')}</p>}
-              {status === 'error'   && <p className="error">{t('contact.error')}</p>}
             </form>
           </div>
 
@@ -203,6 +218,14 @@ const ContactSection = () => {
           </div>
         </div>
         </div>
+        
+        <Modal
+          isOpen={modal.isOpen}
+          onClose={closeModal}
+          type={modal.type}
+          title={modal.title}
+          message={modal.message}
+        />
     </section>
   );
 };

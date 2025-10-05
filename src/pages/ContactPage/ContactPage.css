@@ -225,19 +225,6 @@
   padding-right: 2.5rem;
 }
 
-.contact-page-form-box .success {
-  color: #4ade80;
-  font-weight: 500;
-  margin-top: 1rem;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-}
-
-.contact-page-form-box .error {
-  color: #f87171;
-  font-weight: 500;
-  margin-top: 1rem;
-  font-size: clamp(0.9rem, 2vw, 1rem);
-}
 
 .contact-page-form-box button {
   display: block;
