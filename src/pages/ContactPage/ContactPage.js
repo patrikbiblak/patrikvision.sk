@@ -143,52 +143,57 @@ const ContactPage = () => {
                 <p className="intro-text">{t('contact.intro')}</p>
 
                 <div className="contact-page-content-grid">
-                    <div className="contact-page-info-box" ref={leftRef}>
-                        <h3>{t('contact.contactDetails')}</h3>
-                        {contactDetails.map((detail) => {
-                            const Icon = detail.icon;
-                            return (
-                                <div key={detail.label} className="contact-page-info-item">
-                                    <Icon />
-                                    <div>
-                                        <p>{detail.label}</p>
-                                        {detail.isLink ? (
-                                            <a 
-                                                href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="contact-page-link"
-                                            >
-                                                {detail.value}
-                                            </a>
-                                        ) : (
-                                            <p>{detail.value}</p>
-                                        )}
-                                    </div>
-                                </div>
-                            );
-                        })}
-                        
-                        <h3 className="social-links-heading">{t('contact.socialLinks')}</h3>
-                        <div className="social-links-container">
-                            {socialLinks.map((social) => {
-                                const Icon = social.icon;
+                    <div className="contact-info-wrapper">
+                        <div className="contact-page-info-box" ref={leftRef}>
+                            <h3>{t('contact.contactDetails')}</h3>
+                            {contactDetails.map((detail) => {
+                                const Icon = detail.icon;
                                 return (
-                                    <a
-                                        key={social.label}
-                                        href={social.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="contact-page-social-item"
-                                        aria-label={social.label}
-                                    >
+                                    <div key={detail.label} className="contact-page-info-item">
                                         <Icon />
-                                        <span>{social.label}</span>
-                                    </a>
+                                        <div>
+                                            <p>{detail.label}</p>
+                                            {detail.isLink ? (
+                                                <a 
+                                                    href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="contact-page-link"
+                                                >
+                                                    {detail.value}
+                                                </a>
+                                            ) : (
+                                                <p>{detail.value}</p>
+                                            )}
+                                        </div>
+                                    </div>
                                 );
                             })}
                         </div>
                         
+                        <div className="contact-page-social-box">
+                            <h3 className="social-links-heading">{t('contact.socialLinks')}</h3>
+                            <div className="social-links-container">
+                                {socialLinks.map((social) => {
+                                    const Icon = social.icon;
+                                    return (
+                                        <a
+                                            key={social.label}
+                                            href={social.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="contact-page-social-item"
+                                            aria-label={social.label}
+                                        >
+                                            <Icon />
+                                            <div>
+                                                <span>{social.label}</span>
+                                            </div>
+                                        </a>
+                                    );
+                                })}
+                            </div>
+                        </div>
                     </div>
 
                     <div className="contact-page-form-box" ref={rightRef}>
