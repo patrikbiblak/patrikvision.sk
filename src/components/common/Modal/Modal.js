@@ -30,8 +30,8 @@ const Modal = ({ isOpen, onClose, type, title, message, children }) => {
             // Trigger fade-in animation
             setTimeout(() => setIsVisible(true), 10);
             
-            // Auto-close modal after 8 seconds for both success and error messages
-            const autoCloseDelay = 8000;
+            // Auto-close modal after 6 seconds for both success and error messages
+            const autoCloseDelay = 6000;
             const timer = setTimeout(() => {
                 handleClose();
             }, autoCloseDelay);
