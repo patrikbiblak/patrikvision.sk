@@ -1,18 +1,20 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useState, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import useVersionChecker from "./components/hooks/useVersionChecker";
-import HomePage from "./pages/HomePage/HomePage";
-import AboutPage from "./pages/AboutPage/AboutPage";
-import ContactPage from "./pages/ContactPage/ContactPage";
-import PortfolioPage from "./pages/PortfolioPage/PortfolioPage";
-import ServicesPage from "./pages/ServicesPage/ServicesPage";
 import Navigation from "./components/layout/Navigation/Navigation";
 import Footer from "./components/layout/Footer/Footer";
-import Gdpr from "./pages/gdpr/gdpr";
 import CookieSettings from "./components/features/cookies/CookieSettings";
 import LoadingScreen from "./components/common/LoadingScreen/LoadingScreen";
 import "./i18n/config";
+
+// Lazy load pages for better performance
+const HomePage = lazy(() => import("./pages/HomePage/HomePage"));
+const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage/ContactPage"));
+const PortfolioPage = lazy(() => import("./pages/PortfolioPage/PortfolioPage"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage/ServicesPage"));
+const Gdpr = lazy(() => import("./pages/gdpr/gdpr"));
 
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);

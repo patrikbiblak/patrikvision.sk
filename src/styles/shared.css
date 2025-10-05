@@ -31,63 +31,13 @@
   padding: 2rem;
 }
 
-/* ===== COMPONENT-SPECIFIC CARD VARIANTS ===== */
-/* Contact card - for both homepage and contact page */
-.contact-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  padding: 1.75rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border: 1px solid rgba(17, 100, 102, 0.2);
-  width: 100%;
-}
-
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
-}
-
 /* Service card - for services page */
 .service-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  padding: 1.75rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border: 1px solid rgba(17, 100, 102, 0.2);
-  width: 100%;
   min-height: 400px;
   text-align: left;
   display: flex;
   flex-direction: column;
   max-width: 380px;
-}
-
-.service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
-}
-
-/* About card - for about section */
-.about-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  padding: 1.75rem;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border: 1px solid rgba(17, 100, 102, 0.2);
-  width: 100%;
 }
 
 /* ===== FORM COMPONENTS ===== */
@@ -158,68 +108,6 @@
   transform: none;
 }
 
-/* ===== COMPONENT-SPECIFIC FORM VARIANTS ===== */
-/* Contact form - for both homepage and contact page */
-.contact-form-field {
-  background: transparent;
-  border: 1px solid var(--border-default);
-  color: #333333;
-  padding: 0.5rem;
-  margin-bottom: 0.75rem;
-  width: 100%;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  font-family: inherit;
-  font-size: 1rem;
-}
-
-.contact-form-field:focus {
-  outline: none;
-  border-color: var(--brand-color);
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-}
-
-.contact-form-label {
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--brand-color);
-  margin-bottom: 0.35rem;
-  display: block;
-}
-
-.contact-form-button {
-  background-color: transparent;
-  border: 1px solid var(--border-default);
-  color: #333333;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  transition: all 0.3s;
-  width: 100%;
-  margin: 0.5rem 0 0;
-  cursor: pointer;
-}
-
-.contact-form-button:hover {
-  background-color: rgba(153, 153, 153, 0.1);
-}
-
-.contact-form-button--primary {
-  background: var(--brand-color);
-  color: #ffffff;
-  border: none;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-}
-
-.contact-form-button--primary:hover {
-  background-color: #0d4f51;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-}
-
 /* ===== SECTION HEADINGS ===== */
 /* Base section heading - use with component-specific classes */
 .u-section-heading {
@@ -237,45 +125,6 @@
 
 .u-section-heading--small {
   font-size: 2rem;
-}
-
-/* ===== COMPONENT-SPECIFIC HEADING VARIANTS ===== */
-/* Contact heading - for both homepage and contact page */
-.contact-heading {
-  color: var(--brand-color);
-  text-align: center;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-.contact-heading--large {
-  font-size: 3rem;
-}
-
-.contact-heading--small {
-  font-size: 2rem;
-}
-
-/* Service heading - for services page */
-.service-heading {
-  color: var(--brand-color);
-  text-align: center;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  font-weight: 700;
-}
-
-/* About heading - for about section */
-.about-heading {
-  color: var(--brand-color);
-  text-align: center;
-  letter-spacing: -0.02em;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  font-weight: 700;
 }
 
 /* ===== CONTACT INFO COMPONENTS ===== */
@@ -318,46 +167,6 @@
   border-bottom-color: var(--text-accent);
 }
 
-/* ===== COMPONENT-SPECIFIC CONTACT INFO VARIANTS ===== */
-/* Contact info - for both homepage and contact page */
-.contact-info-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.contact-info-item svg {
-  width: 28px;
-  height: 28px;
-  color: var(--brand-color);
-  flex-shrink: 0;
-}
-
-.contact-info-item p {
-  margin: 0;
-}
-
-.contact-info-item__label {
-  color: var(--brand-color);
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  letter-spacing: 0.4px;
-  margin-bottom: 0.25rem;
-}
-
-.contact-link {
-  color: var(--text-secondary);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: all 0.3s ease;
-}
-
-.contact-link:hover {
-  color: var(--text-accent);
-  border-bottom-color: var(--text-accent);
-}
-
 /* ===== STATUS MESSAGES ===== */
 /* Base status messages - use with component-specific classes */
 .u-success-message {
@@ -367,20 +176,6 @@
 }
 
 .u-error-message {
-  color: #f87171;
-  font-weight: 500;
-  margin-top: 0.75rem;
-}
-
-/* ===== COMPONENT-SPECIFIC STATUS MESSAGE VARIANTS ===== */
-/* Contact form status messages */
-.contact-success-message {
-  color: #4ade80;
-  font-weight: 500;
-  margin-top: 0.75rem;
-}
-
-.contact-error-message {
   color: #f87171;
   font-weight: 500;
   margin-top: 0.75rem;
