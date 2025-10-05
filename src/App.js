@@ -1,11 +1,10 @@
-import React, { Suspense, useState, lazy } from "react";
+import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import useVersionChecker from "./components/hooks/useVersionChecker";
 import Navigation from "./components/layout/Navigation/Navigation";
 import Footer from "./components/layout/Footer/Footer";
 import CookieSettings from "./components/features/cookies/CookieSettings";
-import LoadingScreen from "./components/common/LoadingScreen/LoadingScreen";
 import "./i18n/config";
 
 // Lazy load pages for better performance
@@ -17,21 +16,11 @@ const ServicesPage = lazy(() => import("./pages/ServicesPage/ServicesPage"));
 const Gdpr = lazy(() => import("./pages/gdpr/gdpr"));
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  
   useVersionChecker();
-
-  const handleLoadingComplete = () => {
-    setIsLoading(false);
-  };
-
-  if (isLoading) {
-    return <LoadingScreen onComplete={handleLoadingComplete} />;
-  }
 
   return (
     <HelmetProvider>
-      <Suspense fallback={<LoadingScreen />}>
+      <Suspense fallback={null}>
         <Router>
           <div className="content">
             <Navigation />
