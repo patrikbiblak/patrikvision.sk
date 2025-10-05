@@ -7,6 +7,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  --map-side-gap: clamp(0.75rem, 2vw, 1.25rem);
 }
 
 .contact-page::before {
@@ -82,8 +83,8 @@
 
 /* Map container below the boxes */
 .contact-page-map-container {
-  width: 100%;
-  max-width: 1200px;
+  width: calc(100% - (var(--map-side-gap) * 2));
+  max-width: calc(1200px - (var(--map-side-gap) * 2));
   height: 300px;
   margin: clamp(2rem, 4vw, 3rem) auto 0 auto;
   border-radius: 12px;
