@@ -177,6 +177,18 @@ const ContactSection = () => {
                 required
               />
 
+              {/* Hidden fields for human-readable labels */}
+              <input
+                type="hidden"
+                name="productInterestLabel"
+                value={(productOptions.find((o) => o.value === formData.productInterest)?.label) || ''}
+              />
+              <input
+                type="hidden"
+                name="countryLabel"
+                value={(countryOptions.find((o) => o.value === formData.country)?.label) || ''}
+              />
+
               <button type="submit" disabled={status === 'sending'}>
                 {status === 'sending' ? t('contact.sending') : t('contact.send')}
               </button>
