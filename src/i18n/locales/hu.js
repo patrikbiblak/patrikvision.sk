@@ -25,6 +25,7 @@ const huTranslations = {
     "title": "Rólam",
     "subtitle": "Web Fejlesztés & AI Megoldások",
     "description": "Web Fejlesztés & AI Megoldások szakértő vagyok, aki szenvedéllyel alkot intelligens és funkcionális webalkalmazásokat. React, JavaScript, AI automatizáció, SEO optimalizáció, Google Analytics és modern web technológiák területén specializálódom.",
+    "intro": "Weboldalakat készítek, amelyek működnek. Gyorsak, modernek és az üzlet növekedésére épülnek. Az ötlettől a beindításig az eredményekre fókuszálok, amelyek számítanak.",
     "skills": "Készségek",
     "experience": "Tapasztalat",
     "years": "év tapasztalat",

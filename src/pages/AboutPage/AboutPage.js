@@ -37,7 +37,10 @@ const AboutPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/about" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/about" />
             </Helmet>
-            <Maintenance />
+            <div className="about-page-content">
+                <h1 className="about-heading">{t('nav.about')}</h1>
+                <p className="intro-text">{t('about.intro')}</p>
+            </div>
         </div>
     )
 }
