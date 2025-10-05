@@ -1,6 +1,6 @@
 /* Latest Work Section - Mirrored About Section Design */
 .latest-work-section {
-  padding: clamp(2rem, 6vw, 5rem) 0;
+  padding: var(--section-padding-y) var(--section-padding-x);
   background-color: transparent;
   color: #ffffff;
   position: relative;
@@ -9,16 +9,16 @@
 }
 
 .latest-work-container {
-  max-width: 1040px;
+  max-width: var(--content-max-width);
   margin: 0 auto;
   position: relative;
-  padding: 0 2rem;
+  padding: 0;
 }
 
 .latest-work-layout {
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(1.5rem, 4vw, 2.5rem);
+  gap: clamp(2rem, 4vw, 3rem);
   align-items: center;
   justify-items: center;
 }
@@ -169,11 +169,11 @@
 
 .latest-work-heading {
   font-size: clamp(2rem, 4vw, 2.8rem);
-  font-weight: 600;
+  font-weight: 700;
   color: #116466;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin: 0;
+  margin: 0 0 1.5rem 0;
   font-family: 'Inter', sans-serif;
 }
 
@@ -209,17 +209,17 @@
 /* Mobile adjustments */
 @media (max-width: 767px) {
   .latest-work-section {
-    padding: clamp(1.5rem, 5vw, 2.5rem) 0;
+    padding: var(--section-padding-y) var(--section-padding-x);
     min-height: auto;
     display: block;
   }
 
   .latest-work-container {
-    padding: 0 1.25rem;
+    padding: 0;
   }
 
   .latest-work-layout {
-    gap: clamp(1.25rem, 4vw, 2rem);
+    gap: clamp(2rem, 5vw, 2.5rem);
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
@@ -234,7 +234,7 @@
     order: 1;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: clamp(1.25rem, 3vw, 1.5rem);
   }
 
   .latest-work-left {
@@ -242,14 +242,14 @@
   }
 
   .latest-work-heading {
-    font-size: clamp(1.8rem, 6vw, 2.2rem);
-    margin: 0;
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+    margin: 0 0 1.25rem 0;
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   .project-cards {
-    gap: 1rem;
+    gap: clamp(1.25rem, 3vw, 1.5rem);
   }
 
   .project-card {
@@ -262,22 +262,22 @@
   }
 
   .project-content {
-    padding: 0 clamp(0.75rem, 3.5vw, 1.25rem);
+    padding: 0 clamp(1rem, 3.5vw, 1.5rem);
   }
 }
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
   .latest-work-section {
-    padding: 1.25rem 0;
+    padding: var(--section-padding-y) var(--section-padding-x);
   }
 
   .latest-work-container {
-    padding: 0 1rem;
+    padding: 0;
   }
 
   .latest-work-layout {
-    gap: 1.25rem;
+    gap: clamp(1.5rem, 4vw, 2rem);
     align-items: center;
     justify-items: center;
     display: flex;
@@ -288,7 +288,7 @@
     order: 1;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: clamp(1rem, 2.5vw, 1.25rem);
   }
 
   .latest-work-left {
@@ -296,25 +296,25 @@
   }
 
   .latest-work-heading {
-    font-size: clamp(1.5rem, 8vw, 1.8rem);
-    margin: 0;
+    font-size: clamp(1.5rem, 7vw, 1.8rem);
+    margin: 0 0 1rem 0;
     text-align: center;
-    line-height: 1.1;
+    line-height: 1.25;
   }
 
   .project-cards {
-    gap: 0.9rem;
+    gap: clamp(1rem, 2.5vw, 1.25rem);
   }
 
   .project-content {
-    padding: clamp(0.6rem, 2vw, 0.9rem);
+    padding: clamp(0.875rem, 2.5vw, 1.125rem);
   }
 }
 
 /* Tablet adjustments */
 @media (min-width: 768px) and (max-width: 1023px) {
   .latest-work-section {
-    padding: clamp(1.25rem, 4vw, 2rem) 0;
+    padding: var(--section-padding-y) 0;
     min-height: auto;
     display: block;
   }
@@ -354,7 +354,7 @@
 /* Large screens */
 @media (min-width: 1024px) {
   .latest-work-section {
-    padding: clamp(1rem, 3vw, 2rem) 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .latest-work-container {
