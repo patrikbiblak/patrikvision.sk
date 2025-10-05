@@ -48,6 +48,25 @@ const en = {
       "satisfactionLabel": "Quality Focus",
       "projectsCompleted": "3x",
       "projectsLabel": "Faster Loading"
+    },
+    "cards": {
+      "vision": {
+        "title": "Vision",
+        "description": "To make the web simpler, faster, and more human — through clear design, purposeful engineering, and experiences that feel effortless."
+      },
+      "mission": {
+        "title": "Mission",
+        "description": "Deliver high‑quality, performant websites and apps that help clients grow — combining thoughtful UX, robust code, and measurable results on every project."
+      },
+      "values": {
+        "title": "Values",
+        "description": "I believe in transparency, quality over quantity, and building lasting relationships. Every project is an opportunity to create something meaningful."
+      }
+    },
+    "hero": {
+      "portraitAlt": "Patrik portrait",
+      "paragraph1": "Coffee in one hand, code in the other. I love turning ideas into digital reality and helping businesses grow through thoughtful design and smart technology.",
+      "paragraph2": "When I'm not building websites, you'll find me exploring new tech or perfecting the next great user experience."
     }
   },
   "latestWork": {

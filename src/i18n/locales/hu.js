@@ -48,6 +48,25 @@ const huTranslations = {
       "satisfactionLabel": "Minőségre Fókuszálás",
       "projectsCompleted": "3x",
       "projectsLabel": "Gyorsabb Betöltés"
+    },
+    "cards": {
+      "vision": {
+        "title": "Vízió",
+        "description": "Egyszerűbbé, gyorsabbá és emberibbé tenni a webet — tiszta dizájnnal, céltudatos mérnöki megoldásokkal és természetesnek ható élményekkel."
+      },
+      "mission": {
+        "title": "Küldetés",
+        "description": "Magas minőségű, nagy teljesítményű weboldalakat és alkalmazásokat szállítani, amelyek az ügyfelek növekedését segítik — átgondolt UX-szel, robusztus kóddal és minden projektben mérhető eredményekkel."
+      },
+      "values": {
+        "title": "Értékek",
+        "description": "Hiszek az átláthatóságban, a minőségben a mennyiség felett és a tartós kapcsolatok építésében. Minden projekt lehetőség valami értelmeset alkotni."
+      }
+    },
+    "hero": {
+      "portraitAlt": "Patrik portréja",
+      "paragraph1": "Kávé az egyik kézben, kód a másikban. Szeretem az ötleteket digitális valósággá alakítani, és segíteni a vállalkozások növekedését átgondolt dizájnnal és okos technológiával.",
+      "paragraph2": "Amikor épp nem weboldalakat építek, új technológiákat fedezek fel, vagy a következő nagyszerű felhasználói élményt tökéletesítem."
     }
   },
   "latestWork": {

@@ -2,8 +2,32 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import "./AboutPage.css";
 
-const ServicesPage = () => {
+const AboutPage = () => {
     const { t } = useTranslation();
+
+    const aboutCards = [
+        {
+            id: 'vision',
+            title: t('about.cards.vision.title'),
+            icon: 'visibility',
+            description: t('about.cards.vision.description'),
+            gradient: 'linear-gradient(135deg, #116466 0%, #1aa1a1 100%)'
+        },
+        {
+            id: 'mission',
+            title: t('about.cards.mission.title'), 
+            icon: 'rocket_launch',
+            description: t('about.cards.mission.description'),
+            gradient: 'linear-gradient(135deg, #116466 0%, #1aa1a1 100%)'
+        },
+        {
+            id: 'values',
+            title: t('about.cards.values.title'),
+            icon: 'star',
+            description: t('about.cards.values.description'),
+            gradient: 'linear-gradient(135deg, #116466 0%, #1aa1a1 100%)'
+        }
+    ];
 
     return (
         <div className="about-page">
@@ -39,35 +63,47 @@ const ServicesPage = () => {
             <div className="about-page-content">
                 <h1 className="about-heading">{t('nav.about')}</h1>
                 <p className="intro-text">{t('about.intro')}</p>
-                <div className="about-grid">
-                    <div className="about-image-wrapper area-portrait">
-                        <img
-                            src="/images/bpaatrik.png"
-                            alt="Patrik portrait"
-                            className="about-image about-image--portrait"
-                            loading="lazy"
-                            decoding="async"
-                        />
-                    </div>
-
-                    <div className="about-card area-vision">
-                        <h2 className="about-subheading">Vision</h2>
-                        <p className="about-paragraph">To make the web simpler, faster, and more human — through clear design, purposeful engineering, and experiences that feel effortless.</p>
-                    </div>
-
-                    <div className="about-card area-mission">
-                        <h2 className="about-subheading">Mission</h2>
-                        <p className="about-paragraph">Deliver high‑quality, performant websites and apps that help clients grow — combining thoughtful UX, robust code, and measurable results on every project.</p>
-                    </div>
-
-                    <div className="about-image-wrapper area-avatar">
-                        <img
-                            src="/images/avatar.png"
-                            alt="Patrik avatar"
-                            className="about-image about-image--avatar"
-                            loading="lazy"
-                            decoding="async"
-                        />
+                
+                {/* Values Cards Grid */}
+                <div className="about-cards-grid">
+                    {aboutCards.map((card, index) => (
+                        <AboutCard key={card.id} card={card} index={index} />
+                    ))}
+                </div>
+                
+                {/* Hero Section with Portrait */}
+                <div className="about-hero-section">
+                    <img
+                        src="/images/bpaatrik.png"
+                        alt={t('about.hero.portraitAlt')}
+                        className="about-portrait"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                    <div className="about-hero-content">
+                        <p className="about-hero-description">
+                            {t('about.hero.paragraph1')} {t('about.hero.paragraph2')}
+                        </p>
+                        
+                        {/* Professional Features Section */}
+                        <div className="about-features-section">
+                            <div className="about-features-grid">
+                                <div className="about-feature-item">
+                                    <div className="feature-number">3+</div>
+                                    <div className="feature-label">{t('about.stats.yearsLabel')}</div>
+                                </div>
+                                
+                                <div className="about-feature-item">
+                                    <div className="feature-number">100%</div>
+                                    <div className="feature-label">{t('about.stats.satisfactionLabel')}</div>
+                                </div>
+                                
+                                <div className="about-feature-item">
+                                    <div className="feature-number">94%</div>
+                                    <div className="feature-label">{t('about.clients') || 'Satisfaction'}</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,4 +111,24 @@ const ServicesPage = () => {
     )
 }
 
-export default ServicesPage;
+const AboutCard = ({ card, index }) => {
+    return (
+        <div 
+            className="about-card"
+            style={{
+                transitionDelay: `${index * 150}ms`,
+                '--card-gradient': card.gradient
+            }}
+        >
+            <div className="about-card-header">
+                <div className="about-card-icon-container">
+                    <span className="material-icons about-card-icon">{card.icon}</span>
+                </div>
+                <h3 className="about-card-title">{card.title}</h3>
+            </div>
+            <p className="about-card-description">{card.description}</p>
+        </div>
+    );
+};
+
+export default AboutPage;

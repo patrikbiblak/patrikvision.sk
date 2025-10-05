@@ -48,6 +48,25 @@ const skTranslations = {
       "satisfactionLabel": "Zameranie na Kvalitu",
       "projectsCompleted": "3x",
       "projectsLabel": "Rýchlejšie Načítanie"
+    },
+    "cards": {
+      "vision": {
+        "title": "Vízia",
+        "description": "Zjednodušovať web, robiť ho rýchlejším a ľudskejším — cez jasný dizajn, účelové inžinierstvo a zážitky, ktoré pôsobia prirodzene."
+      },
+      "mission": {
+        "title": "Misia",
+        "description": "Dodávať kvalitné, výkonné weby a aplikácie, ktoré pomáhajú rásť — spojením premysleného UX, robustného kódu a merateľných výsledkov v každom projekte."
+      },
+      "values": {
+        "title": "Hodnoty",
+        "description": "Verím v transparentnosť, kvalitu pred kvantitou a budovanie dlhodobých vzťahov. Každý projekt je príležitosť vytvoriť niečo zmysluplné."
+      }
+    },
+    "hero": {
+      "portraitAlt": "Portrét Patrika",
+      "paragraph1": "Káva v jednej ruke, kód v druhej. Rád mením nápady na digitálnu realitu a pomáham firmám rásť vďaka premyslenému dizajnu a chytrým technológiám.",
+      "paragraph2": "Keď nestaviam weby, nájdete ma objavovať nové technológie alebo vyladzovať ďalší skvelý používateľský zážitok."
     }
   },
   "latestWork": {

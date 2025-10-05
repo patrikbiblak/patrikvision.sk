@@ -1,201 +1,409 @@
 .about-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 6rem 0rem;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .about-page::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle at top left, rgba(17, 100, 102, 0.15) 0%, rgba(17, 100, 102, 0.08) 30%, rgba(17, 100, 102, 0.03) 60%, transparent 80%);
-    z-index: 0;
-    pointer-events: none;
-  }
-  
-  .about-page::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle at bottom right, rgba(17, 100, 102, 0.15) 0%, rgba(17, 100, 102, 0.08) 30%, rgba(17, 100, 102, 0.03) 60%, transparent 80%);
-    z-index: 0;
-    pointer-events: none;
-  }
-  
-  .about-page-content {
-    display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .about-heading {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--brand-color);
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 6rem 0rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at top left, rgba(17, 100, 102, 0.15) 0%, rgba(17, 100, 102, 0.08) 30%, rgba(17, 100, 102, 0.03) 60%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-page::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle at bottom right, rgba(17, 100, 102, 0.15) 0%, rgba(17, 100, 102, 0.08) 30%, rgba(17, 100, 102, 0.03) 60%, transparent 80%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-page-content {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 1;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-color);
+  margin-bottom: 1rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-bottom: 1.5rem;
+}
+
+.intro-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
+  border-radius: var(--brand-radius);
+}
+
+/* Hero Section */
+.about-hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 1.8fr;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 4rem;
+  padding: 2rem;
+}
+
+.about-portrait {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--brand-radius);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+}
+
+
+.about-hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+.about-hero-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Cards Grid */
+.about-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 4rem;
+}
+
+.about-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  border: 1px solid rgba(17, 100, 102, 0.2);
+  width: 100%;
+  min-height: 280px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--brand-radius);
+  transition: all 0.3s ease;
+}
+
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--card-gradient, linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color)));
+}
+
+
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-card-icon-container {
+  width: 50px;
+  height: 50px;
+  background: rgba(17, 100, 102, 0.1);
+  border: 2px solid var(--brand-color);
+  border-radius: var(--brand-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.about-card-icon {
+  font-size: 24px;
+  color: var(--brand-color);
+}
+
+.about-card-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brand-color);
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.about-card-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+  flex: 1;
+}
+
+/* Features Section */
+.about-features-section {
+  width: 100%;
+  margin-top: auto;
+}
+
+.about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.about-feature-item {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.feature-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--brand-color);
+  margin: 0 0 0.5rem 0;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.feature-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .about-hero-section {
+    grid-template-columns: 1fr;
+    gap: 2rem;
     text-align: center;
-    letter-spacing: -0.02em;
+    padding: 1.5rem;
   }
-  
+
+  .about-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .about-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-number {
+    font-size: 2.2rem;
+  }
+
+  .feature-label {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 4rem 0rem;
+  }
+
   .intro-text {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: var(--text-secondary);
-    text-align: center;
+    font-size: 1rem;
     margin-bottom: 2rem;
-    opacity: 0.9;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    padding-bottom: 1.5rem;
-  }
-  
-  .intro-text::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
-    border-radius: var(--radius-xs);
-  }
-  
-  .about-grid {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    grid-template-rows: auto auto;
-    grid-template-areas:
-      "portrait vision"
-      "mission  avatar";
-    column-gap: 2rem;
-    row-gap: 4.5rem;
-    width: 100%;
-    max-width: 1150px;
-    align-items: start;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
-  .area-portrait { grid-area: portrait; }
-  .area-vision { grid-area: vision; }
-  .area-mission { grid-area: mission; }
-  .area-avatar { grid-area: avatar; }
-
-  .about-image-wrapper {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 16px;
-    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  .about-hero-section {
+    margin: 0 1rem 3rem 1rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
 
-  .about-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  .about-hero-title {
+    font-size: 1.6rem;
   }
 
-  /* Keep images from forcing each other; define aspect on the wrapper for stability */
-  .area-portrait {
-    aspect-ratio: 3 / 4;
-    width: clamp(220px, 85%, 420px);
-    justify-self: start;
+  .about-hero-subtitle {
+    font-size: 1rem;
   }
-  .area-avatar {
-    aspect-ratio: 1 / 1;
-    width: clamp(140px, 50%, 240px);
-    justify-self: end;
+
+  .about-hero-description {
+    font-size: 0.95rem;
+  }
+
+  .about-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
   }
 
   .about-card {
-    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-    border: 1px solid rgba(255, 255, 255, 0.10);
-    padding: 1.5rem 1.25rem;
-    border-radius: 16px;
-    backdrop-filter: blur(8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
-    aspect-ratio: 16 / 10; /* horizontal rectangle */
+    padding: 1.5rem;
     min-height: 240px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
-  .about-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 16px 36px rgba(0,0,0,0.16);
-    border-color: rgba(255, 255, 255, 0.16);
+  .about-card-title {
+    font-size: 1.2rem;
   }
 
-  .about-subheading {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
+  .about-card-description {
+    font-size: 0.9rem;
   }
 
-  .about-paragraph {
-    color: var(--text-secondary);
-    line-height: 1.75;
-    margin-bottom: 0;
+  .about-skills-card {
+    margin: 0 1rem;
+    padding: 2rem;
   }
 
-  /* Removed list/tags styles as cards now contain descriptions only */
+  .about-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
-  @media (max-width: 768px) {
-    .intro-text {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-    .about-grid {
-      grid-template-columns: 1fr;
-      grid-template-areas:
-        "portrait"
-        "vision"
-        "mission"
-        "avatar";
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
-    .area-portrait {
-      width: 100%;
-      max-width: none;
-    }
-    .area-avatar {
-      width: 100%;
-      justify-self: stretch;
-    }
+  .feature-number {
+    font-size: 2rem;
   }
-  
-  @media (max-width: 480px) {
-    .intro-text {
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
-    }
+
+  .feature-label {
+    font-size: 0.85rem;
   }
-  
+}
+
+@media (max-width: 480px) {
+  .about-page {
+    padding: 3rem 0rem;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .about-hero-section {
+    margin: 0 0.5rem 2rem 0.5rem;
+    padding: 1.25rem;
+  }
+
+  .about-hero-title {
+    font-size: 1.4rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .about-hero-description {
+    font-size: 0.9rem;
+  }
+
+  .about-portrait {
+    max-width: 250px;
+  }
+
+  .about-cards-grid {
+    padding: 0 0.5rem;
+    gap: 1.25rem;
+  }
+
+  .about-card {
+    padding: 1.25rem;
+    min-height: 220px;
+  }
+
+  .about-card-header {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-card-icon-container {
+    width: 40px;
+    height: 40px;
+  }
+
+  .about-card-icon {
+    font-size: 20px;
+  }
+
+  .about-card-title {
+    font-size: 1.1rem;
+  }
+
+  .about-card-description {
+    font-size: 0.85rem;
+  }
+
+  .about-features-grid {
+    padding: 0 0.5rem;
+    gap: 1.25rem;
+  }
+
+  .feature-number {
+    font-size: 1.8rem;
+  }
+
+  .feature-label {
+    font-size: 0.8rem;
+  }
+}
