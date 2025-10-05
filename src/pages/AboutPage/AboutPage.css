@@ -88,8 +88,7 @@
   align-items: center;
   width: 100%;
   max-width: 1200px;
-  margin-bottom: clamp(2rem, 4vw, 4rem);
-  padding: clamp(1.5rem, 3vw, 2rem);
+  padding: 0 clamp(1.5rem, 3vw, 2rem);
 }
 
 .about-portrait {
@@ -207,6 +206,14 @@
   align-items: center;
 }
 
+/* Responsive stat cards - stack on smaller screens */
+@media (max-width: 768px) {
+  .about-features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 .about-feature-item {
   text-align: center;
   padding: 0.5rem;
@@ -234,26 +241,42 @@
 @media (max-width: 1024px) {
   .about-hero-section {
     grid-template-columns: 1fr;
-    gap: clamp(1.5rem, 3vw, 2rem);
+    gap: clamp(2rem, 4vw, 3rem);
     text-align: center;
-    padding: clamp(1.25rem, 2.5vw, 1.5rem);
+    padding: 0 clamp(1.25rem, 2.5vw, 1.5rem);
+    justify-items: center;
+    align-items: center;
+  }
+
+  .about-portrait {
+    order: 1;
+    margin: 0 auto;
+  }
+
+  .about-hero-content {
+    order: 2;
+    text-align: center;
+  }
+
+  .about-features-section {
+    order: 3;
+    margin-top: 1.5rem;
   }
 
   .about-cards-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .about-features-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 /* Mobile landscape and tablet portrait */
 @media (max-width: 768px) {
   .about-hero-section {
-    margin: 0 clamp(0.75rem, 2vw, 1rem) clamp(2rem, 4vw, 3rem) clamp(0.75rem, 2vw, 1rem);
-    padding: clamp(1.25rem, 2.5vw, 1.5rem);
-    gap: clamp(1.25rem, 2.5vw, 1.5rem);
+    margin: 0 clamp(0.75rem, 2vw, 1rem);
+    padding: 0 clamp(1.25rem, 2.5vw, 1.5rem);
+    gap: clamp(2rem, 4vw, 3rem);
+    justify-items: center;
+    align-items: center;
   }
 
   .about-cards-grid {
@@ -275,18 +298,15 @@
     font-size: 0.9rem;
   }
 
-  .about-features-grid {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-    padding: 0 clamp(0.75rem, 2vw, 1rem);
-  }
 }
 
 /* Mobile portrait */
 @media (max-width: 480px) {
   .about-hero-section {
-    margin: 0 clamp(0.5rem, 1.5vw, 0.75rem) clamp(1.5rem, 3vw, 2rem) clamp(0.5rem, 1.5vw, 0.75rem);
-    padding: clamp(1rem, 2vw, 1.25rem);
+    margin: 0 clamp(0.5rem, 1.5vw, 0.75rem);
+    padding: 0 clamp(1rem, 2vw, 1.25rem);
+    justify-items: center;
+    align-items: center;
   }
 
   .about-portrait {
@@ -316,17 +336,15 @@
     font-size: 0.85rem;
   }
 
-  .about-features-grid {
-    padding: 0 clamp(0.5rem, 1.5vw, 0.75rem);
-    gap: 1.2rem;
-  }
 }
 
 /* Very small screens */
 @media (max-width: 320px) {
   .about-hero-section {
-    margin: 0 clamp(0.25rem, 1vw, 0.5rem) clamp(1.25rem, 2.5vw, 1.5rem) clamp(0.25rem, 1vw, 0.5rem);
-    padding: clamp(0.75rem, 1.5vw, 1rem);
+    margin: 0 clamp(0.25rem, 1vw, 0.5rem);
+    padding: 0 clamp(0.75rem, 1.5vw, 1rem);
+    justify-items: center;
+    align-items: center;
   }
 
   .about-portrait {
@@ -357,8 +375,4 @@
     font-size: 20px;
   }
 
-  .about-features-grid {
-    padding: 0 clamp(0.25rem, 1vw, 0.5rem);
-    gap: 1rem;
-  }
 }
