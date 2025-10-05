@@ -1,10 +1,19 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { CheckCircle, AlertCircle } from 'lucide-react';
 import './Modal.css';
 
 const Modal = ({ isOpen, onClose, type, title, message, children }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [shouldRender, setShouldRender] = useState(false);
+
+    const handleClose = useCallback(() => {
+        setIsVisible(false);
+        // Wait for animation to complete before unmounting
+        setTimeout(() => {
+            setShouldRender(false);
+            onClose();
+        }, 300);
+    }, [onClose]);
 
     useEffect(() => {
         const handleEscape = (e) => {
@@ -38,16 +47,7 @@ const Modal = ({ isOpen, onClose, type, title, message, children }) => {
             document.removeEventListener('keydown', handleEscape);
             document.body.style.overflow = 'unset';
         };
-    }, [isOpen, onClose, type]);
-
-    const handleClose = () => {
-        setIsVisible(false);
-        // Wait for animation to complete before unmounting
-        setTimeout(() => {
-            setShouldRender(false);
-            onClose();
-        }, 300);
-    };
+    }, [isOpen, handleClose]);
 
     if (!shouldRender) return null;
 
