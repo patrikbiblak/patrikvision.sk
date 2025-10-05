@@ -1,7 +1,7 @@
 /* Latest Work Section - Mirrored About Section Design */
 .latest-work-section {
   padding: var(--section-padding-y) var(--section-padding-x);
-  background-color: transparent;
+  background-color: rgba(17, 100, 102, 0.1);
   color: #ffffff;
   position: relative;
   min-height: auto;
@@ -59,7 +59,7 @@
 }
 
 .project-card {
-  background: rgba(17, 100, 102, 0.1);
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
   border: 1px solid rgba(17, 100, 102, 0.2);
   overflow: hidden;
   transition: all 0.3s ease;

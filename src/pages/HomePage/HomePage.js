@@ -2,7 +2,6 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { generateSEOTags } from "../../config/seoDefaults";
-import AboutSection from "./AboutSection/AboutSection";
 import HeroSection from "./HeroSection/HeroSection";
 import ServicesSection from "./ServicesSection/ServicesSection";
 import LatestWorkSection from "./LatestWorkSection/LatestWorkSection";
@@ -79,7 +78,6 @@ const HomePage = () => {
             </Helmet>
             <HeroSection />
             <ServicesSection />
-            <AboutSection />
             <LatestWorkSection />
             <WhyMeSection />
             <ContactSection />
