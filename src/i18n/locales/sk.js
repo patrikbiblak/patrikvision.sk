@@ -25,7 +25,7 @@ const skTranslations = {
     "title": "O Mne",
     "subtitle": "Web Development & AI Solutions",
     "description": "Som Web Development & AI Solutions špecialista s vášňou pre vytváranie inteligentných a funkčných webových aplikácií. Špecializujem sa na React, JavaScript, AI automatizáciu, SEO optimalizáciu, Google Analytics a moderné webové technológie.",
-    "intro": "Vytváram webové stránky, ktoré fungujú. Rýchle, moderné a postavené na rast vášho podnikania. Od nápadu po spustenie sa zameriavam na dosahovanie výsledkov, ktoré sa počítajú.",
+    "intro": "Vytváram webové stránky, ktoré fungujú. Rýchle, moderné a postavené na rast vášho podnikania. Od nápadu po spustenie sa zameriavam na dosahovanie výsledkov.",
     "skills": "Zručnosti",
     "experience": "Skúsenosti",
     "years": "rokov skúseností",

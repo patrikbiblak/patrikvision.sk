@@ -25,7 +25,7 @@ const en = {
     "title": "About Me",
     "subtitle": "Web Development & AI Solutions",
     "description": "I'm a Web Development & AI Solutions specialist with a passion for creating intelligent and functional web applications. I specialize in React, JavaScript, AI automation, SEO optimization, Google Analytics and modern web technologies.",
-    "intro": "I create websites that work. Fast, modern, and built to grow your business. From concept to launch, I focus on delivering results that matter.",
+    "intro": "I create websites that work. Fast, modern, and built to grow your business. From concept to launch, I focus on delivering results.",
     "skills": "Skills",
     "experience": "Experience",
     "years": "years of experience",
