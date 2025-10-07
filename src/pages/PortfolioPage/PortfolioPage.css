@@ -27,7 +27,7 @@
   gap: clamp(1.5rem, 3vw, 2rem);
   width: 100%;
   max-width: 1200px;
-  padding: 0 clamp(1rem, 3vw, 2rem);
+  margin: 0 auto;
 }
 
 /* Project cards - extends shared card styles */
@@ -37,6 +37,7 @@
   flex-direction: column;
   min-height: 320px;
   transition: all 0.3s ease;
+  margin: 0 auto;
 }
 
 .project-card:hover {
@@ -96,7 +97,6 @@
 @media (max-width: 1024px) {
   .portfolio-grid {
     gap: clamp(1.5rem, 2.5vw, 1.75rem);
-    padding: 0 clamp(1rem, 2.5vw, 1.5rem);
   }
 
   .project-card {
@@ -126,12 +126,10 @@
   .portfolio-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1.5rem;
   }
 
   .project-card {
     max-width: 100%;
-    margin: 0 auto;
     min-height: 260px;
   }
 
@@ -161,7 +159,6 @@
   }
 
   .portfolio-grid {
-    padding: 0 1.25rem;
     gap: 1.25rem;
   }
 
@@ -201,7 +198,6 @@
   }
 
   .portfolio-grid {
-    padding: 0 1rem;
     gap: 1rem;
   }
 
@@ -232,4 +228,3 @@
     font-size: 0.78rem;
   }
 }
-

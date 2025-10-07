@@ -4,7 +4,6 @@
   background-color: rgba(17, 100, 102, 0.1);
   color: #ffffff;
   position: relative;
-  min-height: auto;
   display: block;
 }
 
@@ -202,7 +201,6 @@
   padding: clamp(0.9rem, 2vw, 1.25rem) 0;
 }
 
-
 /* Right Column - Heading */
 /* Right column styles removed; heading and CTA are now direct children */
 
@@ -260,7 +258,6 @@
 @media (max-width: 767px) {
   .latest-work-section {
     padding: var(--section-padding-y) var(--section-padding-x);
-    min-height: auto;
     display: block;
   }
 
@@ -353,7 +350,6 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .latest-work-section {
     padding: var(--section-padding-y) 0;
-    min-height: auto;
     display: block;
   }
 
@@ -400,8 +396,4 @@
     align-items: center;
     justify-items: center;
   }
-
 }
-
-
-

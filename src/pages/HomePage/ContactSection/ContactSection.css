@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   padding: var(--section-padding-y) var(--section-padding-x);
   width: 100%;
   text-align: center;
@@ -73,7 +72,6 @@
 
 .homepage-contact-box h3 {
   margin-bottom: clamp(1rem, 2vw, 2rem);
-  text-align: left;
   color: var(--brand-color);
   font-weight: 700;
   font-size: clamp(1.3rem, 2.5vw, 1.5rem);
@@ -83,7 +81,6 @@
 .homepage-contact-box form label {
   font-size: clamp(0.8rem, 1.8vw, 13px);
   font-weight: 600;
-  text-align: left;
   display: block;
   margin-bottom: clamp(0.25rem, 0.8vw, 0.35rem);
   color: var(--brand-color);
@@ -133,7 +130,6 @@
   background-size: 1rem;
   padding-right: 2.5rem;
 }
-
 
 .homepage-contact-box:first-child button {
   display: block;
@@ -188,7 +184,6 @@
 .homepage-contact-info-item div {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
   min-width: 0;
   flex: 1;
@@ -207,7 +202,6 @@
 .homepage-contact-info-item div p:first-child {
   color: var(--brand-color);
   font-weight: 700;
-  text-align: left;
   margin-bottom: 0.3rem;
   text-transform: uppercase;
   letter-spacing: 0.6px;
@@ -275,7 +269,6 @@
   .homepage-contact-box {
     width: 100%;
     max-width: 500px;
-    min-height: auto;
   }
 
   .homepage-contact-map {
@@ -344,6 +337,3 @@
     margin-top: 1rem;
   }
 }
-
-
-

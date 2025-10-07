@@ -81,7 +81,6 @@
   }
 }
 
-
 .about-hero-description {
   font-size: clamp(0.9rem, 2vw, 1rem);
   line-height: 1.7;
@@ -95,22 +94,19 @@
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.25rem, 3vw, 1.75rem);
   width: 100%;
-  justify-items: center;
   max-width: 1200px;
-  margin-bottom: clamp(2rem, 4vw, 4rem);
-  padding: 0 clamp(1rem, 2vw, 1.5rem);
+  margin: 0 auto clamp(2rem, 4vw, 4rem);
 }
 
 /* About cards - extends shared card styles */
 .about-card {
   /* Inherits from .u-card and .u-card-animated in shared.css */
   min-height: 280px;
-  text-align: left;
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  margin: 0 auto;
 }
-
 
 .about-card-header {
   display: flex;
@@ -243,7 +239,6 @@
   .about-cards-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1.5rem;
   }
 
   .about-card {
@@ -258,7 +253,6 @@
   .about-card-description {
     font-size: 0.9rem;
   }
-
 }
 
 /* Mobile portrait */
@@ -275,7 +269,6 @@
   }
 
   .about-cards-grid {
-    padding: 0 1.25rem;
     gap: 1.25rem;
   }
 
@@ -296,7 +289,6 @@
   .about-card-description {
     font-size: 0.85rem;
   }
-
 }
 
 /* Very small screens */
@@ -313,7 +305,6 @@
   }
 
   .about-cards-grid {
-    padding: 0 1rem;
     gap: 1rem;
   }
 
@@ -335,5 +326,4 @@
   .about-card-icon {
     font-size: 20px;
   }
-
 }
