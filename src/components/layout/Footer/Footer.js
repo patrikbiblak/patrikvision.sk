@@ -1,17 +1,15 @@
 import { FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { MdEmail, MdLocationOn, MdPhone } from 'react-icons/md';
-import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import "./Footer.css";
 
 const Footer = () => {
-    const ref = useRef(null);
     const { t } = useTranslation();
 
   return (
     <footer className="footer">
         <div className="footer-container">
-            <div ref={ref} className="footer-content">
+            <div className="footer-content">
                 {/* Brand Section */}
                 <div className="footer-brand">
                     <div className="footer-logo">

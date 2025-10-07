@@ -18,7 +18,7 @@ const useVersionChecker = () => {
           window.location.reload();
         }
       } catch (err) {
-        console.error('Chyba pri kontrole verzie:', err);
+        console.error('Version check error:', err);
       }
     };
 

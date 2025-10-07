@@ -137,7 +137,9 @@ input, textarea, select {
 }
 
 input:focus {
-  border: var(--border-focus);
+  outline: none;
+  border-color: var(--brand-color);
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
 }
 
 .hidden {

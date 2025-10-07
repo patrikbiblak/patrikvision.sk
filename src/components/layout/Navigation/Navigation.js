@@ -3,13 +3,53 @@ import { NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import "./Navigation.css";
 
-const Navigation = () => {
+// Language Switcher Component
+const LanguageSwitcher = ({ isMobile }) => {
+  const { i18n } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const languages = [
+    { code: 'en', label: 'EN' },
+    { code: 'sk', label: 'SK' },
+    { code: 'hu', label: 'HU' }
+  ];
 
+  const currentLang = i18n.language.split('-')[0];
+
+  return (
+    <div className={`custom-select ${isMobile ? 'mobile' : ''}`}>
+      <div 
+        className="select-trigger"
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <span>{currentLang.toUpperCase()}</span>
+        <span className={`arrow ${isOpen ? 'open' : ''}`}></span>
+      </div>
+      {isOpen && (
+        <div className="select-options">
+          {languages.map(({ code, label }) => (
+            <div 
+              key={code}
+              className={`option ${currentLang === code ? 'selected' : ''}`}
+              onClick={() => {
+                i18n.changeLanguage(code);
+                setIsOpen(false);
+              }}
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
+const Navigation = () => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const navItems = [
     { path: "/", label: t('nav.home') },
@@ -41,61 +81,21 @@ const Navigation = () => {
 
         <nav className={`nav-menu-wrapper ${isOpen ? "open" : ""}`}>
           <div className="mobile-language-switcher">
-            <div className="custom-select mobile">
-              <div 
-                className="select-trigger"
-                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-              >
-                <span>{i18n.language.split('-')[0].toUpperCase()}</span>
-                <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
-              </div>
-              {isLanguageOpen && (
-                <div className="select-options">
-                  <div 
-                    className={`option ${i18n.language.split('-')[0] === 'en' ? 'selected' : ''}`}
-                    onClick={() => {
-                      i18n.changeLanguage('en');
-                      setIsLanguageOpen(false);
-                    }}
-                  >
-                    EN
-                  </div>
-                  <div 
-                    className={`option ${i18n.language.split('-')[0] === 'sk' ? 'selected' : ''}`}
-                    onClick={() => {
-                      i18n.changeLanguage('sk');
-                      setIsLanguageOpen(false);
-                    }}
-                  >
-                    SK
-                  </div>
-                  <div 
-                    className={`option ${i18n.language.split('-')[0] === 'hu' ? 'selected' : ''}`}
-                    onClick={() => {
-                      i18n.changeLanguage('hu');
-                      setIsLanguageOpen(false);
-                    }}
-                  >
-                    HU
-                  </div>
-                </div>
-              )}
-            </div>
+            <LanguageSwitcher isMobile={true} />
           </div>
           <ul className="navigation-links">
             {navItems.map(({ path, label }) => (
               <li key={path}>
                 <NavLink
-                  key={path}
                   to={path}
                   className={`navigation-link ${
                     location.pathname === path ? "active" : ""
                   }`}
                   onClick={() => {
-                  closeMenu();
-                  setTimeout(() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                  }, 50);
+                    closeMenu();
+                    setTimeout(() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }, 50);
                   }}
                 >
                   {label}
@@ -107,46 +107,7 @@ const Navigation = () => {
         
         <div className="navbar-right">
           <div className="language-switcher">
-            <div className="custom-select">
-              <div 
-                className="select-trigger"
-                onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-              >
-                <span>{i18n.language.split('-')[0].toUpperCase()}</span>
-                <span className={`arrow ${isLanguageOpen ? 'open' : ''}`}></span>
-              </div>
-              {isLanguageOpen && (
-                <div className="select-options">
-                  <div 
-                    className={`option ${i18n.language.split('-')[0] === 'en' ? 'selected' : ''}`}
-                    onClick={() => {
-                      i18n.changeLanguage('en');
-                      setIsLanguageOpen(false);
-                    }}
-                  >
-                    EN
-                  </div>
-                  <div 
-                    className={`option ${i18n.language.split('-')[0] === 'sk' ? 'selected' : ''}`}
-                    onClick={() => {
-                      i18n.changeLanguage('sk');
-                      setIsLanguageOpen(false);
-                    }}
-                  >
-                    SK
-                  </div>
-                  <div 
-                    className={`option ${i18n.language.split('-')[0] === 'hu' ? 'selected' : ''}`}
-                    onClick={() => {
-                      i18n.changeLanguage('hu');
-                      setIsLanguageOpen(false);
-                    }}
-                  >
-                    HU
-                  </div>
-                </div>
-              )}
-            </div>
+            <LanguageSwitcher isMobile={false} />
           </div>
           
           <button

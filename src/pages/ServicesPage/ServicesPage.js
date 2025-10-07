@@ -83,7 +83,6 @@ const ServicesPage = () => {
 
 const ServiceCard = ({ serviceKey, index }) => {
     const { t } = useTranslation();
-    const ref = useRef(null);
     
     const service = t(`services.${serviceKey}`, { returnObjects: true });
 
@@ -94,7 +93,6 @@ const ServiceCard = ({ serviceKey, index }) => {
 
     return (
         <div
-            ref={ref}
             className="service-card"
             style={{
                 transitionDelay: `${index * 150}ms`,

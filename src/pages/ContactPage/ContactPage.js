@@ -10,8 +10,6 @@ import "./ContactPage.css";
 
 const ContactPage = () => {
     const { t } = useTranslation();
-    const leftRef = useRef(null);
-    const rightRef = useRef(null);
     const formRef = useRef();
     
     const [formData, setFormData] = useState({
@@ -105,9 +103,6 @@ const ContactPage = () => {
         { icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/patrikbiblak/' },
     ];
 
-    // Bratislava, Slovakia coordinates
-    const mapCenter = { lat: 48.1485965, lng: 17.1077478 };
-
     return (
         <div className="contact-page">
             <Helmet>
@@ -146,7 +141,7 @@ const ContactPage = () => {
                 <div className="contact-page-content-grid">
                     <ScrollAnimation animation="slide-right" duration={0.7}>
                         <div className="contact-info-wrapper">
-                            <div className="contact-page-info-box" ref={leftRef}>
+                            <div className="contact-page-info-box">
                             <h3>{t('contact.contactDetails')}</h3>
                             {contactDetails.map((detail) => {
                                 const Icon = detail.icon;
@@ -200,7 +195,7 @@ const ContactPage = () => {
                     </ScrollAnimation>
 
                     <ScrollAnimation animation="slide-left" duration={0.7}>
-                        <div className="contact-page-form-box" ref={rightRef}>
+                        <div className="contact-page-form-box">
                             <h3>{t('contact.sendMessage')}</h3>
                         <form ref={formRef} onSubmit={handleSubmit}>
                             {/* Personal Information */}
@@ -287,8 +282,6 @@ const ContactPage = () => {
 
                 <div className="contact-page-map-container">
                     <GoogleMap 
-                        center={mapCenter}
-                        zoom={10}
                         className="contact-map"
                     />
                 </div>

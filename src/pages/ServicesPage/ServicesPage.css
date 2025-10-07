@@ -79,7 +79,7 @@
   width: 60px;
   height: 2px;
   background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
-  border-radius: var(--radius-xs);
+  border-radius: var(--brand-radius);
 }
 
 .services-grid {
