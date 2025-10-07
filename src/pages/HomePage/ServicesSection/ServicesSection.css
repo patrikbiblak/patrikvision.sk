@@ -2,7 +2,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: auto;
   padding: var(--section-padding-y) var(--section-padding-x);
   width: 100%;
 }
@@ -13,7 +12,6 @@
   gap: clamp(1.5rem, 3vw, 2rem);
   width: 100%;
   max-width: var(--content-max-width);
-  justify-items: center;
   margin: 0 auto;
 }
 
@@ -24,9 +22,9 @@
   width: 100%;
   max-width: 380px;
   min-height: 280px;
-  text-align: left;
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 .home-service-header {
@@ -34,7 +32,6 @@
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 1.25rem;
-  text-align: left;
 }
 
 .home-service-icon-container {
@@ -42,11 +39,11 @@
   height: 50px;
   background: rgba(17, 100, 102, 0.1);
   border: 2px solid var(--brand-color);
+  border-radius: var(--brand-radius);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  border-radius: var(--brand-radius);
 }
 
 .home-service-icon {
@@ -67,11 +64,9 @@
 }
 
 .home-service-main {
-  text-align: left;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
 }
 
 .home-service-title {
@@ -80,7 +75,6 @@
   color: var(--brand-color);
   margin-bottom: 0.75rem;
   line-height: 1.2;
-  text-align: left;
   letter-spacing: -0.02em;
 }
 
@@ -90,8 +84,6 @@
   line-height: 1.6;
   opacity: 0.85;
   margin: 0;
-  text-align: left;
-  font-weight: 400;
 }
 
 /* Mobile responsiveness */
@@ -105,14 +97,11 @@
   .home-services-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    padding: 0 1.5rem;
-    max-width: 100%;
   }
 
   .home-service-card {
     padding: clamp(1.5rem, 3vw, 1.75rem);
     max-width: 100%;
-    text-align: left;
     min-height: 260px;
   }
 
@@ -124,14 +113,12 @@
 
   .home-service-description {
     font-size: clamp(0.9rem, 2.2vw, 0.95rem);
-    line-height: 1.6;
   }
 }
 
 @media (max-width: 480px) {
   .home-services-grid {
     gap: 1.25rem;
-    padding: 0 1.25rem;
   }
 
   .home-service-card {
@@ -142,7 +129,6 @@
   .home-service-title {
     font-size: clamp(1.1rem, 3.5vw, 1.25rem);
     margin-bottom: 0.6rem;
-    line-height: 1.3;
   }
 
   .home-service-description {
@@ -159,6 +145,3 @@
     font-size: 20px;
   }
 }
-
-
-
