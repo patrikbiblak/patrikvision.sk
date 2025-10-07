@@ -1,6 +1,7 @@
 import "./ServicesSection.css";
 import { useRef } from "react";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "../../../components/common/ScrollAnimation/ScrollAnimation";
 
 const ServicesSection = () => {
   const services = [
@@ -17,7 +18,15 @@ const ServicesSection = () => {
       <div className="home-services-content">
         <div className="home-services-grid">
           {services.map((serviceKey, index) => (
-            <HomeServiceItem key={serviceKey} serviceKey={serviceKey} index={index} />
+            <ScrollAnimation 
+              key={serviceKey} 
+              animation="scale" 
+              delay={index * 80}
+              duration={0.5}
+              threshold={0.15}
+            >
+              <HomeServiceItem serviceKey={serviceKey} index={index} />
+            </ScrollAnimation>
           ))}
         </div>
       </div>

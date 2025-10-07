@@ -5,6 +5,7 @@ import emailjs from '@emailjs/browser';
 import { Mail, Phone, Instagram, Linkedin } from 'lucide-react';
 import GoogleMap from '../../components/common/GoogleMap/GoogleMap';
 import Modal from '../../components/common/Modal/Modal';
+import ScrollAnimation from '../../components/common/ScrollAnimation/ScrollAnimation';
 import "./ContactPage.css";
 
 const ContactPage = () => {
@@ -139,12 +140,17 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
             <div className="contact-page-content">
-                <h1 className="contact-heading">{t('nav.contact')}</h1>
-                <p className="intro-text">{t('contact.intro')}</p>
+                <ScrollAnimation animation="fade" duration={0.6}>
+                    <h1 className="contact-heading">{t('nav.contact')}</h1>
+                </ScrollAnimation>
+                <ScrollAnimation animation="slide-up" delay={100} duration={0.6}>
+                    <p className="intro-text">{t('contact.intro')}</p>
+                </ScrollAnimation>
 
                 <div className="contact-page-content-grid">
-                    <div className="contact-info-wrapper">
-                        <div className="contact-page-info-box" ref={leftRef}>
+                    <ScrollAnimation animation="slide-right" duration={0.7}>
+                        <div className="contact-info-wrapper">
+                            <div className="contact-page-info-box" ref={leftRef}>
                             <h3>{t('contact.contactDetails')}</h3>
                             {contactDetails.map((detail) => {
                                 const Icon = detail.icon;
@@ -194,10 +200,12 @@ const ContactPage = () => {
                                 })}
                             </div>
                         </div>
-                    </div>
+                        </div>
+                    </ScrollAnimation>
 
-                    <div className="contact-page-form-box" ref={rightRef}>
-                        <h3>{t('contact.sendMessage')}</h3>
+                    <ScrollAnimation animation="slide-left" duration={0.7}>
+                        <div className="contact-page-form-box" ref={rightRef}>
+                            <h3>{t('contact.sendMessage')}</h3>
                         <form ref={formRef} onSubmit={handleSubmit}>
                             {/* Personal Information */}
                             <label htmlFor="page-name">{t('contact.name')}</label>
@@ -277,16 +285,19 @@ const ContactPage = () => {
                                 {status === 'sending' ? t('contact.sending') : t('contact.send')}
                             </button>
                         </form>
-                    </div>
+                        </div>
+                    </ScrollAnimation>
                 </div>
 
-                <div className="contact-page-map-container">
-                    <GoogleMap 
+                <ScrollAnimation animation="zoom" duration={0.6}>
+                    <div className="contact-page-map-container">
+                        <GoogleMap 
                         center={mapCenter}
                         zoom={10}
                         className="contact-map"
-                    />
-                </div>
+                        />
+                    </div>
+                </ScrollAnimation>
             </div>
 
             <Modal

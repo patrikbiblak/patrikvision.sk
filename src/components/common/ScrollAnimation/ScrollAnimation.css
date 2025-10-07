@@ -1,0 +1,251 @@
+/* Base scroll animation styles */
+.scroll-animation {
+  opacity: 0;
+}
+
+.scroll-animation-visible {
+  opacity: 1;
+  animation-fill-mode: forwards;
+}
+
+/* Remove will-change after animation completes */
+.scroll-animation-visible.animation-complete {
+  will-change: auto;
+}
+
+/* Fade animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.scroll-animation-fade.scroll-animation-visible {
+  animation-name: fadeIn;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide Up animation */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.scroll-animation-slide-up {
+  transform: translate3d(0, 30px, 0);
+}
+
+.scroll-animation-slide-up.scroll-animation-visible {
+  animation-name: slideUp;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide Down animation */
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.scroll-animation-slide-down {
+  transform: translate3d(0, -30px, 0);
+}
+
+.scroll-animation-slide-down.scroll-animation-visible {
+  animation-name: slideDown;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide Left animation */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translate3d(30px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.scroll-animation-slide-left {
+  transform: translate3d(30px, 0, 0);
+}
+
+.scroll-animation-slide-left.scroll-animation-visible {
+  animation-name: slideLeft;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Slide Right animation */
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.scroll-animation-slide-right {
+  transform: translate3d(-30px, 0, 0);
+}
+
+.scroll-animation-slide-right.scroll-animation-visible {
+  animation-name: slideRight;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Scale animation */
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.95, 0.95, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.scroll-animation-scale {
+  transform: scale3d(0.95, 0.95, 1);
+}
+
+.scroll-animation-scale.scroll-animation-visible {
+  animation-name: scale;
+  animation-timing-function: cubic-bezier(0.34, 1.1, 0.64, 1);
+}
+
+/* Scale Up animation (grows from small) */
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.9, 0.9, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.scroll-animation-scale-up {
+  transform: scale3d(0.9, 0.9, 1);
+}
+
+.scroll-animation-scale-up.scroll-animation-visible {
+  animation-name: scaleUp;
+  animation-timing-function: cubic-bezier(0.34, 1.05, 0.64, 1);
+}
+
+/* Zoom animation (subtle scale with fade) */
+@keyframes zoom {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.97, 0.97, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.scroll-animation-zoom {
+  transform: scale3d(0.97, 0.97, 1);
+}
+
+.scroll-animation-zoom.scroll-animation-visible {
+  animation-name: zoom;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Bounce Scale animation */
+@keyframes bounceScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.scroll-animation-bounce-scale.scroll-animation-visible {
+  animation-name: bounceScale;
+  animation-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Rotate In animation */
+@keyframes rotateIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-5deg) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+.scroll-animation-rotate-in {
+  transform: rotate(-5deg) scale(0.95);
+}
+
+.scroll-animation-rotate-in.scroll-animation-visible {
+  animation-name: rotateIn;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Flip In animation */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: perspective(600px) rotateY(-45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(600px) rotateY(0);
+  }
+}
+
+.scroll-animation-flip-in.scroll-animation-visible {
+  animation-name: flipIn;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .scroll-animation {
+    animation: none !important;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .scroll-animation-visible {
+    opacity: 1;
+    transform: none !important;
+  }
+}
+

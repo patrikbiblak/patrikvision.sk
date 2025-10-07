@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "../../../components/common/ScrollAnimation/ScrollAnimation";
 import "./WhyMeSection.css";
 
 const WhyMeSection = () => {
@@ -33,30 +34,34 @@ const WhyMeSection = () => {
       <div className="container">
         <div className="why-choose-me-content" ref={ref}>
           <div className="content-wrapper">
-            <div className="left-column">
-              <h2>{t('whyChooseMe.title')}</h2>
-              <p className="section-description">{t('whyChooseMe.subtitle')}</p>
-              
-              <div className="reasons-list">
-                {reasons.map((reason, index) => (
-                  <div key={index} className="reason-item">
-                    <span className="checkmark">✓</span>
-                    <span className="reason-text">{reason}</span>
-                  </div>
-                ))}
+            <ScrollAnimation animation="slide-right" duration={0.7}>
+              <div className="left-column">
+                <h2>{t('whyChooseMe.title')}</h2>
+                <p className="section-description">{t('whyChooseMe.subtitle')}</p>
+                
+                <div className="reasons-list">
+                  {reasons.map((reason, index) => (
+                    <div key={index} className="reason-item">
+                      <span className="checkmark">✓</span>
+                      <span className="reason-text">{reason}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollAnimation>
 
-            <div className="right-column">
-              <div className="offers-cards">
-                {offers.map((offer, index) => (
-                  <div key={index} className="offer-card">
-                    <div className="offer-title">{offer.title}</div>
-                    <div className="offer-description">{offer.description}</div>
-                  </div>
-                ))}
+            <ScrollAnimation animation="slide-left" duration={0.7}>
+              <div className="right-column">
+                <div className="offers-cards">
+                  {offers.map((offer, index) => (
+                    <div key={index} className="offer-card">
+                      <div className="offer-title">{offer.title}</div>
+                      <div className="offer-description">{offer.description}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
+            </ScrollAnimation>
           </div>
         </div>
       </div>

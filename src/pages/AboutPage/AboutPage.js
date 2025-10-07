@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "../../components/common/ScrollAnimation/ScrollAnimation";
 import "./AboutPage.css";
 
 const AboutPage = () => {
@@ -61,50 +62,65 @@ const AboutPage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/about" />
             </Helmet>
             <div className="about-page-content">
-                <h1 className="about-heading">{t('nav.about')}</h1>
-                <p className="intro-text">{t('about.intro')}</p>
+                <ScrollAnimation animation="fade" duration={0.6}>
+                    <h1 className="about-heading">{t('nav.about')}</h1>
+                </ScrollAnimation>
+                <ScrollAnimation animation="slide-up" delay={100} duration={0.6}>
+                    <p className="intro-text">{t('about.intro')}</p>
+                </ScrollAnimation>
                 
                 {/* Values Cards Grid */}
                 <div className="about-cards-grid">
                     {aboutCards.map((card, index) => (
-                        <AboutCard key={card.id} card={card} index={index} />
+                        <ScrollAnimation 
+                            key={card.id} 
+                            animation="scale" 
+                            delay={index * 100}
+                            duration={0.5}
+                        >
+                            <AboutCard card={card} index={index} />
+                        </ScrollAnimation>
                     ))}
                 </div>
                 
                 {/* Hero Section with Portrait */}
                 <div className="about-hero-section">
-                    <img
-                        src="/images/bpaatrik.png"
-                        alt={t('about.hero.portraitAlt')}
-                        className="about-portrait"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                    <div className="about-hero-content">
-                        <p className="about-hero-description">
-                            {t('about.hero.paragraph1')} {t('about.hero.paragraph2')}
-                        </p>
-                        
-                        {/* Professional Features Section */}
-                        <div className="about-features-section">
-                            <div className="about-features-grid">
-                                <div className="about-feature-item">
-                                    <div className="feature-number">3+</div>
-                                    <div className="feature-label">{t('about.stats.yearsLabel')}</div>
-                                </div>
-                                
-                                <div className="about-feature-item">
-                                    <div className="feature-number">100%</div>
-                                    <div className="feature-label">{t('about.stats.satisfactionLabel')}</div>
-                                </div>
-                                
-                                <div className="about-feature-item">
-                                    <div className="feature-number">94%</div>
-                                    <div className="feature-label">{t('about.clients') || 'Satisfaction'}</div>
+                    <ScrollAnimation animation="slide-right" duration={0.7}>
+                        <img
+                            src="/images/bpaatrik.png"
+                            alt={t('about.hero.portraitAlt')}
+                            className="about-portrait"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </ScrollAnimation>
+                    <ScrollAnimation animation="slide-left" duration={0.7}>
+                        <div className="about-hero-content">
+                            <p className="about-hero-description">
+                                {t('about.hero.paragraph1')} {t('about.hero.paragraph2')}
+                            </p>
+                            
+                            {/* Professional Features Section */}
+                            <div className="about-features-section">
+                                <div className="about-features-grid">
+                                    <div className="about-feature-item">
+                                        <div className="feature-number">3+</div>
+                                        <div className="feature-label">{t('about.stats.yearsLabel')}</div>
+                                    </div>
+                                    
+                                    <div className="about-feature-item">
+                                        <div className="feature-number">100%</div>
+                                        <div className="feature-label">{t('about.stats.satisfactionLabel')}</div>
+                                    </div>
+                                    
+                                    <div className="about-feature-item">
+                                        <div className="feature-number">94%</div>
+                                        <div className="feature-label">{t('about.clients') || 'Satisfaction'}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </ScrollAnimation>
                 </div>
             </div>
         </div>

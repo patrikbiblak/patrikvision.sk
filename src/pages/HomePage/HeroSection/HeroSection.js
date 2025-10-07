@@ -66,7 +66,7 @@ const developer = {
     return (
         <section className="hero-section">
             <div className="hero-container">
-                <div className="code-space" ref={codeRef}>
+                <div className="code-space hero-animate-left" ref={codeRef}>
                     <div className="code-header">
                         <div className="code-buttons">
                             <span className="code-btn red"></span>
@@ -83,7 +83,7 @@ const developer = {
                     </pre>
                 </div>
 
-                <div className="hero-content" ref={ref}> 
+                <div className="hero-content hero-animate-right" ref={ref}> 
                     <h1 dangerouslySetInnerHTML={{ __html: t('hero.title') }}></h1>
                     <p>{t('hero.description')}</p>
                     <div className="hero-buttons">

@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import Particles from '../../../components/common/Particles/Particles';
 import GoogleMap from '../../../components/common/GoogleMap/GoogleMap';
 import Modal from '../../../components/common/Modal/Modal';
+import ScrollAnimation from '../../../components/common/ScrollAnimation/ScrollAnimation';
 import "./ContactSection.css";
 
 const ContactSection = () => {
@@ -106,13 +107,16 @@ const ContactSection = () => {
     <section className="homepage-contact-section">
       <Particles />
       <div>
-        <div className="homepage-contact-heading" ref={ref}>
-          <h2>{t('contact.contactMe')}</h2>
-          <p>{t('contact.contactDesc')}</p>
-        </div>
+        <ScrollAnimation animation="fade" duration={0.6}>
+          <div className="homepage-contact-heading" ref={ref}>
+            <h2>{t('contact.contactMe')}</h2>
+            <p>{t('contact.contactDesc')}</p>
+          </div>
+        </ScrollAnimation>
 
         <div className="homepage-contact-content">
-          <div className="homepage-contact-box" ref={leftRef}>
+          <ScrollAnimation animation="slide-right" duration={0.7}>
+            <div className="homepage-contact-box" ref={leftRef}>
             <h3>{t('contact.sendMessage')}</h3>
             <form ref={formRef} onSubmit={handleSubmit}>
               {/* Personal Information */}
@@ -193,9 +197,11 @@ const ContactSection = () => {
                 {status === 'sending' ? t('contact.sending') : t('contact.send')}
               </button>
             </form>
-          </div>
+            </div>
+          </ScrollAnimation>
 
-          <div className="homepage-contact-box" ref={rightRef}>
+          <ScrollAnimation animation="slide-left" duration={0.7}>
+            <div className="homepage-contact-box" ref={rightRef}>
             <h3>{t('contact.contactDetails')}</h3>
             {contactDetails.map((detail) => {
               const Icon = detail.icon;
@@ -227,7 +233,8 @@ const ContactSection = () => {
                 className="contact-map"
               />
             </div>
-          </div>
+            </div>
+          </ScrollAnimation>
         </div>
         </div>
         

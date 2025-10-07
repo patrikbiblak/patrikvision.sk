@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { useRef } from "react";
+import ScrollAnimation from "../../components/common/ScrollAnimation/ScrollAnimation";
 import "./ServicesPage.css";
 
 const ServicesPage = () => {
@@ -47,12 +48,23 @@ const ServicesPage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/services" />
             </Helmet>
             <div className="services-page-content">
-                <h1 className="services-heading">{t('nav.services')}</h1>
-                <p className="intro-text">{t('services.intro')}</p>
+                <ScrollAnimation animation="fade" duration={0.6}>
+                    <h1 className="services-heading">{t('nav.services')}</h1>
+                </ScrollAnimation>
+                <ScrollAnimation animation="slide-up" delay={100} duration={0.6}>
+                    <p className="intro-text">{t('services.intro')}</p>
+                </ScrollAnimation>
                 
                 <div className="services-grid">
                     {services.map((serviceKey, index) => (
-                        <ServiceCard key={serviceKey} serviceKey={serviceKey} index={index} />
+                        <ScrollAnimation 
+                            key={serviceKey} 
+                            animation="scale" 
+                            delay={index * 80}
+                            duration={0.5}
+                        >
+                            <ServiceCard serviceKey={serviceKey} index={index} />
+                        </ScrollAnimation>
                     ))}
                 </div>
             </div>

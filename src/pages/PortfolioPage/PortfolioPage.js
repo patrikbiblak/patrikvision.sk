@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
+import ScrollAnimation from "../../components/common/ScrollAnimation/ScrollAnimation";
 import "./PortfolioPage.css";
 
 const PortfolioPage = () => {
@@ -110,12 +111,23 @@ const PortfolioPage = () => {
                 </script>
             </Helmet>
             <div className="portfolio-page-content">
-                <h1 className="portfolio-heading">{t('nav.portfolio')}</h1>
-                <p className="intro-text">{t('latestWork.description')}</p>
+                <ScrollAnimation animation="fade" duration={0.6}>
+                    <h1 className="portfolio-heading">{t('nav.portfolio')}</h1>
+                </ScrollAnimation>
+                <ScrollAnimation animation="slide-up" delay={100} duration={0.6}>
+                    <p className="intro-text">{t('latestWork.description')}</p>
+                </ScrollAnimation>
                 
                 <div className="portfolio-grid">
                     {projects.map((project, index) => (
-                        <ProjectCard key={project.id} project={project} index={index} />
+                        <ScrollAnimation 
+                            key={project.id} 
+                            animation="scale" 
+                            delay={index * 100}
+                            duration={0.5}
+                        >
+                            <ProjectCard project={project} index={index} />
+                        </ScrollAnimation>
                     ))}
                 </div>
             </div>
