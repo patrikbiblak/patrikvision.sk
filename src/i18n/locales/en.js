@@ -71,7 +71,7 @@ const en = {
   },
   "latestWork": {
     "title": "Latest Work",
-    "description": "Explore my recent projects showcasing modern web development, AI solutions, and innovative digital experiences that drive business growth.",
+    "description": "Explore my recent projects showcasing modern web development, AI solutions, and innovative digital experiences that drive growth.",
     "viewAll": "View All Projects"
   },
   "whyChooseMe": {

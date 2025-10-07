@@ -71,7 +71,7 @@ const skTranslations = {
   },
   "latestWork": {
     "title": "Najnovšie Práce",
-    "description": "Preskúmajte moje nedávne projekty predstavujúce moderný webový vývoj, AI riešenia a inovatívne digitálne zážitky, ktoré poháňajú rast firmy.",
+    "description": "Preskúmajte moje nedávne projekty predstavujúce moderný webový vývoj, AI riešenia a inovatívne digitálne zážitky, ktoré poháňajú rast.",
     "viewAll": "Zobraziť Všetky Projekty"
   },
   "whyChooseMe": {

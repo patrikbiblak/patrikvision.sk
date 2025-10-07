@@ -71,7 +71,7 @@ const huTranslations = {
   },
   "latestWork": {
     "title": "Legújabb Munkák",
-    "description": "Fedezze fel legújabb projekteimet, amelyek a modern webfejlesztést, AI megoldásokat és innovatív digitális élményeket mutatják be, amelyek üzleti növekedést idéznek elő.",
+    "description": "Fedezze fel legújabb projekteimet, amelyek a modern webfejlesztést, AI megoldásokat és innovatív digitális élményeket mutatják be, amelyek növekedést idéznek elő.",
     "viewAll": "Összes Projekt Megtekintése"
   },
   "whyChooseMe": {
