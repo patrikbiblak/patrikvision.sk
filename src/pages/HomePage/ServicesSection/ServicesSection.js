@@ -1,7 +1,6 @@
 import "./ServicesSection.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import ScrollAnimation from "../../../components/common/ScrollAnimation/ScrollAnimation";
 
 const ServicesSection = () => {
   const services = [
@@ -12,21 +11,35 @@ const ServicesSection = () => {
     'support',
     'marketing'
   ];
+  
+  const gridRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('services-grid-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    if (gridRef.current) {
+      observer.observe(gridRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section className="home-services-section">
       <div className="home-services-content">
-        <div className="home-services-grid">
+        <div className="home-services-grid" ref={gridRef}>
           {services.map((serviceKey, index) => (
-            <ScrollAnimation 
-              key={serviceKey} 
-              animation="scale" 
-              delay={index * 80}
-              duration={0.5}
-              threshold={0.15}
-            >
-              <HomeServiceItem serviceKey={serviceKey} index={index} />
-            </ScrollAnimation>
+            <HomeServiceItem key={serviceKey} serviceKey={serviceKey} index={index} />
           ))}
         </div>
       </div>

@@ -140,12 +140,8 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
             <div className="contact-page-content">
-                <ScrollAnimation animation="fade" duration={0.6}>
-                    <h1 className="contact-heading">{t('nav.contact')}</h1>
-                </ScrollAnimation>
-                <ScrollAnimation animation="slide-up" delay={100} duration={0.6}>
-                    <p className="intro-text">{t('contact.intro')}</p>
-                </ScrollAnimation>
+                <h1 className="contact-heading page-heading-animate">{t('nav.contact')}</h1>
+                <p className="intro-text page-intro-animate">{t('contact.intro')}</p>
 
                 <div className="contact-page-content-grid">
                     <ScrollAnimation animation="slide-right" duration={0.7}>
@@ -289,15 +285,13 @@ const ContactPage = () => {
                     </ScrollAnimation>
                 </div>
 
-                <ScrollAnimation animation="zoom" duration={0.6}>
-                    <div className="contact-page-map-container">
-                        <GoogleMap 
+                <div className="contact-page-map-container">
+                    <GoogleMap 
                         center={mapCenter}
                         zoom={10}
                         className="contact-map"
-                        />
-                    </div>
-                </ScrollAnimation>
+                    />
+                </div>
             </div>
 
             <Modal

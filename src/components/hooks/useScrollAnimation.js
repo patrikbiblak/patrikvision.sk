@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from 'react';
  */
 const useScrollAnimation = (options = {}) => {
   const {
-    threshold = 0.1,
+    threshold = 0.25,
     rootMargin = '0px',
     triggerOnce = true
   } = options;

@@ -1,6 +1,35 @@
 /* ===== SHARED COMPONENT STYLES ===== */
 /* This file contains reusable component patterns to eliminate duplication */
 
+/* ===== PAGE HEADER ANIMATIONS ===== */
+/* Smooth fade-in using transitions for maximum performance */
+
+.page-heading-animate {
+  opacity: 0;
+  animation: simpleFadeIn 0.8s ease-in-out forwards;
+}
+
+.page-intro-animate {
+  opacity: 0;
+  animation: simpleFadeIn 0.8s ease-in-out 0.15s forwards;
+}
+
+@keyframes simpleFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .page-heading-animate,
+  .page-intro-animate {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
 /* ===== CARD COMPONENTS ===== */
 /* Base card pattern - use with component-specific classes */
 .u-card {

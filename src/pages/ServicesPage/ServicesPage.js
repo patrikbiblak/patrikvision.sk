@@ -1,11 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import { useRef } from "react";
-import ScrollAnimation from "../../components/common/ScrollAnimation/ScrollAnimation";
+import { useRef, useEffect } from "react";
 import "./ServicesPage.css";
 
 const ServicesPage = () => {
     const { t } = useTranslation();
+    const gridRef = useRef(null);
 
     const services = [
         'webpages',
@@ -15,6 +15,26 @@ const ServicesPage = () => {
         'support',
         'marketing'
     ];
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('services-grid-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (gridRef.current) {
+            observer.observe(gridRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <div className="services-page">
@@ -48,23 +68,12 @@ const ServicesPage = () => {
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/services" />
             </Helmet>
             <div className="services-page-content">
-                <ScrollAnimation animation="fade" duration={0.6}>
-                    <h1 className="services-heading">{t('nav.services')}</h1>
-                </ScrollAnimation>
-                <ScrollAnimation animation="slide-up" delay={100} duration={0.6}>
-                    <p className="intro-text">{t('services.intro')}</p>
-                </ScrollAnimation>
+                <h1 className="services-heading page-heading-animate">{t('nav.services')}</h1>
+                <p className="intro-text page-intro-animate">{t('services.intro')}</p>
                 
-                <div className="services-grid">
+                <div className="services-grid" ref={gridRef}>
                     {services.map((serviceKey, index) => (
-                        <ScrollAnimation 
-                            key={serviceKey} 
-                            animation="scale" 
-                            delay={index * 80}
-                            duration={0.5}
-                        >
-                            <ServiceCard serviceKey={serviceKey} index={index} />
-                        </ScrollAnimation>
+                        <ServiceCard key={serviceKey} serviceKey={serviceKey} index={index} />
                     ))}
                 </div>
             </div>

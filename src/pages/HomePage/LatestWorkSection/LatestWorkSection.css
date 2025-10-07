@@ -62,11 +62,72 @@
   background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
   border: 1px solid rgba(17, 100, 102, 0.2);
   overflow: hidden;
-  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
   border-radius: var(--brand-radius);
-  border-radius: var(--brand-radius);
+  opacity: 0;
+  transform: translate3d(0, 20px, 0) scale3d(0.95, 0.95, 1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Animation trigger classes */
+.latest-work-heading {
+  opacity: 0;
+  transform: translate3d(0, -15px, 0);
+}
+
+.latest-work-heading.animate-in {
+  animation: fadeInDown 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.project-cards.animate-in .project-card {
+  animation: projectCardFadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.project-cards.animate-in .project-card:nth-child(1) { animation-delay: 0ms; }
+.project-cards.animate-in .project-card:nth-child(2) { animation-delay: 100ms; }
+
+.latest-work-cta {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0);
+}
+
+.latest-work-cta.animate-in {
+  animation: slideUpFade 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -15px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideUpFade {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes projectCardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0) scale3d(0.95, 0.95, 1);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+  }
 }
 
 .project-card:hover {

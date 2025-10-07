@@ -1,10 +1,31 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
-import ScrollAnimation from "../../components/common/ScrollAnimation/ScrollAnimation";
+import { useRef, useEffect } from "react";
 import "./PortfolioPage.css";
 
 const PortfolioPage = () => {
     const { t } = useTranslation();
+    const gridRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('portfolio-grid-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (gridRef.current) {
+            observer.observe(gridRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, []);
 
     const projects = [
         {
@@ -111,23 +132,12 @@ const PortfolioPage = () => {
                 </script>
             </Helmet>
             <div className="portfolio-page-content">
-                <ScrollAnimation animation="fade" duration={0.6}>
-                    <h1 className="portfolio-heading">{t('nav.portfolio')}</h1>
-                </ScrollAnimation>
-                <ScrollAnimation animation="slide-up" delay={100} duration={0.6}>
-                    <p className="intro-text">{t('latestWork.description')}</p>
-                </ScrollAnimation>
+                <h1 className="portfolio-heading page-heading-animate">{t('nav.portfolio')}</h1>
+                <p className="intro-text page-intro-animate">{t('latestWork.description')}</p>
                 
-                <div className="portfolio-grid">
+                <div className="portfolio-grid" ref={gridRef}>
                     {projects.map((project, index) => (
-                        <ScrollAnimation 
-                            key={project.id} 
-                            animation="scale" 
-                            delay={index * 100}
-                            duration={0.5}
-                        >
-                            <ProjectCard project={project} index={index} />
-                        </ScrollAnimation>
+                        <ProjectCard key={project.id} project={project} index={index} />
                     ))}
                 </div>
             </div>
