@@ -13,7 +13,7 @@ const PortfolioPage = () => {
                 <meta name="description" content={t('seo.portfolio.description')} />
                 <meta name="keywords" content={t('seo.portfolio.keywords')} />
                 <meta name="author" content="PatrikVision" />
-                <meta name="robots" content="index, follow" />
+                <meta name="robots" content="noindex, follow" />
                 <meta name="language" content="en,sk,hu" />
                 <meta name="revisit-after" content="7 days" />
                 <meta name="geo.region" content="SK" />
