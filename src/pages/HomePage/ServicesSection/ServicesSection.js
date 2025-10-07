@@ -19,7 +19,7 @@ const ServicesSection = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('services-grid-visible');
+            entry.target.classList.add('grid-animated');
             observer.unobserve(entry.target);
           }
         });
@@ -58,7 +58,7 @@ const HomeServiceItem = ({ serviceKey, index }) => {
   return (
     <div
       ref={ref}
-      className="home-service-card"
+      className="home-service-card u-card u-card-animated"
       style={{
         transitionDelay: `${index * 150}ms`,
       }}
