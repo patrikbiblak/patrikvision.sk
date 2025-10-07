@@ -104,7 +104,7 @@ const ContactPage = () => {
     ];
 
     return (
-        <div className="contact-page">
+        <div className="contact-page page-decoration">
             <Helmet>
                 <title>{t('seo.contact.title')} | PatrikVision</title>
                 <meta name="description" content={t('seo.contact.description')} />
@@ -134,14 +134,13 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/contact" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
-            <div className="contact-page-content">
-                <h1 className="contact-heading page-heading-animate">{t('nav.contact')}</h1>
-                <p className="intro-text page-intro-animate">{t('contact.intro')}</p>
+            <h1 className="page-heading page-heading-animate">{t('nav.contact')}</h1>
+            <p className="page-intro page-intro-animate">{t('contact.intro')}</p>
 
                 <div className="contact-page-content-grid">
                     <ScrollAnimation animation="slide-right" duration={0.7}>
-                        <div className="contact-info-wrapper">
-                            <div className="contact-page-info-box">
+                    <div className="contact-info-wrapper">
+                        <div className="contact-page-info-box u-card">
                             <h3>{t('contact.contactDetails')}</h3>
                             {contactDetails.map((detail) => {
                                 const Icon = detail.icon;
@@ -168,7 +167,7 @@ const ContactPage = () => {
                             })}
                         </div>
                         
-                        <div className="contact-page-social-box">
+                        <div className="contact-page-social-box u-card">
                             <h3 className="social-links-heading">{t('contact.socialLinks')}</h3>
                             <div className="social-links-container">
                                 {socialLinks.map((social) => {
@@ -183,9 +182,7 @@ const ContactPage = () => {
                                             aria-label={social.label}
                                         >
                                             <Icon />
-                                            <div>
-                                                <span>{social.label}</span>
-                                            </div>
+                                            <span>{social.label}</span>
                                         </a>
                                     );
                                 })}
@@ -195,7 +192,7 @@ const ContactPage = () => {
                     </ScrollAnimation>
 
                     <ScrollAnimation animation="slide-left" duration={0.7}>
-                        <div className="contact-page-form-box">
+                        <div className="contact-page-form-box u-card">
                             <h3>{t('contact.sendMessage')}</h3>
                         <form ref={formRef} onSubmit={handleSubmit}>
                             {/* Personal Information */}
@@ -280,11 +277,10 @@ const ContactPage = () => {
                     </ScrollAnimation>
                 </div>
 
-                <div className="contact-page-map-container">
-                    <GoogleMap 
-                        className="contact-map"
-                    />
-                </div>
+            <div className="contact-page-map-container">
+                <GoogleMap 
+                    className="contact-map"
+                />
             </div>
 
             <Modal

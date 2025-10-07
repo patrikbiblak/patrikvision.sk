@@ -46,7 +46,7 @@
 /* ===== LINKS ===== */
 .navigation-links {
   display: flex;
-  gap: 6rem;
+  gap: 4rem;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -192,6 +192,13 @@
   transform: rotate(-45deg) translate(0.3125em, -0.3125em);
 }
 
+/* ===== MEDIUM SCREENS ===== */
+@media (max-width: 1200px) {
+  .navigation-links {
+    gap: 3rem;
+  }
+}
+
 /* ===== MOBILE ===== */
 @media (max-width: 1000px) {
   .hamburger { display: flex; }
@@ -241,7 +248,8 @@
     padding: 1rem 2rem;
     text-align: left;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    display: inline-block;
+    display: block;
+    width: 100%;
   }
 
   .navigation-link:last-of-type {

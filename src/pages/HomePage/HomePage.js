@@ -13,7 +13,7 @@ const HomePage = () => {
     const seo = generateSEOTags(t('seo.home.title'), t('seo.home.description'), t('seo.home.keywords'), '/');
 
     return (
-        <div>
+        <>
             <Helmet>
                 <title>{seo.title}</title>
                 <meta name="description" content={seo.description} />
@@ -81,7 +81,7 @@ const HomePage = () => {
             <LatestWorkSection />
             <WhyMeSection />
             <ContactSection />
-        </div>
+        </>
     )
 }
 

@@ -49,11 +49,10 @@ const LatestWorkSection = () => {
 
   return (
     <section className="latest-work-section">
-      <div className="latest-work-container">
-        <div className="latest-work-layout">
-          <h2 className="latest-work-heading" ref={headingRef}>{t('latestWork.title')}</h2>
+      <div className="latest-work-content">
+        <h2 className="latest-work-heading" ref={headingRef}>{t('latestWork.title')}</h2>
 
-          <div className="project-cards" ref={gridRef}>
+        <div className="project-cards" ref={gridRef}>
             {projects.map((project, index) => (
               <div key={project.id} className="project-card" data-index={index}>
                 <div className="project-image">
@@ -69,12 +68,11 @@ const LatestWorkSection = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          <a href="/portfolio" className="latest-work-cta" ref={ctaRef}>
-            {t('latestWork.viewAll')}
-          </a>
         </div>
+
+        <a href="/portfolio" className="latest-work-cta" ref={ctaRef}>
+          {t('latestWork.viewAll')}
+        </a>
       </div>
     </section>
   );

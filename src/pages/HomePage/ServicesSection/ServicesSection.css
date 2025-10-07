@@ -7,74 +7,26 @@
   width: 100%;
 }
 
-.home-services-content {
-  display: flex;
-  gap: clamp(1.5rem, 3vw, 2.5rem);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: var(--content-max-width);
-}
-
 .home-services-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: clamp(1.5rem, 3vw, 2rem);
   width: 100%;
+  max-width: var(--content-max-width);
   justify-items: center;
+  margin: 0 auto;
 }
 
+/* Home service cards - extends shared card styles */
 .home-service-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  /* Inherits from .u-card and .u-card-animated in shared.css */
   padding: clamp(1.5rem, 3vw, 2rem);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border: 1px solid rgba(17, 100, 102, 0.2);
   width: 100%;
   max-width: 380px;
   min-height: 280px;
   text-align: left;
   display: flex;
   flex-direction: column;
-  border-radius: var(--brand-radius);
-  opacity: 0;
-  transform: translate3d(0, 20px, 0) scale3d(0.95, 0.95, 1);
-  transition: none;
-}
-
-/* Staggered animation for service cards */
-.services-grid-visible .home-service-card {
-  animation: serviceCardFadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-.services-grid-visible .home-service-card:nth-child(1) { animation-delay: 0ms; }
-.services-grid-visible .home-service-card:nth-child(2) { animation-delay: 80ms; }
-.services-grid-visible .home-service-card:nth-child(3) { animation-delay: 160ms; }
-.services-grid-visible .home-service-card:nth-child(4) { animation-delay: 240ms; }
-.services-grid-visible .home-service-card:nth-child(5) { animation-delay: 320ms; }
-.services-grid-visible .home-service-card:nth-child(6) { animation-delay: 400ms; }
-
-@keyframes serviceCardFadeIn {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0) scale3d(0.95, 0.95, 1);
-  }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
-  }
-}
-
-.home-service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
 }
 
 .home-service-header {
@@ -152,8 +104,9 @@
 @media (max-width: 768px) {
   .home-services-grid {
     grid-template-columns: 1fr;
-    gap: clamp(1.5rem, 3vw, 2rem);
-    max-width: 400px;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    max-width: 100%;
   }
 
   .home-service-card {
@@ -176,6 +129,11 @@
 }
 
 @media (max-width: 480px) {
+  .home-services-grid {
+    gap: 1.25rem;
+    padding: 0 1.25rem;
+  }
+
   .home-service-card {
     padding: clamp(1.25rem, 3vw, 1.5rem);
     min-height: 240px;

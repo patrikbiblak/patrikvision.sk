@@ -54,7 +54,7 @@ const AboutPage = () => {
     ];
 
     return (
-        <div className="about-page">
+        <div className="about-page page-decoration">
             <Helmet>
                 <title>{t('seo.about.title')} | PatrikVision</title>
                 <meta name="description" content={t('seo.about.description')} />
@@ -84,12 +84,11 @@ const AboutPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/about" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/about" />
             </Helmet>
-            <div className="about-page-content">
-                <h1 className="about-heading page-heading-animate">{t('nav.about')}</h1>
-                <p className="intro-text page-intro-animate">{t('about.intro')}</p>
+            <h1 className="page-heading page-heading-animate">{t('nav.about')}</h1>
+            <p className="page-intro page-intro-animate">{t('about.intro')}</p>
                 
                 {/* Values Cards Grid */}
-                <div className="about-cards-grid" ref={cardsGridRef}>
+                <div className="about-cards-grid grid-animated" ref={cardsGridRef}>
                     {aboutCards.map((card, index) => (
                         <AboutCard key={card.id} card={card} index={index} />
                     ))}
@@ -111,24 +110,21 @@ const AboutPage = () => {
                         </p>
                         
                         {/* Professional Features Section */}
-                        <div className="about-features-section">
-                            <div className="about-features-grid">
-                                <div className="about-feature-item">
-                                    <div className="feature-number">3+</div>
-                                    <div className="feature-label">{t('about.stats.yearsLabel')}</div>
-                                </div>
-                                
-                                <div className="about-feature-item">
-                                    <div className="feature-number">100%</div>
-                                    <div className="feature-label">{t('about.stats.satisfactionLabel')}</div>
-                                </div>
-                                
-                                <div className="about-feature-item">
-                                    <div className="feature-number">94%</div>
-                                    <div className="feature-label">{t('about.clients') || 'Satisfaction'}</div>
-                                </div>
+                        <div className="about-features-grid">
+                            <div className="about-feature-item">
+                                <div className="feature-number">3+</div>
+                                <div className="feature-label">{t('about.stats.yearsLabel')}</div>
                             </div>
-                        </div>
+                            
+                            <div className="about-feature-item">
+                                <div className="feature-number">100%</div>
+                                <div className="feature-label">{t('about.stats.satisfactionLabel')}</div>
+                            </div>
+                            
+                            <div className="about-feature-item">
+                                <div className="feature-number">94%</div>
+                                <div className="feature-label">{t('about.clients') || 'Satisfaction'}</div>
+                            </div>
                     </div>
                 </div>
             </div>
@@ -139,7 +135,7 @@ const AboutPage = () => {
 const AboutCard = ({ card, index }) => {
     return (
         <div 
-            className="about-card"
+            className="about-card u-card u-card-animated"
             style={{
                 transitionDelay: `${index * 150}ms`,
                 '--card-gradient': card.gradient

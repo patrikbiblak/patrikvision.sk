@@ -31,11 +31,9 @@ const WhyMeSection = () => {
 
   return (
     <section className="why-choose-me-section">
-      <div className="container">
-        <div className="why-choose-me-content" ref={ref}>
-          <div className="content-wrapper">
-            <ScrollAnimation animation="slide-right" duration={0.7}>
-              <div className="left-column">
+      <div className="why-choose-me-content" ref={ref}>
+        <ScrollAnimation animation="slide-right" duration={0.7}>
+          <div className="left-column">
                 <h2>{t('whyChooseMe.title')}</h2>
                 <p className="section-description">{t('whyChooseMe.subtitle')}</p>
                 
@@ -50,20 +48,18 @@ const WhyMeSection = () => {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation animation="slide-left" duration={0.7}>
-              <div className="right-column">
-                <div className="offers-cards">
-                  {offers.map((offer, index) => (
-                    <div key={index} className="offer-card">
-                      <div className="offer-title">{offer.title}</div>
-                      <div className="offer-description">{offer.description}</div>
-                    </div>
-                  ))}
+        <ScrollAnimation animation="slide-left" duration={0.7}>
+          <div className="right-column">
+            <div className="offers-cards">
+              {offers.map((offer, index) => (
+                <div key={index} className="offer-card">
+                  <div className="offer-title">{offer.title}</div>
+                  <div className="offer-description">{offer.description}</div>
                 </div>
-              </div>
-            </ScrollAnimation>
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
       </div>
     </section>
   );

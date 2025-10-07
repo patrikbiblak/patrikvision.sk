@@ -8,10 +8,9 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-        <div className="footer-container">
-            <div className="footer-content">
-                {/* Brand Section */}
-                <div className="footer-brand">
+        <div className="footer-content">
+            {/* Brand Section */}
+            <div className="footer-brand">
                     <div className="footer-logo">
                         Patrik<span className="brand-accent">Vision</span>
                     </div>
@@ -96,7 +95,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </div>
 
             {/* Footer Bottom */}
             <div className="footer-bottom">
@@ -104,9 +102,7 @@ const Footer = () => {
                     <p className="copyright">
                         © {new Date().getFullYear()} PatrikVision. {t('footer.rights')}
                     </p>
-                    <div className="footer-bottom-links">
-                        <a href="/gdpr" className="footer-bottom-link">{t('footer.privacyPolicy')}</a>
-                    </div>
+                    <a href="/gdpr" className="footer-bottom-link">{t('footer.privacyPolicy')}</a>
                 </div>
             </div>
         </div>

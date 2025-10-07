@@ -79,23 +79,21 @@ const Modal = ({ isOpen, onClose, type, title, message, children }) => {
             onClick={handleClose}
         >
             <div 
-                className={`modal-container ${isVisible ? 'modal-container-visible' : 'modal-container-hidden'}`}
+                className={`modal-content ${isVisible ? 'modal-content-visible' : 'modal-content-hidden'}`}
                 onClick={(e) => e.stopPropagation()}
             >
-                <div className="modal-content">
-                    {getIcon()}
-                    {title && (
-                        <h2 className={`modal-title ${getTitleColor()}`}>
-                            {title}
-                        </h2>
-                    )}
-                    {message && (
-                        <p className="modal-message">
-                            {message}
-                        </p>
-                    )}
-                    {children}
-                </div>
+                {getIcon()}
+                {title && (
+                    <h2 className={`modal-title ${getTitleColor()}`}>
+                        {title}
+                    </h2>
+                )}
+                {message && (
+                    <p className="modal-message">
+                        {message}
+                    </p>
+                )}
+                {children}
             </div>
         </div>
     );

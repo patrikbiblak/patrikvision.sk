@@ -10,19 +10,17 @@ A modern, responsive website built with React showcasing web development service
 - 📧 Contact form with EmailJS integration
 - 🍪 GDPR-compliant cookie management
 - ⚡ Fast loading with optimized assets
+- ♿ Accessible (respects reduced motion preferences)
+- 🎨 Clean, maintainable CSS architecture
 
 ## Technologies Used
 
-- React 18
-- React Router
-- React Helmet (SEO)
+- React 19
+- React Router v7
+- React Helmet Async (SEO)
 - i18next (Internationalization)
 - EmailJS (Contact form)
 - Google Maps API
 - Lucide React (Icons)
-- CSS3 with modern features
-
-## License
-
-This project is proprietary software. All rights reserved.
+- CSS3 with modern features (CSS Grid, Flexbox, Custom Properties)
 

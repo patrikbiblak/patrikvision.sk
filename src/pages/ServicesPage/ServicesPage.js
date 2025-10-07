@@ -37,7 +37,7 @@ const ServicesPage = () => {
     }, []);
 
     return (
-        <div className="services-page">
+        <div className="services-page page-decoration">
             <Helmet>
                 <title>{t('seo.services.title')} | PatrikVision</title>
                 <meta name="description" content={t('seo.services.description')} />
@@ -67,15 +67,13 @@ const ServicesPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/services" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/services" />
             </Helmet>
-            <div className="services-page-content">
-                <h1 className="services-heading page-heading-animate">{t('nav.services')}</h1>
-                <p className="intro-text page-intro-animate">{t('services.intro')}</p>
-                
-                <div className="services-grid" ref={gridRef}>
-                    {services.map((serviceKey, index) => (
-                        <ServiceCard key={serviceKey} serviceKey={serviceKey} index={index} />
-                    ))}
-                </div>
+            <h1 className="page-heading page-heading-animate">{t('nav.services')}</h1>
+            <p className="page-intro page-intro-animate">{t('services.intro')}</p>
+            
+            <div className="services-grid grid-animated" ref={gridRef}>
+                {services.map((serviceKey, index) => (
+                    <ServiceCard key={serviceKey} serviceKey={serviceKey} index={index} />
+                ))}
             </div>
         </div>
     )
@@ -93,7 +91,7 @@ const ServiceCard = ({ serviceKey, index }) => {
 
     return (
         <div
-            className="service-card"
+            className="service-card u-card u-card-animated"
             style={{
                 transitionDelay: `${index * 150}ms`,
             }}

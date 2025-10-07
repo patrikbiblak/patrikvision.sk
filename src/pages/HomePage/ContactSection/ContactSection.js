@@ -106,19 +106,18 @@ const ContactSection = () => {
   return (
     <section className="homepage-contact-section">
       <Particles />
-      <div>
-        <ScrollAnimation animation="fade" duration={0.6}>
-          <div className="homepage-contact-heading" ref={ref}>
-            <h2>{t('contact.contactMe')}</h2>
-            <p>{t('contact.contactDesc')}</p>
-          </div>
-        </ScrollAnimation>
+      <ScrollAnimation animation="fade" duration={0.6}>
+        <div className="homepage-contact-heading" ref={ref}>
+          <h2>{t('contact.contactMe')}</h2>
+          <p>{t('contact.contactDesc')}</p>
+        </div>
+      </ScrollAnimation>
 
-        <div className="homepage-contact-content">
-          <ScrollAnimation animation="slide-right" duration={0.7}>
-            <div className="homepage-contact-box" ref={leftRef}>
-            <h3>{t('contact.sendMessage')}</h3>
-            <form ref={formRef} onSubmit={handleSubmit}>
+      <div className="homepage-contact-content">
+        <ScrollAnimation animation="slide-right" duration={0.7}>
+          <div className="homepage-contact-box" ref={leftRef}>
+          <h3>{t('contact.sendMessage')}</h3>
+          <form ref={formRef} onSubmit={handleSubmit}>
               {/* Personal Information */}
               <label htmlFor="section-name">{t('contact.name')}</label>
               <input
@@ -235,7 +234,6 @@ const ContactSection = () => {
             </div>
             </div>
           </ScrollAnimation>
-        </div>
         </div>
         
         <Modal

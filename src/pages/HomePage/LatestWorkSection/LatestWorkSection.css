@@ -8,14 +8,11 @@
   display: block;
 }
 
-.latest-work-container {
+.latest-work-content {
   max-width: var(--content-max-width);
   margin: 0 auto;
   position: relative;
   padding: 0;
-}
-
-.latest-work-layout {
   display: grid;
   grid-template-columns: 1fr;
   gap: clamp(1.25rem, 3vw, 2rem);
@@ -26,7 +23,7 @@
 /* Desktop Layout - Two Columns (Switched from About Section) */
 /* On desktop, cards should be in a horizontal row; heading above, button below. */
 @media (min-width: 768px) {
-  .latest-work-layout {
+  .latest-work-content {
     grid-template-columns: 1fr;
     gap: clamp(1.5rem, 3vw, 2.25rem);
   }

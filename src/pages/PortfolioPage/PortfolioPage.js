@@ -59,7 +59,7 @@ const PortfolioPage = () => {
     ];
 
     return (
-        <div className="portfolio-page">
+        <div className="portfolio-page page-decoration">
             <Helmet>
                 <title>{t('seo.portfolio.title')} | PatrikVision</title>
                 <meta name="description" content={t('seo.portfolio.description')} />
@@ -131,15 +131,13 @@ const PortfolioPage = () => {
                     })}
                 </script>
             </Helmet>
-            <div className="portfolio-page-content">
-                <h1 className="portfolio-heading page-heading-animate">{t('nav.portfolio')}</h1>
-                <p className="intro-text page-intro-animate">{t('latestWork.description')}</p>
-                
-                <div className="portfolio-grid" ref={gridRef}>
-                    {projects.map((project, index) => (
-                        <ProjectCard key={project.id} project={project} index={index} />
-                    ))}
-                </div>
+            <h1 className="page-heading page-heading-animate">{t('nav.portfolio')}</h1>
+            <p className="page-intro page-intro-animate">{t('latestWork.description')}</p>
+            
+            <div className="portfolio-grid grid-animated" ref={gridRef}>
+                {projects.map((project, index) => (
+                    <ProjectCard key={project.id} project={project} index={index} />
+                ))}
             </div>
         </div>
     )
@@ -148,7 +146,7 @@ const PortfolioPage = () => {
 const ProjectCard = ({ project, index }) => {
     return (
         <div 
-            className="project-card"
+            className="project-card u-card u-card-animated"
             style={{
                 transitionDelay: `${index * 150}ms`
             }}

@@ -36,12 +36,10 @@ const ServicesSection = () => {
 
   return (
     <section className="home-services-section">
-      <div className="home-services-content">
-        <div className="home-services-grid" ref={gridRef}>
-          {services.map((serviceKey, index) => (
-            <HomeServiceItem key={serviceKey} serviceKey={serviceKey} index={index} />
-          ))}
-        </div>
+      <div className="home-services-grid" ref={gridRef}>
+        {services.map((serviceKey, index) => (
+          <HomeServiceItem key={serviceKey} serviceKey={serviceKey} index={index} />
+        ))}
       </div>
     </section>
   );
