@@ -103,5 +103,3 @@ const developer = {
 }
 
 export default HeroSection;
-
-
