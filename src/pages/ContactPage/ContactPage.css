@@ -47,12 +47,13 @@
 }
 
 .contact-heading {
-  font-size: 2.5rem;
+  font-size: clamp(2.4rem, 4.8vw, 3rem);
   font-weight: 700;
   color: var(--brand-color);
   margin-bottom: 1rem;
   text-align: center;
   letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .intro-text {
@@ -67,6 +68,8 @@
   margin-right: auto;
   position: relative;
   padding-bottom: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.005em;
 }
 
 .intro-text::after {
@@ -441,6 +444,10 @@
 
 /* Tablet and smaller desktop */
 @media (max-width: 1024px) {
+  .contact-heading {
+    font-size: clamp(2.2rem, 4.2vw, 2.8rem);
+  }
+  
   .contact-page-content-grid {
     gap: clamp(1.5rem, 3vw, 2.5rem);
   }
@@ -452,11 +459,8 @@
 
 /* Mobile landscape and tablet portrait */
 @media (max-width: 768px) {
-  .intro-text {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .contact-heading {
+    font-size: clamp(2rem, 5.2vw, 2.6rem);
   }
 
   .contact-page-content-grid {
@@ -481,11 +485,8 @@
 
 /* Mobile portrait */
 @media (max-width: 480px) {
-  .intro-text {
-    font-size: 0.95rem;
-    margin-bottom: 1.5rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .contact-heading {
+    font-size: clamp(1.8rem, 5.8vw, 2.2rem);
   }
 
   .contact-page-content-grid {
@@ -532,6 +533,10 @@
 
 /* Very small screens */
 @media (max-width: 320px) {
+  .contact-heading {
+    font-size: clamp(1.6rem, 6.8vw, 1.9rem);
+  }
+  
   .contact-page-content-grid {
     padding: 0 0.25rem;
   }
