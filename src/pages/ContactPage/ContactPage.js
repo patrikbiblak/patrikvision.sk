@@ -56,15 +56,15 @@ const ContactPage = () => {
             });
     };
 
-    const closeModal = () => {
-        setModal({ isOpen: false, type: '', title: '', message: '' });
-    };
-
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
         });
+    };
+
+    const closeModal = () => {
+        setModal({ isOpen: false, type: '', title: '', message: '' });
     };
 
     const productOptions = [
@@ -134,42 +134,39 @@ const ContactPage = () => {
                 <link rel="alternate" hreflang="sk" href="https://patrikvision.sk/contact" />
                 <link rel="alternate" hreflang="hu" href="https://patrikvision.sk/contact" />
             </Helmet>
+
+            {/* Page Header */}
             <h1 className="page-heading page-heading-animate">{t('nav.contact')}</h1>
             <p className="page-intro page-intro-animate">{t('contact.intro')}</p>
 
-                <div className="contact-page-content-grid">
-                    <ScrollAnimation animation="slide-right" duration={0.7}>
-                    <div className="contact-info-wrapper">
-                        <div className="contact-page-info-box u-card">
-                            <h3>{t('contact.contactDetails')}</h3>
-                            {contactDetails.map((detail) => {
-                                const Icon = detail.icon;
-                                return (
-                                    <div key={detail.label} className="contact-page-info-item">
-                                        <Icon />
-                                        <div>
-                                            <p>{detail.label}</p>
-                                            {detail.isLink ? (
-                                                <a 
-                                                    href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="contact-page-link"
-                                                >
-                                                    {detail.value}
-                                                </a>
-                                            ) : (
-                                                <p>{detail.value}</p>
-                                            )}
+            {/* Contact Content Grid */}
+            <div className="contact-grid">
+                {/* Left Column - Contact Info */}
+                <ScrollAnimation animation="slide-right" duration={0.7}>
+                    <div className="contact-left-column">
+                        {/* Contact Details */}
+                        <div className="contact-box u-card">
+                            <h3 className="contact-box-title">{t('contact.contactDetails')}</h3>
+                            <div className="contact-items">
+                                {contactDetails.map((detail) => {
+                                    const Icon = detail.icon;
+                                    return (
+                                        <div key={detail.label} className="contact-item">
+                                            <Icon className="contact-item-icon" />
+                                            <div className="contact-item-content">
+                                                <span className="contact-item-label">{detail.label}</span>
+                                                <span className="contact-item-value">{detail.value}</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                );
-                            })}
+                                    );
+                                })}
+                            </div>
                         </div>
-                        
-                        <div className="contact-page-social-box u-card">
-                            <h3 className="social-links-heading">{t('contact.socialLinks')}</h3>
-                            <div className="social-links-container">
+
+                        {/* Social Profiles */}
+                        <div className="contact-box u-card">
+                            <h3 className="contact-box-title">{t('contact.socialLinks')}</h3>
+                            <div className="social-items">
                                 {socialLinks.map((social) => {
                                     const Icon = social.icon;
                                     return (
@@ -178,84 +175,108 @@ const ContactPage = () => {
                                             href={social.url}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="contact-page-social-item"
+                                            className="social-item"
                                             aria-label={social.label}
                                         >
-                                            <Icon />
-                                            <span>{social.label}</span>
+                                            <Icon className="social-item-icon" />
+                                            <span className="social-item-label">{social.label}</span>
                                         </a>
                                     );
                                 })}
                             </div>
                         </div>
-                        </div>
-                    </ScrollAnimation>
+                    </div>
+                </ScrollAnimation>
 
-                    <ScrollAnimation animation="slide-left" duration={0.7}>
-                        <div className="contact-page-form-box u-card">
-                            <h3>{t('contact.sendMessage')}</h3>
-                        <form ref={formRef} onSubmit={handleSubmit}>
-                            {/* Personal Information */}
-                            <label htmlFor="page-name">{t('contact.name')}</label>
-                            <input
-                                id="page-name"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleChange}
-                                required
-                            />
+                {/* Right Column - Contact Form */}
+                <ScrollAnimation animation="slide-left" duration={0.7}>
+                    <div className="contact-form-container u-card">
+                        <h3 className="contact-box-title">{t('contact.sendMessage')}</h3>
+                        <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
+                            <div className="form-group">
+                                <label htmlFor="contact-name" className="form-label">
+                                    {t('contact.name')}
+                                </label>
+                                <input
+                                    id="contact-name"
+                                    name="name"
+                                    type="text"
+                                    className="form-input"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
 
-                            <label htmlFor="page-email">{t('contact.email')}</label>
-                            <input
-                                id="page-email"
-                                name="email"
-                                type="email"
-                                value={formData.email}
-                                onChange={handleChange}
-                                required
-                            />
+                            <div className="form-group">
+                                <label htmlFor="contact-email" className="form-label">
+                                    {t('contact.email')}
+                                </label>
+                                <input
+                                    id="contact-email"
+                                    name="email"
+                                    type="email"
+                                    className="form-input"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
 
-                            {/* Project Information */}
-                            <label htmlFor="page-product">{t('contact.productInterest')}</label>
-                            <select
-                                id="page-product"
-                                name="productInterest"
-                                value={formData.productInterest}
-                                onChange={handleChange}
-                                required
-                            >
-                                {productOptions.map((option) => (
-                                    <option key={option.value} value={option.value}>
-                                        {option.label}
-                                    </option>
-                                ))}
-                            </select>
+                            <div className="form-group">
+                                <label htmlFor="contact-product" className="form-label">
+                                    {t('contact.productInterest')}
+                                </label>
+                                <select
+                                    id="contact-product"
+                                    name="productInterest"
+                                    className="form-select"
+                                    value={formData.productInterest}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    {productOptions.map((option) => (
+                                        <option key={option.value} value={option.value}>
+                                            {option.label}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
 
-                            <label htmlFor="page-country">{t('contact.country')}</label>
-                            <select
-                                id="page-country"
-                                name="country"
-                                value={formData.country}
-                                onChange={handleChange}
-                                required
-                            >
-                                {countryOptions.map((option) => (
-                                    <option key={option.value} value={option.value}>
-                                        {option.label}
-                                    </option>
-                                ))}
-                            </select>
+                            <div className="form-group">
+                                <label htmlFor="contact-country" className="form-label">
+                                    {t('contact.country')}
+                                </label>
+                                <select
+                                    id="contact-country"
+                                    name="country"
+                                    className="form-select"
+                                    value={formData.country}
+                                    onChange={handleChange}
+                                    required
+                                >
+                                    {countryOptions.map((option) => (
+                                        <option key={option.value} value={option.value}>
+                                            {option.label}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
 
-                            {/* Message */}
-                            <label htmlFor="page-message">{t('contact.message')}</label>
-                            <textarea
-                                id="page-message"
-                                name="message"
-                                rows={5}
-                                value={formData.message}
-                                onChange={handleChange}
-                                required
-                            />
+                            <div className="form-group">
+                                <label htmlFor="contact-message" className="form-label">
+                                    {t('contact.message')}
+                                </label>
+                                <textarea
+                                    id="contact-message"
+                                    name="message"
+                                    className="form-textarea"
+                                    rows={5}
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    required
+                                />
+                            </div>
 
                             {/* Hidden fields for human-readable labels */}
                             <input
@@ -269,20 +290,20 @@ const ContactPage = () => {
                                 value={(countryOptions.find((o) => o.value === formData.country)?.label) || ''}
                             />
 
-                            <button type="submit" disabled={status === 'sending'}>
+                            <button type="submit" className="form-submit" disabled={status === 'sending'}>
                                 {status === 'sending' ? t('contact.sending') : t('contact.send')}
                             </button>
                         </form>
-                        </div>
-                    </ScrollAnimation>
-                </div>
-
-            <div className="contact-page-map-container">
-                <GoogleMap 
-                    className="contact-map"
-                />
+                    </div>
+                </ScrollAnimation>
             </div>
 
+            {/* Google Map */}
+            <div className="contact-map-wrapper">
+                <GoogleMap className="contact-map" />
+            </div>
+
+            {/* Modal */}
             <Modal
                 isOpen={modal.isOpen}
                 onClose={closeModal}
@@ -291,7 +312,7 @@ const ContactPage = () => {
                 message={modal.message}
             />
         </div>
-    )
-}
+    );
+};
 
 export default ContactPage;
