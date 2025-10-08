@@ -7,23 +7,25 @@ const Footer = () => {
     const { t } = useTranslation();
 
   return (
-    <footer className="footer">
-        <div className="footer-content">
-            {/* Brand Section */}
-            <div className="footer-brand">
+    <footer className="footer" role="contentinfo">
+        <div className="footer-container">
+            <div className="footer-main">
+                {/* Brand Section */}
+                <div className="footer-brand">
                     <div className="footer-logo">
                         Patrik<span className="brand-accent">Vision</span>
                     </div>
                     <p className="footer-description">
                         {t('footer.description')}
                     </p>
-                    <div className="footer-social">
+                    <div className="footer-social" role="list" aria-label="Social media links">
                         <a
                             href="https://www.instagram.com/bpaatrik/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-link"
-                            aria-label="Instagram"
+                            aria-label="Follow us on Instagram"
+                            role="listitem"
                         >
                             <FaInstagram />
                         </a>
@@ -32,14 +34,16 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-link"
-                            aria-label="GitHub"
+                            aria-label="View our GitHub profile"
+                            role="listitem"
                         >
                             <FaGithub />
                         </a>
                         <a
                             href="mailto:contact@patrikvision.sk"
                             className="social-link"
-                            aria-label="Email"
+                            aria-label="Send us an email"
+                            role="listitem"
                         >
                             <MdEmail />
                         </a>
@@ -48,22 +52,25 @@ const Footer = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                             className="social-link"
-                            aria-label="LinkedIn"
+                            aria-label="Connect with us on LinkedIn"
+                            role="listitem"
                         >
                             <FaLinkedin />
                         </a>
                     </div>
                 </div>
 
-                {/* Quick Links */}
+                {/* Navigation Links */}
                 <div className="footer-section">
                     <h4 className="footer-title">{t('footer.quickLinks')}</h4>
-                    <ul className="footer-links">
-                        <li><a href="/about" className="footer-link">{t('footer.about')}</a></li>
-                        <li><a href="/services" className="footer-link">{t('footer.services')}</a></li>
-                        <li><a href="/portfolio" className="footer-link">{t('footer.portfolio')}</a></li>
-                        <li><a href="/contact" className="footer-link">{t('footer.contact')}</a></li>
-                    </ul>
+                    <nav className="footer-nav" aria-label="Footer navigation">
+                        <ul className="footer-links">
+                            <li><a href="/about" className="footer-link">{t('footer.about')}</a></li>
+                            <li><a href="/services" className="footer-link">{t('footer.services')}</a></li>
+                            <li><a href="/portfolio" className="footer-link">{t('footer.portfolio')}</a></li>
+                            <li><a href="/contact" className="footer-link">{t('footer.contact')}</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
                 {/* Services */}
@@ -80,21 +87,26 @@ const Footer = () => {
                 {/* Contact Info */}
                 <div className="footer-section">
                     <h4 className="footer-title">{t('footer.contactInfo')}</h4>
-                    <div className="contact-info">
+                    <address className="contact-info">
                         <div className="contact-item">
-                            <MdEmail className="contact-icon" />
-                            <span>contact@patrikvision.sk</span>
+                            <MdEmail className="contact-icon" aria-hidden="true" />
+                            <a href="mailto:contact@patrikvision.sk" className="contact-link">
+                                contact@patrikvision.sk
+                            </a>
                         </div>
                         <div className="contact-item">
-                            <MdPhone className="contact-icon" />
-                            <span>+421 918 755 276</span>
+                            <MdPhone className="contact-icon" aria-hidden="true" />
+                            <a href="tel:+421918755276" className="contact-link">
+                                +421 918 755 276
+                            </a>
                         </div>
                         <div className="contact-item">
-                            <MdLocationOn className="contact-icon" />
-                            <span>Slovakia</span>
+                            <MdLocationOn className="contact-icon" aria-hidden="true" />
+                            <span className="contact-text">Slovakia</span>
                         </div>
-                    </div>
+                    </address>
                 </div>
+            </div>
 
             {/* Footer Bottom */}
             <div className="footer-bottom">
@@ -102,7 +114,9 @@ const Footer = () => {
                     <p className="copyright">
                         © {new Date().getFullYear()} PatrikVision. {t('footer.rights')}
                     </p>
-                    <a href="/gdpr" className="footer-bottom-link">{t('footer.privacyPolicy')}</a>
+                    <div className="footer-bottom-links">
+                        <a href="/gdpr" className="footer-bottom-link">{t('footer.privacyPolicy')}</a>
+                    </div>
                 </div>
             </div>
         </div>
