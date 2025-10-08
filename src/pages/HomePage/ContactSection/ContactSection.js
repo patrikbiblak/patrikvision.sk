@@ -106,18 +106,22 @@ const ContactSection = () => {
   return (
     <section className="homepage-contact-section">
       <Particles />
+      
+      {/* Section Header */}
       <ScrollAnimation animation="fade" duration={0.6}>
-        <div className="homepage-contact-heading" ref={ref}>
+        <div className="homepage-contact-header" ref={ref}>
           <h2>{t('contact.contactMe')}</h2>
           <p>{t('contact.contactDesc')}</p>
         </div>
       </ScrollAnimation>
 
-      <div className="homepage-contact-content">
+      {/* Cards Container */}
+      <div className="homepage-contact-cards">
+        {/* Contact Form Card */}
         <ScrollAnimation animation="slide-right" duration={0.7}>
-          <div className="homepage-contact-box" ref={leftRef}>
-          <h3>{t('contact.sendMessage')}</h3>
-          <form ref={formRef} onSubmit={handleSubmit}>
+          <div className="homepage-contact-card u-card" ref={leftRef}>
+            <h3>{t('contact.sendMessage')}</h3>
+            <form ref={formRef} onSubmit={handleSubmit}>
               {/* Personal Information */}
               <label htmlFor="section-name">{t('contact.name')}</label>
               <input
@@ -192,39 +196,43 @@ const ContactSection = () => {
                 value={(countryOptions.find((o) => o.value === formData.country)?.label) || ''}
               />
 
-              <button type="submit" disabled={status === 'sending'}>
+              <button type="submit" className="contact-submit-btn" disabled={status === 'sending'}>
                 {status === 'sending' ? t('contact.sending') : t('contact.send')}
               </button>
             </form>
-            </div>
-          </ScrollAnimation>
+          </div>
+        </ScrollAnimation>
 
-          <ScrollAnimation animation="slide-left" duration={0.7}>
-            <div className="homepage-contact-box" ref={rightRef}>
+        {/* Contact Details Card */}
+        <ScrollAnimation animation="slide-left" duration={0.7}>
+          <div className="homepage-contact-card u-card" ref={rightRef}>
             <h3>{t('contact.contactDetails')}</h3>
-            {contactDetails.map((detail) => {
-              const Icon = detail.icon;
-              return (
-                <div key={detail.label} className="homepage-contact-info-item">
-                  <Icon />
-                  <div>
-                    <p>{detail.label}</p>
-                    {detail.isLink ? (
-                      <a 
-                        href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="homepage-contact-link"
-                      >
-                        {detail.value}
-                      </a>
-                    ) : (
-                      <p>{detail.value}</p>
-                    )}
+            <div className="contact-details-list">
+              {contactDetails.map((detail) => {
+                const Icon = detail.icon;
+                return (
+                  <div key={detail.label} className="contact-detail-item">
+                    <Icon className="contact-detail-icon" />
+                    <div className="contact-detail-content">
+                      <p className="contact-detail-label">{detail.label}</p>
+                      {detail.isLink ? (
+                        <a 
+                          href={detail.value.startsWith('http') ? detail.value : `https://${detail.value}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="contact-detail-value contact-link"
+                        >
+                          {detail.value}
+                        </a>
+                      ) : (
+                        <p className="contact-detail-value">{detail.value}</p>
+                      )}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            
             <div className="homepage-contact-map">
               <GoogleMap 
                 center={{ lat: 48.1485965, lng: 17.1077478 }}
@@ -232,17 +240,17 @@ const ContactSection = () => {
                 className="contact-map"
               />
             </div>
-            </div>
-          </ScrollAnimation>
-        </div>
+          </div>
+        </ScrollAnimation>
+      </div>
         
-        <Modal
-          isOpen={modal.isOpen}
-          onClose={closeModal}
-          type={modal.type}
-          title={modal.title}
-          message={modal.message}
-        />
+      <Modal
+        isOpen={modal.isOpen}
+        onClose={closeModal}
+        type={modal.type}
+        title={modal.title}
+        message={modal.message}
+      />
     </section>
   );
 };

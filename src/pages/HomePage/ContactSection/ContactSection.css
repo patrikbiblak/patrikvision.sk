@@ -1,240 +1,244 @@
-/* ===== CONTACT SECTION (HOMEPAGE ONLY) ===== */
+/* ===================================
+   Contact Section - Homepage
+   =================================== */
+
 .homepage-contact-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--section-padding-y) var(--section-padding-x);
   width: 100%;
-  text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-.homepage-contact-heading {
-  margin-bottom: clamp(2rem, 5vw, 4rem);
+/* ===================================
+   Section Header
+   =================================== */
+
+.homepage-contact-header {
   text-align: center;
   max-width: 800px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto clamp(3rem, 6vw, 4rem);
   position: relative;
   z-index: 2;
 }
 
-.homepage-contact-heading h2 {
-  margin-bottom: clamp(0.5rem, 2vw, 1rem);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+.homepage-contact-header h2 {
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--brand-color);
+  margin-bottom: clamp(0.75rem, 2vw, 1rem);
   line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
-.homepage-contact-heading p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+.homepage-contact-header p {
+  font-size: clamp(1rem, 2vw, 1.15rem);
   line-height: 1.6;
+  color: var(--text-secondary);
 }
 
-.homepage-contact-content {
-  display: flex;
-  flex-wrap: wrap;
+/* ===================================
+   Cards Container
+   =================================== */
+
+.homepage-contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: clamp(2rem, 4vw, 3rem);
-  align-items: stretch;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: var(--content-max-width);
   width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 
-.homepage-contact-box {
-  width: clamp(280px, 90vw, 500px);
-  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
-  padding: clamp(1.5rem, 3vw, 2rem);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border: 1px solid rgba(17, 100, 102, 0.2);
-  color: var(--text-primary);
-  min-height: 600px;
+/* ===================================
+   Contact Cards (extends u-card from shared.css)
+   =================================== */
+
+.homepage-contact-card {
+  /* Inherits from .u-card in shared.css */
   display: flex;
   flex-direction: column;
-  border-radius: var(--brand-radius);
+  min-height: 600px;
+  text-align: left;
 }
 
-.homepage-contact-box::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--brand-color), #1aa1a1, var(--brand-color));
-}
-
-.homepage-contact-box h3 {
-  margin-bottom: clamp(1rem, 2vw, 2rem);
-  color: var(--brand-color);
+.homepage-contact-card h3 {
+  font-size: clamp(1.35rem, 2.5vw, 1.6rem);
   font-weight: 700;
-  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  color: var(--brand-color);
+  margin-bottom: clamp(1.25rem, 2.5vw, 1.75rem);
   line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
-.homepage-contact-box form label {
-  font-size: clamp(0.8rem, 1.8vw, 13px);
+/* ===================================
+   Form Styles
+   =================================== */
+
+.homepage-contact-card form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.homepage-contact-card label {
+  font-size: clamp(0.75rem, 1.6vw, 0.8rem);
   font-weight: 600;
-  display: block;
-  margin-bottom: clamp(0.25rem, 0.8vw, 0.35rem);
-  color: var(--brand-color);
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  color: var(--brand-color);
+  margin-bottom: clamp(0.3rem, 0.8vw, 0.4rem);
+  display: block;
 }
 
-.homepage-contact-box input,
-.homepage-contact-box textarea,
-.homepage-contact-box select {
+.homepage-contact-card input,
+.homepage-contact-card textarea,
+.homepage-contact-card select {
   width: 100%;
   background: #ffffff;
   border: 2px solid rgba(17, 100, 102, 0.2);
   color: var(--text-primary);
-  padding: clamp(0.5rem, 1.2vw, 0.65rem);
+  padding: clamp(0.6rem, 1.3vw, 0.75rem);
+  margin-bottom: clamp(0.75rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-family: inherit;
   transition: all 0.3s ease;
-  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
-  margin-bottom: clamp(0.4rem, 0.8vw, 0.6rem);
-  box-sizing: border-box;
+  border-radius: 4px;
 }
 
-.homepage-contact-box input:focus,
-.homepage-contact-box textarea:focus,
-.homepage-contact-box select:focus {
+.homepage-contact-card input:focus,
+.homepage-contact-card textarea:focus,
+.homepage-contact-card select:focus {
   border-color: var(--brand-color);
   outline: none;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 0 0 3px rgba(17, 100, 102, 0.1);
 }
 
-.homepage-contact-box input::placeholder,
-.homepage-contact-box textarea::placeholder {
-  color: var(--text-secondary);
-  opacity: 0.7;
-}
-
-.homepage-contact-box textarea {
+.homepage-contact-card textarea {
   resize: vertical;
-  min-height: clamp(80px, 12vw, 100px);
+  min-height: clamp(100px, 15vw, 120px);
 }
 
-.homepage-contact-box select {
+.homepage-contact-card select {
   cursor: pointer;
   appearance: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23116666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23116466' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right 0.7rem center;
+  background-position: right 0.75rem center;
   background-size: 1rem;
   padding-right: 2.5rem;
 }
 
-.homepage-contact-box:first-child button {
-  display: block;
-  color: #ffffff;
-  font-weight: 600;
+.contact-submit-btn {
   background: var(--brand-color);
+  color: #ffffff;
   border: none;
-  margin: 0 auto;
-  width: 100%;
-  margin-top: clamp(0.8rem, 1.5vw, 1rem);
-  transition: all 0.3s ease;
-  padding: clamp(0.6rem, 1.5vw, 0.8rem);
-  font-size: clamp(0.85rem, 1.8vw, 0.95rem);
-  cursor: pointer;
+  padding: clamp(0.75rem, 1.5vw, 0.9rem) clamp(1.5rem, 3vw, 2rem);
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.2);
 }
 
-.homepage-contact-box button:hover {
+.contact-submit-btn:hover:not(:disabled) {
   background-color: #0d4f51;
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
+  box-shadow: 0 6px 14px rgba(17, 100, 102, 0.3);
 }
 
-.homepage-contact-box button:disabled {
+.contact-submit-btn:disabled {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
 }
 
-.homepage-contact-info-item {
+/* ===================================
+   Contact Details List
+   =================================== */
+
+.contact-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 2.5vw, 1.75rem);
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+
+.contact-detail-item {
   display: flex;
   align-items: flex-start;
-  flex-direction: row;
-  gap: clamp(1rem, 2vw, 1.3rem);
-  margin-bottom: clamp(1.4rem, 2.8vw, 1.8rem);
+  gap: clamp(1rem, 2vw, 1.25rem);
 }
 
-.homepage-contact-info-item:last-child {
-  margin-bottom: 0;
-}
-
-.homepage-contact-info-item svg {
-  width: clamp(28px, 4vw, 32px);
-  height: clamp(28px, 4vw, 32px);
-  flex-shrink: 0;
+.contact-detail-icon {
+  width: clamp(26px, 4vw, 30px);
+  height: clamp(26px, 4vw, 30px);
   color: var(--brand-color);
+  flex-shrink: 0;
   margin-top: 0.1rem;
 }
 
-.homepage-contact-info-item div {
+.contact-detail-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  min-width: 0;
+  gap: 0.25rem;
   flex: 1;
+  min-width: 0;
 }
 
-.homepage-contact-info-item p {
-  margin: 0;
-  line-height: 1.5;
-  color: var(--text-primary);
-  font-size: clamp(0.9rem, 2vw, 1rem);
-  font-weight: 500;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-.homepage-contact-info-item div p:first-child {
-  color: var(--brand-color);
+.contact-detail-label {
+  font-size: clamp(0.7rem, 1.6vw, 0.75rem);
   font-weight: 700;
-  margin-bottom: 0.3rem;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  font-size: clamp(0.7rem, 1.8vw, 0.75rem);
+  letter-spacing: 0.5px;
+  color: var(--brand-color);
+  margin: 0;
   line-height: 1.2;
 }
 
-.homepage-contact-link {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+.contact-detail-value {
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
   font-weight: 500;
-  line-height: 1.5;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.4;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.contact-link {
+  color: var(--text-primary);
+  text-decoration: none;
   transition: color 0.3s ease;
   border-bottom: 1px solid transparent;
 }
 
-.homepage-contact-link:hover {
+.contact-link:hover {
   color: var(--brand-color);
   border-bottom-color: var(--brand-color);
 }
 
-/* Google Maps integration */
+/* ===================================
+   Google Maps
+   =================================== */
+
 .homepage-contact-map {
   margin-top: auto;
   width: 100%;
   height: 200px;
   border-radius: var(--brand-radius);
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(17, 100, 102, 0.15);
-  border: 1px solid rgba(17, 100, 102, 0.2);
+  box-shadow: 0 2px 8px rgba(17, 100, 102, 0.15);
+  border: 1px solid rgba(17, 100, 102, 0.15);
 }
 
 .homepage-contact-map .contact-map {
@@ -243,97 +247,106 @@
   border-radius: var(--brand-radius);
 }
 
-/* Tablet and smaller desktop */
+/* ===================================
+   Responsive Design
+   =================================== */
+
+/* Tablet */
 @media (max-width: 1024px) {
-  .homepage-contact-content {
-    gap: clamp(1.5rem, 3vw, 2.5rem);
+  .homepage-contact-cards {
+    gap: clamp(1.75rem, 3.5vw, 2.5rem);
+  }
+
+  .homepage-contact-card {
+    min-height: 550px;
   }
 }
 
 /* Mobile landscape and tablet portrait */
 @media (max-width: 768px) {
-  .homepage-contact-section {
-    padding: var(--section-padding-y) var(--section-padding-x);
+  .homepage-contact-header {
+    margin-bottom: clamp(2.5rem, 5vw, 3rem);
   }
 
-  .homepage-contact-heading {
-    margin-bottom: clamp(2rem, 4vw, 3rem);
+  .homepage-contact-cards {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 4vw, 2.5rem);
   }
 
-  .homepage-contact-content {
-    gap: clamp(1.5rem, 3vw, 2.5rem);
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .homepage-contact-box {
-    width: 100%;
-    max-width: 500px;
+  .homepage-contact-card {
+    min-height: auto;
   }
 
   .homepage-contact-map {
     height: 180px;
-    margin-top: 1.5rem;
   }
 }
 
 /* Mobile portrait */
 @media (max-width: 480px) {
-  .homepage-contact-section {
-    padding: var(--section-padding-y) var(--section-padding-x);
+  .homepage-contact-header {
+    margin-bottom: clamp(2rem, 4vw, 2.5rem);
   }
 
-  .homepage-contact-heading {
-    margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  .homepage-contact-header h2 {
+    font-size: clamp(1.75rem, 5vw, 2.25rem);
   }
 
-  .homepage-contact-box {
+  .homepage-contact-header p {
+    font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  }
+
+  .homepage-contact-cards {
+    gap: clamp(1.75rem, 4vw, 2rem);
+  }
+
+  .homepage-contact-card {
     padding: clamp(1.25rem, 3vw, 1.5rem);
-    width: 100%;
   }
 
-  .homepage-contact-info-item {
+  .homepage-contact-card h3 {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    margin-bottom: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  .contact-details-list {
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  .contact-detail-item {
     gap: clamp(0.875rem, 2vw, 1rem);
-    margin-bottom: clamp(1.25rem, 2.5vw, 1.5rem);
   }
 
-  .homepage-contact-info-item svg {
+  .contact-detail-icon {
     width: clamp(22px, 4vw, 26px);
     height: clamp(22px, 4vw, 26px);
   }
 
   .homepage-contact-map {
     height: clamp(150px, 25vw, 170px);
-    margin-top: 1.25rem;
   }
 }
 
 /* Very small screens */
 @media (max-width: 360px) {
-  .homepage-contact-section {
-    padding: var(--section-padding-y) var(--section-padding-x);
+  .homepage-contact-header h2 {
+    font-size: clamp(1.5rem, 5.5vw, 1.9rem);
   }
 
-  .homepage-contact-box {
+  .homepage-contact-card {
     padding: clamp(1rem, 2.5vw, 1.25rem);
   }
 
-  .homepage-contact-box h3 {
-    font-size: clamp(1.05rem, 3vw, 1.15rem);
+  .homepage-contact-card h3 {
+    font-size: clamp(1.1rem, 3.5vw, 1.25rem);
   }
 
-  .homepage-contact-info-item {
-    gap: clamp(0.75rem, 2vw, 0.875rem);
-    margin-bottom: clamp(1rem, 2vw, 1.25rem);
-  }
-
-  .homepage-contact-info-item svg {
+  .contact-detail-icon {
     width: clamp(20px, 3.5vw, 22px);
     height: clamp(20px, 3.5vw, 22px);
   }
 
   .homepage-contact-map {
     height: clamp(130px, 22vw, 150px);
-    margin-top: 1rem;
   }
 }
