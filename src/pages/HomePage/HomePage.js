@@ -71,7 +71,7 @@ const HomePage = () => {
                             "@type": "ContactPoint",
                             "telephone": "+421918755276",
                             "contactType": "customer service",
-                            "email": "contact@patrikvision.sk"
+                            "email": "info@patrikvision.sk"
                         }
                     })}
                 </script>

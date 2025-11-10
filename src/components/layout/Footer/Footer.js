@@ -40,7 +40,7 @@ const Footer = () => {
                             <FaGithub />
                         </a>
                         <a
-                            href="mailto:contact@patrikvision.sk"
+                            href="mailto:info@patrikvision.sk"
                             className="social-link"
                             aria-label="Send us an email"
                             role="listitem"
@@ -90,8 +90,8 @@ const Footer = () => {
                     <address className="contact-info">
                         <div className="contact-item">
                             <MdEmail className="contact-icon" aria-hidden="true" />
-                            <a href="mailto:contact@patrikvision.sk" className="contact-link">
-                                contact@patrikvision.sk
+                            <a href="mailto:info@patrikvision.sk" className="contact-link">
+                                info@patrikvision.sk
                             </a>
                         </div>
                         <div className="contact-item">

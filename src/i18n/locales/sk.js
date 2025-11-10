@@ -294,7 +294,7 @@ const skTranslations = {
     "effectiveDate": "Dátum účinnosti:",
     "date": "13. júla 2025",
     "operator": "Prevádzkovateľ a spracovatelia",
-    "operatorText": "Prevádzkovateľ: PatrikVision<br/>Email: contact@patrikvision.sk<br/>Telefón: +421 918 755 276<br/><br/>Spracovatelia údajov:<br/>• HostCreators (hosting, doména)<br/>• Google Analytics<br/>• EmailJS (email služby)",
+    "operatorText": "Prevádzkovateľ: PatrikVision<br/>Email: info@patrikvision.sk<br/>Telefón: +421 918 755 276<br/><br/>Spracovatelia údajov:<br/>• HostCreators (hosting, doména)<br/>• Google Analytics<br/>• EmailJS (email služby)",
     "dataCollected": "Aké údaje zhromažďujeme",
     "contactData": "Kontaktné údaje – meno, e‑mail, správy z formulára.",
     "technicalData": "Technické údaje – IP, typ prehliadača, zariadenie (Google Analytics).",
@@ -319,7 +319,7 @@ const skTranslations = {
     "changeCookieSettings": "Zmeniť nastavenia cookies",
     "complaintRight": "Právo podať sťažnosť Úradu na ochranu osobných údajov",
     "contact": "Kontakt",
-    "contactText": "V prípade otázok píšte na contact@patrikvision.sk alebo použite",
+    "contactText": "V prípade otázok píšte na info@patrikvision.sk alebo použite",
     "contactForm": "kontaktný formulár"
   },
   "cookies": {

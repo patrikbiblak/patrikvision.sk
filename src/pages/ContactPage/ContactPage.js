@@ -94,7 +94,7 @@ const ContactPage = () => {
     ];
 
     const contactDetails = [
-        { icon: Mail, label: t('contact.details.email'), value: 'contact@patrikvision.sk' },
+        { icon: Mail, label: t('contact.details.email'), value: 'info@patrikvision.sk' },
         { icon: Phone, label: t('contact.details.phone'), value: '+421 918 755 276' },
     ];
 

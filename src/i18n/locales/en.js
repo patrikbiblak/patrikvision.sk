@@ -294,7 +294,7 @@ const en = {
     "effectiveDate": "Effective date:",
     "date": "July 13, 2025",
     "operator": "Controller and processors",
-    "operatorText": "Controller: PatrikVision<br/>Email: contact@patrikvision.sk<br/>Phone: +421 918 755 276<br/><br/>Data Processors:<br/>• HostCreators (hosting, domain)<br/>• Google Analytics<br/>• EmailJS (email services)",
+    "operatorText": "Controller: PatrikVision<br/>Email: info@patrikvision.sk<br/>Phone: +421 918 755 276<br/><br/>Data Processors:<br/>• HostCreators (hosting, domain)<br/>• Google Analytics<br/>• EmailJS (email services)",
     "dataCollected": "What data we collect",
     "contactData": "Contact data – name, email, messages from forms.",
     "technicalData": "Technical data – IP, browser type, device (Google Analytics).",
@@ -319,7 +319,7 @@ const en = {
     "changeCookieSettings": "Change cookie settings",
     "complaintRight": "Right to file a complaint with the Data Protection Authority",
     "contact": "Contact",
-    "contactText": "For questions, write to contact@patrikvision.sk or use the",
+    "contactText": "For questions, write to info@patrikvision.sk or use the",
     "contactForm": "contact form"
   },
   "cookies": {

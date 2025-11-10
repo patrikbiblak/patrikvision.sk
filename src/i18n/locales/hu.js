@@ -294,7 +294,7 @@ const huTranslations = {
     "effectiveDate": "Hatálybalépés dátuma:",
     "date": "2025. július 13.",
     "operator": "Adatkezelő és feldolgozók",
-    "operatorText": "Adatkezelő: PatrikVision<br/>Email: contact@patrikvision.sk<br/>Telefon: +421 918 755 276<br/><br/>Adatfeldolgozók:<br/>• HostCreators (hosting, domain)<br/>• Google Analytics<br/>• EmailJS (email szolgáltatások)",
+    "operatorText": "Adatkezelő: PatrikVision<br/>Email: info@patrikvision.sk<br/>Telefon: +421 918 755 276<br/><br/>Adatfeldolgozók:<br/>• HostCreators (hosting, domain)<br/>• Google Analytics<br/>• EmailJS (email szolgáltatások)",
     "dataCollected": "Milyen adatokat gyűjtünk",
     "contactData": "Kapcsolati adatok – név, email, űrlapokból származó üzenetek.",
     "technicalData": "Technikai adatok – IP, böngésző típus, eszköz (Google Analytics).",
@@ -319,7 +319,7 @@ const huTranslations = {
     "changeCookieSettings": "Cookie beállítások módosítása",
     "complaintRight": "Jog panaszt tenni az Adatvédelmi Hatóságnál",
     "contact": "Kapcsolat",
-    "contactText": "Kérdésekre írjon a contact@patrikvision.sk címre vagy használja a",
+    "contactText": "Kérdésekre írjon a info@patrikvision.sk címre vagy használja a",
     "contactForm": "kapcsolati űrlapot"
   },
   "cookies": {
