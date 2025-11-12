@@ -1,7 +1,5 @@
-import FtpDeploy from "ftp-deploy";
-import dotenv from "dotenv";
-
-dotenv.config();
+const FtpDeploy = require("ftp-deploy");
+require("dotenv").config();
 
 const ftpDeploy = new FtpDeploy();
 
