@@ -15,7 +15,7 @@ const en = {
     "suggestion4": "Check back later for updates"
   },
   "hero": {
-    "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solution</span>",
+    "title": "<span class=\"brand-color\">Web</span> <span class=\"underline-word\">Development</span> & <span class=\"brand-color\">AI</span> <span class=\"underline-word\">Solutions</span>",
     "subtitle": "Web Development & AI Solutions",
     "description": "Transform your business with cutting-edge web solutions that drive growth. From intelligent AI automation to performance-optimized websites, I deliver measurable results that boost your online presence.",
     "services": "Services",
