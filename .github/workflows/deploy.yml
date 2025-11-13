@@ -24,13 +24,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+      - name: Deploy via FTPS
+        uses: SamKirkland/FTPS-Deploy-Action@v1
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build/
           server-dir: /
+          protocol: ftps
           exclude: |
             **/.htaccess
