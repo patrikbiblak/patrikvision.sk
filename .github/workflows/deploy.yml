@@ -1,4 +1,4 @@
-name: Deploy React App to WebSupport via FTPS
+name: Deploy React App to WebSupport FTPS
 
 on:
   push:
@@ -6,11 +6,11 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Setup Node
@@ -24,13 +24,21 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy via FTPS
-        uses: SebastianStehle/ftp-action@v2
-        with:
-          host: ${{ secrets.FTP_HOST }}
-          user: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          secure: true
-          localDir: build/
-          remoteDir: /
-          options: "--exclude .htaccess"
+      - name: Deploy via FTPS using curl
+        run: |
+          echo "Uploading files via FTPS..."
+          curl -k --ftp-ssl \
+            --user "${{ secrets.FTP_USER }}:${{ secrets.FTP_PASSWORD }}" \
+            --ftp-method nocwd \
+            --upload-file build/index.html "ftps://${{ secrets.FTP_HOST }}/index.html"
+
+          # upload entire build folder recursively
+          for file in $(find build -type f); do
+            remote_path="${file#build/}"
+            echo "Uploading: $remote_path"
+            curl -k --ftp-ssl \
+              --user "${{ secrets.FTP_USER }}:${{ secrets.FTP_PASSWORD }}" \
+              --ftp-create-dirs \
+              --upload-file "$file" \
+              "ftps://${{ secrets.FTP_HOST }}/$remote_path"
+          done
