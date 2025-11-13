@@ -1,9 +1,9 @@
-name: Deploy React App to WebSupport via FTP
+name: Deploy React App to WebSupport via FTPS
 
 on:
   push:
     branches:
-      - main   # deploy spustí pri pushi do main
+      - main
 
 jobs:
   build-and-deploy:
@@ -25,13 +25,12 @@ jobs:
         run: npm run build
 
       - name: Deploy via FTPS
-        uses: SamKirkland/FTPS-Deploy-Action@v1
+        uses: SebastianStehle/ftp-action@v2
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
+          host: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: build/
-          server-dir: /
-          protocol: ftps
-          exclude: |
-            **/.htaccess
+          secure: true
+          localDir: build/
+          remoteDir: /
+          options: "--exclude .htaccess"
