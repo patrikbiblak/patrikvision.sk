@@ -1,5 +1,6 @@
 {
   "name": "patrikvision.sk",
+  "homepage": "https://patrikvision.sk",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,11 +26,10 @@
   "scripts": {
     "start": "react-scripts start",
     "prebuild": "node update-version.js",
-    "build": "react-scripts build && npm run deploy",
+    "build": "react-scripts build",
     "build:analyze": "npm run build && npx webpack-bundle-analyzer build/static/js/*.js",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "node deploy.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
